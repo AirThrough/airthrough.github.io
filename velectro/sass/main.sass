@@ -1,0 +1,2223 @@
+// Developer: Andrew Skorodumov
+// Contact me here: https://vk.com/id415744967
+
+// VARS
+
+$grey-bg: #e8e8e8
+$black-main: #030303
+$blue-main: #3756a6
+$grey-light: #d1d1d1
+$grey-ph: #b6b6b6
+$grey-bg-light: #f0f2f2
+$green: #2cb42c
+
+body 
+	font-family: 'Roboto'
+	font-size: 16px
+	background: $grey-bg-light
+	overflow-y: auto !important
+
+.mfp-container	
+	padding: 0 !important
+
+ul 
+	list-style: none
+	padding: 0
+	margin: 0
+
+button 
+	&:focus 
+		outline: none !important
+
+::-webkit-input-placeholder
+	color: #b6b6b6
+	font-size: 14px
+	letter-spacing: 0.02em
+
+.mobile-header 
+	display: none
+
+.mobile-only 
+	display: none 
+
+
+
+.blue-button
+	line-height: 31px
+	border: none
+	background: $blue-main
+	border-radius: 5px
+	padding: 0px 10px
+	display: inline-block
+	font-size: 11px
+	color: white
+	letter-spacing: 0.06em
+	transition: all 0.25s ease-in-out
+
+	&:hover 
+		background: lighten($blue-main, 10%)
+		transition: all 0.25s ease-in-out
+
+.go-futher 
+	padding: 9px 40px 
+	border: 2px solid $blue-main
+	border-radius: 3px 
+	background: transparent 
+	font-size: 13px 
+	font-weight: 500
+	transition: 0.25s all ease-out
+
+	&:hover 
+		background: $blue-main
+		color: white 
+		transition: 0.25s all ease-out
+
+.order-button 
+	padding: 5px 40px 
+	font-size: 13px 
+	font-weight: 500
+
+
+.logo 
+	font-family: 'Adler'
+	letter-spacing: 0.02em
+	font-size: 30px
+	color: $blue-main
+
+.search-button
+	background: url('../img/search-icon.png') no-repeat
+	border: none
+	height: 16px
+	width: 16px
+	position: absolute
+	top: 50%
+	margin-top: -8px
+	right: 12px
+
+.h2 
+	font-weight: bold 
+	margin: 0
+	padding: 0
+	font-size: 36px 
+	color: $black-main
+	line-height: normal 
+	letter-spacing: 0.02em 
+	text-transform: uppercase
+	position: relative
+	
+	display: inline-block
+	
+
+.section-heading 
+	position: relative
+	margin-top: 40px
+	margin-bottom: 15px
+
+.button-aside 
+	padding: 9px 15px
+	font-weight: bold 
+	font-size: 14px 
+	letter-spacing: 0.02em
+	border-radius: 5px 
+	border: 1px solid $blue-main
+	background: transparent
+	color: $black-main
+	transition: 0.25s all ease-in-out
+	position: absolute
+	bottom: 0
+	right: 0
+	margin-top: 8px
+	display: inline-block
+
+	&:focus 
+		outline: none
+
+	&:hover 
+		background: $blue-main
+		color: white 
+		transition: 0.25s all ease-in-out
+
+	&:active 
+		opacity: 0.7
+		transition: 0.25s all ease-in-out
+
+
+.breadcumbs 
+	margin-top: 25px
+	margin-bottom: 15px
+
+	.bread-links 
+		li 
+			display: inline-block
+
+			&:last-child
+				&::after 
+					display: none 
+
+				a 
+					border-bottom: none 
+					color: $black-main
+
+			&::after 
+				content: "/"
+				display: inline-block
+				color: $black-main
+				font-size: 18px 
+				margin-left: 5px
+
+			a 
+				text-decoration: none 
+				color: $blue-main
+				font-size: 18px 
+				letter-spacing: 0.02em 
+				border-bottom: 1px solid $blue-main
+				padding-bottom: 0px
+
+
+
+
+
+
+// ===================== Item STYLES
+
+.items-inner 
+	font-size: 0
+
+.item 
+	background: white 
+	display: inline-block
+	width: 33.3333%	
+	padding: 8px
+	box-shadow: 0 0 0 0 $blue-main inset
+	transition: 0.25s all ease-in-out
+
+	&.item-small 
+
+		.item-bottom
+
+			.video-button
+
+				svg 
+					width: 30px
+
+
+	&:hover 
+		box-shadow: 0 0 0 3px $blue-main inset
+		transition: 0.25s all ease-in-out
+
+		.item-pic .marker 
+			opacity: 1
+			transition: 0.45s all ease-in-out
+
+		.item-pic .item-pic-slider .owl-dots
+			opacity: 1
+			transform: translateY(0px)
+			transition: 0.45s all ease-in-out
+
+		.item-pic .item-pic-slider .owl-nav .owl-next 
+			opacity: 1
+			transform: translateX(0px)
+			transition: 0.45s all ease-in-out
+
+		.item-pic .item-pic-slider .owl-nav .owl-prev
+			opacity: 1
+			transform: translateX(0px)
+			transition: 0.45s all ease-in-out
+
+		.item-bottom .item-price .item-old-price .item-old-price-through-line
+			opacity: 1
+			transition: 0.45s all ease-in-out
+
+			&::after 
+				transform: scale(1)
+				transition: 0.55s all ease-in-out
+
+	.item-pic 
+		padding: 25px
+		position: relative
+		padding-bottom: 40px
+		cursor: pointer
+
+		.marker 
+			padding: 1px 4px
+			border: 2px solid $green 
+			display: inline-block
+			position: absolute
+			top: 0
+			right: 0
+			font-size: 14px 
+			letter-spacing: 0.02em
+			color: $black-main
+			opacity: 0
+			transition: 0.45s all ease-in-out
+
+			&.marker-best-price
+				border-color: $green 
+
+
+		.item-pic-slider
+			position: relative
+
+			.owl-dots 
+				opacity: 0
+				transform: translateY(10px)
+				position: absolute
+				width: 76%
+				margin-left: 12%
+				bottom: -30px
+				left: 0
+				display: flex 
+				flex-direction: row 
+				justify-content: center
+				transition: 0.25s all ease-in-out
+
+				.owl-dot 
+					width: 13px
+					height: 13px
+					background: rgba(0,0,0, 0.3)
+					border-radius: 50%
+					margin-right: 7px
+					transition: 0.25s all ease-in-out
+
+					&.active 
+						background: black 
+						transition: 0.25s all ease-in-out
+
+					&:last-child 
+						margin-right: 0
+
+
+			.owl-nav 
+				position: absolute
+				bottom: -40px
+				left: 0
+				width: 100%
+
+				.owl-prev
+					position: absolute
+					left: 0
+					bottom: 0
+					width: 33px
+					height: 33px
+					background: rgba(0,0,0,0.6)
+					border-radius: 50%
+					transition: 0.25s all ease-in-out
+					opacity: 0
+					transform: translateX(-10px)
+
+					&:hover 
+						background: rgba(0,0,0,0.8)
+						transition: 0.25s all ease-in-out
+
+					&::after 
+						content: ""
+						display: block
+						position: absolute
+						top: 50%
+						margin-top: -10px
+						left: 50%
+						margin-left: -7px
+						width: 0
+						height: 0
+						border-style: solid 
+						border-width: 10px 10px 10px 0
+						border-color: transparent white transparent transparent 
+						
+
+				.owl-next
+					position: absolute
+					right: 0
+					bottom: 0
+					width: 33px
+					height: 33px
+					background: rgba(0,0,0,0.6)
+					border-radius: 50%
+					transition: 0.25s all ease-in-out
+					opacity: 0
+					transform: translateX(10px)
+
+					&:hover 
+						transition: 0.25s all ease-in-out
+						background: rgba(0,0,0,0.8)
+
+					&::after 
+						content: ""
+						display: block
+						position: absolute
+						top: 50%
+						margin-top: -10px
+						left: 50%
+						margin-left: -3px
+						width: 0
+						height: 0
+						border-style: solid 
+						border-width: 10px 0 10px 10px
+						border-color: transparent transparent transparent white
+
+			.img-block
+				text-align: center
+
+				img 
+					margin-left: auto 
+					margin-right: auto 
+					max-width: 100%
+					width: auto
+
+		
+	.item-title 
+		font-size: 23px 
+		line-height: 25px
+		color: $blue-main
+		letter-spacing: 0.02em 
+		display: block 
+		padding-left: 20px
+		padding-right: 20px
+		margin-top: 15px
+		text-align: center
+		font-weight: 500
+		margin-bottom: 10px
+		cursor: pointer
+
+	.item-desc 
+		padding-left: 10px
+		padding-right: 10px
+
+		.single-desc 
+			padding-right: 10px
+			display: inline-block
+			width: 50%
+			color: #626362
+			font-size: 13px
+			line-height: 25px
+			letter-spacing: 0.02em
+			line-height: 25px
+			font-size: 13px 
+			font-weight: 300
+
+	.item-main-desc
+		color: #626362
+		font-size: 15px
+		line-height: 25px
+		letter-spacing: 0.02em
+		font-weight: 500
+		margin-top: 3px
+		text-align: center
+		margin-bottom: 35px
+
+	.item-bottom
+		padding-bottom: 15px
+		padding-left: 10px
+		padding-right: 10px
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		align-items: flex-end
+		
+		.item-price
+
+			position: relative
+
+			.item-current-price
+				font-size: 28px 
+				font-weight: 500
+				letter-spacing: 0.02em 
+				color: $black-main
+
+			.item-old-price
+				color: #9f9f9f
+				font-size: 20px 
+				text-align: center
+				letter-spacing: 0.02em 
+
+				.item-old-price-through-line
+					position: relative
+					opacity: 0
+					transition: 0.45s all ease-in-out
+					&::after 
+						content: ''
+						display: block 
+						width: 100%
+						height: 2px
+						background: $grey-light
+						transform: scale(0)
+						position: absolute
+						top: 50%
+						margin-top: -1px
+						left: 0
+						transition: 0.65s all ease-in-out
+
+				
+		.video-button 
+			padding-bottom: 10px
+			cursor: pointer
+
+			svg 
+				width: 50px
+				height: auto
+
+		
+		.item-button
+			line-height: 20px
+			border-radius: 3px 
+			background: transparent
+			font-size: 18px 
+			letter-spacing: 0.02em 
+			font-weight: 500
+			color: $black-main
+			padding: 8px 27px
+			border: 2px solid $blue-main
+			transition: 0.25s all ease-in-out
+
+			&:hover 
+				background: $blue-main
+				color: white 
+				transition: 0.25s all ease-in-out
+
+			&:active 
+				opacity: 0.7
+				transition: 0.25s all ease-in-out
+
+
+.main-page-catalog-2
+	padding-bottom: 40px
+
+	.item 
+		border-radius: 0px 
+		width: 49%
+		transition: 0.3s all ease-in-out
+		box-shadow: 0 0 0 2px lighten($blue-main, 30%)
+
+		&:first-child
+			margin-right: 2%
+
+		&:hover 
+			box-shadow: 0 0 5px 4px lighten($blue-main, 30%)
+			transition: 0.3s all ease-in-out
+
+		.item-title
+			margin-bottom: 15px
+			font-weight: 500
+			letter-spacing: 0.04em
+
+		.item-pic
+			padding-left: 5px
+			padding-right: 5px
+
+			.item-pic-slider
+
+				.img-block
+
+					img 
+						width: auto
+						max-height: 600px
+
+		.item-desc 
+
+			.single-desc
+				line-height: 32px
+				font-size: 18px 
+				font-weight: 300
+
+		.item-bottom
+
+			.item-button 
+				padding: 7px 40px
+				border-radius: 3px 
+
+			.video-button
+				padding-bottom: 0px
+
+				object 
+					width: 50px
+
+
+// ===================== HEADER STYLES
+
+.header 
+
+	&.header-2 
+
+		.main-header
+
+			.logo 
+				margin-right: 0
+
+		.banner-header 
+			height: calc(100vh - 161px)
+			max-height: 600px 
+		
+		.top-header-inner
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			align-items: center
+
+		.address
+			position: relative
+			padding-left: 22px
+
+			&::before 
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				background: url('../img/geo-icon.png') no-repeat
+				width: 14px
+				height: 22px
+				top: 50%
+				margin-top: -11px
+		.right-column
+			display: input-block
+			width: 30%
+
+		.top-nav-menu 
+			display: flex
+			flex-direction: row
+			line-height: 39px
+
+			li 
+				margin-right: 36px
+
+				.top-links
+					color: $blue-main
+					font-size: 14px
+					border-bottom: 2px $blue-main solid
+					letter-spacing: 0.06em
+					transition: 0.25s all linear
+
+					&:hover 
+						text-decoration: none
+						border-bottom: lighten($blue-main, 20%) solid 2px
+						transition: 0.25s all linear
+						color: lighten($blue-main, 20%)
+
+
+	.top-header
+		height: 39px
+		background: $grey-bg
+
+		.left-column
+			display: flex 
+			flex-direction: row
+			justify-content: flex-start
+			color: $black-main
+			font-size: 12px
+			letter-spacing: 0.06em
+			white-space: nowrap
+			line-height: 39px
+
+			.address
+				margin-right: 50px
+				position: relative
+				padding-left: 22px
+
+				&::before 
+					content: ''
+					display: block
+					position: absolute
+					left: 0
+					background: url('../img/geo-icon.png') no-repeat
+					width: 14px
+					height: 22px
+					top: 50%
+					margin-top: -11px
+
+			.worktime
+				position: relative
+				padding-left: 30px
+
+				&::before 
+					content: ''
+					display: block
+					position: absolute
+					left: 0
+					background: url('../img/clocks-icon.png') no-repeat
+					width: 20px
+					height: 20px
+					top: 50%
+					margin-top: -10px
+
+
+
+		.right-column
+			display: flex 
+			flex-direction: row
+			justify-content: flex-end
+			align-items: center
+
+		.top-nav-menu 
+			display: flex
+			flex-direction: row
+			line-height: 39px
+
+			li 
+				margin-right: 36px
+
+				.top-links
+					color: $blue-main
+					font-size: 14px
+					border-bottom: 2px $blue-main solid
+					letter-spacing: 0.06em
+					transition: 0.25s all linear
+
+					&:hover 
+						text-decoration: none
+						border-bottom: lighten($blue-main, 20%) solid 2px
+						transition: 0.25s all linear
+						color: lighten($blue-main, 20%)
+
+	.main-header
+		background: white
+
+		.logo
+			height: 70px
+			line-height: 80px
+			margin-right: 36px
+			display: inline-block
+
+
+
+		.teasers 
+			display: inline-block
+			vertical-align: top 
+			margin-top: 12px
+
+			li 
+				font-size: 12px
+				letter-spacing: 0.02em
+
+				&::before 
+					margin-right: 4px
+					background: $blue-main
+					content: ''
+					display: inline-block
+					border-radius: 50%
+					height: 5px
+					width: 5px
+					vertical-align: middle
+
+	
+
+		.phone-block
+			height: 70px
+			float: right
+			display: flex
+			flex-direction: column 
+			justify-content: center
+			position: relative
+
+			&::before 
+				content: ''
+				display: block
+				background: url('../img/phone-icon.png') no-repeat
+				height: 20px
+				width: 20px
+				position: absolute
+				top: 50%
+				left: -30px
+				margin-top: -10px
+
+			.phone-link 
+				font-size: 20px
+				letter-spacing: 0.02em
+				color: black
+
+	.nav-header
+		background: $grey-bg
+
+		&.scroll-fix 
+			position: fixed 
+			top: 0
+			left: 0
+			width: 100%
+			z-index: 100
+			box-shadow: 0 0 2px 2px lighten($blue-main, 30%)
+
+		.main-nav-menu
+
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+
+			li
+				position: relative
+
+				&:last-child 
+					min-width: 150px
+
+				&::before 
+					content: ''
+					display: block
+					position: absolute
+					top: 0
+					left: 0
+					background: $blue-main
+					width: 100%
+					height: 4px
+					transform: scale(0)
+					transition: 0.3s all linear
+
+				&:hover 
+					background: lighten($blue-main, 10%)
+					transition: 0.3s all linear 
+
+					a 
+						color: white
+
+					.img-block
+						img 
+
+							filter: brightness(1000%)
+
+				a 
+					display: flex
+					flex-direction: column
+					justify-content: center
+					align-items: center
+					text-align: center
+					font-size: 14px
+					letter-spacing: 0.02em
+					padding-left: 20px
+					padding-right: 20px
+					color: $black-main
+					line-height: 12px
+					padding-top: 13px
+					padding-bottom: 13px
+					position: relative
+
+					&:hover 
+						text-decoration: none
+
+				
+					.img-block 
+						margin-bottom: 7px
+						height: 34px
+						display: flex 
+						flex-direction: column 
+						justify-content: flex-end
+
+						img 
+							display: inline-block
+							vertical-align: bottom 
+	
+	.banner-header
+
+		background: $grey-bg-light
+		padding-top: 30px
+		padding-bottom: 30px
+
+		.banner-inner
+			background: white
+			padding-top: 20px
+			padding-bottom: 20px
+			padding-left: 70px
+
+			font-size: 0
+
+			.left-banner 
+				display: inline-block
+				width: 50%
+				vertical-align: middle
+
+			.right-banner
+				display: inline-block
+				width: 50%
+
+				.img-block 
+					text-align: center
+
+			.h3 
+				padding: 0
+				margin: 0
+				font-weight: normal
+				position: relative
+				padding-left: 70px
+				font-size: 36px 
+				letter-spacing: 0.02em
+				text-transform: uppercase
+				margin-bottom: 40px
+				color: $black-main
+				line-height: normal
+
+				&::before 
+					content: ''
+					display: block 
+					position: absolute
+					bottom: 5px
+					left: 0
+					background: url('../img/bike-4.png') no-repeat
+					width: 60px
+					height: 34px
+
+			.desc 
+				margin-bottom: 40px
+				
+				li 
+					position: relative
+					padding-left: 13px
+					font-size: 16px 
+					letter-spacing: 0.02em 
+					margin-bottom: 2px
+
+					&::before 
+						content: ''
+						display: block 
+						position: absolute
+						top: 50%
+						margin-top: -2px
+						left: 0
+						width: 8px
+						height: 8px
+						border-radius: 50%
+						background: $blue-main
+
+			.blue-button
+				height: 40px
+				line-height: 38px
+				width: 180px
+				font-size: 14px
+				letter-spacing: 0.02em
+
+
+// ===================== MINI_TEASERS STYLES
+
+.teasers-section 
+	background: $grey-bg
+	padding-top: 19px
+	padding-bottom: 19px
+	margin-bottom: 30px
+
+	.teasers-inner 
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		align-items: center
+
+		.item-teaser 
+
+			&:nth-child(2)
+				
+
+				.text-block
+					max-width: 131px
+
+			&:nth-child(3)
+				
+
+				.text-block
+					max-width: 131px
+
+			.text-block 
+				font-size: 20px 
+				letter-spacing: 0.02em 
+				line-height: 20px
+				color: $black-main
+				display: inline-block
+				vertical-align: middle
+				max-width: 95px
+
+			.icon-block 
+				display: inline-block
+				margin-right: 15px
+
+
+
+// ===================== MAIN_PAGE_CATALOG STYLES
+
+.main-page-catalog 
+	background: $grey-bg-light
+
+.text-section 
+	background: $grey-bg-light
+	padding-top: 30px
+
+	ul 
+		li 
+			margin-bottom: 15px
+
+.gallery
+	padding-top: 40px
+	background: $grey-bg-light
+	padding-bottom: 100px
+
+	.gallery-slider
+		margin-top: 25px
+
+		.owl-dots 
+			position: absolute
+			width: 25%
+			margin-left: 38%
+			bottom: -40px
+			left: 0
+			display: flex 
+			flex-direction: row 
+			justify-content: center
+			transition: 0.25s all ease-in-out
+
+			.owl-dot 
+				width: 13px
+				height: 13px
+				background: rgba(0,0,0, 0.3)
+				border-radius: 50%
+				margin-right: 7px
+				transition: 0.25s all ease-in-out
+
+				&.active 
+					background: black 
+					transition: 0.25s all ease-in-out
+
+				&:last-child 
+					margin-right: 0
+
+
+
+		.owl-nav 
+			position: absolute
+			bottom: -50px
+			left: 33.33333%
+			width: 33.33333%
+
+
+			.owl-prev
+				position: absolute
+				left: 0
+				bottom: 0
+				width: 33px
+				height: 33px
+				background: rgba(0,0,0,0.6)
+				border-radius: 50%
+				transition: 0.25s all ease-in-out
+
+				&:hover 
+					background: rgba(0,0,0,0.8)
+					transition: 0.25s all ease-in-out
+
+				&::after 
+					content: ""
+					display: block
+					position: absolute
+					top: 50%
+					margin-top: -10px
+					left: 50%
+					margin-left: -7px
+					width: 0
+					height: 0
+					border-style: solid 
+					border-width: 10px 10px 10px 0
+					border-color: transparent white transparent transparent 
+					
+
+			.owl-next
+				position: absolute
+				right: 0
+				bottom: 0
+				width: 33px
+				height: 33px
+				background: rgba(0,0,0,0.6)
+				border-radius: 50%
+				transition: 0.25s all ease-in-out
+
+				&:hover 
+					transition: 0.25s all ease-in-out
+					background: rgba(0,0,0,0.8)
+
+				&::after 
+					content: ""
+					display: block
+					position: absolute
+					top: 50%
+					margin-top: -10px
+					left: 50%
+					margin-left: -3px
+					width: 0
+					height: 0
+					border-style: solid 
+					border-width: 10px 0 10px 10px
+					border-color: transparent transparent transparent white
+
+		.img-block
+			text-align: center
+			display: block 
+
+			img 
+				margin-left: auto 
+				margin-right: auto 
+				max-width: 100%
+				width: auto
+
+.how-to-buy 
+	padding-top: 50px
+	background: $grey-bg-light
+	padding-bottom: 60px
+
+	.how-to-buy-inner 
+		position: relative
+		background: white
+		padding-left: 100px
+		padding-bottom: 25px
+		padding-top: 50px
+		padding-right: 10px
+
+	.h2 
+		position: absolute
+		line-height: 35px
+		font-size: 36px
+		top: 15px
+		left: 15px
+
+	.main-row-how 
+		font-size: 0
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+
+		.step-item 
+			
+
+			.number 
+				color: #d8d7d7
+				font-size: 60px 
+				text-align: center
+				line-height: 50px
+				margin-bottom: 10px
+				font-weight: bold 
+
+			.icon-block
+				display: inline-block
+				width: 60px
+				height: 60px
+				border-radius: 50%
+				background: $blue-main
+				line-height: 60px
+				text-align: center
+
+				img 
+
+			.step-text 
+				display: inline-block
+				font-size: 16px 
+				letter-spacing: 0.02em
+				color: $black-main
+				line-height: 20px
+				max-width: 225px
+				vertical-align: top
+				margin-left: 10px
+
+.footer
+	background: $grey-bg
+
+	.main-footer 
+		border-bottom: 1px solid #777778
+		height: 88px
+
+	.footer-row 
+		height: 88px
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		align-items: center
+
+		.info-block-1 
+			height: inherit
+			display: flex 
+			flex-direction: column 
+			justify-content: center
+			height: 70px
+			margin-right: 15px
+
+		.info-block-2
+			height: inherit
+			display: flex 
+			flex-direction: column 
+			justify-content: space-around
+
+		.delivery-block
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between
+			align-items: center
+
+			.delivery-title 
+				color: $blue-main
+				font-size: 18px 
+				line-height: 20px
+				letter-spacing: 0.06em 
+				margin-right: 20px
+
+			.delivery-method-1
+				margin-right: 15px
+
+		.payment-block 
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between
+			align-items: center
+
+			.payment-title 
+				color: $blue-main
+				font-size: 18px 
+				line-height: 20px
+				letter-spacing: 0.06em 
+				margin-right: 20px
+
+			.payment-method-1
+				margin-right: 20px
+
+		.address
+			position: relative
+			padding-left: 22px
+			color: $black-main
+			font-size: 12px
+			letter-spacing: 0.06em
+			white-space: nowrap
+			margin-bottom: 17px
+			margin-top: 4px
+
+
+			&::before 
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				background: url('../img/geo-icon.png') no-repeat
+				width: 14px
+				height: 22px
+				top: 50%
+				margin-top: -11px
+
+		.worktime
+			position: relative
+			padding-left: 30px
+			color: $black-main
+			font-size: 12px
+			letter-spacing: 0.06em
+			white-space: nowrap
+
+			&::before 
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				background: url('../img/clocks-icon.png') no-repeat
+				width: 20px
+				height: 20px
+				top: 50%
+				margin-top: -10px
+
+		.phone-block
+			height: 70px
+			display: flex
+			flex-direction: column 
+			justify-content: center
+			position: relative
+			margin-left: 12px
+
+			&::before 
+				content: ''
+				display: block
+				background: url('../img/phone-icon.png') no-repeat
+				height: 20px
+				width: 20px
+				position: absolute
+				top: 50%
+				left: -30px
+				margin-top: -10px
+
+			.phone-link 
+				font-size: 20px
+				letter-spacing: 0.02em
+				color: black
+				text-decoration: none
+
+
+	.footer-bottom 
+		min-height: 70px
+		position: relative
+
+		.bottom-nav-menu 
+			display: flex
+			flex-direction: row
+			line-height: 39px
+
+			li 
+				margin-right: 36px
+
+				.bottom-links
+					color: $blue-main
+					font-size: 14px
+					border-bottom: 2px $blue-main solid
+					letter-spacing: 0.06em
+					transition: 0.25s all linear
+
+					&:hover 
+						text-decoration: none
+						border-bottom: lighten($blue-main, 20%) solid 2px
+						transition: 0.25s all linear
+						color: lighten($blue-main, 20%)
+
+		.social-media 
+			position: absolute
+			top: 50%	
+			left: 50%
+			margin-left: -20px
+			margin-top: -5px
+
+
+			.inst-link
+				background: url('../img/inst.png') no-repeat
+				width: 41px
+				height: 40px
+				display: block 
+
+// ===================== CATALOG STYLES
+
+.catalog 
+	background: $grey-bg-light
+
+	.teasers-section
+		margin-bottom: 4s0px
+
+	.input-search
+		border: 1px solid $grey-light
+		border-radius: 7px
+		width: 100%
+		background: none
+		padding-top: 7px
+		padding-bottom: 7px
+		padding-left: 13px
+		transition: 0.25s all ease-in-out
+		background: white
+
+
+		&:focus 
+			outline: none 
+			border-color: $blue-main
+			transition: 0.25s all ease-in-out
+
+	.search-form
+		position: absolute
+		top: 10px
+		right: 0
+		min-width: 370px
+		margin-top: 23px
+
+	.search-button 
+		border-radius: 1px 7px 7px 1px 
+		width: 50px
+		height: 98%
+		top: 1px
+		right: 0
+		margin-top: 0
+		background-position: center
+		transition: 0.25s all ease-in-out
+
+		&:hover 
+			background-color: rgba(0,0,0,0.05)
+			transition: 0.25s all ease-in-out
+
+		&:active 
+			opacity: 0.5
+			transition: 0.25s all ease-in-out
+
+	&.main-page-catalog-2
+
+		.item
+
+			&:nth-child(2n+1)
+				margin-right: 2%
+
+			.item-main-desc
+				display: none
+
+	.h2 
+		margin-bottom: 25px
+
+
+	.filters-section 
+		margin-bottom: 30px
+		form 
+			margin-bottom: 20px
+		.nice-select
+			display: inline-block
+			float: none 
+			// border: none
+			// background: none 
+			// box-shadow: none 
+			// padding-left: 0
+			padding-right: 60px
+			margin-right: 15px
+			margin-bottom: 10px
+
+			&.active-select 
+				border-color: $blue-main
+				.current 
+					border-bottom: 1px solid $blue-main
+
+			&.open 
+				&::after
+					transform: rotate(0deg)
+
+			&::after 
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 10px 6px 0 6px 
+				border-color: $blue-main transparent transparent transparent
+				transform: rotate(0deg)
+				margin-top: -5px
+				right: 23px
+
+			&::before 
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 0px 6px 10px 6px 
+				border-color: transparent transparent $blue-main transparent
+				width: 0;
+				content: ""
+				display: block
+				margin-top: -5px
+				top: 50%
+				right: 10px
+				position: absolute
+
+
+			.list 
+				min-width: 100%
+				// margin-top: -8px
+				// border-radius: 0
+				// box-shadow: 0 0 0 1px lighten($black-main, 30%)
+
+	.items-block 
+		font-size: 0
+
+		.item 
+			margin-bottom: 30px
+
+	.pagination
+		margin-bottom: 30px
+		display: flex 
+		flex-direction: row 
+		justify-content: center
+		align-items: center
+
+		.pagination-numbers 
+			li 
+				height: 40px
+				width: 40px
+				line-height: 35px
+				text-align: center
+				border: #959595 2px solid
+				border-radius: 3px 
+				font-size: 24px
+				color: $black-main
+				margin-right: 15px
+				display: inline-block
+				transition: 0.35s all ease-in-out
+				cursor: pointer
+				position: relative
+
+				&.active 
+					border-color: #b0292c
+					cursor: auto
+
+				&:hover 
+					border-color: rgba(#b0292c, 15%)
+					transition: 0.35s all ease-in-out
+
+				&:last-child
+					color: transparent
+					border-color: #ecec3f
+
+					&:hover 
+						border-color: #ecec3f
+
+					&::after 
+						position: absolute
+						content: ''
+						display: block 
+						border-bottom: 2px solid #ecec3f
+						position: absolute
+						top: 50%
+						left: 50%
+						margin-top: -6px
+						margin-left: -9px
+						width: 11px
+						height: 11px
+						border-right: 2px solid #ecec3f
+						transform: rotate(-45deg)
+
+		.blue-button
+			padding-left: 40px
+			padding-right: 40px
+			height: 40px
+			font-size: 16px
+			letter-spacing: 0.02em
+			border-radius: 3px 
+
+	.consult-block
+		background: white 
+		padding-top: 25px
+		padding-bottom: 25px
+		padding-left: 15px
+		padding-right: 15px
+		margin-bottom: 20px
+
+		.consult-text 
+			font-size: 17px 
+			font-weight: 500
+			line-height: 23px
+			letter-spacing: 0.02em 
+			margin-bottom: 30px
+			margin-top: 0
+
+		.blue-button
+			padding: 9px 25px
+			font-size: 16px 
+			letter-spacing: 0.02em
+			margin-right: 20px
+
+		.phone-link
+			font-size: 24px 
+			letter-spacing: 0.02em 
+			color: $blue-main
+			text-decoration: none 
+
+			&::before 
+				content: ''
+				display: inline-block
+				background: url('../img/phone-icon.png') no-repeat
+				height: 20px
+				width: 20px
+				margin-right: 5px
+				vertical-align: middle
+
+	.text-block
+		margin-top: 0px
+		font-size: 18px 
+		letter-spacing: 0.02em 
+		line-height: 25px
+		color: $black-main
+
+
+.bottom-nav-section 
+	background: $grey-bg
+	margin-bottom: 55px
+
+
+	.main-nav-menu
+
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+
+		li
+			position: relative
+
+			&:last-child 
+				min-width: 150px
+
+			&::before 
+				content: ''
+				display: block
+				position: absolute
+				top: 0
+				left: 0
+				background: $blue-main
+				width: 100%
+				height: 4px
+				transform: scale(0)
+				transition: 0.3s all linear
+
+			&:hover 
+				background: white
+				transition: 0.3s all linear 
+
+				&::before
+					transform: scale(1)
+					transition: 0.3s all linear
+
+			a 
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				text-align: center
+				font-size: 14px
+				letter-spacing: 0.02em
+				padding-left: 20px
+				padding-right: 20px
+				color: $black-main
+				line-height: 12px
+				padding-top: 13px
+				padding-bottom: 13px
+				position: relative
+
+				&:hover 
+					text-decoration: none
+
+			
+				.img-block 
+					margin-bottom: 7px
+					height: 34px
+					display: flex 
+					flex-direction: column 
+					justify-content: flex-end
+
+					img 
+						display: inline-block
+						vertical-align: bottom 
+
+
+.item-page 
+	
+
+	.product-view
+		margin-top: 20px
+		background: white 
+
+	.product-view-main 
+		padding: 34px
+
+		.owl-dots 
+			display: flex 
+			flex-direction: row 
+			flex-wrap: wrap 
+			position: absolute
+			bottom: -103px
+			left: 0
+			width: 100%
+
+			.owl-dot 
+				flex: 1
+				height: 103px
+				transition: 0.25s all ease-in-out
+				border: 2px solid transparent
+				
+				&:hover 
+					border: 2px solid $blue-main
+					transition: 0.25s all ease-in-out
+
+				&.active 
+					border: 2px solid $blue-main
+					transition: 0.25s all ease-in-out
+
+		img 
+			width: 100%
+
+
+
+
+	.product-bottom-slider
+		display: flex 
+		justify-content: space-around
+		flex-direction: row
+		
+		.img-block
+			padding-top: 18px
+			padding-bottom: 18px
+			text-align: center
+			border: 2px solid transparent
+			transition: 0.25s all ease-in-out
+			cursor: pointer
+
+			img 
+				width: 60%
+
+	.table-props 
+		margin-top: 20px;
+		background: white 
+		padding: 8px
+		border: 1px solid $black-main
+		ul 
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between
+			margin-bottom: 8px
+
+			// &:nth-child(4)
+			// 	li 
+			// 		&:first-child
+			// 			flex: 10
+			// &:nth-child(12)
+			// 	li 
+			// 		&:first-child
+			// 			flex: 10
+
+			&:last-child
+				margin-bottom: 0
+			
+			li 
+				font-size: 16px 
+				font-weight: 500
+				letter-spacing: 0.02em 
+				flex: 16
+				white-space: nowrap
+
+				&:last-child
+					text-align: center
+					font-weight: normal
+					flex: 20
+
+	.bottom-product 
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		margin-top: 10px
+
+		.blue-button 
+			//200 40
+			font-size: 18px 
+			letter-spacing: 0.02em 
+			font-weight: 500
+			padding: 4px 68px
+			padding-bottom: 5px
+
+		.price-block 
+			font-weight: 500
+			font-size: 30px 
+			letter-spacing: 0.02em 
+			color: $blue-main
+
+			.old 
+				color: $black-main
+
+.video 
+	padding-top: 25px
+	padding-bottom: 25px
+
+	.video-block 
+		margin-top: 25px
+
+
+.recomendations 
+	margin-bottom: 30px
+
+	.h2 
+		margin-top: 20px
+		margin-bottom: 20px
+
+	.rec-block 
+		font-size: 0 
+
+		.rec-item 
+			display: inline-block
+			width: 25%
+			padding: 15px
+			background: white 
+			box-shadow: 0 0 0 2px transparent inset
+			transition: 0.3s all ease-in-out 
+			cursor: pointer
+			text-align: center
+
+			&:hover 
+				box-shadow: 0 0 0 2px $blue-main inset
+				transition: 0.3s all ease-in-out
+
+			.img-block
+				text-align: center
+				padding-left: 25px
+				padding-right: 25px
+				margin-bottom: 8px
+
+			.title 
+				letter-spacing: 0.02em 
+				font-size: 16px 
+				line-height: 25px
+
+			.cost 
+				letter-spacing: 0.02em 
+				font-size: 18px 
+				line-height: 25px
+
+.items-summary 
+		background: white
+		margin-bottom: 25px
+
+		ul 
+			font-size: 0
+
+			&.item-order-row
+				padding-top: 25px
+				padding-bottom: 25px
+				border-bottom: 1px solid $grey-bg-light
+
+				.amount-block 
+					position: relative
+					margin-left: auto 
+					margin-right: auto 
+					font-size: 18px 
+					color: $blue-main
+					width: 150px
+					height: 40px
+					border: 1px solid $blue-main
+					border-radius: 3px 
+					line-height: 38px
+
+					.plus 
+						position: absolute
+						height: 100%
+						width: 33.33%
+						top: 0
+						right: 0
+						cursor: pointer
+						border-radius: 3px 
+						background: transparent
+						transition: 0.25s all ease-in-out
+
+						&:hover 
+							transition: 0.25s all ease-in-out
+							background: $grey-bg-light
+
+						&:active 
+							transition: 0.25s all ease-in-out
+							opacity: 0.5
+
+							&::after 
+								transform: translateY(-2px) rotate(135deg)
+								transition: 0.25s all ease-in-out
+
+							
+						&::after 
+							width: 9px
+							height: 9px
+							content: ""
+							display: block 
+							top: 50%
+							margin-top: -3px
+							left: 50%
+							margin-left: -6px
+							position: absolute
+							border-bottom: 2px solid $blue-main
+							border-left: 2px solid $blue-main
+							transform: rotate(135deg)
+							transition: 0.25s all ease-in-out
+
+					.minus 
+						position: absolute
+						height: 100%
+						width: 33.33%
+						top: 0
+						left: 0
+						cursor: pointer
+						border-radius: 3px 
+						background: transparent
+						transition: 0.25s all ease-in-out
+
+						&:hover 
+							transition: 0.25s all ease-in-out
+							background: $grey-bg-light
+
+						&:active 
+							transition: 0.25s all ease-in-out
+							opacity: 0.5
+
+							&::after 
+								transform: translateY(2px) rotate(-45deg)
+								transition: 0.25s all ease-in-out
+
+							
+						&::after 
+							width: 9px
+							height: 9px
+							content: ""
+							display: block 
+							top: 50%
+							margin-top: -6px
+							left: 50%
+							margin-left: -6px
+							position: absolute
+							border-bottom: 2px solid $blue-main
+							border-left: 2px solid $blue-main
+							transform: rotate(-45deg)
+							transition: 0.25s all ease-in-out
+
+				.sum-per-item-block
+					position: relative
+
+				.delete-button 
+					font-size: 17px 
+					position: absolute
+					top: -2px
+					right: 20px
+					width: 30px
+					height: 30px
+					border-radius: 50%
+					background: #d9d9d9
+					text-align: center
+					line-height: 30px
+					color: #dc1414
+					cursor: pointer
+					transition: 0.25s all ease-in-out
+
+
+
+					&:hover 
+						background: darken(#d9d9d9, 20%)
+						transition: 0.25s all ease-in-out
+
+					&:active
+						opacity: 0.5
+				
+
+
+
+			&.heading 
+				border-bottom: 1px solid #aeaeae
+				li 
+
+					min-height: 49px
+					line-height: 49px
+				
+
+			li 
+				font-size: 22px 
+				color: $black-main
+				line-height: 25px
+				font-weight: 500
+				letter-spacing: 0.02em 
+				display: inline-block
+				vertical-align: middle
+				text-align: center
+
+				img 
+					width: 60%
+
+				&:first-child 
+					width: 25%
+
+				&:nth-child(2) 
+					width: 30%
+					text-align: left
+
+				&:nth-child(3)
+					width: 25%
+
+				&:nth-child(4)
+					width: 20%
+
+		.final-cost 
+			font-size: 22px 
+			letter-spacing: 0.02em 
+			color: $black-main
+			text-align: right
+			font-weight: 500
+			padding-top: 11px
+			padding-bottom: 11px
+			padding-right: 77px
+
+			.blue-col 
+				color: $blue-main
+
+.order-page 
+	.h2 
+		margin-bottom: 25px
+		margin-top: 25px
+
+	.order-button 
+		display: block 
+		padding: 10px 45px 
+		margin-left: auto 
+		margin-right: auto
+		margin-bottom: 50px
+		font-size: 17px
+
+	.delivery-block
+
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+
+		input 
+			display: none
+
+
+
+		.delivery-item.checked
+			box-shadow: 0 0 0 2px $blue-main inset
+
+		.delivery-item 
+			width: 320px
+			padding-top: 15px
+			padding-bottom: 15px
+			background: white 
+			text-align: center
+			display: flex 
+			flex-direction: column
+			justify-content: space-around
+			box-shadow: 0 0 0 2px transparent inset
+			transition: 0.25s all ease-in-out
+			cursor: pointer
+
+
+
+			&:hover 
+				box-shadow: 0 0 0 2px $blue-main inset
+				transition: 0.25s all ease-in-out
+
+			.delivery-text
+				font-size: 24px 
+				font-weight: 500
+				letter-spacing: 0.02em 
+
+	.main-input-block 
+		background: white
+		padding: 30px
+		padding-top: 20px
+		padding-bottom: 20px
+		margin-bottom: 30px
+
+		.label-title 
+			font-size: 20px 
+			font-weight: 500
+			letter-spacing: 0.02em
+			margin-bottom: 10px
+			display: block
+
+		.row-info
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between
+			align-items: flex-end
+			margin-bottom: 20px
+
+			.input-wrap-comment 
+				max-width: 100%
+				width: 100%
+
+			&:last-child
+				margin-bottom: 0
+
+			&:first-child
+
+				.input-wrap 
+					max-width: 300px
+
+				input 
+					min-width: 300px
+
+		.input-block 
+			border: 2px solid $blue-main
+			border-radius: 3px 
+			padding-left: 15px
+			padding-top: 9px
+			padding-bottom: 10px
+			font-size: 18px
+			color: #aeaeae
+			font-weight: 500
+			letter-spacing: 0.02em
+
+			&:focus 
+				outline: none
+
+		textarea.input-block 
+			width: 100%
+			resize: none 
+			min-height: 140px
+
+
+	
+
+.header-1 .banner-header
+	background: none
+
+	.banner-inner 
+		background: none
+		color: white !important
+	.h3
+		color: white !important
+.header-1 .nav-header
+	background: white
+
+.top-bg-block 
+	background: url(../img/bg-1-1.jpg) 0px -150px no-repeat
+	background-size: cover
+
+
+
+.header-2 .top-bg-block 
+	background: url(../img/bg-2-1.jpg) -200px 0px no-repeat
+	max-height: 600px !important
+
+.banner-header
+	max-height: 600px !important
+
+
+.header-3 .top-bg-block 
+	background: url(../img/bg-3-1.jpg) 0px 0px no-repeat
+	background-size: auto
+	background-position: center center
+
+.header-3 .main-header .input-search
+	color: white
+	background: rgba(0,0,0,0.5)
+	border-radius: 0px 
+	border: none 
+	padding-top: 10px
+	padding-bottom: 10px
+	font-weight: 300
+
+.header-3 .banner-header
+	background: none
+
+	.banner-inner 
+		background: none
+.header-3 .main-header
+	background: none
+
+.header-2 .top-header
+	background: white
+
+.header-2 .top-bg-block .banner-header
+	position: relative
+
+	.banner-inner 
+		position: relative
+		z-index: -20
+
+
+	&::after 
+		z-index: 0
+		content: ''
+		display: block 
+		background: rgba(0,0,0,0.0)
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		position: absolute
+
+
+.modal 
+	max-width: 800px 
+	height: auto
+	margin-left: auto 
+	margin-right: auto
+
+	&.modal-cart 
+
+		.modal-cart-title
+			font-weight: 500
+			font-size: 29px 
+			color: $black-main
+			letter-spacing: 0.02em
+			margin-bottom: 20px
+		
+
+		.modal-inner 
+			background: white
+			padding: 15px
+			box-shadow: 0 0 8px 2px $blue-main
+
+			.items-summary
+				margin-bottom: 0
+
+			.items-summary ul.item-order-row .sum-per-item-block .delete-button
+				right: 0px
+
+			.items-summary ul
+				li
+					font-size: 16px 
+
+			.cart-bottom 
+				margin-top: 40px
+				display: flex 
+				flex-direction: row 
+				justify-content: space-between
+				align-items: center
+
+
+	&.modal-callback 
+
+		max-width: 400px
+
+		.modal-inner 
+			background: white
+			padding: 40px	
+			box-shadow: 0 0 8px 2px $blue-main
+			
+			.modal-form 
+				width: 300px
+				margin-left: auto 
+				margin-right: auto 
+
+			.modal-title 
+				font-weight: normal
+				color: $black-main
+				letter-spacing: 0.01em 
+				font-size: 25px 
+				text-transform: uppercase
+				line-height: 30px
+				margin-bottom: 20px
+
+			.modal-add-text 
+				font-weight: 300
+				font-size: 16px 
+				margin-bottom: 20px
+
+			.input-block 
+				font-weight: 300
+				width: 100%
+				display: block
+				padding: 10px 20px 
+				background: white 
+				border: 1px solid $grey-bg
+				border-radius: 3px 
+				margin-bottom: 20px
+				transition: 0.25s all ease-in-out
+
+				&:focus 
+					outline: none 
+					border-color: opacify($blue-main, 0.2)
+					transition: 0.25s all ease-in-out
+
+			.blue-button 
+				padding: 10px 20px 
+				width: 100%
+				font-size: 18px
+
+
+	.modal_content 
+		position: relative
+
+	.mfp-close 
+		position: absolute
+		top: -30px
+		right: -30px
+		color: $blue-main
+		cursor: pointer
+		transition: 0.25s all ease-in-out
+
+		&:hover 
+			transition: 0.25s all ease-in-out
+
+
+
+
+/* overlay at start */
+.mfp-fade.mfp-bg 
+	opacity: 0
+	transition: all 0.35s ease-out
+
+.mfp-fade.mfp-bg.mfp-ready
+	opacity: .8
+	transition: all 0.35s ease-out
+
+.mfp-fade.mfp-bg.mfp-removing
+	opacity: 0
+	transition: all 0.35s ease-out
+
+.mfp-fade.mfp-wrap .mfp-content
+	opacity: 0
+	transform: scale(0)
+	transition: all 0.35s ease-out
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content
+	opacity: 1
+	transform: scale(1) 
+	transition: all 0.35s ease-out
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content 
+	opacity: 0
+	transition: all 0.35s ease-out
+
