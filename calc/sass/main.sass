@@ -1,0 +1,108 @@
+
+
+
+.calc 
+	margin-top: 100px
+
+	.calc-main-wrap 
+		padding: 30px
+		border: 1px solid #ececec
+
+	.title 
+		font-family: 'Rubik'
+		font-size: 24px
+		color: #73818c
+		text-align: center
+		padding-top: 12px
+		padding-bottom: 18px
+
+	.nice-select
+		float: none
+		margin-bottom: 20px
+
+	label
+		font-family: 'Rubik'
+		font-size: 18px
+		color: #73818c
+		display: block
+		margin-bottom: 10px
+
+	.number 
+
+	    border-radius: 0
+	    font-size: 14px
+	    padding: 0 0 5px 0
+	    background: 0 0 
+	    border: none
+	    border-bottom: 2px solid #dbe3ef
+	    color: #73818c
+	    width: 100%
+	    margin-bottom: 20px
+
+	    &:focus 
+	    	outline: none
+	    	border-color: #ffc107 
+
+	.ui-slider-horizontal .ui-slider-handle
+		top: -.65em
+
+
+	.ui-slider-handle 
+		background-color: #ffc107
+		border: 2px solid #ffc107
+		cursor: e-resize !important
+		height: 20px
+		width: 20px
+		border-radius: 50%
+
+		&:focus 
+			outline: none
+
+	.ui-widget.ui-widget-content
+		border: none
+		height: 2px
+		background-color: #e0e0e0
+
+	.range-points
+		list-style: none
+		padding: 0
+		margin: 0
+		width: 100%
+		display: flex 
+		flex-direction: row
+		justify-content: space-between
+		position: relative
+		margin-bottom: 60px
+
+		li 
+			padding-top: 10px
+			position: absolute
+
+			&:last-child
+				&::before
+					margin-left: -1px
+			&:first-child
+				&::before
+					margin-left: 1px
+
+			&::before
+				content: ''
+				display: block
+				height: 8px
+				width: 2px
+				background-color: #e0e0e0
+				position: absolute
+				top: 0
+				left: calc(50% - 1px)
+
+@for $i from 2 to 12
+	.calc .range-points li:nth-child(#{$i})
+		left: $i*10%-10%		
+
+
+.for-approval
+	margin-top: 50px
+	table 
+		td 
+			padding: 20px 
+			border: 1px grey solid
