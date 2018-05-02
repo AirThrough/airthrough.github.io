@@ -8,6 +8,7 @@ $brown-bold: #91190e
 $pink-bg: #f9ebe5
 $pink-border: #faeee9
 $btn-brown: #480d0c
+$accent: #f6e180
 
 
 
@@ -595,7 +596,7 @@ ul
 		left: 0px
 		width: 100%
 		background: url('../img/header-texture_white.png') white 
-		height: 183px
+		height: 223px
 
 
 	&-slider 
@@ -606,7 +607,7 @@ ul
 				position: absolute
 				right: -90px
 				top: 50%
-				margin-top: -17px
+				margin-top: -100px
 				background: url('../img/nav-item.svg') no-repeat
 				font-size: 0 
 				width: 17px
@@ -627,7 +628,7 @@ ul
 				position: absolute
 				left: -90px
 				top: 50%
-				margin-top: -17px
+				margin-top: -100px
 				background: url('../img/nav-item.svg') no-repeat
 				font-size: 0 
 				width: 17px
@@ -1217,7 +1218,209 @@ ul
 				border-radius: 40px 
 			    border-image: linear-gradient(90deg, transparent 0%, #e4cc72 50%, transparent 100%) 20%
 
+	&-contacts-row 
+		background: url('../img/header-texture_white.png') 	
+		padding-top: 27px
+		padding-bottom: 27px
+
+	&-soc-title 
+		color: $light-grey
+		font-size: 14px
+		font-weight: 300
+		text-transform: uppercase
+		letter-spacing: 1.4px
+		margin-bottom: 36px
+
+	.soc-media-row
+		display: flex 
+		flex-direction: row 
+		justify-content: flex-start
+		align-items: center
+
+		.soc 
+			margin-right: 31px
+			width: 40px
+			height: 40px
+			display: block
+
+	&-contact-item 
+		padding-left: 80px
+		color: $light-grey
+		font-size: 14px
+		font-weight: 300
+		line-height: 20px
+		margin-bottom: 15px
+		position: relative
+
+		&:nth-child(2) 
+			margin-bottom: 0
+
+		&::after 
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 40px
+			height: 20px
+			width: 20px
+
+		&.contact-phone 
+			&::after 
+				background: url('../img/icon-phone.png') no-repeat 100%
+
+		&.contact-address 
+			&::after 
+				top: 8px
+				background: url('../img/icon-loc.png') no-repeat 100%
+
+		&.contact-mail 
+			&::after 
+				background: url('../img/icon-mail.png') no-repeat 100%
+
+		&.contact-worktime 
+			&::after 
+				top: 8px
+				background: url('../img/icon-clock.png') no-repeat 100%
+
+	&-bottom-row 
+		padding-top: 30px
+		padding-bottom: 30px
+		position: relative
+
+		&::after 
+			content: ""
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 60%
+			right: 0
+			height: 1px
+			margin-left: auto 
+			margin-right: auto
+			background: linear-gradient(90deg, transparent 0%, rgba(255,255,255, 0.65) 50%, transparent 100%)
+
+	.payment-title 
+		color: $light-grey
+		font-size: 14px
+		font-weight: 300
+		text-transform: uppercase
+		letter-spacing: 1.4px
+		margin-top: 5px
+
+	.payment-methods
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		align-items: center
+
+		.payment-method
+
+			&-1 
+				background: url('../img/payment-1.png') no-repeat 100% center
+				width: 46px
+				height: 28px
+
+			&-2 
+				background: url('../img/payment-2.png') no-repeat 100% center
+				width: 46px
+				height: 28px
+
+			&-3 
+				background: url('../img/payment-3.png') no-repeat 100% center
+				width: 45px
+				height: 28px
+
+			&-4 
+				background: url('../img/payment-4.png') no-repeat 100% center
+				width: 46px
+				height: 27px
+
+			&-5 
+				background: url('../img/payment-5.png') no-repeat 100% center
+				width: 46px
+				height: 17px
+
+			&-6 
+				background: url('../img/payment-6.png') no-repeat 100% center
+				width: 58px
+				height: 15px
+
+			&-7 
+				background: url('../img/payment-7.png') no-repeat 100% center
+				width: 46px
+				height: 22px
+
+	&-info-row 
+		padding-top: 27px
+		padding-bottom: 27px
+		position: relative
+
+		&::after 
+			content: ""
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 60%
+			right: 0
+			height: 1px
+			margin-left: auto 
+			margin-right: auto
+			background: linear-gradient(90deg, transparent 0%, rgba(255,255,255, 0.65) 50%, transparent 100%)
+
+	&-text 
+		color: $light-grey
+		font-size: 12px
+		font-weight: 300
+		line-height: 16px
+		
+		a 
+			color: white 
+			transition: 0.25s all ease-in-out
+
+			&:hover 
+				color: $accent
+				transition: 0.25s all ease-in-out 
+
+	&-copyright 
+		color: $light-grey
+		font-size: 12px
+		font-weight: 300
+		line-height: 16px
+		padding-top: 27px
+		padding-bottom: 27px
+		
+
+		.copy-row 
+			display: flex 
+			flex-direction: row
+			justify-content: center
+
+			.company-name 
+				margin-right: 40px
+
+		a 
+			color: white 
+			transition: 0.25s all ease-in-out
+
+			&:hover 
+				color: $accent
+				transition: 0.25s all ease-in-out
+
+
+
+
+
 			
+
+
+
+
+
+
+
+
 
 
 		

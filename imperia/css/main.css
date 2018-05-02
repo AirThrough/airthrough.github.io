@@ -655,12 +655,12 @@ ul {
     left: 0px;
     width: 100%;
     background: url("../img/header-texture_white.png") white;
-    height: 183px; }
+    height: 223px; }
   .popular-slider .owl-nav button.owl-next {
     position: absolute;
     right: -90px;
     top: 50%;
-    margin-top: -17px;
+    margin-top: -100px;
     background: url("../img/nav-item.svg") no-repeat;
     font-size: 0;
     width: 17px;
@@ -687,7 +687,7 @@ ul {
     position: absolute;
     left: -90px;
     top: 50%;
-    margin-top: -17px;
+    margin-top: -100px;
     background: url("../img/nav-item.svg") no-repeat;
     font-size: 0;
     width: 17px;
@@ -1352,3 +1352,204 @@ ul {
         -webkit-border-radius: 40px;
                 border-radius: 40px;
           border-radius-border-image: linear-gradient(90deg, transparent 0%, #e4cc72 50%, transparent 100%) 20%; }
+  .footer-contacts-row {
+    background: url("../img/header-texture_white.png");
+    padding-top: 27px;
+    padding-bottom: 27px; }
+  .footer-soc-title {
+    color: #a7a9ac;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    margin-bottom: 36px; }
+  .footer .soc-media-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .footer .soc-media-row .soc {
+      margin-right: 31px;
+      width: 40px;
+      height: 40px;
+      display: block; }
+  .footer-contact-item {
+    padding-left: 80px;
+    color: #a7a9ac;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 15px;
+    position: relative; }
+    .footer-contact-item:nth-child(2) {
+      margin-bottom: 0; }
+    .footer-contact-item::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 40px;
+      height: 20px;
+      width: 20px; }
+    .footer-contact-item.contact-phone::after {
+      background: url("../img/icon-phone.png") no-repeat 100%; }
+    .footer-contact-item.contact-address::after {
+      top: 8px;
+      background: url("../img/icon-loc.png") no-repeat 100%; }
+    .footer-contact-item.contact-mail::after {
+      background: url("../img/icon-mail.png") no-repeat 100%; }
+    .footer-contact-item.contact-worktime::after {
+      top: 8px;
+      background: url("../img/icon-clock.png") no-repeat 100%; }
+  .footer-bottom-row {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative; }
+    .footer-bottom-row::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60%;
+      right: 0;
+      height: 1px;
+      margin-left: auto;
+      margin-right: auto;
+      background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(50%, rgba(255, 255, 255, 0.65)), to(transparent));
+      background: -webkit-linear-gradient(left, transparent 0%, rgba(255, 255, 255, 0.65) 50%, transparent 100%);
+      background: -o-linear-gradient(left, transparent 0%, rgba(255, 255, 255, 0.65) 50%, transparent 100%);
+      background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.65) 50%, transparent 100%); }
+  .footer .payment-title {
+    color: #a7a9ac;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    margin-top: 5px; }
+  .footer .payment-methods {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .footer .payment-methods .payment-method-1 {
+      background: url("../img/payment-1.png") no-repeat 100% center;
+      width: 46px;
+      height: 28px; }
+    .footer .payment-methods .payment-method-2 {
+      background: url("../img/payment-2.png") no-repeat 100% center;
+      width: 46px;
+      height: 28px; }
+    .footer .payment-methods .payment-method-3 {
+      background: url("../img/payment-3.png") no-repeat 100% center;
+      width: 45px;
+      height: 28px; }
+    .footer .payment-methods .payment-method-4 {
+      background: url("../img/payment-4.png") no-repeat 100% center;
+      width: 46px;
+      height: 27px; }
+    .footer .payment-methods .payment-method-5 {
+      background: url("../img/payment-5.png") no-repeat 100% center;
+      width: 46px;
+      height: 17px; }
+    .footer .payment-methods .payment-method-6 {
+      background: url("../img/payment-6.png") no-repeat 100% center;
+      width: 58px;
+      height: 15px; }
+    .footer .payment-methods .payment-method-7 {
+      background: url("../img/payment-7.png") no-repeat 100% center;
+      width: 46px;
+      height: 22px; }
+  .footer-info-row {
+    padding-top: 27px;
+    padding-bottom: 27px;
+    position: relative; }
+    .footer-info-row::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60%;
+      right: 0;
+      height: 1px;
+      margin-left: auto;
+      margin-right: auto;
+      background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(50%, rgba(255, 255, 255, 0.65)), to(transparent));
+      background: -webkit-linear-gradient(left, transparent 0%, rgba(255, 255, 255, 0.65) 50%, transparent 100%);
+      background: -o-linear-gradient(left, transparent 0%, rgba(255, 255, 255, 0.65) 50%, transparent 100%);
+      background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.65) 50%, transparent 100%); }
+  .footer-text {
+    color: #a7a9ac;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16px; }
+    .footer-text a {
+      color: white;
+      -webkit-transition: 0.25s all ease-in-out;
+      -o-transition: 0.25s all ease-in-out;
+      transition: 0.25s all ease-in-out; }
+      .footer-text a:hover {
+        color: #f6e180;
+        -webkit-transition: 0.25s all ease-in-out;
+        -o-transition: 0.25s all ease-in-out;
+        transition: 0.25s all ease-in-out; }
+  .footer-copyright {
+    color: #a7a9ac;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16px;
+    padding-top: 27px;
+    padding-bottom: 27px; }
+    .footer-copyright .copy-row {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .footer-copyright .copy-row .company-name {
+        margin-right: 40px; }
+    .footer-copyright a {
+      color: white;
+      -webkit-transition: 0.25s all ease-in-out;
+      -o-transition: 0.25s all ease-in-out;
+      transition: 0.25s all ease-in-out; }
+      .footer-copyright a:hover {
+        color: #f6e180;
+        -webkit-transition: 0.25s all ease-in-out;
+        -o-transition: 0.25s all ease-in-out;
+        transition: 0.25s all ease-in-out; }
