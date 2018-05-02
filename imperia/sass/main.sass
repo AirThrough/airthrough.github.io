@@ -20,7 +20,7 @@ a
 	&:hover 
 		text-decoration: none
 
-input 
+input, textarea 
 	&:focus 
 		outline: none 
 
@@ -32,6 +32,13 @@ ul
 	li 
 		padding: 0
 		margin: 0
+
+::-webkit-input-placeholder
+	color: black 
+	font-size: 16px 
+	font-weight: 300
+
+
 
 .text-gradient
 	text-align: center
@@ -1407,6 +1414,133 @@ ul
 			&:hover 
 				color: $accent
 				transition: 0.25s all ease-in-out
+
+
+
+
+// CONTACT PAGE 
+
+.contacts 
+	margin-top: 70px
+	margin-bottom: 110px
+	position: relative
+
+	&::after 
+		z-index: -1
+		height: 152px
+		width: 100%
+		content: ""
+		display: block 
+		position: absolute
+		top: 0
+		left: 0
+		background: url('../img/header-texture_white.png') 
+
+	&-item 
+
+		.icon-block 
+			height: 152px
+			text-align: center
+			display: flex 
+			flex-direction: column 
+			justify-content: center
+			align-items: center
+			margin-bottom: 32px
+
+	&-title 
+		color: $brown-bold
+		font-size: 18px
+		font-weight: 700
+		line-height: 24px
+		text-align: center
+		margin-bottom: 10px
+
+	&-text 
+		font-size: 14px
+		font-weight: 300
+		color: #000000
+		line-height: 18px
+		text-align: center
+
+.contact-us 
+	position: relative
+	overflow: hidden
+	margin-bottom: 80px
+
+	.h2 
+		padding-top: 0
+		margin-top: 0
+		margin-bottom: 0
+		padding-bottom: 0
+
+	.contact-us-title 
+		margin-top: 38px
+		margin-bottom: 44px
+		color: #000000
+		font-size: 24px
+		font-weight: 300
+		line-height: 28px
+		text-align: center
+
+	&::after 
+		z-index: -1
+		height: 506px
+		width: 100%
+		content: ""
+		display: block 
+		position: absolute
+		top: 23px
+		left: 0
+		background: url('../img/header-texture_white.png') 
+
+	&-form 
+
+	.input-block 
+		padding-top: 15px
+		padding-left: 30px
+		padding-bottom: 17px
+		border: 1px solid #dcddde
+		background-color: #ffffff
+		border-radius: 20px 
+		display: block 
+		width: 100%
+		margin-bottom: 10px
+	
+	textarea.input-block
+		resize: none 
+
+	.bottom-form 
+		margin-top: 50px
+		text-align: center
+		position: relative
+
+		&::after 
+			content: '' 
+			display: block 
+			position: absolute
+			top: 29px
+			left: 0
+			background: linear-gradient(90deg, white 0%, $super-light-grey 50%, $super-light-grey 100%)
+			width: 28%
+			height: 1px
+
+		&::before
+			content: '' 
+			display: block 
+			position: absolute
+			top: 29px
+			right: 0 
+			background: linear-gradient(90deg, $super-light-grey 0%, $super-light-grey 50%, white 100%)
+			width: 28%
+			height: 1px
+
+		.btn-accent
+			margin-left: auto
+			margin-right: auto
+
+
+
+
 
 
 
