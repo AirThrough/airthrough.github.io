@@ -1992,9 +1992,6 @@ ul
 			display: block
 			background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.15), transparent 100%)
 
-
-
-
 	.control-menu
 
 		li 
@@ -2067,16 +2064,6 @@ ul
 				text-align: center
 				width: 20%
 
-				// &:nth-child(1) 
-				// 	width: 20%
-				// &:nth-child(2) 
-				// 	width: 25%
-				// &:nth-child(3) 
-				// 	width: 25%
-				// &:nth-child(4) 
-				// 	width: 20%
-				// &:nth-child(5) 
-				// 	width: 15%
 
 		.trow 
 			width: 100%
@@ -2110,16 +2097,174 @@ ul
 				line-height: 22px
 				width: 20%
 
-				// &:nth-child(1) 
-				// 	width: 20%
-				// &:nth-child(2) 
-				// 	width: 25%
-				// &:nth-child(3) 
-				// 	width: 25%
-				// &:nth-child(4) 
-				// 	width: 20%
-				// &:nth-child(5) 
-				// 	width: 10%
+
+// INFO2 PAGe 
+
+.team 
+
+	.h2 
+		margin-top: 70px
+
+	.aside-menu
+		margin-top: 169px
+		margin-bottom: 35px
+
+	.team-list 
+
+		.team-member-item 
+			position: relative
+			padding-left: 269px
+			margin-bottom: 30px
+			padding-bottom: 50px
+
+			&:last-child
+
+				&::before 
+					display: none 
+
+			&::before
+				position: absolute
+				bottom: 0px
+				left: 0
+				width: 100%
+				height: 1px
+				content: "" 
+				display: block
+				background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.25), transparent 100%)
+
+
+
+
+			.img-block
+				border-radius: 50% 
+				overflow: hidden
+				position: absolute
+				left: 65px
+				top: 0
+				height: 140px
+				width: 140px
+
+				img 
+					width: 100%
+
+			.member-name 
+				padding-top: 20px
+				color: #000000
+				font-family: "Fontin Sans CR"
+				font-size: 18px
+				font-weight: 700
+				line-height: 22px
+				text-transform: uppercase
+				letter-spacing: 1.8px
+				margin-bottom: 30px
+
+			.member-info-block 
+				margin-bottom: 20px
+
+				.title 
+					color: #a7a9ac
+					font-size: 14px
+					font-weight: 300
+					margin-bottom: 10px
+				
+				.desc 
+					color: #000000
+					font-size: 14px
+					font-weight: 300
+					line-height: 20px
+
+
+.job 
+	margin-top: 80px
+	background: url('../img/info2-bottom.png') no-repeat center
+	background-size: 100% auto 
+	padding-top: 20px
+	padding-bottom: 20px
+	overflow: hidden
+
+	.job-inner 
+		padding-top: 35px
+		padding-bottom: 35px
+		position: relative
+		text-align: center
+
+		&::before
+			position: absolute
+			bottom: 0px
+			left: 0
+			width: 100%
+			height: 1px
+			content: "" 
+			display: block
+			background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.75), transparent 100%)
+	
+		&::after 
+			position: absolute
+			top: 0px
+			left: 0
+			width: 100%
+			height: 1px
+			content: "" 
+			display: block
+			background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.75), transparent 100%)
+
+		
+		.title-with-sub
+			color: white 
+			margin-bottom: 42px
+
+			&::after 
+				display: none 
+
+			&::before 
+				display: none 
+
+			.large 
+				color: white 
+
+		.desc 
+			text-align: center
+			text-shadow: 0 0 15px rgba(36, 33, 33, 0.25)
+			color: #ffffff
+			font-size: 18px
+			font-weight: 300
+			line-height: 24px
+			margin-bottom: 46px
+
+
+		.btn-white 
+			margin-left: auto
+			margin-right: auto
+			background: linear-gradient(90deg, white 0%, white 20%,  white 40%, white 60%, #ab9f9a 80%, white 100%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+
+			&:hover 
+				transition: 0.5s all ease-in-out
+				background-position: 50px 0
+
+				&::after 
+					box-shadow: 0 0 0 1px white inset
+					transition: 0.35s all ease-in-out
+					border-radius: 40px
+					opacity: 0 
+					transform: translateZ(-90px) scale(1.2)
+
+
+				&::before 
+					background-position: 35px 0
+					transition: 0.35s all ease-in-out
+					box-shadow: 0 0 0 2px white inset
+					background-color:  #91817c
+
+
+			&::before 
+				background: url('../img/header-texture_white.png') #91817c
+
+			&::after 
+				border-image: linear-gradient(90deg, transparent 0%, white 50%, transparent 100%) 1 0%
+			
+
 
 
 
