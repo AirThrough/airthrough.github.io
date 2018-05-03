@@ -2074,3 +2074,194 @@ ul {
   .recom .h2::before {
     top: 23px;
     width: 30%; }
+
+.cabinet {
+  position: relative;
+  overflow: hidden; }
+  .cabinet::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 66px;
+    background: url("../img/header-texture_white.png"); }
+  .cabinet::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: url("../img/header-texture_white.png"); }
+  .cabinet .h2 {
+    margin-top: 47px;
+    margin-bottom: 48px; }
+  .cabinet .username {
+    text-align: center;
+    color: #000000;
+    font-family: "Fontin Sans CR";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    margin-bottom: 50px; }
+  .cabinet .user-image {
+    border: 1px solid #dcddde;
+    -webkit-border-radius: 20px;
+            border-radius: 20px;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding: 77px; }
+  .cabinet .company-name {
+    margin-top: 20px;
+    text-align: center;
+    color: #000000;
+    font-family: "Fontin Sans CR";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    margin-bottom: 45px; }
+  .cabinet .main-user-block {
+    margin-bottom: 70px;
+    padding-bottom: 70px;
+    position: relative; }
+    .cabinet .main-user-block::before {
+      position: absolute;
+      bottom: 1px;
+      left: -50%;
+      width: 200%;
+      height: 1px;
+      content: "";
+      display: block;
+      background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(0, 0, 0, 0.15)), to(transparent));
+      background: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.15), transparent 100%);
+      background: -o-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.15), transparent 100%);
+      background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.15), transparent 100%); }
+  .cabinet .control-menu li {
+    position: relative;
+    text-align: center; }
+    .cabinet .control-menu li:last-child::before {
+      display: none; }
+    .cabinet .control-menu li::before {
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      content: "";
+      display: block;
+      background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(0, 0, 0, 0.35)), to(transparent));
+      background: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.35), transparent 100%);
+      background: -o-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.35), transparent 100%);
+      background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.35), transparent 100%); }
+    .cabinet .control-menu li a {
+      width: 100%;
+      text-align: center;
+      display: block;
+      padding-top: 18px;
+      padding-bottom: 18px;
+      color: #000000;
+      font-size: 12px;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 1.2px; }
+  .cabinet .info-item .info-title {
+    color: #a7a9ac;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 10px; }
+  .cabinet .info-item .info-desc {
+    font-size: 16px;
+    font-weight: 300;
+    color: #000000;
+    line-height: 24px;
+    margin-bottom: 20px; }
+  .cabinet .recents-table .thead {
+    padding: 38px 15px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    -webkit-border-radius: 30px;
+            border-radius: 30px;
+    border: 1px solid #dcddde;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+    .cabinet .recents-table .thead li {
+      color: #a7a9ac;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 22px;
+      text-align: center;
+      width: 20%; }
+  .cabinet .recents-table .trow {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    padding: 38px 15px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    position: relative; }
+    .cabinet .recents-table .trow::before {
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      content: "";
+      display: block;
+      background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(0, 0, 0, 0.35)), to(transparent));
+      background: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.35), transparent 100%);
+      background: -o-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.35), transparent 100%);
+      background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.35), transparent 100%); }
+    .cabinet .recents-table .trow li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: #000;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 22px;
+      width: 20%; }
