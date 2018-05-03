@@ -2421,3 +2421,209 @@ ul {
              -o-border-image: -o-linear-gradient(left, transparent 0%, white 50%, transparent 100%) 1 0%;
                 border-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(50%, white), to(transparent)) 1 0%;
                 border-image: linear-gradient(90deg, transparent 0%, white 50%, transparent 100%) 1 0%; }
+
+.company-inside {
+  overflow: hidden; }
+  .company-inside .h2 {
+    margin-top: 70px; }
+  .company-inside .aside-menu {
+    margin-top: 169px;
+    margin-bottom: 35px; }
+  .company-inside .text-two-columns {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 36px;
+       -moz-column-gap: 36px;
+            column-gap: 36px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-top: 47px; }
+    .company-inside .text-two-columns p {
+      margin-top: 0; }
+  .company-inside .careers-block {
+    margin-bottom: 80px; }
+  .company-inside .office-block.office-block_production .h2::after {
+    width: 20%; }
+  .company-inside .office-block.office-block_production .h2::before {
+    width: 20%; }
+  .company-inside .office-block .h2 {
+    margin-bottom: 60px; }
+  .company-inside .office-block .office-item {
+    width: 210px;
+    height: 210px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    border: 1px solid #dadada;
+    padding: 5px;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    -webkit-transition: 0.35s all ease-in-out;
+    -o-transition: 0.35s all ease-in-out;
+    transition: 0.35s all ease-in-out;
+    cursor: pointer; }
+    .company-inside .office-block .office-item:hover {
+      background-color: #480d0c;
+      border-color: #480d0c;
+      -webkit-transition: 0.35s all ease-in-out;
+      -o-transition: 0.35s all ease-in-out;
+      transition: 0.35s all ease-in-out; }
+      .company-inside .office-block .office-item:hover::after {
+        border-color: #f6e180;
+        background-color: #480d0c;
+        -webkit-transition: 0.35s all ease-in-out;
+        -o-transition: 0.35s all ease-in-out;
+        transition: 0.35s all ease-in-out;
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg); }
+      .company-inside .office-block .office-item:hover .office-title {
+        color: white;
+        -webkit-transition: 0.35s all ease-in-out;
+        -o-transition: 0.35s all ease-in-out;
+        transition: 0.35s all ease-in-out; }
+    .company-inside .office-block .office-item::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      border: 1px solid #dadada;
+      width: 200px;
+      height: 200px;
+      z-index: 0;
+      background: url("../img/header-texture_white.png") white;
+      -webkit-transition: 0.35s all ease-in-out;
+      -o-transition: 0.35s all ease-in-out;
+      transition: 0.35s all ease-in-out; }
+    .company-inside .office-block .office-item .office-title {
+      position: relative;
+      z-index: 200;
+      color: #000000;
+      font-family: "Fontin Sans CR";
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      -webkit-transition: 0.35s all ease-in-out;
+      -o-transition: 0.35s all ease-in-out;
+      transition: 0.35s all ease-in-out; }
+  .company-inside .company-advantages {
+    margin-top: 70px;
+    margin-bottom: 110px;
+    position: relative;
+    padding-bottom: 70px; }
+    .company-inside .company-advantages .title-with-sub {
+      position: relative;
+      margin-top: -23px; }
+      .company-inside .company-advantages .title-with-sub::after {
+        width: 25%; }
+      .company-inside .company-advantages .title-with-sub::before {
+        width: 25%; }
+    .company-inside .company-advantages::after {
+      z-index: -1;
+      height: 100%;
+      width: 300%;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      background: url("../img/header-texture_white.png"); }
+    .company-inside .company-advantages-item .icon-block {
+      height: 152px;
+      text-align: center;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-bottom: 32px; }
+    .company-inside .company-advantages-title {
+      color: #91190e;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: center;
+      margin-bottom: 10px; }
+    .company-inside .company-advantages-text {
+      font-size: 14px;
+      font-weight: 300;
+      color: #000000;
+      line-height: 18px;
+      text-align: center; }
+
+.consult {
+  padding-bottom: 80px; }
+  .consult .title-with-sub {
+    position: relative; }
+    .consult .title-with-sub::after {
+      width: 25%; }
+    .consult .title-with-sub::before {
+      width: 25%; }
+  .consult-desc {
+    margin-top: 45px;
+    text-align: center;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 60px; }
+  .consult-text {
+    text-align: center;
+    color: #a7a9ac;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px; }
+  .consult-form {
+    margin-top: 50px; }
+    .consult-form .input-block {
+      -webkit-border-radius: 30px;
+              border-radius: 30px; }
+    .consult-form .btn-accent {
+      margin-top: 30px;
+      width: 100%; }
+      .consult-form .btn-accent::before {
+        left: 0;
+        width: 100%; }
+      .consult-form .btn-accent::after {
+        left: 0;
+        width: 100%; }
+  .consult .img-wrap {
+    margin-top: 45px; }

@@ -2265,6 +2265,208 @@ ul
 				border-image: linear-gradient(90deg, transparent 0%, white 50%, transparent 100%) 1 0%
 			
 
+// INFO3 PAGE 
+
+.company-inside 
+	overflow: hidden
+	
+	.h2 
+		margin-top: 70px
+
+	.aside-menu
+		margin-top: 169px
+		margin-bottom: 35px
+
+	.text-two-columns 
+		column-count: 2
+		column-gap: 36px
+		color: #000000
+		font-size: 14px
+		font-weight: 300
+		line-height: 18px
+		margin-top: 47px
+
+		p 
+			margin-top: 0
+
+	.careers-block 
+		margin-bottom: 80px
+
+	.office-block 
+
+		&.office-block_production 
+
+			.h2 
+
+				&::after 
+					width: 20%
+				&::before 
+					width: 20%
+
+		.h2 
+			margin-bottom: 60px
+		
+		.office-item 
+			width: 210px
+			height: 210px
+			margin-left: auto
+			margin-right: auto
+			border-radius: 50% 
+			border: 1px solid #dadada
+			padding: 5px
+			text-align: center
+			display: flex 
+			flex-direction: column 
+			justify-content: center
+			align-items: center
+			position: relative
+			transition: 0.35s all ease-in-out
+			cursor: pointer
+
+			&:hover 
+				background-color: #480d0c
+				border-color: #480d0c
+				transition: 0.35s all ease-in-out
+
+				&::after 
+					border-color: #f6e180
+					background-color: #480d0c
+					transition: 0.35s all ease-in-out
+					transform: rotate(45deg)
+
+				.office-title
+					color: white
+					transition: 0.35s all ease-in-out
+
+			&::after 
+				content: ""
+				display: block
+				position: absolute
+				top: 4px
+				left: 4px
+				border-radius: 50% 
+				border: 1px solid #dadada
+				width: 200px
+				height: 200px
+				z-index: 0 
+				background: url('../img/header-texture_white.png') white
+				transition: 0.35s all ease-in-out
+
+
+			.office-title 
+				position: relative
+				z-index: 200
+				color: #000000
+				font-family: "Fontin Sans CR"
+				font-size: 18px
+				font-weight: 700
+				line-height: 22px
+				text-transform: uppercase
+				letter-spacing: 1.8px
+				transition: 0.35s all ease-in-out
+
+
+	.company-advantages 
+		margin-top: 70px
+		margin-bottom: 110px
+		position: relative
+		padding-bottom: 70px
+
+		.title-with-sub 
+			position: relative
+			margin-top: -23px
+
+			&::after 
+				width: 25%
+			&::before 
+				width: 25%
+
+		&::after 
+			z-index: -1
+			height: 100%
+			width: 300%
+			content: ""
+			display: block 
+			position: absolute
+			top: 0
+			left: -100%
+			background: url('../img/header-texture_white.png') 
+
+		&-item 
+
+			.icon-block 
+				height: 152px
+				text-align: center
+				display: flex 
+				flex-direction: column 
+				justify-content: center
+				align-items: center
+				margin-bottom: 32px
+
+		&-title 
+			color: $brown-bold
+			font-size: 18px
+			font-weight: 700
+			line-height: 24px
+			text-align: center
+			margin-bottom: 10px
+
+		&-text 
+			font-size: 14px
+			font-weight: 300
+			color: #000000
+			line-height: 18px
+			text-align: center
+
+.consult
+	padding-bottom: 80px
+
+
+	.title-with-sub 
+		position: relative
+
+		&::after 
+			width: 25%
+		&::before 
+			width: 25%
+
+
+	&-desc 
+		margin-top: 45px
+		text-align: center
+		color: #000000
+		font-size: 16px
+		font-weight: 300
+		line-height: 20px
+		margin-bottom: 60px
+
+	&-text 
+		text-align: center
+		color: #a7a9ac
+		font-size: 16px
+		font-weight: 300
+		line-height: 20px
+
+	&-form 
+		margin-top: 50px
+
+		.input-block
+			border-radius: 30px
+
+		.btn-accent
+			margin-top: 30px
+			width: 100%
+
+			&::before 
+				left: 0
+				width: 100%
+
+			&::after 
+				left: 0
+				width: 100%
+
+	.img-wrap
+		margin-top: 45px
 
 
 
