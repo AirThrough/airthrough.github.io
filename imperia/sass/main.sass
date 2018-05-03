@@ -2468,10 +2468,339 @@ ul
 	.img-wrap
 		margin-top: 45px
 
+// CATALOG PAGE
+
+.catalog 
+	padding-bottom: 80px
+
+	&-top-nav 
+		padding-top: 18px
+		padding-bottom: 18px
+		position: relative
+
+		&::after 
+			content: "" 
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, transparent 0%, transparent 20%, rgba(0,0,0,0.15) 50%, transparent 80%, transparent 100%) 
+		
+		&::before 
+			content: "" 
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, transparent 0%, transparent 20%, rgba(0,0,0,0.15) 50%, transparent 80%, transparent 100%) 
+
+
+		.title-page 
+			text-align: center
+			color: #a7a9ac
+			font-size: 12px
+			font-weight: 300
+			line-height: 22px
+			text-transform: uppercase
+			letter-spacing: 1.2px
+
+	.center-nav-row 
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		align-items: center
+
+	.show-count 
+		display: flex 
+		flex-direction: row 
+		justify-content: center
+		align-items: center
+
+		&-title 
+			color: #a7a9ac
+			font-size: 12px
+			font-weight: 300
+			line-height: 22px
+			text-transform: uppercase
+			letter-spacing: 1.2px
+			margin-right: 15px
+
+		.numbers 
+			display: flex 
+			flex-direction: row 
+			justify-content: center
+			align-items: center
+			margin-right: 22px
+
+			.number 
+				text-transform: uppercase
+				margin-right: 10px
+				font-size: 12px
+				font-weight: 300
+				color: #000000
+
+				&:last-child
+					margin-right: 0
+
+				&.current 
+					font-weight: 700
+
+	.sort-filter
+		display: flex 
+		flex-direction: row 
+		justify-content: center
+		align-items: center
+
+		&-title 
+			color: #a7a9ac
+			font-size: 12px
+			font-weight: 300
+			line-height: 22px
+			text-transform: uppercase
+			letter-spacing: 1.2px
 
 
 
+	.pagination 
+		padding-bottom: 0
+		padding-top: 0
 
+		&::after 
+			display: none 
+
+
+	.nice-select
+		border: none 
+		line-height: 0
+		float: none 
+		height: auto
+
+		&.open 
+
+			&::after 
+				transform: rotate(180deg)
+				transition: 0.25s all ease-in-out
+
+
+		.list 
+			width: 113%
+			margin-top: 9px
+
+		.current
+			color: #000
+			font-size: 12px
+			font-weight: 700
+			line-height: 22px
+			text-transform: uppercase
+			letter-spacing: 1.2px
+
+		&::after 
+			height: 20px
+			width: 20px
+			background: url('../img/arrow_bottom.png') no-repeat 100% center
+			transform: rotate(0deg)
+			border: none 
+			margin-top: -10px
+			right: 0
+			transform-origin: 50% 50%
+			transition: 0.25s all ease-in-out
+
+
+	.aside-menu
+
+		.aside-menu-list 
+			margin-top: 15px
+
+			.sub-menu 
+				margin-top: 10px
+
+				li 
+					padding-top: 0
+					padding-bottom: 0
+					height: 18px
+
+					&.current
+
+						a 
+							font-weight: 700
+
+					a 
+						padding-top: 0
+						padding-bottom: 0
+						font-size: 10px 
+						font-weight: 300
+						letter-spacing: 1px
+						line-height: 18px
+
+					&::after 
+						display: none 
+
+		
+	.title-with-sub
+		margin-top: 70px
+		margin-bottom: 50px
+		position: relative
+
+		&::after 
+			width: 30%
+
+		&::before 
+			width: 30%
+
+	&-item 
+		text-align: center
+		margin-bottom: 50px	
+
+		.btn-accent
+			margin-top: 15px
+			width: 75%
+
+			&::after 
+				width: 100%
+				left: 0
+
+			&::before 
+				width: 100%
+				left: 0
+
+		.img-block 
+			display: flex 
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			text-align: center
+			padding-top: 50px
+			padding-bottom: 50px
+			position: relative
+			border-radius: 50%
+			border: 1px solid $light-grey
+			width: 220px
+			height: 220px
+			overflow: hidden
+
+			&:hover 
+
+				img 
+					transform: scale(1.5)
+					transition: 0.35s all ease-in-out
+
+			img 
+				vertical-align: middle
+				position: relative
+				border-radius: 50%
+				max-width: 150px 
+				height: auto
+				margin-left: auto
+				margin-right: auto
+				z-index: 5
+				transition: 0.35s all ease-in-out
+
+
+	&-title 
+		width: 70%
+		margin-left: auto
+		margin-right: auto
+		display: block 
+		margin-top: 25px
+		color: $grey-text
+		font-size: 18px
+		font-weight: 300
+		line-height: 22px
+		transition: 0.35s all ease-in-out
+		color: black 
+
+		&:hover 
+			color: black 
+			transition: 0.35s all ease-in-out
+
+	&-weight 
+		width: 70%
+		margin-left: auto
+		margin-right: auto
+		margin-top: 0px
+		color: $grey-text
+		font-size: 18px
+		font-weight: 300
+		line-height: 42px
+
+	&-price 
+		width: 70%
+		margin-left: auto
+		margin-right: auto
+		color: $brown-bold
+		font-weight: 700
+		line-height: 22px
+		font-size: 18px
+
+	.bottom-nav 
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		align-items: center
+		padding-top: 18px
+		padding-bottom: 18px
+		position: relative
+
+		.load-button 
+			color: #a7a9ac
+			font-size: 12px
+			font-weight: 300
+			line-height: 22px
+			text-transform: uppercase
+			letter-spacing: 1.2px
+			margin-right: 15px
+			position: relative
+
+			&::after 
+				content: ""
+				display: block
+				position: absolute
+				height: 20px
+				width: 20px
+				background: url('../img/arrow_bottom.png') no-repeat 100% center
+				transform: rotate(0deg)
+				border: none 
+				margin-top: 0px
+				top: 0
+				right: -40px
+				transform-origin: 50% 50%
+				transition: 0.25s all ease-in-out
+
+		&::after 
+			content: "" 
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.15) 50%, transparent 100%) 
+		
+		&::before 
+			content: "" 
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.15) 50%, transparent 100%) 
+
+	.text-two-columns
+		column-count: 2
+		column-gap: 36px
+		color: #000000
+		font-size: 14px
+		font-weight: 300
+		line-height: 18px
+		margin-top: 47px
+
+		p 
+			margin-top: 0
 
 
 
