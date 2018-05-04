@@ -19,6 +19,13 @@ $(document).ready(function(){
 
 	$("select").niceSelect();
 
+	$(".product-slider").owlCarousel({
+		items: 1, 
+		loop: true,
+		nav: true,
+		dots: true
+	});
+
 
 	
 

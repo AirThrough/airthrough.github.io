@@ -2805,13 +2805,307 @@ ul
 
 
 
+// PRODUCT PAGE 
+
+.product-main-info 
+	margin-bottom: 80px
+
+	.h2 
+		margin-top: 71px
+		margin-bottom: 40px
+
+		&::after 
+			top: 21px
+
+		&::before 
+			top: 21px
+
+	.instock-mark 
+		color: #a7a9ac
+		font-size: 16px
+		font-weight: 300
+		text-align: center
+		padding-bottom: 20px
+		position: relative
+
+		&::before
+			content: "" 
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, transparent 0%, transparent 20%, rgba(0,0,0,0.15) 50%, transparent 80%, transparent 100%) 
+		
+		&::after 
+			content: ""
+			display: block
+			position: absolute
+			width: 20px
+			height: 20px
+			background: url('../img/icon-instock.png') no-repeat center 100%
+			top: 3px
+			right: 50% 
+			margin-right: -85px
+
+	.notify-instock
+		color: #000000
+		font-size: 12px
+		font-weight: 300
+		display: block
+		text-transform: uppercase
+		letter-spacing: 1.2px
+		text-align: center
+		padding-top: 19px
+		margin-bottom: 40px
+
+
+	.product-slider 
+		max-width: 300px 
+		margin-left: auto
+		margin-right: auto
+		background: url('../img/header-texture_white.png') 
+		border-radius: 20px
+		position: relative
+		margin-bottom: 40px
+
+		.owl-dots
+			position: absolute
+			bottom: -115px
+			height: 75px
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between
+			align-items: center
+			width: 100%
+
+			.owl-dot
+				border: 1px solid black 
+				height: 100%
+				flex: 1
+				opacity: 0
+
+
+
+		.owl-nav 
+
+			button.owl-next 
+				position: absolute
+				right: -34px
+				top: 50%
+				margin-top: -17px
+				background: url('../img/nav-item.svg') no-repeat
+				font-size: 0 
+				width: 17px
+				height: 34px
+				background-size: 100%
+				transform: rotate(180deg)
+				transition: 0.25s all ease-in-out
+
+				&:focus 
+					outline: none 
+
+				&:hover 
+					right: -40px
+					transform: scale(1.5) rotate(180deg)
+					transition: 0.25s all ease-in-out
+
+			button.owl-prev 
+				position: absolute
+				left: -34px
+				top: 50%
+				margin-top: -17px
+				background: url('../img/nav-item.svg') no-repeat
+				font-size: 0 
+				width: 17px
+				height: 34px
+				background-size: 100%
+				transition: 0.25s all ease-in-out
+
+				&:focus 
+					outline: none 
+
+				&:hover 
+					left: -40px
+					transform: scale(1.5)
+					transition: 0.25s all ease-in-out
+
+
+		.product-item 
+			padding-top: 50px
+			padding-bottom: 50px
+			text-align: center
+
+
+			img 
+				display: inline-block
+				width: auto
+
+		&_bottom 
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between
+			align-items: center
+			max-width: 300px 
+			margin-left: auto
+			margin-right: auto
+
+			.product-slider-dot 
+				text-align: center
+
+				img 
+					width: 60%
+
+
+
+	.product-params 
+		padding-top: 25px
+		padding-bottom: 25px
+		position: relative
+		padding-left: 40px
+		padding-right: 40px
+		margin-bottom: 50px
+
+		&::after 
+			content: "" 
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.15) 50%, transparent 100%) 
+		
+		&::before 
+			content: "" 
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.15) 50%, transparent 100%) 
+
+		.param 
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between
+			align-items: center
 			
 
+			li 
+				padding-top: 7px
+				padding-bottom: 7px
+				color: #a7a9ac
+				font-size: 16px
+				font-weight: 300
+
+				&:nth-child(2) 
+					color: #000000
+
+			&-important 
+				li 
+					&:nth-child(2) 
+						font-weight: 700
+
+	.product-buttons 
+
+		.btn-accent
+			width: 100%
+
+			&::after 
+				width: 100%
+				left: 0
+
+			&::before 
+				width: 100%
+				left: 0
+
+			&.btn-transparent
+
+				&::before 
+					background: none
+					box-shadow: 0 0 0 1px #e4cc72 inset
+
+				&::after 
+					border: none 
+					display: none 
+
+			
+.product-consist
+	padding-top: 50px
+	padding-bottom: 50px
+	background: url('../img/header-texture_white.png') 
 
 
+	p 
+		color: #000000
+		font-size: 16px
+		font-weight: 300
+		line-height: 18px
+		margin-top: 0
 
 
+	.consist-title 
+		margin-bottom: 30px
+		text-align: center
+		color: #000000
+		font-family: "Fontin Sans CR"
+		font-size: 24px
+		font-weight: 700
+		text-transform: uppercase
+		letter-spacing: 2.4px
 
+	.consist-table
+		background: linear-gradient(90deg, transparent 0%, white 10%, white 90%, transparent 100%)
+		position: relative
+		padding-top: 30px
+		padding-bottom: 30px
+
+		&-row 
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between
+			align-items: center
+
+			li 
+				padding-top: 7px
+				padding-bottom: 7px
+
+				&:nth-child(2) 
+					color: #000000
+					font-size: 16px
+					font-weight: 300
+
+				&:nth-child(1) 
+					color: #a7a9ac
+					font-size: 16px
+					font-weight: 300
+
+		&::before
+			content: "" 
+			display: block
+			position: absolute
+			bottom: -1px
+			left: 0
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.15) 50%, transparent 100%) 
+
+		&::after
+			content: "" 
+			display: block
+			position: absolute
+			top: -1px
+			left: 0
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.15) 50%, transparent 100%) 
+		
+
+	.consist-text 
+		margin-top: 64px
 
 
 
