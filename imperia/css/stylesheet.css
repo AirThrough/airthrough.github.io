@@ -899,6 +899,14 @@ ul {
     width: 100%;
     background: url("../img/header-texture_white.png") white;
     height: 223px; }
+  .popular_product-page::after {
+    top: 150px; }
+  .popular_product-page .h2 {
+    margin-top: 0; }
+    .popular_product-page .h2::after {
+      top: 24px; }
+    .popular_product-page .h2::before {
+      top: 24px; }
   .popular-slider .owl-nav button.owl-next {
     position: absolute;
     right: -90px;
@@ -3284,10 +3292,10 @@ ul {
     text-transform: uppercase;
     letter-spacing: 2.4px; }
   .product-consist .consist-table {
-    background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(10%, white), color-stop(90%, white), to(transparent));
-    background: -webkit-linear-gradient(left, transparent 0%, white 10%, white 90%, transparent 100%);
-    background: -o-linear-gradient(left, transparent 0%, white 10%, white 90%, transparent 100%);
-    background: linear-gradient(90deg, transparent 0%, white 10%, white 90%, transparent 100%);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.6)), color-stop(50%, white), to(rgba(255, 255, 255, 0.6)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.6) 0%, white 50%, rgba(255, 255, 255, 0.6) 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0.6) 0%, white 50%, rgba(255, 255, 255, 0.6) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, white 50%, rgba(255, 255, 255, 0.6) 100%);
     position: relative;
     padding-top: 30px;
     padding-bottom: 30px; }
@@ -3346,3 +3354,130 @@ ul {
       background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.15) 50%, transparent 100%); }
   .product-consist .consist-text {
     margin-top: 64px; }
+
+.order-params {
+  padding-top: 80px;
+  padding-bottom: 80px; }
+  .order-params .icon-block {
+    width: 127px;
+    height: 127px;
+    background: #f9ebe5;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    position: relative;
+    -webkit-box-shadow: 0 0 0 4px #f9ebe5;
+            box-shadow: 0 0 0 4px #f9ebe5;
+    border: 1px solid white; }
+    .order-params .icon-block_center::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: -60%;
+      background: -webkit-gradient(linear, left top, right top, from(white), color-stop(50%, #dfe0e1), to(#dfe0e1));
+      background: -webkit-linear-gradient(left, white 0%, #dfe0e1 50%, #dfe0e1 100%);
+      background: -o-linear-gradient(left, white 0%, #dfe0e1 50%, #dfe0e1 100%);
+      background: linear-gradient(90deg, white 0%, #dfe0e1 50%, #dfe0e1 100%);
+      width: 48%;
+      height: 1px; }
+    .order-params .icon-block_center::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: -60%;
+      background: -webkit-gradient(linear, left top, right top, from(#dfe0e1), color-stop(50%, #dfe0e1), to(white));
+      background: -webkit-linear-gradient(left, #dfe0e1 0%, #dfe0e1 50%, white 100%);
+      background: -o-linear-gradient(left, #dfe0e1 0%, #dfe0e1 50%, white 100%);
+      background: linear-gradient(90deg, #dfe0e1 0%, #dfe0e1 50%, white 100%);
+      width: 48%;
+      height: 1px; }
+  .order-params .desc {
+    margin-top: 40px;
+    text-align: center;
+    max-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px; }
+
+.special-offer {
+  padding-bottom: 60px;
+  position: relative;
+  margin-top: 40px;
+  padding-top: 110px;
+  margin-bottom: 40px;
+  text-align: center; }
+  .special-offer .title-with-sub {
+    margin-bottom: 40px; }
+    .special-offer .title-with-sub::after {
+      width: 30%;
+      background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(50%, #dfe0e1), to(#dfe0e1));
+      background: -webkit-linear-gradient(left, transparent 0%, #dfe0e1 50%, #dfe0e1 100%);
+      background: -o-linear-gradient(left, transparent 0%, #dfe0e1 50%, #dfe0e1 100%);
+      background: linear-gradient(90deg, transparent 0%, #dfe0e1 50%, #dfe0e1 100%); }
+    .special-offer .title-with-sub::before {
+      width: 30%;
+      background: -webkit-gradient(linear, left top, right top, from(#dfe0e1), color-stop(50%, #dfe0e1), to(transparent));
+      background: -webkit-linear-gradient(left, #dfe0e1 0%, #dfe0e1 50%, transparent 100%);
+      background: -o-linear-gradient(left, #dfe0e1 0%, #dfe0e1 50%, transparent 100%);
+      background: linear-gradient(90deg, #dfe0e1 0%, #dfe0e1 50%, transparent 100%); }
+  .special-offer::after {
+    z-index: -1;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 368px;
+    width: 100%;
+    -webkit-background-size: 100% auto;
+            background-size: 100% auto;
+    background: url("../img/text-wave.png") top left no-repeat #f9ebe5; }
+  .special-offer::before {
+    z-index: -1;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 122px;
+    width: 100%;
+    -webkit-background-size: 100% auto;
+            background-size: 100% auto;
+    background: url("../img/text-wave.png") top left no-repeat;
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  .special-offer .offer-text {
+    margin-bottom: 50px;
+    text-align: center;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28px; }
+  .special-offer .btn-accent {
+    margin-left: auto;
+    margin-right: auto; }

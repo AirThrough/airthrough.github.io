@@ -817,6 +817,19 @@ ul
 		background: url('../img/header-texture_white.png') white 
 		height: 223px
 
+	&_product-page 
+
+		&::after 
+			top: 150px
+
+		.h2 
+			margin-top: 0
+
+			&::after 
+				top: 24px
+			&::before 
+				top: 24px
+
 
 	&-slider 
 
@@ -3058,7 +3071,7 @@ ul
 		letter-spacing: 2.4px
 
 	.consist-table
-		background: linear-gradient(90deg, transparent 0%, white 10%, white 90%, transparent 100%)
+		background: linear-gradient(90deg, rgba(255,255,255,0.6) 0%, white 50%, rgba(255,255,255,0.6) 100%)
 		position: relative
 		padding-top: 30px
 		padding-bottom: 30px
@@ -3109,10 +3122,117 @@ ul
 
 
 
+.order-params 
+	padding-top: 80px
+	padding-bottom: 80px
+
+	.icon-block
+		width: 127px
+		height: 127px
+		background: $pink-bg
+		border-radius: 50% 
+		margin-left: auto
+		margin-right: auto
+		display: flex 
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		text-align: center
+		position: relative
+		box-shadow: 0 0 0 4px $pink-bg
+		border: 1px solid white 
+
+		&_center 
+			
+			&::after 
+				content: '' 
+				display: block 
+				position: absolute
+				top: 50%
+				left: -60%
+				background: linear-gradient(90deg, white 0%, $super-light-grey 50%, $super-light-grey 100%)
+				width: 48%
+				height: 1px
+
+			&::before
+				content: '' 
+				display: block 
+				position: absolute
+				top: 50%
+				right: -60% 
+				background: linear-gradient(90deg, $super-light-grey 0%, $super-light-grey 50%, white 100%)
+				width: 48%
+				height: 1px
+
+	.desc 
+		margin-top: 40px
+		text-align: center
+		max-width: 260px 
+		margin-left: auto
+		margin-right: auto
+		color: #000000
+		font-size: 16px
+		font-weight: 300
+		line-height: 20px
 
 
-		
+.special-offer 
+	padding-bottom: 60px
+	position: relative
+	margin-top: 40px
+	padding-top: 110px
+	margin-bottom: 40px
+	text-align: center
+
+	.title-with-sub 
+		margin-bottom: 40px
+
+		&::after 
+			width: 30%
+			background: linear-gradient(90deg, transparent 0%, $super-light-grey 50%, $super-light-grey 100%)
+
+		&::before 
+			width: 30%
+			background: linear-gradient(90deg, $super-light-grey 0%, $super-light-grey 50%, transparent 100%)
 
 
 
+	&::after 
+		z-index: -1
+		content: ""
+		display: block 
+		position: absolute
+		top: 0
+		left: 0
+		height: 368px
+		width: 100%
+		background-size: 100% auto 
+		background: url('../img/text-wave.png') top left no-repeat $pink-bg
 
+	&::before 
+		z-index: -1
+		content: ""
+		display: block 
+		position: absolute
+		bottom: 0
+		left: 0
+		height: 122px
+		width: 100%
+		background-size: 100% auto 
+		background: url('../img/text-wave.png') top left no-repeat
+		transform: rotate(180deg) 
+
+	.offer-text 
+		margin-bottom: 50px
+		text-align: center
+		color: #000000
+		font-size: 24px
+		font-weight: 300
+		line-height: 28px
+
+	.btn-accent 
+		margin-left: auto
+		margin-right: auto
+
+	
+	
