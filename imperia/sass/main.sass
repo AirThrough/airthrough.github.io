@@ -3235,4 +3235,374 @@ ul
 		margin-right: auto
 
 	
+// INFO1 page
+
+.info-delivery 
+	padding-bottom: 100px
+
+	.aside-menu
+		margin-top: 205px
+
+	.h2 
+		margin-top: 70px
+		margin-bottom: 35px
+
+		&::before 
+			top: 24px
+
+		&::after 
+			top: 24px
+
+	.delivery-text 
+		text-align: center
+		color: #000000
+		font-size: 16px
+		font-weight: 300
+		line-height: 24px
+		margin-bottom: 20px
+
+	.delivery-way 
+		padding-top: 25px
+		padding-bottom: 25px
+		position: relative
+		
+
+		&::before 
+			content: "" 
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, transparent 0%, transparent 20%, rgba(0,0,0,0.15) 50%, transparent 80%, transparent 100%) 
+
+
+
+		&-title 
+			margin-top: 15px
+			text-align: center
+			color: #000000
+			font-family: "Fontin Sans CR"
+			font-size: 18px
+			font-weight: 700
+			text-transform: uppercase
+			letter-spacing: 1.8px
+			margin-bottom: 20px
+
+		&-stats 
+
+			.stats-row 
+				display: flex 
+				flex-direction: row 
+				justify-content: space-between
+				align-items: center
+				margin-bottom: 10px
+
+				li 
+					&:first-child 
+						color: #a7a9ac
+						font-size: 16px
+						font-weight: 300
+
+					&:nth-child(2) 
+						color: #000000
+						font-size: 16px
+						font-weight: 300
+
+		&-desc 
+			text-align: center
+			color: #a7a9ac
+			font-size: 16px
+			font-weight: 300
+			line-height: 24px
+
+			.bold 
+				color: #000
+				font-weight: 500
+
+
+.geo 
+	background: #faebe6
+	padding-bottom: 60px
+
+	&-title-row 
+		position: relative
+		margin-bottom: 40px
+
+		&::after 
+			z-index: 0
+			content: ""
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: url('../img/header-texture_white.png') white
+
+
+	&-title 
+		z-index: 2
+		position: relative
+		text-align: center
+		padding-top: 60px
+		padding-bottom: 40px
+		color: #000000
+		font-family: "Fontin Sans CR"
+		font-size: 24px
+		font-weight: 700
+		line-height: 46px
+		text-transform: uppercase
+		letter-spacing: 2.4px
+		
+
+		.large 
+			font-size: 42px
+			letter-spacing: 4.2px
+		
+	&-map 
+		margin-top: 20px
+		position: relative
+
+	&-marker 
+		position: absolute
+		cursor: pointer
+
+		&:hover 
+
+			.geo-dot 
+				transform: scale(2) 
+				transition: 0.45s all ease-in-out
+
+			.geo-caption 
+				z-index: 200
+				opacity: 1 
+				transform: translateY(0px) 
+				transition: 0.45s transform ease-in-out, 0.45s opacity ease-in-out, 0s z-index linear
+
+		&-1 
+			left: 15px
+			top: 166px
+
+		&-2 
+			left: 47px
+			top: 116px
+
+		&-3 
+			left: 88px
+			top: 142px
+
+		&-4 
+			left: 115px
+			top: 100px
+
+		&-5 
+			left: 161px
+			top: 137px
+
+		&-6 
+			left: 235px
+			top: 166px
+
+		&-7 
+			top: 104px
+			left: 342px
+
+
+	&-dot 
+		width: 20px
+		height: 20px
+		background: url('../img/geo-marker.png') 100% center no-repeat
+		background-size: cover
+		transform: scale(1)
+		transition: 0.45s all ease-in-out
+
+	&-caption
+		position: absolute
+		z-index: -200
+		bottom: 20px
+		left: -60px
+		padding-top: 18px
+		padding-bottom: 18px
+		padding-left: 12px
+		padding-right: 12px
+		background: white 
+		text-align: center
+		color: #000000
+		font-size: 12px
+		font-weight: 300
+		line-height: 18px
+		border-radius: 10px 
+		min-width: 140px 
+		opacity: 0 
+		transform: translateY(-10px) 
+		transition: 0.45s transform ease-in-out, 0.45s opacity ease-in-out, 0s z-index linear
+
+		.bold 
+			font-weight: 700
+
+		&::after 
+			content: ""
+			display: block 
+			position: absolute
+			bottom: -12px
+			left: 50%
+			margin-left: -10px
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 12px 10px 0 10px 
+			border-color: white transparent transparent transparent
+
+	&-text-title 
+		padding-left: 60px
+		font-family: "Fontin Sans CR"
+		font-size: 18px
+		font-weight: 700
+		letter-spacing: 1.8px
+		line-height: 22px
+		text-transform: uppercase
+		margin-bottom: 15px
+
+	&-text 
+		padding-left: 60px
+		color: #000000
+		font-size: 14px
+		font-weight: 300
+		line-height: 20px
+
+		p 
+			margin-top: 0
+
+	&-bottom 
+		margin-top: 20px
+		padding-top: 20px
+		padding-bottom: 20px
+		position: relative
+
+		&::after 
+			content: "" 
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.25), transparent 100%) 
+
+
+
+
+	&-form 
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		align-items: center
+
+	.select-block 
+		display: flex 
+		flex-direction: row 
+		justify-content: flex-start
+		align-items: center
+
+
+	.select-title 
+		white-space: nowrap
+		color: #a7a9ac
+		font-weight: 300
+		letter-spacing: 1.2px
+		text-transform: uppercase
+		margin-right: 10px
+		font-size: 12px 
 	
+	.nice-select
+		border: none 
+		line-height: 0
+		float: none 
+		height: auto
+		background: transparent
+
+		&.open 
+
+			.list 
+				z-index: 200
+
+			&::after 
+				transform: rotate(180deg)
+				transition: 0.25s all ease-in-out
+
+
+		.list 
+			width: 113%
+			margin-top: 29px
+
+		.current
+			font-weight: 700
+			letter-spacing: 1.2px
+			color: #000000
+			text-transform: uppercase
+			font-size: 12px
+
+		&::after 
+			height: 20px
+			width: 20px
+			background: url('../img/arrow_bottom.png') no-repeat 100% center
+			transform: rotate(0deg)
+			border: none 
+			margin-top: -10px
+			right: 0
+			transform-origin: 50% 50%
+			transition: 0.25s all ease-in-out
+
+	.confirm-block 
+		width: 220px
+
+		.btn-accent
+			width: 100%
+
+			&::after 
+				width: 100%
+				left: 0
+
+			&::before 
+				width: 100%
+				left: 0
+
+
+	&-world 
+		margin-bottom: 80px
+
+		.geo-marker 
+
+			&-1
+				top: 46px
+				left: 45px
+
+			&-2 
+				top: 2px
+				left: 164px
+
+			&-3 
+				top: 159px
+				left: 111px
+
+			&-4 
+				top: 150px
+				left: 251px
+
+			&-5 
+				top: 34px
+				left: 254px
+
+			&-6 
+				top: 17px
+				left: 415px
+
+			&-7 
+				top: 183px
+				left: 435px
+
+
+
+
