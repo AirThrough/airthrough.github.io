@@ -7,22 +7,60 @@
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/all.min.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
 </head>
 <body>
 
 	<header class="header">
+		<div class="header-mobile">
+
+			<div class="top-mobile">
+				<a href="#" class="register user-links">Регистрация</a>
+				<a href="#" class="authorize user-links">Личный кабинет</a>
+			</div>
+
+			
+
+			<ul class="main-menu">
+				<li class="active"><a  href="#">Главная</a></li>
+				<li><a href="#">Каталог</a></li>
+				<li><a href="#">Акции</a></li>
+				<li><a href="#">Новости</a></li>
+				<li><a href="#">Информация</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+
+			<div class="top-main-header_wrapper">
+
+				<form action="" class="search-form">
+					<input type="search" class="input-search">
+					<button type="submit" class="search-submit"></button>
+				</form>
+
+				<div class="cart-block">
+					<a href="#" class="cart-link">Корзина</a>
+				</div>
+
+			</div>
+		</div>
 
 
 		<div class="top-header">
+
+			
 			
 			<div class="container">
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-md-3 col-xs-4">
 						<div class="header-title">Торговый дом Империя</div>
 						<p class="header-desc">Продажа кондитеркских изделий 
 						от производителя</p>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 col-xs-8">
+						<div class="open-menu-wrap">
+							<div class="button-mobile"></div>
+						</div>
+						
 						<div class="callback-block">
 							<a class="phone-link" href="tel:+70000000000">+7 (000) 000-00-00</a>
 							<button class="text-gradient">Заказать звонок</button>
@@ -105,6 +143,7 @@
 
 		
 	</header>
+
 	
 	<div class="breadcumbs">
 		<div class="container">
@@ -151,7 +190,7 @@
 					<div class="newslist-items">
 						
 						<div class="row">
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-4">
 								<div class="last-news-item">
 									<img src="img/last-news-1.jpg" alt="">
 									<div class="last-news-title">Заголовок</div>
@@ -162,7 +201,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-4">
 								<div class="last-news-item">
 									<img src="img/last-news-2.jpg" alt="">
 									<div class="last-news-title">Длинный
@@ -174,7 +213,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-4">
 								<div class="last-news-item">
 									<img src="img/last-news-3.jpg" alt="">
 									<div class="last-news-title">Средний заголовок</div>
@@ -186,7 +225,7 @@
 								</div>
 							</div>
 
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-4">
 								<div class="last-news-item">
 									<img src="img/last-news-1.jpg" alt="">
 									<div class="last-news-title">Заголовок</div>
@@ -197,7 +236,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-4">
 								<div class="last-news-item">
 									<img src="img/last-news-2.jpg" alt="">
 									<div class="last-news-title">Длинный
@@ -209,7 +248,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-4">
 								<div class="last-news-item">
 									<img src="img/last-news-3.jpg" alt="">
 									<div class="last-news-title">Средний заголовок</div>
@@ -221,7 +260,7 @@
 								</div>
 							</div>
 
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-4">
 								<div class="last-news-item">
 									<img src="img/last-news-1.jpg" alt="">
 									<div class="last-news-title">Заголовок</div>
@@ -232,7 +271,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-4">
 								<div class="last-news-item">
 									<img src="img/last-news-2.jpg" alt="">
 									<div class="last-news-title">Длинный
@@ -244,7 +283,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 col-sm-4">
 								<div class="last-news-item">
 									<img src="img/last-news-3.jpg" alt="">
 									<div class="last-news-title">Средний заголовок</div>
@@ -336,7 +375,7 @@
 		<div class="footer-contacts-row">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-md-3 col-sm-6">
 						<div class="footer-soc-media-wrapper">
 							<div class="footer-soc-title">Мессенджеры</div>
 							<div class="soc-media-row">
@@ -352,7 +391,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-3 col-sm-6">
 						<div class="footer-soc-media-wrapper">
 							<div class="footer-soc-title">Социальные сети</div>
 							<div class="soc-media-row">
@@ -368,17 +407,17 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-3 col-sm-6">
 
 						<div class="footer-contact-item contact-phone">8 (800) 000-00-00</div>
 						<div class="footer-contact-item contact-address">г. Вологда, <br>
 							ул. Большая Улочная, <br>
 						стр. 14, к-2, офис 87</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-3 col-sm-6">
 
 						<div class="footer-contact-item contact-mail">info@emailname.ru</div>
-						<div class="footer-contact-item contact-worktime">Пн-Пт — 10:00 - 22:00
+						<div class="footer-contact-item contact-worktime">Пн-Пт — 10:00 - 22:00 <br>
 						Сб-Вс — 10:00 - 22:00</div>
 					</div>
 				</div>
@@ -442,7 +481,6 @@
 
 
 		</footer>
-
 
 		<script src="js/all.min.js"></script>
 		<script src="js/app.js"></script>

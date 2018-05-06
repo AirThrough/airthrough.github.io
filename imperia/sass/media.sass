@@ -10,13 +10,14 @@ $btn-brown: #480d0c
 $accent: #f6e180
 
 
-@media (min-width: 1200px)
+@media (min-width: 992px)
 	.header-mobile, .button-mobile 
 		display: none 
 
 
-@media (min-width: 0) and (max-width: 450px) 
 
+
+@media (min-width: 0) and (max-width: 768px) 
 
 	.container 
 		padding-left: 15px
@@ -64,6 +65,7 @@ $accent: #f6e180
 		min-height: 77px
 
 		.top-header 
+			text-align: right
 			.register, .authorize 
 				display: none !important
 
@@ -109,6 +111,7 @@ $accent: #f6e180
 					font-size: 17px
 
 				.phone-link 
+					display: block
 					white-space: nowrap 
 					padding: 0
 					border: none 
@@ -175,11 +178,19 @@ $accent: #f6e180
 		&::after
 			display: none 
 
+		.title 
+
+			.large 
+				font-size: 30px 
+
 	.client-row
 		flex-wrap: wrap
+		justify-content: center
 
 		.client-item 
 			margin-bottom: 40px
+			margin-right: 10px
+			margin-left: 10px
 
 	.client::after 
 		height: 100%
@@ -537,8 +548,406 @@ $accent: #f6e180
 			border-radius: 20px 
 			background: linear-gradient(90deg, #986c35 0%, #e4cc72 50%, #986c35 100%)
 			transition: 0.45s all ease-in-out
+	
+	// NEWSLIST PAGE
+	.newslist, .newsitem, .team, .info-delivery    
+		margin-top: 20px
+
+		& > .container > .row 
+			display: flex 
+			flex-direction: column
+
+			& > .col-md-3 
+				order: 2
+
+		.aside-menu-list
+			margin-top: 40px
+			margin-bottom: 0px
+
+	// NEWSITEM 
+
+	.newsitem .text-two-columns
+		column-count: 1
+
+	.newsitem-share-block
+		flex-wrap: wrap 
+		justify-content: center
+	.newsitem .share-links .soc
+		margin-top: 15px
+		&:last-child
+			margin-right: 0
+	.subscribe-title
+		font-size: 28px 
+		line-height: normal
+	.subscribe-subtitle
+		font-size: 18px 
+		line-height: 30px
+	.subscribe-desc
+		font-size: 18px 
+		br 
+			display: none 
+	.subscribe-text
+		font-size: 16px 
+	.subscribe-block .policy-href
+		position: relative
+		top: 0
+		left: 0
+		margin-top: 20px
+	.subscribe-block .btn-accent
+		margin-left: auto
+		margin-right: auto
+
+
+	// CATALOG PAGE 
+
+	.breadcumbs .breadcumbs-list 
+		flex-wrap: wrap
+		li
+			margin-right: 15px
+
+			&::after 
+				right: -10px
+
+			a
+				font-size: 11px 
+
+	.catalog
+
+		.title-page 
+			display: none 
+
+		.center-nav-row
+			flex-direction: column 
+
+			& > div 
+				margin-bottom: 20px
+
+		&-item 
+
+			.img-block 
+				margin-left: auto
+				margin-right: auto
+
+		.text-two-columns
+			column-count: 1
+
+	// PRODUCT PAGE 
+
+	.product-main-info .product-slider .owl-nav button.owl-prev
+		left: 0
+	.product-main-info .product-slider .owl-nav button.owl-next 
+		right: 0
+	.product-main-info .product-slider_bottom
+		margin-bottom: 30px
+	.product-main-info .product-buttons .btn-accent
+		margin-bottom: 20px
+	.product-main-info
+		margin-bottom: 20px
+	.product-consist
+		padding-top: 0
+	.order-params .desc
+		margin-bottom: 30px
+	.special-offer .offer-text
+		font-size: 20px 
+		line-height: 25px
+
+		br 
+			display: none 
+
+	// contacts 
+
+	.contacts
+		margin-top: 0
+		padding-bottom: 40px
+		&::after
+			height: 100%
+
+	.contacts-item .icon-block
+		height: 100px
+		margin-bottom: 0
+		margin-top: 20px
+
+	.contact-us .bottom-form
+
+		&::after 
+			display: none 
+		&::before 
+			display: none 
+
+	// info2 
+
+	.team .team-list .team-member-item
+		padding-left: 0
+		&:last-child
+			margin-bottom: 0
+			padding-bottom: 0
+	.team .team-list .team-member-item .img-block
+		position: relative
+		top: 0
+		left: 0
+	.team .team-list .team-member-item
+		text-align: center
+		.img-block
+			margin-left: auto
+			margin-right: auto
+	.job
+		margin-top: 0
+		background-size: cover
+	.team .aside-menu
+		margin-top: 0
+		.aside-menu-list
+			margin-top: 10px
+
+	// info3 
+	.company-inside
+		.aside-menu
+			margin-top: 30px
+		.aside-menu-list
+			margin-top: 0
+	.company-inside .text-two-columns
+		column-count: 1
+	.company-inside .office-block .office-item
+		margin-bottom: 30px
+	.company-inside .company-advantages .title-with-sub
+		margin-top: 0
+		padding-top: 30px
+		margin-bottom: 20px
+
+
+
+	//info1
+
+	.geo
+		overflow: hidden
+
+		&-map 
+			overflow-x: scroll
+
+	.info-delivery .h2
+		margin-top: 30px
+	.info-delivery .aside-menu
+		margin-top: 20px
+	.geo-text
+		text-align: center
+		padding-left: 0
+	.geo-text-title
+		padding-left: 0
+		text-align: center
+		margin-top: 30px
+	.geo-form
+		display: flex 
+		flex-direction: column 
+		& > div 
+			margin-bottom: 20px
+			margin-top: 20px
+
+	// login1
+
+	.info-user-block
+		text-align: center
+
+	//login2 
+
+	.cabinet .recents-table .trow li
+		font-size: 11px
+
+	.cabinet .recents-table .thead li
+		font-size: 12px 
+		line-height: normal
+	.recents-table
+		margin-top: 40px
+
+ 
+
+	
+
+
+@media (min-width: 0) and (max-width: 360px)
+	
+	.open-menu-wrap
+		left: 10%
+
+	.header .top-header .header-title
+		font-size: 13px 
+
+@media (min-width: 450px) and (max-width: 768px)
+
+	.header .top-header .header-title
+		line-height: 37px
+
+	.achieve-item
+		margin-bottom: 0px
+
+	// newslist 
+
+	.newslist-items 
+		.row 
+			.col-md-4
+				width: 49%
+				display: inline-block
+
+	// product page 
+
+	.product-main-info .product-slider
+		max-width: 450px 
+	.product-main-info .product-buttons .btn-accent
+		width: 300px
+		margin-left: auto
+		margin-right: auto
+		display: block
+
+	.special-offer::before
+		bottom: -21px
+
+	// contacts 
+
+	.contact-us
+		padding-top: 20px
+
+		&::after
+			top: 0
+
+	// newsitem 
+	.newsitem-share-block
+		flex-wrap: wrap 
+		justify-content: space-between
+
+	//info3 
+	.consult .img-wrap
+		margin-left: auto
+		margin-right: auto
+		text-align: center
+	.consult-form
+		max-width: 400px
+		margin-left: auto
+		margin-right: auto
 
 
 
 
 
+
+
+
+@media (min-width: 768px) and (max-width: 992px)
+
+	.footer 
+
+		&-nav 
+			flex-direction: row 
+			justify-content: flex-start
+			align-items: flex-start
+
+			&-title 
+				text-align: left
+
+			&-col 
+				li 
+					text-align: left
+
+		.soc-media-row
+			flex-direction: row 
+			justify-content: flex-start
+
+		&-soc-title
+			text-align: left
+
+		&-contact-item
+			text-align: left
+
+			&::after 
+				left: 0
+
+	.newslist 
+		margin-top: 20px
+
+		& > .container > .row 
+			display: flex 
+			flex-direction: column
+
+			& > .col-md-3 
+				order: 2
+
+		.aside-menu-list
+			margin-top: 40px
+			margin-bottom: 0px
+
+	.newsitem 
+		margin-top: 20px
+
+		& > .container > .row 
+			display: block
+
+		.aside-menu-list
+			width: 100%
+
+	// catalog 
+
+	
+	.catalog
+
+		.title-page 
+			display: none 
+
+		.center-nav-row
+			flex-direction: row 
+
+			& > div 
+				margin-bottom: 0px
+
+	.catalog .aside-menu .aside-menu-list
+		margin-top: 100px
+		width: 100%
+	
+	// product 
+
+	.order-params .desc
+		br 
+			display: none 
+
+	.special-offer::before
+		bottom: -42px
+
+	// contacts 
+
+	.contacts-text
+		height: 50px
+
+	// info3 
+	.company-inside .aside-menu-list
+		width: 100%
+		margin-top: 100px
+	.company-inside .office-block .office-item
+		width: 170px
+		height: 170px
+
+		&::after 
+			width: 95.23%
+			height: 95.23%
+			top: 2.3%
+			left: 2.3%
+
+
+
+
+@media (min-width: 992px) and (max-width: 1200px)
+
+	.text-section::after
+		right: 0
+
+	.candy-bg 
+		display: none 
+
+	.subscribe-block .btn-accent
+		width: 100%
+		margin-left: 0
+
+		&::after 
+			width: 100%
+			left: 0
+		&::before
+			width: 100%
+			left: 0
+	.job
+		margin-top: 0
+		background-size: cover
