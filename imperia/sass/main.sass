@@ -21,6 +21,9 @@ a
 	&:hover 
 		text-decoration: none
 
+	&:focus 
+		outline: none 
+
 input, textarea 
 	&:focus 
 		outline: none 
@@ -33,6 +36,10 @@ ul
 	li 
 		padding: 0
 		margin: 0
+
+button 
+	&:focus 
+		outline: none 
 
 .title-with-sub 
 	text-align: center
@@ -86,12 +93,42 @@ ul
 		height: 20px
 		margin-right: 10px
 		display: inline-block
+		opacity: 0.8	
+		transform: translateX(-1px) translateZ(-1px) translateY(1px)
+		z-index: 400
+		transition: 0.25s all ease-in-out
+		cursor: pointer
+
+		&.active
+			filter: brightness(130%)
+			opacity: 1	
+			transition: 0.25s all ease-in-out
+
+		&:hover 
+			filter: brightness(130%)
+			opacity: 1	
+			transition: 0.25s all ease-in-out
 
 	.scope-down 
 		background: url('../img/dislike.png') no-repeat
 		width: 20px
 		height: 20px
 		display: inline-block
+		opacity: 0.8	
+		transform: translateX(-1px) translateZ(-1px) translateY(1px)
+		z-index: 400
+		transition: 0.25s all ease-in-out
+		cursor: pointer
+
+		&.active
+			filter: brightness(130%)
+			opacity: 1	
+			transition: 0.25s all ease-in-out
+
+		&:hover 
+			filter: brightness(130%)
+			opacity: 1	
+			transition: 0.25s all ease-in-out
 
 
 .input-block 
@@ -990,6 +1027,7 @@ ul
 
 .video-block 
 	background: url('../img/picture-2.jpg') no-repeat
+	background-size: cover
 	padding-top: 20px
 	padding-bottom: 20px
 
@@ -1064,7 +1102,7 @@ ul
 		content: ""
 		display: block 
 		background: url('../img/header-texture_white.png') white 
-		height: 297px
+		height: 313px
 		width: 100%
 		position: absolute 
 		bottom: 0
@@ -1128,24 +1166,25 @@ ul
 
 	.candy-bg 
 		position: absolute
+		will-change: transform
 
 		&-1 
 			background: url('../img/candy-bg-1.png') no-repeat
 			width: 222px
 			height: 207px
-			top: 182px
+			top: 2782px
 			right: 0
 		&-2 
 			background: url('../img/candy-bg-2.png') no-repeat
 			width: 260px
 			height: 228px
 			left: 0
-			top: 405px
+			top: 2605px
 		&-3 
 			background: url('../img/candy-bg-3.png') no-repeat
 			width: 216px
 			height: 267px
-			top: 715px
+			top: 3015px
 			right: 0
 
 	&-item 
@@ -1194,11 +1233,12 @@ ul
 			width: 238px
 			height: 227px
 			background: url('../img/candy-bg-4.png') no-repeat
-			top: 300px
+			top: 2800px
 			left: 0
 
 
 	&-item 
+		display: block 
 		margin-left: auto
 		margin-right: auto
 		width: 300px
@@ -1208,6 +1248,7 @@ ul
 		position: relative
 		padding: 20px
 		padding-top: 168px
+		cursor: pointer
 
 		&:hover 
 

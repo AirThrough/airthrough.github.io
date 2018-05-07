@@ -150,7 +150,8 @@
 
 		<div class="banner-slider owl-carousel">
 			
-			<div class="banner-item" style="background: url('img/picture-1.png') no-repeat;">
+			<div class="banner-item" style="background: url('img/picture-1.png') no-repeat; -webkit-background-size: cover;
+			background-size: cover;">
 
 				<div class="container">
 					<div class="row">
@@ -174,7 +175,8 @@
 
 			</div>
 
-			<div class="banner-item"  style="background: url(img/picture-2.jpg) no-repeat;">
+			<div class="banner-item"  style="background: url(img/picture-2.jpg) no-repeat; -webkit-background-size: cover;
+			background-size: cover;">
 
 				<div class="container">
 					<div class="row">
@@ -197,7 +199,8 @@
 
 			</div>
 
-			<div class="banner-item"  style="background: url(img/picture-1.png) no-repeat;">
+			<div class="banner-item"  style="background: url(img/picture-1.png) no-repeat; -webkit-background-size: cover;
+			background-size: cover;">
 
 				<div class="container">
 					<div class="row">
@@ -221,7 +224,8 @@
 
 			</div>
 
-			<div class="banner-item"  style="background: url(img/picture-2.jpg) no-repeat;">
+			<div class="banner-item"  style="background: url(img/picture-2.jpg) no-repeat; -webkit-background-size: cover;
+			background-size: cover;">
 
 				<div class="container">
 					<div class="row">
@@ -416,7 +420,7 @@
 				
 				<div class="col-md-6">
 					
-					<h3 class="title"><span class="large">Вологодская</span><br>Кондитерская фабрика</h3>
+					<h1 class="title"><span class="large">Вологодская</span><br>Кондитерская фабрика</h1>
 
 					<p>«Красный Октябрь» – старейшее предприятие кондитерской отрасли страны, которое является одним из крупнейших и известнейших московских производителей кондитерских изделий в России.</p>
 					<p>Официальной датой основания предприятия считается 1851 год. В этот год на Арбате начала работу мастерская по изготовлению конфет и шоколада, открытая поданным Вюртемберга Теодором Фердинандом фон Эйнемом. В 1867 году в справочнике «Фабрично-заводские предприятия Российской империи» появляется запись: «Эйнем. Товарищество паровой фабрики шоколада, конфет и чайных печений». После октябрьской революции фабрика была национализирована и получила название «Государственная кондитерская фабрика № 1, бывшая Эйнем». В 1922 году ей присвоили имя «Красный Октябрь». Репутация фабрики – качественного производителя кондитерских изделий и заботливого работодателя была сохранена. Фабрика выделялась среди остальных высокой трудовой культурой и дополнительными благами, которыми пользовались сотрудники предприятия, поэтому работать здесь было престижно.</p>
@@ -488,10 +492,10 @@
 		</div>
 	</section>
 
-	<section class="achieve">
-		<div class="candy-bg candy-bg-1"></div>
-		<div class="candy-bg candy-bg-2"></div>
-		<div class="candy-bg candy-bg-3"></div>
+	<section class="achieve" >
+		<div class="candy-bg candy-bg-1 parallaxy-animate block-1"   parallaxy-options='{"multiplier":"0.6"}'></div>
+		<div class="candy-bg candy-bg-2 parallaxy-animate block-2" parallaxy-options='{"multiplier":"0.5"}'></div>
+		<div class="candy-bg candy-bg-3 parallaxy-animate block-3" parallaxy-options='{"multiplier":"0.5"}'></div>
 		<div class="container">
 			<div class="row">
 				<h2 class="h2">Достижения</h2>
@@ -554,7 +558,7 @@
 	</section>
 
 	<section class="last-news">
-		<div class="candy-bg candy-bg-4"></div>
+		<div class="candy-bg candy-bg-4 parallaxy-animate block-4" parallaxy-options='{"multiplier":"0.5"}'></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -622,11 +626,11 @@
 			<div class="row">
 				<div class="col-md-12">
 
-					<div class="title-with-sub">
+					<h2 class="title-with-sub">
 						<span class="large">Заказ</span> <br>
 						кондитерских изделий <br>
 						через торговый дом империя
-					</div>
+					</h2>
 
 				</div>
 			</div>
@@ -825,11 +829,15 @@
 			</div>
 
 
-		</footer>
+	</footer>
 
 
 		<script src="js/all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.6/jquery.mousewheel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
 		<script src="js/app.js"></script>
+
 
 	</body>
 	</html>
