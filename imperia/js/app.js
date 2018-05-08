@@ -90,7 +90,54 @@ $(document).ready(function(){
 		$(".geo-text-russia-wrap").css({
 			height: $(".geo-text-russia.chosen").outerHeight()
 		});
+	});
 
+	$(".geo-text-world-wrap").css({
+			height: $(".geo-text-world.chosen").outerHeight()
+		});
+
+	$("#geo-world-region").change(function(){
+
+		var cur_reg = $(this).val();
+
+		if (!$(".geo-map-world .geo-marker-"+cur_reg).hasClass('chosen')) {
+			$(".geo-map-world .geo-marker").removeClass('chosen');
+			$(".geo-map-world .geo-marker-"+cur_reg).addClass('chosen');
+		}
+
+		if (!$(".geo-text-world.geo-text-"+cur_reg).hasClass('chosen')) {
+			$(".geo-text-world").removeClass('chosen');
+			$(".geo-text-world.geo-text-"+cur_reg).addClass('chosen');
+		}
+
+		$(".geo-text-world-wrap").css({
+			height: $(".geo-text-world.chosen").outerHeight()
+		});
+
+
+	});
+
+	$(".geo-map-russia .geo-marker").click(function(){
+
+		if (!$(this).hasClass('chosen')) {
+			$(".geo-map-russia .geo-marker").removeClass('chosen');
+			$(this).addClass('chosen');
+			$("#geo-russia-region").val($(this).data('value'));
+			document.getElementById("geo-russia-region").selectedIndex = +($(this).data('value'))-1;
+			$('#geo-russia-region').niceSelect('update');
+		}
+
+	});
+
+	$(".geo-map-world .geo-marker").click(function(){
+
+		if (!$(this).hasClass('chosen')) {
+			$(".geo-map-world .geo-marker").removeClass('chosen');
+			$(this).addClass('chosen');
+			$("#geo-world-region").val($(this).data('value'));
+			document.getElementById("geo-world-region").selectedIndex = +($(this).data('value'))-1;
+			$('#geo-world-region').niceSelect('update');
+		}
 
 	});
 

@@ -4043,7 +4043,7 @@ button:focus {
     font-size: 14px;
     font-weight: 300;
     line-height: 20px; }
-    .geo-text-russia {
+    .geo-text-russia, .geo-text-world {
       opacity: 0;
       z-index: -99999999;
       position: absolute;
@@ -4052,7 +4052,7 @@ button:focus {
       -o-transition: 0.45s transform ease-in-out, 0.45s opacity ease-in-out, 0.45s z-index linear;
       transition: 0.45s transform ease-in-out, 0.45s opacity ease-in-out, 0.45s z-index linear;
       transition: 0.45s transform ease-in-out, 0.45s opacity ease-in-out, 0.45s z-index linear, 0.45s -webkit-transform ease-in-out; }
-      .geo-text-russia.chosen {
+      .geo-text-russia.chosen, .geo-text-world.chosen {
         z-index: 1;
         opacity: 1;
         -webkit-transition: 0.45s opacity ease-in-out, 0s z-index linear, 0.45s -webkit-transform ease-in-out;
@@ -4067,6 +4067,8 @@ button:focus {
     padding-top: 20px;
     padding-bottom: 20px;
     position: relative; }
+    .geo-bottom .input-block {
+      margin-bottom: 0; }
     .geo-bottom::after {
       content: "";
       display: block;
@@ -4179,20 +4181,20 @@ button:focus {
       top: 46px;
       left: 45px; }
     .geo-world .geo-marker-2 {
-      top: 2px;
-      left: 164px; }
-    .geo-world .geo-marker-3 {
       top: 159px;
       left: 111px; }
+    .geo-world .geo-marker-3 {
+      top: 43px;
+      left: 219px; }
     .geo-world .geo-marker-4 {
-      top: 150px;
-      left: 251px; }
-    .geo-world .geo-marker-5 {
       top: 34px;
       left: 254px; }
+    .geo-world .geo-marker-5 {
+      top: 69px;
+      left: 349px; }
     .geo-world .geo-marker-6 {
-      top: 17px;
-      left: 415px; }
+      top: 150px;
+      left: 251px; }
     .geo-world .geo-marker-7 {
       top: 183px;
       left: 435px; }
