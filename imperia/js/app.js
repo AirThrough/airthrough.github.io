@@ -67,6 +67,33 @@ $(document).ready(function(){
 		$(this).next('.sub-menu').slideToggle();
 	});
 
+	// MAP 
+
+	$(".geo-text-russia-wrap").css({
+			height: $(".geo-text-russia.chosen").outerHeight()
+		});
+
+	$("#geo-russia-region").change(function(){
+
+		var cur_reg = $(this).val();
+
+		if (!$(".geo-map-russia .geo-marker-"+cur_reg).hasClass('chosen')) {
+			$(".geo-map-russia .geo-marker").removeClass('chosen');
+			$(".geo-map-russia .geo-marker-"+cur_reg).addClass('chosen');
+		}
+
+		if (!$(".geo-text-russia.geo-text-"+cur_reg).hasClass('chosen')) {
+			$(".geo-text-russia").removeClass('chosen');
+			$(".geo-text-russia.geo-text-"+cur_reg).addClass('chosen');
+		}
+
+		$(".geo-text-russia-wrap").css({
+			height: $(".geo-text-russia.chosen").outerHeight()
+		});
+
+
+	});
+
 
 
 	function translate(event){

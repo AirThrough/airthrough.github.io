@@ -139,10 +139,6 @@ button
 			background-position: -30px 0 
 			transition: 0.25s all ease-in-out
 
-		// // &::after 
-		// // 	transform: translateZ(-1px) scaleX(1.2) 
-		// 	transition: 0.25s all ease-in-out
-
 	&::after 
 		display: block
 		content: ""
@@ -438,6 +434,18 @@ button
 	background: url('../img/header-texture_white.png')
 	padding-top: 20px
 	padding-bottom: 20px 
+	position: relative
+
+	&::after 
+		content: "" 
+		display: block
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 1px
+		background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.15), transparent 100%) 
+
 
 	.breadcumbs-list 
 		display: flex 
@@ -1815,6 +1823,9 @@ button
 		top: 0
 		left: 0
 		background: url('../img/header-texture_white.png') 
+		border-width: 1px 
+		border-style: solid 
+		border-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.15) 50%, transparent 100%) 1 0%
 
 	&-item 
 
@@ -2029,10 +2040,21 @@ button
 		 
 .subscribe 
 	margin-top: 0px
-	padding-top: 10px
+	padding-top: 170px
 	padding-bottom: 80px
 	background: url('../img/text-wave.png') top left no-repeat $pink-bg
 	background-size: 100% auto 
+
+	.candy-button 
+		margin-top: -5px
+
+		.candy-lines
+
+			&::after 
+				width: 84px
+
+			&::before 
+				width: 102px
 
 	&-title 
 		color: #000000
@@ -3639,6 +3661,18 @@ button
 		position: absolute
 		cursor: pointer
 
+		&.chosen 
+
+			.geo-dot 
+				transform: scale(2) 
+				transition: 0.45s all ease-in-out
+
+			.geo-caption 
+				z-index: 200
+				opacity: 1 
+				transform: translateY(0px) 
+				transition: 0.45s transform ease-in-out, 0.45s opacity ease-in-out, 0s z-index linear
+
 		&:hover 
 
 			.geo-dot 
@@ -3652,30 +3686,34 @@ button
 				transition: 0.45s transform ease-in-out, 0.45s opacity ease-in-out, 0s z-index linear
 
 		&-1 
-			left: 15px
-			top: 166px
-
-		&-2 
 			left: 47px
 			top: 116px
 
+		&-2 
+			left: 97px
+			top: 87px
+
 		&-3 
+			left: 28px
+			top: 157px
+
+		&-4 
+			top: 181px
+			left: 14px
+
+		&-5 
 			left: 88px
 			top: 142px
 
-		&-4 
-			left: 115px
-			top: 100px
-
-		&-5 
+		&-6 
 			left: 161px
 			top: 137px
 
-		&-6 
+		&-7 
 			left: 235px
 			top: 166px
 
-		&-7 
+		&-8 
 			top: 104px
 			left: 342px
 
@@ -3742,6 +3780,17 @@ button
 		font-weight: 300
 		line-height: 20px
 
+		&-russia 
+			opacity: 0
+			z-index: -99999999
+			position: absolute
+			transition: 0.45s transform ease-in-out, 0.45s opacity ease-in-out, 0.45s z-index linear
+
+			&.chosen 
+				z-index: 1
+				opacity: 1
+				transition: 0.45s transform ease-in-out, 0.45s opacity ease-in-out, 0s z-index linear
+
 		p 
 			margin-top: 0
 
@@ -3788,7 +3837,7 @@ button
 	
 	.nice-select
 		border: none 
-		line-height: 0
+		line-height: normal
 		float: none 
 		height: auto
 		background: transparent
