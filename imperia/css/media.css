@@ -1,3 +1,8 @@
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .special-offer {
+    padding-top: 118px;
+    padding-bottom: 114px; } }
+
 @media (min-width: 992px) {
   .header-mobile, .button-mobile {
     display: none; } }
@@ -655,6 +660,7 @@
   .product-main-info .product-buttons .btn-accent {
     margin-bottom: 20px; }
   .product-main-info {
+    overflow: hidden;
     margin-bottom: 20px; }
   .product-consist {
     padding-top: 0; }
@@ -665,6 +671,9 @@
     line-height: 25px; }
     .special-offer .offer-text br {
       display: none; }
+  .special-offer {
+    padding-top: 27px;
+    padding-bottom: 27px; }
   .contacts {
     margin-top: 0;
     padding-bottom: 40px; }
@@ -872,8 +881,10 @@
     width: 100%; }
   .order-params .desc br {
     display: none; }
-  .special-offer::before {
-    bottom: -42px; }
+  .special-offer {
+    padding-top: 60px; }
+    .special-offer::before {
+      bottom: 90px; }
   .contacts-text {
     height: 50px; }
   .company-inside .aside-menu-list {
@@ -905,4 +916,8 @@
   .job {
     margin-top: 0;
     -webkit-background-size: cover;
-            background-size: cover; } }
+            background-size: cover; }
+  .special-offer {
+    padding-top: 76px; }
+    .special-offer::before {
+      bottom: 75px; } }

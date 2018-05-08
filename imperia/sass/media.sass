@@ -9,6 +9,16 @@ $pink-border: #faeee9
 $btn-brown: #480d0c
 $accent: #f6e180
 
+// DESCTOP ADAPT
+
+@media (min-width: 1200px) and (max-width: 1600px)
+
+	.special-offer
+		padding-top: 118px
+		padding-bottom: 114px
+
+// MOBILE & PLANCHEt
+
 
 @media (min-width: 992px)
 	.header-mobile, .button-mobile 
@@ -642,6 +652,7 @@ $accent: #f6e180
 	.product-main-info .product-buttons .btn-accent
 		margin-bottom: 20px
 	.product-main-info
+		overflow: hidden
 		margin-bottom: 20px
 	.product-consist
 		padding-top: 0
@@ -653,6 +664,10 @@ $accent: #f6e180
 
 		br 
 			display: none 
+
+	.special-offer
+		padding-top: 27px
+		padding-bottom: 27px
 
 	// contacts 
 
@@ -905,8 +920,10 @@ $accent: #f6e180
 		br 
 			display: none 
 
-	.special-offer::before
-		bottom: -42px
+	.special-offer
+		padding-top: 60px
+		&::before
+			bottom: 90px
 
 	// contacts 
 
@@ -951,3 +968,9 @@ $accent: #f6e180
 	.job
 		margin-top: 0
 		background-size: cover
+
+
+	.special-offer
+		padding-top: 76px
+		&::before
+			bottom: 75px

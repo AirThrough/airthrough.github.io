@@ -62,6 +62,11 @@ $(document).ready(function(){
 
 	});
 
+	$(".has-sub > a").click(function(e){
+		e.preventDefault();
+		$(this).next('.sub-menu').slideToggle();
+	});
+
 
 
 	function translate(event){
