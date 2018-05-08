@@ -62,32 +62,7 @@ $(document).ready(function(){
 
 	});
 
-	// PARALLAX 
-	// var cur_dif = 0;
-	// var candy_2_top = $(".achieve .candy-bg-2").css('top');
-	// candy_2_top = +(candy_2_top.substr(0, candy_2_top.length-3));
 
-	// $(window).scroll(function(){
-
-	// 	var achieve_offset = $('.achieve').offset().top;
-	// 	var window_offset = $(window).scrollTop();
-
-	// 	if (achieve_offset <= window_offset+300) {
-
-	// 		cur_dif = (window_offset - achieve_offset)/10;
-
-	// 		var cur_top = $(".achieve .candy-bg-2").css('top');
-
-	// 		cur_top = cur_top.substr(0, cur_top.length-3);
-
-	// 		console.log(cur_dif + +(cur_top)  );
-			
-	// 		$('.achieve .candy-bg-2').animate({
-	// 			'top' : candy_2_top + cur_dif
-	// 		}, 0);
-
-	// 	}
-	// })
 
 	function translate(event){
   var $window = $(window);
@@ -177,6 +152,57 @@ var parallaxController;
     init()
 })();
 
+
+
+/// map
+
+  var check_load = false;
+  var control = $("#map").width();
+  if (control) {
+  
+  $(window).scroll(function(){                              
+   if ( $(window).scrollTop() >= $("#map").offset().top-3000 ){  
+  if (check_load == false) {
+     check_load = true;
+     
+     console.log("yes");
+     console.log($("yamps").width());
+     var script = document.createElement('script');
+script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
+
+document.body.appendChild(script);
+
+script.onload = function(){
+    
+
+   ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [59.22556173748073,39.8806625],
+            zoom: 16
+        });
+         var myPlacemark = new ymaps.Placemark([59.22556173748073,39.8806625], {
+                
+        iconLayout: 'default#imageWithContent',
+        iconImageHref: 'new_leadera/img/logotype.png',
+        iconImageSize: [28, 33],
+        iconImageOffset: [-3, -42],
+        balloonContentBody: '<div class="map-title" style="text-align: center;">г. Вологда, ул. Большая Улочная, <br>стр. 14, к-2, офис 87</div>'
+         
+    });
+        myMap.geoObjects.add(myPlacemark);
+        myMap.behaviors.disable('scrollZoom');
+        myMap.behaviors.disable('multiTouch');
+      // myMap.behaviors.get('drag').options.set('inertia', false);
+      console.log($("yamps").width());
+     
+});
+}
+
+  }
+    
+   }
+});
+}
 
 	
 
