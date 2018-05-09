@@ -236,6 +236,8 @@ button
 	font-size: 16px 
 	font-weight: 300
 
+
+
 .scope-block
 	position: absolute
 	bottom: 15px
@@ -383,7 +385,37 @@ button
 		transition: 0.35s all ease-in-out
 		border-radius: 40px
 
-        
+.btn-white 
+	margin-left: auto
+	margin-right: auto
+	background: linear-gradient(90deg, white 0%, white 20%,  white 40%, white 60%, #ab9f9a 80%, white 100%)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+
+	&:hover 
+		transition: 0.5s all ease-in-out
+		background-position: 50px 0
+
+		&::after 
+			box-shadow: 0 0 0 1px white inset
+			transition: 0.35s all ease-in-out
+			border-radius: 40px
+			opacity: 0 
+			transform: translateZ(-90px) scale(1.2)
+
+
+		&::before 
+			background-position: 35px 0
+			transition: 0.35s all ease-in-out
+			box-shadow: 0 0 0 2px white inset
+			background-color:  #91817c
+
+
+	&::before 
+		background: url('../img/header-texture_white.png') #91817c
+
+	&::after 
+		border-image: linear-gradient(90deg, transparent 0%, white 50%, transparent 100%) 1 0%       
 
 
 
@@ -2476,39 +2508,6 @@ button
 			font-weight: 300
 			line-height: 24px
 			margin-bottom: 46px
-
-
-		.btn-white 
-			margin-left: auto
-			margin-right: auto
-			background: linear-gradient(90deg, white 0%, white 20%,  white 40%, white 60%, #ab9f9a 80%, white 100%)
-			-webkit-background-clip: text
-			-webkit-text-fill-color: transparent
-
-			&:hover 
-				transition: 0.5s all ease-in-out
-				background-position: 50px 0
-
-				&::after 
-					box-shadow: 0 0 0 1px white inset
-					transition: 0.35s all ease-in-out
-					border-radius: 40px
-					opacity: 0 
-					transform: translateZ(-90px) scale(1.2)
-
-
-				&::before 
-					background-position: 35px 0
-					transition: 0.35s all ease-in-out
-					box-shadow: 0 0 0 2px white inset
-					background-color:  #91817c
-
-
-			&::before 
-				background: url('../img/header-texture_white.png') #91817c
-
-			&::after 
-				border-image: linear-gradient(90deg, transparent 0%, white 50%, transparent 100%) 1 0%
 			
 
 // INFO3 PAGE 
@@ -3931,4 +3930,536 @@ button
 
 
 
+
+// reg 1 page 
+
+.reg 
+	padding-top: 80px
+	padding-bottom: 80px
+	position: relative
+	background: url('../img/register-1.jpg') no-repeat
+	background-size: cover 
+	overflow: hidden
+
+	&-redacted 
+
+		.reg-title 
+			line-height: 46px
+
+	&-success 
+
+		.reg-title 
+			margin-top: 30px
+			line-height: 46px
+
+		.reg-desc 
+			font-family: "Fontin Sans CR"
+			font-size: 24px
+			font-weight: 700
+			line-height: 32px
+			text-transform: uppercase
+			letter-spacing: 2.4px
+
+		.reg-submit 
+			padding-top: 60px
+			position: relative
+			padding-bottom: 130px
+
+			&::after 
+				content: ""
+				display: block 
+				position: absolute
+				left: -100%
+				top: 20px
+				width: 300%
+				height: 1px 
+				background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.05) 35%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.05) 65%, transparent 100%)
+
+
+
+
+	&::after 
+		content: ""
+		display: block 
+		position: absolute
+		left: 0
+		top: 20px
+		width: 100%
+		height: 1px 
+		background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 25%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.15) 75%, transparent 100%)
+	&::before
+		content: ""
+		display: block 
+		position: absolute
+		left: 0
+		bottom: 20px
+		width: 100%
+		height: 1px 
+		background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 25%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.15) 75%, transparent 100%)
+
+	&-title 
+		margin-bottom: 35px
+		text-align: center
+		text-shadow: 0 0 15px rgba(36, 33, 33, 0.25)
+		color: #ffffff
+		font-family: "Fontin Sans CR"
+		font-size: 42px
+		font-weight: bold
+		line-height: 18px
+		text-transform: uppercase
+		letter-spacing: 4.2px
+
+	&-desc 
+		margin-bottom: 35px
+		text-align: center
+		text-shadow: 0 0 15px rgba(36, 33, 33, 0.25)
+		color: #ffffff
+		font-size: 24px
+		font-weight: 300
+		line-height: 28px
+
+	&-label 
+		display: block
+		margin-bottom: 11px
+		padding-left: 30px
+		color: #ffffff
+		font-size: 16px
+		font-weight: 300
+		line-height: 22px
+
+	&-input-block
+		padding-top: 13px
+		padding-bottom: 15px
+		box-shadow: inset 0 3px 4px rgba(0, 0, 0, 0.25)
+		border: none 
+		border-radius: 30px
+
+		&-wrap 
+			margin-bottom: 25px
+
+	&-ava 
+		margin-top: 42px
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		align-items: center
+
+		.img-block 
+			background: white 
+			border-radius: 50% 
+			padding: 10px
+			text-align: center
+			height: 74px
+			width: 74px
+			display: flex 
+			flex-direction: column 
+			justify-content: center
+			align-items: center
+
+			img 
+				max-width: 50px 
+
+	&-label-image 
+		cursor: pointer
+		text-shadow: 0 0 15px rgba(36, 33, 33, 0.25)
+		color: #ffffff
+		font-size: 16px
+		font-weight: 300
+		line-height: 22px
+		padding-left: 70px
+		position: relative
+
+		&::after 
+			display: block
+			content: ""
+			position: absolute
+			top: 50%
+			margin-top: -10px
+			left: 19px 
+			width: 20px
+			height: 20px
+			background: url('../img/pencil.png') 100% no-repeat
+
+	.input-img 
+		background: none 
+		border: none 
+		width: 0px
+		height: 0px
+		font-size: 0 
+		opacity: 0
+		position: absolute
+		z-index: -1
+
+	&-submit 
+		margin-top: 47px
+		text-align: center
+
+		.btn-white 
+			cursor: pointer
+			// &:hover 
+			// 	&::before 
+			// 		box-shadow: 0px 5px 4px 2px rgba(0,0,0,0.1)
+			// &::before 
+			// 	box-shadow: 0px 5px 7px 2px rgba(0,0,0,0.3)
+
+
+//log_in
+
+.log_in 
+	padding-top: 45px
+	padding-bottom: 66px
+	position: relative
+
+	&::after 
+		content: ''
+		display: block 
+		position: absolute
+		top: 0
+		left: 0
+		background: url('../img/header-texture_white.png')
+		height: 66px
+		width: 100%
+		z-index: -1 
+
+	&::before 
+		content: ''
+		display: block 
+		position: absolute
+		bottom: 0
+		left: 0
+		background: url('../img/header-texture_white.png')
+		height: 66px
+		width: 100%
+		z-index: -1 
+
+
+	.title-with-sub
+		margin-bottom: 45px
+
+	&-wrap 
+		position: relative 
+
+		&::after 
+			content: ""
+			display: block 
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.1) 25%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 75%, transparent 100%)
+
+	&-desc 
+		text-align: center
+		color: #000000
+		font-size: 24px
+		font-weight: 300
+		line-height: 28px
+		margin-bottom: 40px
+
+	&-form 
+		width: 300px
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 30px
+
+
+		.btn-accent
+			margin-top: 50px
+			width: 100%
+
+			&::after 
+				width: 100%
+				left: 0
+			&::before 
+				width: 100%
+				left: 0
+
+// basket 
+
+.basket
+	padding-top: 45px
+	padding-bottom: 66px
+	position: relative
+	overflow: hidden
+
+	&::after 
+		content: ''
+		display: block 
+		position: absolute
+		top: 0
+		left: 0
+		background: url('../img/header-texture_white.png')
+		height: 66px
+		width: 100%
+		z-index: -1 
+
+	&::before 
+		content: ''
+		display: block 
+		position: absolute
+		bottom: 0
+		left: 0
+		background: url('../img/header-texture_white.png')
+		height: 66px
+		width: 100%
+		z-index: -1 
+
+	.h2 
+		margin-top: 0
+		margin-bottom: 70px
+
+	&-top-row 
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 40px
+
+		.btn-accent 
+			width: 300px
+
+			&::before 
+				width: 100%
+				left: 0
+				display: none 
+
+			&::after 
+				width: 100%
+				left: 0
+				display: none
+
+	&-title 
+		padding-left: 40px
+		color: #000000
+		font-size: 24px
+		font-weight: 300
+		line-height: 28px
+
+	
+
+	&-table 
+		margin-bottom: 55px
+
+		.top-row
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between
+			align-items: center
+			border: 1px solid #dcddde
+			border-radius: 30px 
+			padding: 13px 42px 
+
+			li 
+				text-align: center
+				color: #a7a9ac
+				font-size: 16px
+				font-weight: 300
+
+				&:nth-child(1) 
+					width: 10%
+					margin-right: 15%
+				&:nth-child(2)
+					width: 25%
+				&:nth-child(3)
+					width: 15%
+				&:nth-child(4)
+					width: 15%
+				&:nth-child(5)
+					width: 15%
+
+
+
+		.simple-row 
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between
+			align-items: center
+			position: relative
+			padding: 10px 42px 
+
+			&::after 
+				display: block
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 100%
+				height: 1px
+				background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.05) 75%, transparent 100%)
+		
+
+			&>li 
+				text-align: center
+				color: #000000
+				font-size: 16px
+				font-weight: 300
+
+				&:nth-child(1) 
+					width: 10%
+				&:nth-child(2)
+					width: 15%
+				&:nth-child(3)
+					width: 25%
+				&:nth-child(4)
+					width: 11%
+					margin-left: 2%
+					margin-right: 2%
+				&:nth-child(5)
+					width: 15%
+				&:nth-child(6)
+					width: 15%
+
+
+				img 
+					max-width: 30px
+
+		.nice-select
+			width: 100%
+			line-height: normal
+
+	.submit-block
+		text-align: center
+		padding-bottom: 30px
+		position: relative
+
+		&::after 
+			content: ""
+			position: absolute
+			bottom: 0
+			left: -100%
+			width: 300%
+			height: 1px
+			background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.05) 75%, transparent 100%)
+
+
+
+
+
+.order-make
+	padding-top: 45px
+	padding-bottom: 66px
+	position: relative
+	overflow: hidden
+
+	&::after 
+		content: ''
+		display: block 
+		position: absolute
+		top: 0
+		left: 0
+		background: url('../img/header-texture_white.png')
+		height: 66px
+		width: 100%
+		z-index: -1 
+
+	&::before 
+		content: ''
+		display: block 
+		position: absolute
+		bottom: 0
+		left: 0
+		background: url('../img/header-texture_white.png')
+		height: 66px
+		width: 100%
+		z-index: -1 
+
+	.h2 
+		margin-top: 0
+		margin-bottom: 70px
+
+		&::after 
+			top: 24px
+		&::before 
+			top: 24px
+
+	.btn-transparent 
+		width: 100%
+		cursor: pointer
+
+		&::before 
+			width: 100%
+			left: 0
+			display: none 
+
+		&::after 
+			width: 100%
+			left: 0
+			display: none
+
+	.generals 
+		padding-top: 34px
+		padding-bottom: 10px
+		position: relative
+
+		&::after 
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.05) 75%, transparent 100%)
+
+		&::before 
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.05) 75%, transparent 100%)
+
+
+
+		.gen-title 
+			text-align: center
+			font-family: "Fontin Sans CR"
+			font-weight: 700
+			letter-spacing: 2.4px
+			text-transform: uppercase
+			color: #000000
+			font-size: 24px
+
+		.gen-fin 
+			text-align: center
+			color: #000000
+			font-size: 24px
+			font-weight: 300
+
+	.payment-block
+		padding-top: 15px
+
+		.payment-title
+			color: #a7a9ac
+			font-size: 12px
+			font-weight: 300
+			text-transform: uppercase
+			letter-spacing: 1.2px
+			text-align: center
+			margin-bottom: 20px
+
+		.nice-select
+			width: 100%
+			line-height: normal
+
+			.current
+				text-align: center
+				width: 100%
+				display: block 
+
+	.submit-block
+		margin-top: 50px
+		padding-bottom: 40px
+		text-align: center
+		position: relative
+
+		&::after 
+			content: ""
+			position: absolute
+			bottom: 0
+			left: -100%
+			width: 300%
+			height: 1px
+			background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.05) 75%, transparent 100%)
 

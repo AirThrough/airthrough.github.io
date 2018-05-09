@@ -150,6 +150,26 @@ $(document).ready(function(){
   		loupe: 'loupe' 
 	});
 
+	// IMG FILE INPUT
+
+	document.getElementById('ava').onchange = function (evt) {
+    var tgt = evt.target || window.event.srcElement,
+        files = tgt.files;
+
+    if (FileReader && files && files.length) {
+        var fr = new FileReader();
+        fr.onload = function () {
+            document.getElementById('ava-preview').src = fr.result;
+        }
+        fr.readAsDataURL(files[0]);
+    }
+
+    else {
+        alert('Ваш браузер не поддерживает отображение превью загружаемых изображений. После регистрации изображение будет сохранено.');
+    }
+}
+
+
 
 
 	function translate(event){
