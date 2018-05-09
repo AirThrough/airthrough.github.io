@@ -27,6 +27,9 @@ ul {
 button:focus {
   outline: none; }
 
+.loupe {
+  z-index: 9999; }
+
 .candy-button {
   border: none;
   background: url("../img/candy-button-bg-2.svg") no-repeat;
@@ -1199,7 +1202,8 @@ button:focus {
       -o-transition: 0.25s all ease-in-out;
       transition: 0.25s all ease-in-out; }
   .popular-item {
-    text-align: center; }
+    text-align: center;
+    position: relative; }
     .popular-item .img-block {
       display: block;
       text-align: center;
