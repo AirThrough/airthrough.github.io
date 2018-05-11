@@ -120,11 +120,23 @@ $(document).ready(function(){
 	$(".geo-map-russia .geo-marker").click(function(){
 
 		if (!$(this).hasClass('chosen')) {
+			var cur_reg = $(this).data('value');
 			$(".geo-map-russia .geo-marker").removeClass('chosen');
 			$(this).addClass('chosen');
-			$("#geo-russia-region").val($(this).data('value'));
+			$("#geo-russia-region").val(cur_reg);
 			document.getElementById("geo-russia-region").selectedIndex = +($(this).data('value'))-1;
 			$('#geo-russia-region').niceSelect('update');
+
+
+			if (!$(".geo-text-russia.geo-text-"+cur_reg).hasClass('chosen')) {
+				$(".geo-text-russia").removeClass('chosen');
+				$(".geo-text-russia.geo-text-"+cur_reg).addClass('chosen');
+			}
+
+			$(".geo-text-russia-wrap").css({
+				height: $(".geo-text-russia.chosen").outerHeight()
+			});
+
 		}
 
 	});
@@ -132,11 +144,21 @@ $(document).ready(function(){
 	$(".geo-map-world .geo-marker").click(function(){
 
 		if (!$(this).hasClass('chosen')) {
+			var cur_reg = $(this).data('value');
 			$(".geo-map-world .geo-marker").removeClass('chosen');
 			$(this).addClass('chosen');
-			$("#geo-world-region").val($(this).data('value'));
+			$("#geo-world-region").val(cur_reg);
 			document.getElementById("geo-world-region").selectedIndex = +($(this).data('value'))-1;
 			$('#geo-world-region').niceSelect('update');
+
+			if (!$(".geo-text-world.geo-text-"+cur_reg).hasClass('chosen')) {
+				$(".geo-text-world").removeClass('chosen');
+				$(".geo-text-world.geo-text-"+cur_reg).addClass('chosen');
+			}
+
+			$(".geo-text-world-wrap").css({
+				height: $(".geo-text-world.chosen").outerHeight()
+			});
 		}
 
 	});
@@ -145,32 +167,13 @@ $(document).ready(function(){
 	// LOUPE
 
 	$('.slider-img-loupe').loupe({
-		width: 200, 
-  		height: 200, 
-  		loupe: 'loupe' 
+		width: 180, 
+		height: 180, 
+		loupe: 'loupe' 
 	});
 
-	// IMG FILE INPUT
 
-	document.getElementById('ava').onchange = function (evt) {
-    var tgt = evt.target || window.event.srcElement,
-        files = tgt.files;
-
-    if (FileReader && files && files.length) {
-        var fr = new FileReader();
-        fr.onload = function () {
-            document.getElementById('ava-preview').src = fr.result;
-        }
-        fr.readAsDataURL(files[0]);
-    }
-
-    else {
-        alert('Ваш браузер не поддерживает отображение превью загружаемых изображений. После регистрации изображение будет сохранено.');
-    }
-}
-
-
-
+	// PARALLAX
 
 	function translate(event){
 		var $window = $(window);
@@ -192,9 +195,6 @@ $(document).ready(function(){
 	if (window.addEventListener)
 		window.addEventListener('DOMMouseScroll', translate, false);
 	window.onmousewheel = document.onmousewheel = translate;
-
-
-
 
 	var parallaxController;
 
@@ -250,14 +250,8 @@ $(document).ready(function(){
     	}
     	scrollHandler();
     }
-	// pauseTween = function() {
-	// 	menuClosed = false;
-	// }
-	// restartTween = function() {
-	// 	menuClosed = true;
-	// 	scrollHandler();
-	// }
-	init()
+
+    init()
 })();
 
 

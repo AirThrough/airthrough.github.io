@@ -385,6 +385,25 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
 		<script src="js/app.js"></script>
 
+		<script>
+			document.getElementById('ava').onchange = function (evt) {
+				var tgt = evt.target || window.event.srcElement,
+				files = tgt.files;
+
+				if (FileReader && files && files.length) {
+					var fr = new FileReader();
+					fr.onload = function () {
+						document.getElementById('ava-preview').src = fr.result;
+					}
+					fr.readAsDataURL(files[0]);
+				}
+
+				else {
+					alert('Ваш браузер не поддерживает отображение превью загружаемых изображений. После регистрации изображение будет сохранено.');
+				}
+			}
+		</script>
+
 
 	</body>
 	</html>

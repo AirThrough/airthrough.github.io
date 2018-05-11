@@ -28,7 +28,8 @@ button:focus {
   outline: none; }
 
 .loupe {
-  z-index: 9999; }
+  z-index: 9999;
+  background: url("../img/header-texture_white.png") white; }
 
 .candy-button {
   border: none;
@@ -1791,7 +1792,15 @@ button:focus {
       letter-spacing: 1px;
       font-size: 10px;
       color: white;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      -webkit-transition: 0.25s all ease-in-out;
+      -o-transition: 0.25s all ease-in-out;
+      transition: 0.25s all ease-in-out; }
+      .footer-nav-col li a:hover {
+        color: #fec618;
+        -webkit-transition: 0.25s all ease-in-out;
+        -o-transition: 0.25s all ease-in-out;
+        transition: 0.25s all ease-in-out; }
   .footer-callback {
     width: 100%;
     padding-top: 21px;
@@ -1876,6 +1885,16 @@ button:focus {
       width: 40px;
       height: 40px;
       display: block; }
+      .footer .soc-media-row .soc img {
+        -webkit-transition: 0.25s all ease-in-out;
+        -o-transition: 0.25s all ease-in-out;
+        transition: 0.25s all ease-in-out; }
+        .footer .soc-media-row .soc img:hover {
+          -webkit-filter: brightness(150%);
+                  filter: brightness(150%);
+          -webkit-transition: 0.25s all ease-in-out;
+          -o-transition: 0.25s all ease-in-out;
+          transition: 0.25s all ease-in-out; }
   .footer-contact-item {
     padding-left: 80px;
     color: #a7a9ac;
@@ -3456,6 +3475,7 @@ button:focus {
         .product-main-info .product-slider_bottom .product-slider-dot img {
           width: 60%; }
   .product-main-info .product-params {
+    margin-top: 42px;
     padding-top: 25px;
     padding-bottom: 25px;
     position: relative;
@@ -3729,7 +3749,7 @@ button:focus {
   padding-bottom: 60px;
   position: relative;
   margin-top: 40px;
-  padding-top: 150px;
+  padding-top: 145px;
   padding-bottom: 149px;
   margin-bottom: 40px;
   text-align: center;
@@ -4743,7 +4763,7 @@ button:focus {
   .header-mobile, .button-mobile {
     display: none; } }
 
-@media (min-width: 0) and (max-width: 900px) {
+@media (min-width: 0) and (max-width: 992px) {
   .container {
     padding-left: 15px;
     padding-right: 15px; }
@@ -5694,3 +5714,19 @@ button:focus {
     padding-top: 76px; }
     .special-offer::before {
       bottom: 75px; } }
+
+@media (min-width: 768px) and (max-width: 800px) {
+  .special-offer {
+    padding-bottom: 72px; }
+    .special-offer::before {
+      bottom: 15px; }
+    .special-offer::after {
+      top: 2px; } }
+
+@media (min-width: 801px) and (max-width: 850px) {
+  .special-offer {
+    padding-bottom: 72px; }
+    .special-offer::before {
+      bottom: 11px; }
+    .special-offer::after {
+      top: 2px; } }

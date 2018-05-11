@@ -7,7 +7,7 @@
   .header-mobile, .button-mobile {
     display: none; } }
 
-@media (min-width: 0) and (max-width: 900px) {
+@media (min-width: 0) and (max-width: 992px) {
   .container {
     padding-left: 15px;
     padding-right: 15px; }
@@ -958,3 +958,19 @@
     padding-top: 76px; }
     .special-offer::before {
       bottom: 75px; } }
+
+@media (min-width: 768px) and (max-width: 800px) {
+  .special-offer {
+    padding-bottom: 72px; }
+    .special-offer::before {
+      bottom: 15px; }
+    .special-offer::after {
+      top: 2px; } }
+
+@media (min-width: 801px) and (max-width: 850px) {
+  .special-offer {
+    padding-bottom: 72px; }
+    .special-offer::before {
+      bottom: 11px; }
+    .special-offer::after {
+      top: 2px; } }
