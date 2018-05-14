@@ -2,6 +2,76 @@ $(document).ready(function(){
 
 	console.log('Okay');
 
+	$("input[type='tel']").mask("+7 (999) 999-9999");
+
+	$(".btn-popup").magnificPopup({
+	 	removalDelay: 500,
+	 	mainClass: 'mfp-fade'
+	 });
+
+	// FORM 
+
+	$(".modal_form--callback").submit(function(e){
+
+		e.preventDefault();
+
+		$.magnificPopup.open({
+    		items: { src: '#sp-callback' } ,
+    		removalDelay: 500,
+			mainClass: 'mfp-fade'
+		});
+
+		return false;
+
+	});
+
+	$(".modal_form--instock").submit(function(e){
+
+		e.preventDefault();
+
+		$.magnificPopup.open({
+    		items: { src: '#sp-instock' } ,
+    		removalDelay: 500,
+			mainClass: 'mfp-fade'
+		});
+
+		return false;
+
+	});
+
+	$(".modal_form--one-click").submit(function(e){
+
+		e.preventDefault();
+
+		$.magnificPopup.open({
+    		items: { src: '#sp-oneclick' } ,
+    		removalDelay: 500,
+			mainClass: 'mfp-fade'
+		});
+
+		return false;
+
+	});
+
+	$(".modal_form--email").submit(function(e){
+
+		e.preventDefault();
+
+		$.magnificPopup.open({
+    		items: { src: '#sp-email' } ,
+    		removalDelay: 500,
+			mainClass: 'mfp-fade'
+		});
+
+		return false;
+
+	});
+
+	$(".btn-popup-close").click(function(){
+	 	var magnificPopup = $.magnificPopup.instance; 
+	 	magnificPopup.close(); 
+	 });
+
 	$(".banner-slider").owlCarousel({
 		items: 1,
 		loop: true,

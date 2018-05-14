@@ -3977,11 +3977,13 @@ button:focus {
       transition: 0.45s transform ease-in-out, 0.45s opacity ease-in-out, 0s z-index linear;
       transition: 0.45s transform ease-in-out, 0.45s opacity ease-in-out, 0s z-index linear, 0.45s -webkit-transform ease-in-out; }
     .geo-marker-1 {
-      left: 47px;
-      top: 116px; }
+      left: 9.832%;
+      top: 44.274%; }
     .geo-marker-2 {
       left: 97px;
-      top: 87px; }
+      top: 87px;
+      left: 20.2928%;
+      top: 33.2061%; }
     .geo-marker-3 {
       left: 28px;
       top: 157px; }
@@ -4753,3 +4755,199 @@ button:focus {
       background: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 100%);
       background: -o-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 100%);
       background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 100%); }
+
+.modal#subscribe .modal_title::after {
+  bottom: 52px;
+  width: 30%; }
+
+.modal#subscribe .modal_title::before {
+  bottom: 52px;
+  width: 30%; }
+
+.modal#subscribe .modal_form {
+  max-width: 100%; }
+  .modal#subscribe .modal_form-note {
+    margin-bottom: 20px; }
+
+.modal#subscribe .candy-button {
+  margin-top: 20px; }
+  .modal#subscribe .candy-button .candy-lines::after {
+    left: 10%;
+    top: 6.5px;
+    width: 84px; }
+  .modal#subscribe .candy-button .candy-lines::before {
+    width: 101px; }
+
+.modal#sp-callback .modal_content::after {
+  height: 92px; }
+
+.modal#sp-callback .modal_title::after {
+  left: -60px;
+  bottom: 19px; }
+
+.modal#sp-callback .modal_title::before {
+  right: -60px;
+  bottom: 19px; }
+
+.modal .mfp-close {
+  top: 20px;
+  right: 20px;
+  z-index: 200;
+  cursor: pointer;
+  -webkit-transition: 0.25s all ease-in-out;
+  -o-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out; }
+  .modal .mfp-close:hover {
+    color: #f6e180;
+    -webkit-transition: 0.25s all ease-in-out;
+    -o-transition: 0.25s all ease-in-out;
+    transition: 0.25s all ease-in-out; }
+
+.modal_content {
+  text-align: center;
+  max-width: 623px;
+  padding: 80px 110px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  position: relative; }
+  .modal_content::after {
+    height: 123px;
+    width: 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../img/header-texture_white.png");
+    z-index: 0; }
+
+.modal_title {
+  position: relative;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #000000;
+  font-family: "Fontin Sans CR";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  text-transform: uppercase;
+  letter-spacing: 2.4px; }
+  .modal_title::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 21px;
+    left: -100px;
+    background: -webkit-gradient(linear, left top, right top, from(white), color-stop(50%, #dfe0e1), to(#dfe0e1));
+    background: -webkit-linear-gradient(left, white 0%, #dfe0e1 50%, #dfe0e1 100%);
+    background: -o-linear-gradient(left, white 0%, #dfe0e1 50%, #dfe0e1 100%);
+    background: linear-gradient(90deg, white 0%, #dfe0e1 50%, #dfe0e1 100%);
+    width: 38%;
+    height: 1px; }
+  .modal_title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 21px;
+    right: -100px;
+    background: -webkit-gradient(linear, left top, right top, from(#dfe0e1), color-stop(50%, #dfe0e1), to(white));
+    background: -webkit-linear-gradient(left, #dfe0e1 0%, #dfe0e1 50%, white 100%);
+    background: -o-linear-gradient(left, #dfe0e1 0%, #dfe0e1 50%, white 100%);
+    background: linear-gradient(90deg, #dfe0e1 0%, #dfe0e1 50%, white 100%);
+    width: 38%;
+    height: 1px; }
+
+.modal_desc {
+  margin-bottom: 25px;
+  text-align: center;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px; }
+
+.modal_form {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px; }
+  .modal_form .input-block {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    margin-bottom: 7px;
+    -webkit-border-radius: 30px;
+            border-radius: 30px; }
+  .modal_form-note {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #a7a9ac;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px; }
+
+.modal .btn-accent {
+  cursor: pointer;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto; }
+  .modal .btn-accent::after {
+    left: 0;
+    width: 100%; }
+  .modal .btn-accent::before {
+    left: 0;
+    width: 100%; }
+
+.modal-thanks .modal_content::after {
+  height: 92px; }
+
+.modal-thanks .modal_title::after {
+  left: -60px;
+  bottom: 19px; }
+
+.modal-thanks .modal_title::before {
+  right: -60px;
+  bottom: 19px; }
+
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.35s ease-out;
+  -o-transition: all 0.35s ease-out;
+  transition: all 0.35s ease-out; }
+
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+  -webkit-transition: all 0.35s ease-out;
+  -o-transition: all 0.35s ease-out;
+  transition: all 0.35s ease-out; }
+
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+  -webkit-transition: all 0.35s ease-out;
+  -o-transition: all 0.35s ease-out;
+  transition: all 0.35s ease-out; }
+
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.35s ease-out;
+  -o-transition: all 0.35s ease-out;
+  transition: all 0.35s ease-out; }
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.35s ease-out;
+  -o-transition: all 0.35s ease-out;
+  transition: all 0.35s ease-out; }
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.35s ease-out;
+  -o-transition: all 0.35s ease-out;
+  transition: all 0.35s ease-out; }
