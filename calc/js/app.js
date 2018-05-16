@@ -1,15 +1,20 @@
 $(document).ready(function () {
 
 	$("select").niceSelect();
+
+	markerChange(1000);
 	
 	$(".range").slider({
 		min: 0,
 		max: 1000,
 		value: 1000,
 		change: function( event, ui ) {
-
 			$("#range-input").val(ui.value);
 			getFullCost();
+			markerChange(ui.value);
+		},
+		slide: function (event, ui) {
+			markerChange(ui.value);
 		}
 	});
 
@@ -23,6 +28,18 @@ $(document).ready(function () {
 
 	});
 
+	$(".range-block-wrap").mouseenter(function(){
+		if (!$("#current-amount").hasClass('active')) {
+			$("#current-amount").addClass("active");
+		}
+		
+	});
+	$(".range-block-wrap").mouseleave(function(){
+			if ($("#current-amount").hasClass('active')) {
+		$("#current-amount").removeClass("active");
+	}
+	});
+
 
 
 	// MAIN CALC CODE
@@ -32,6 +49,17 @@ $(document).ready(function () {
 		getFullCost();
 
 	});
+
+	function markerChange(value) {
+		$("#current-amount").text(value);
+
+		var cur_w = $("#current-amount").outerWidth();
+		var cur_pos = (value/1000)*100;
+		$("#current-amount").css({
+			'left': cur_pos+'%',
+			'margin-left': -cur_w/2+1
+		});
+	}
 
 	function getFullCost() {
 		
@@ -618,7 +646,7 @@ $(document).ready(function () {
 		$("#work-cost").text(work_self_cost);
 		$("#incomes-cost").text(sum_incomes);
 
-		$(".result-block .cost").text(fin_sum + ' руб.');
+		$(".result-block .cost").text(Math.ceil(fin_sum) + ' руб.');
 
 
 

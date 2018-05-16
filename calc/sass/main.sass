@@ -1,8 +1,56 @@
+#current-amount 
+	position: absolute
+	background: white 
+	top: -25px
+	left: 0
+	margin-left: -32px 
+	z-index: 999
+	text-align: center
+	white-space: nowrap
+	color: #000
+	padding: 10px 20px 11px 
+	border-radius: 6px
+	font-size: 16px 
+	font-weight: 400
+	line-height: 13px
+	box-shadow: 0 10px 10px rgba(0,0,0,0.12), 0 0px 28px rgba(0,0,0,.1)
+	transition: 0.25s transform ease-in-out, 0.25s opacity ease-in-out
+	transform: translateY(-3px)
+	opacity: 0
+
+	&::after 
+		display: block
+		content: ""
+		bottom: -8px
+		margin-left: -8px
+		border-top: 8px solid #fff
+		border-left: 8px solid transparent
+		border-right: 8px solid transparent
+		border-bottom: 0 
+		left: 50%
+		position: absolute
+
+	&.active 
+		opacity: 1
+		transform: translateY(0px)
+		transition: 0.25s transform ease-in-out, 0.25s opacity ease-in-out
 
 
+
+.range-block-wrap
+	position: relative
 
 .calc 
-	margin-top: 100px
+	margin-top: 110px
+
+	.range-block-wrap
+		padding-top: 20px
+		padding-bottom: 20px
+
+	.nice-select
+
+		.list 
+			width: 100%
 
 	.calc-main-wrap 
 		padding: 30px
@@ -15,6 +63,7 @@
 		text-align: center
 		padding-top: 12px
 		padding-bottom: 18px
+		margin-bottom: 10px
 
 	.nice-select
 		float: none
@@ -26,6 +75,9 @@
 		color: #73818c
 		display: block
 		margin-bottom: 10px
+
+		&.label-title-1
+			margin-bottom: 0
 
 	.number 
 
@@ -44,7 +96,7 @@
 	    	border-color: #ffc107 
 
 	.ui-slider-horizontal .ui-slider-handle
-		top: -.65em
+		top: -.13em
 
 
 	.ui-slider-handle 
@@ -59,9 +111,25 @@
 			outline: none
 
 	.ui-widget.ui-widget-content
+		cursor: pointer
 		border: none
 		height: 2px
-		background-color: #e0e0e0
+		padding-top: 10px
+		padding-bottom: 10px
+		background-color: transparent
+		position: relative
+		margin-bottom: -10px
+
+		&::after 
+			height: 1px
+			background-color: #e0e0e0
+			content: ""
+			display: block 
+			position: absolute
+			top: 50%
+			margin-top: -1px
+			left: 0	
+			width: 100%
 
 	.range-points
 		list-style: none
@@ -95,6 +163,72 @@
 				top: 0
 				left: calc(50% - 1px)
 
+	.radio-container 
+		display: block 
+		position: relative
+		padding-left: 35px
+		margin-bottom: 10px
+		margin-top: 10px
+		cursor: pointer
+		font-size: 18px 
+		user-select: none 
+		transition: all 0.25s ease-in-out
+
+		input.radio-type 
+			position: absolute
+			opacity: 0
+			transition: all 0.25s ease-in-out
+
+
+		.checkmark
+			position: absolute
+			top: 0px
+			left: 0
+			height: 25px
+			width: 25px
+			background-color: #eee 
+			border-radius: 50%
+			transition: all 0.25s ease-in-out
+
+			&::after 
+				content: ""
+				position: absolute
+				display: none 
+				top: 8px
+				left: 8px
+				width: 9px
+				height: 9px
+				border-radius: 50%
+				// background: #dbe3ef 
+				background: white
+				transition: all 0.25s ease-in-out
+
+		&:hover 
+			input.radio-type ~ .checkmark
+				background-color: #ccc
+				transition: all 0.25s ease-in-out
+
+		input.radio-type:checked ~ .checkmark
+			background-color: #ffc107
+			transition: all 0.25s ease-in-out
+
+		input.radio-type:checked ~ .checkmark::after 
+			display: block
+			transition: all 0.25s ease-in-out
+
+	.result-block 
+		margin-top: 15px
+		font-family: 'Rubik'
+		font-size: 18px
+		color: #73818c
+
+		.cost 
+			margin-top: 5px
+			color: black 
+
+
+
+
 @for $i from 2 to 12
 	.calc .range-points li:nth-child(#{$i})
 		left: $i*10%-10%		
@@ -106,3 +240,4 @@
 		td 
 			padding: 20px 
 			border: 1px grey solid
+

@@ -1,5 +1,62 @@
+#current-amount {
+  position: absolute;
+  background: white;
+  top: -25px;
+  left: 0;
+  margin-left: -32px;
+  z-index: 999;
+  text-align: center;
+  white-space: nowrap;
+  color: #000;
+  padding: 10px 20px 11px;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 13px;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.12), 0 0px 28px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.12), 0 0px 28px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.25s opacity ease-in-out, 0.25s -webkit-transform ease-in-out;
+  transition: 0.25s opacity ease-in-out, 0.25s -webkit-transform ease-in-out;
+  -o-transition: 0.25s transform ease-in-out, 0.25s opacity ease-in-out;
+  transition: 0.25s transform ease-in-out, 0.25s opacity ease-in-out;
+  transition: 0.25s transform ease-in-out, 0.25s opacity ease-in-out, 0.25s -webkit-transform ease-in-out;
+  -webkit-transform: translateY(-3px);
+      -ms-transform: translateY(-3px);
+          transform: translateY(-3px);
+  opacity: 0; }
+  #current-amount::after {
+    display: block;
+    content: "";
+    bottom: -8px;
+    margin-left: -8px;
+    border-top: 8px solid #fff;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 0;
+    left: 50%;
+    position: absolute; }
+  #current-amount.active {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-transition: 0.25s opacity ease-in-out, 0.25s -webkit-transform ease-in-out;
+    transition: 0.25s opacity ease-in-out, 0.25s -webkit-transform ease-in-out;
+    -o-transition: 0.25s transform ease-in-out, 0.25s opacity ease-in-out;
+    transition: 0.25s transform ease-in-out, 0.25s opacity ease-in-out;
+    transition: 0.25s transform ease-in-out, 0.25s opacity ease-in-out, 0.25s -webkit-transform ease-in-out; }
+
+.range-block-wrap {
+  position: relative; }
+
 .calc {
-  margin-top: 100px; }
+  margin-top: 110px; }
+  .calc .range-block-wrap {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .calc .nice-select .list {
+    width: 100%; }
   .calc .calc-main-wrap {
     padding: 30px;
     border: 1px solid #ececec; }
@@ -9,7 +66,8 @@
     color: #73818c;
     text-align: center;
     padding-top: 12px;
-    padding-bottom: 18px; }
+    padding-bottom: 18px;
+    margin-bottom: 10px; }
   .calc .nice-select {
     float: none;
     margin-bottom: 20px; }
@@ -19,6 +77,8 @@
     color: #73818c;
     display: block;
     margin-bottom: 10px; }
+    .calc label.label-title-1 {
+      margin-bottom: 0; }
   .calc .number {
     -webkit-border-radius: 0;
             border-radius: 0;
@@ -34,7 +94,7 @@
       outline: none;
       border-color: #ffc107; }
   .calc .ui-slider-horizontal .ui-slider-handle {
-    top: -.65em; }
+    top: -.13em; }
   .calc .ui-slider-handle {
     background-color: #ffc107;
     border: 2px solid #ffc107;
@@ -46,9 +106,24 @@
     .calc .ui-slider-handle:focus {
       outline: none; }
   .calc .ui-widget.ui-widget-content {
+    cursor: pointer;
     border: none;
     height: 2px;
-    background-color: #e0e0e0; }
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: transparent;
+    position: relative;
+    margin-bottom: -10px; }
+    .calc .ui-widget.ui-widget-content::after {
+      height: 1px;
+      background-color: #e0e0e0;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      margin-top: -1px;
+      left: 0;
+      width: 100%; }
   .calc .range-points {
     list-style: none;
     padding: 0;
@@ -86,6 +161,76 @@
         top: 0;
         left: -webkit-calc(50% - 1px);
         left: calc(50% - 1px); }
+  .calc .radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
+    .calc .radio-container input.radio-type {
+      position: absolute;
+      opacity: 0;
+      -webkit-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
+    .calc .radio-container .checkmark {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      -webkit-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
+      .calc .radio-container .checkmark::after {
+        content: "";
+        position: absolute;
+        display: none;
+        top: 8px;
+        left: 8px;
+        width: 9px;
+        height: 9px;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        background: white;
+        -webkit-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out; }
+    .calc .radio-container:hover input.radio-type ~ .checkmark {
+      background-color: #ccc;
+      -webkit-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
+    .calc .radio-container input.radio-type:checked ~ .checkmark {
+      background-color: #ffc107;
+      -webkit-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
+    .calc .radio-container input.radio-type:checked ~ .checkmark::after {
+      display: block;
+      -webkit-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
+  .calc .result-block {
+    margin-top: 15px;
+    font-family: 'Rubik';
+    font-size: 18px;
+    color: #73818c; }
+    .calc .result-block .cost {
+      margin-top: 5px;
+      color: black; }
 
 .calc .range-points li:nth-child(2) {
   left: 10%; }

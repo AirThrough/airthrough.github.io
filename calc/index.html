@@ -14,158 +14,169 @@
 
 
 	<section class="calc">
-
 		<div class="container">
-			<div class="col-lg-3">
+			<div class="row">
+				<div class="col-lg-3">
+				</div>
+				<div class="col-lg-9">
 
-			</div>
-			<div class="col-lg-9">
+					<div class="calc-main-wrap">
 
-				<div class="calc-main-wrap">
-
-					<div class="title">Забор из профнастила</div>
-
-
-					<label for="length">Длина забора</label>
-					<input type="hidden" id="range-input" value="1000" class="input-calc">
-					<div class="range"></div>
-					<ul class="range-points">
-						<li>0</li>
-						<li>100</li>
-						<li>200</li>
-						<li>300</li>
-						<li>400</li>
-						<li>500</li>
-						<li>600</li>
-						<li>700</li>
-						<li>800</li>
-						<li>900</li>
-						<li>1000</li>
-					</ul>
+						<div class="title">Забор из профнастила</div>
 
 
-					<div class="row">
-						<div class="col-lg-6">
-
-							<label for="height">Высота забора</label>
-							<select name="" id="height" class="input-calc">
-								
-								<option value="1.5">1,5м</option>
-								<option value="1.8" selected="selected">1,8м</option>
-								<option value="2">2,0м</option>
-								<option value="2.5">2,5м</option>
-							</select>
-
-							<label for="lag">Количество лаг</label>
-							<select name="" id="lag" class="input-calc">
-								<option value="1">1</option>
-								<option value="2" selected="selected">2</option>
-								<option value="3">3</option>
-							</select>
-
-							<label for="width">Толщина листа</label>
-							<select name="" id="width" class="input-calc">
-								<option selected="selected" value="0.4">0.4мм</option>
-								<option value="0.5">0.5мм</option>
-							</select>
-
+						<label for="length" class="label-title-1">Длина забора</label>
+						<div class="range-block-wrap">
+							<div id="current-amount">12</div>
+							<input type="hidden" id="range-input" value="1000" class="input-calc">
+							<div class="range"></div>
+							<ul class="range-points">
+								<li>0</li>
+								<li>100</li>
+								<li>200</li>
+								<li>300</li>
+								<li>400</li>
+								<li>500</li>
+								<li>600</li>
+								<li>700</li>
+								<li>800</li>
+								<li>900</li>
+								<li>1000</li>
+							</ul>
 						</div>
-						<div class="col-lg-6">
 
-							<label for="mark">Марка листа</label>
-							<select name="" id="mark" class="input-calc">
-								<option selected="selected" value="8">C 8</option>
-								<option value="20">C 20</option>
-							</select>
 
-							<label for="covering">Покрытие</label>
-							<select name="" id="covering" class="input-calc">
-								<option value="Одностороннее">Одностороннее</option>
-								<option value="Двухстороннее">Двухстороннее</option>
-								<option value="Оцинкованное">Оцинкованное</option>
-								<option selected="selected" value="Имитация дерева/камня">Имитация дерева/камня</option>
-							</select>
 
-							<label for="pillars">Столбы</label>
-							<select name="" id="pillars" class="input-calc">
-								<option value="60х60х1,8 мм.">60х60х1,8 мм.</option>
-								<option value="60х60х2 мм.">60х60х2 мм.</option>
-								<option value="80х80х2 мм.">80х80х2 мм.</option>
-								<option value="80х80х3 мм." selected="selected">80х80х3 мм.</option>
-							</select>
+						<div class="row">
+							<div class="col-lg-6">
 
+								<label for="height">Высота забора</label>
+								<select name="" id="height" class="input-calc">
+
+									<option value="1.5">1,5м</option>
+									<option value="1.8" selected="selected">1,8м</option>
+									<option value="2">2,0м</option>
+									<option value="2.5">2,5м</option>
+								</select>
+
+								<label for="lag">Количество лаг</label>
+								<select name="" id="lag" class="input-calc">
+									<option value="1">1</option>
+									<option value="2" selected="selected">2</option>
+									<option value="3">3</option>
+								</select>
+
+								<label for="width">Толщина листа</label>
+								<select name="" id="width" class="input-calc">
+									<option selected="selected" value="0.4">0.4мм</option>
+									<option value="0.5">0.5мм</option>
+								</select>
+
+							</div>
+							<div class="col-lg-6">
+
+								<label for="mark">Марка листа</label>
+								<select name="" id="mark" class="input-calc">
+									<option selected="selected" value="8">C 8</option>
+									<option value="20">C 20</option>
+								</select>
+
+								<label for="covering">Покрытие</label>
+								<select name="" id="covering" class="input-calc">
+									<option value="Одностороннее">Одностороннее</option>
+									<option value="Двухстороннее">Двухстороннее</option>
+									<option value="Оцинкованное">Оцинкованное</option>
+									<option selected="selected" value="Имитация дерева/камня">Имитация дерева/камня</option>
+								</select>
+
+								<label for="pillars">Столбы</label>
+								<select name="" id="pillars" class="input-calc">
+									<option value="60х60х1,8 мм.">60х60х1,8 мм.</option>
+									<option value="60х60х2 мм.">60х60х2 мм.</option>
+									<option value="80х80х2 мм.">80х80х2 мм.</option>
+									<option value="80х80х3 мм." selected="selected">80х80х3 мм.</option>
+								</select>
+
+							</div>
 						</div>
+
+						<div class="title">Ворота</div>
+
+						<div class="row">
+							<div class="col-lg-6">
+
+								<label for="gates">Распашные ворота</label>
+								<input type="number" min="0" max="100" class="number input-calc" id="gates" value="1">
+								<label for="radio-input-1" class="radio-container">
+									
+									<input class="input-calc radio-type" type="radio" id="radio-input-1" name="type" value="1" checked="checked">
+								Стандартные
+								<span class="checkmark"></span>
+
+							</label>
+								<label for="radio-input-2" class="radio-container">
+									<input class="input-calc radio-type" type="radio" id="radio-input-2" name="type" value="2">
+								В раме
+								<span class="checkmark"></span>
+
+							</label>
+
+								<label for="gates-width">Ширина распашных ворот</label>
+								<select class="input-calc" name="" id="gates-width">
+									<option value="3">3 м.</option>
+									<option value="3.5">3,5 м.</option>
+									<option value="4" selected="selected">4 м.</option>
+								</select>
+
+								<label for="gates-mech">Механизм</label>
+								<select class="input-calc" name="" id="gates-mech">
+									<option value="Механические">Механические</option>
+									<option value="Автоматические">Автоматические</option>
+								</select>
+
+							</div>
+							<div class="col-lg-6">
+
+								<label for="gates-back">Откатные ворота</label>
+								<input type="number" min="0" max="100" class="number input-calc" id="gates-back" value="1">
+
+								<label for="gates-width-back">Ширина откатных ворот</label>
+								<select class="input-calc" name="" id="gates-width-back">
+									<option value="3" selected="selected">3 м.</option>
+									<option value="3.5">3,5 м.</option>
+									<option value="4" selected="selected">4 м.</option>
+								</select>
+
+								<label for="gates-mech-back">Механизм</label>
+								<select class="input-calc" name="" id="gates-mech-back">
+									<option value="Механические">Механические</option>
+									<option selected="selected" value="Автоматические">Автоматические</option>
+								</select>
+
+								<label for="gates-back-small">Калитка</label>
+								<input type="number" min="0" max="100" class="number input-calc" id="gates-back-small" value="0">
+
+							</div>
+						</div>
+
+						<div class="result-block">
+							<div class="text">Установка забора из профнастила "под ключ"
+
+							</div>
+
+							<div class="cost">1011522 руб.</div>
+						</div>
+
+
 					</div>
 
-					<div class="title">Ворота</div>
 
-					<div class="row">
-						<div class="col-lg-6">
 
-							<label for="gates">Распашные ворота</label>
-							<input type="number" min="0" max="100" class="number input-calc" id="gates" value="1">
 
-							<label for="radio-input-1">
-								<input class="input-calc radio-type" type="radio" id="radio-input-1" name="type" value="1" checked="checked">
-							Стандартные</label>
-							<label for="radio-input-2">
-								<input class="input-calc radio-type" type="radio" id="radio-input-2" name="type" value="2">
-							В раме</label>
-
-							<label for="gates-width">Ширина распашных ворот</label>
-							<select class="input-calc" name="" id="gates-width">
-								<option value="3">3 м.</option>
-								<option value="3.5">3,5 м.</option>
-								<option value="4" selected="selected">4 м.</option>
-							</select>
-
-							<label for="gates-mech">Механизм</label>
-							<select class="input-calc" name="" id="gates-mech">
-								<option value="Механические">Механические</option>
-								<option value="Автоматические">Автоматические</option>
-							</select>
-
-						</div>
-						<div class="col-lg-6">
-							
-							<label for="gates-back">Откатные ворота</label>
-							<input type="number" min="0" max="100" class="number input-calc" id="gates-back" value="1">
-
-							<label for="gates-width-back">Ширина откатных ворот</label>
-							<select class="input-calc" name="" id="gates-width-back">
-								<option value="3" selected="selected">3 м.</option>
-								<option value="3.5">3,5 м.</option>
-								<option value="4" selected="selected">4 м.</option>
-							</select>
-
-							<label for="gates-mech-back">Механизм</label>
-							<select class="input-calc" name="" id="gates-mech-back">
-								<option value="Механические">Механические</option>
-								<option selected="selected" value="Автоматические">Автоматические</option>
-							</select>
-
-							<label for="gates-back-small">Калитка</label>
-							<input type="number" min="0" max="100" class="number input-calc" id="gates-back-small" value="0">
-
-						</div>
-					</div>
-					
-					<div class="result-block">
-						<div class="text">Установка забора из профнастила "под ключ"
-
-						</div>
-
-						<div class="cost">1011521.8 руб</div>
-					</div>
-					
 
 				</div>
-
-
-
-
-
 			</div>
+			
 
 
 
@@ -173,29 +184,7 @@
 
 	</section>
 
-	<div class="for-approval">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3"></div>
-				<div class="col-md-9">
-					<table>
 
-						<tr>
-							<td>Материалы себестоимость</td>
-							<td>Работа Себестоимость</td>
-							<td>Прибыль</td>
-						</tr>
-						<tr>
-							<td id="self-cost"></td>
-							<td id="work-cost"></td>
-							<td id="incomes-cost"></td>
-						</tr>
-					</table>
-				</div>
-			</div>
-		</div>
-		
-	</div>
 
 
 	<script src="js/jquery.min.js"></script>
