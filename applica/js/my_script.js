@@ -42,9 +42,9 @@ $(document).ready(function(){
   //           data: th.serialize()
   //       }).done(function() {
   //        $.magnificPopup.open({ items: { src: '#sp' } });
-          setTimeout(function() {
-                 th.trigger("reset");
-             }, 1000);
+          // setTimeout(function() {
+          //        th.trigger("reset");
+          //    }, 1000);
       //   });
 
        // return false;
@@ -327,6 +327,10 @@ $(document).ready(function() {
       $("#form_contact").addClass('opened');
     });
 
+    $("[href='#form_contact']").click(function(){
+      $("#form_contact").addClass('opened');
+    });
+
     $(".b_ban_link .modal").click(function(){
       $("#form_prodject .prod_popup").addClass('opened');
     });
@@ -364,14 +368,7 @@ $(function () {
     $('#tab-tov-nav li:first').addClass('active_tag');
     $('#tab-tov-boxeid > div').hide();
     $('#tab-tov-boxeid > div:first').show();
-    // $('#tab-tov-nav a').click(function () {
-    //     $('#tab-tov-nav li').removeClass('active_tag');
-    //     $(this).parent().addClass('active_tag');
-    //     // var activeTab = $(this).attr('href');
-    //     // $('#tab-tov-boxeid > div:visible').hide();
-    //     // $(activeTab).show();
-    //     return false;
-    // });
+
 
 });
 /*------------------------------------------------tabs*/
@@ -393,127 +390,6 @@ $(document).ready(function() {
 });
 });
 
-//==================text
-
-//===========validation///
-// $(function frmotpr(){
-//         var field = new Array("name_f", "contact_f", "mssg_f");
-//         $("#file_form").submit(function() {
-//             var error=0;
-//             $("#file_form").find(":input").each(function() {
-//                 for(var i=0;i<field.length;i++){
-//                     if($(this).attr("name")==field[i]){
-//                         if(!$(this).val()){
-//                             $(this).addClass('notvalid');
-//                             error=1;    
-//                         }
-//                         else{
-//                             $(this).removeClass('notvalid');
-//                         }
-//                     }                       
-//                 }               
-//            })
-//             var email = $("#contact_f").val();
-//             if(!isValidEmailAddress(email)){
-//                 error=2;
-//                 $("#contact_f").addClass('notvalid');
-//             }
-//             if(error==0){
-//             return true;
-//             }else{
-//             var err_text = "Не все обязательные поля заполнены!";
-//             if(error==1)  err_text="Не все обязательные поля заполнены!";
-//             $("#messenger").html(err_text); 
-//             $("#messenger").fadeIn("slow"); 
-//             return false;
-//             }
-//         })
-//     });
-    
-//     function isValidEmailAddress(emailAddress) {
-//         var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-//         return pattern.test(emailAddress);
-//     }
-    
-//     $(function frmotpr(){
-//         var field = new Array("name_f2", "contact_f2", "mssg_f2");
-//         $("#file_form2").submit(function() {
-//             var error=0;
-//             $("#file_form2").find(":input").each(function() {
-//                 for(var i=0;i<field.length;i++){
-//                     if($(this).attr("name")==field[i]){
-//                         if(!$(this).val()){
-//                             $(this).addClass('notvalid');
-//                             error=1;    
-//                         }
-//                         else{
-//                             $(this).removeClass('notvalid');
-//                         }
-//                     }                       
-//                 }               
-//            })
-//             var email = $("#contact_f2").val();
-//             if(!isValidEmailAddress(email)){
-//                 error=2;
-//                 $("#contact_f2").addClass('notvalid');
-//             }
-//             if(error==0){
-//             return true;
-//             }else{
-//             var err_text = "Не все обязательные поля заполнены!";
-//             if(error==1)  err_text="Не все обязательные поля заполнены!";
-//             $("#messenger2").html(err_text); 
-//             $("#messenger2").fadeIn("slow"); 
-//             return false;
-//             }
-//         })
-//     });
-    
-//     function isValidEmailAddress(emailAddress) {
-//         var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-//         return pattern.test(emailAddress);
-//     }
-    
-    
-//     $(function frmotpr(){
-//         var field = new Array("name_f_m", "contact_f_m", "mssg_f_m");
-//         $("#file_form_m").submit(function() {
-//             var error=0;
-//             $("#file_form_m").find(":input").each(function() {
-//                 for(var i=0;i<field.length;i++){
-//                     if($(this).attr("name")==field[i]){
-//                         if(!$(this).val()){
-//                             $(this).addClass('notvalid');
-//                             error=1;    
-//                         }
-//                         else{
-//                             $(this).removeClass('notvalid');
-//                         }
-//                     }                       
-//                 }               
-//            })
-//             var email = $("#contact_f_m").val();
-//             if(!isValidEmailAddress(email)){
-//                 error=2;
-//                 $("#contact_f_m").addClass('notvalid');
-//             }
-//             if(error==0){
-//             return true;
-//             }else{
-//             var err_text = "Не все обязательные поля заполнены!";
-//             if(error==1)  err_text="Не все обязательные поля заполнены!";
-//             $("#messenger_m").html(err_text); 
-//             $("#messenger_m").fadeIn("slow"); 
-//             return false;
-//             }
-//         })
-//     });
-    
-//     function isValidEmailAddress(emailAddress) {
-//         var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-//         return pattern.test(emailAddress);
-//     }
-//===========validation///
 
 
 
