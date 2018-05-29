@@ -130,7 +130,13 @@ $(document).ready(function(){
 
 $(".ico_nav").bind("click", function(){
 
+
+
         $(this).next('.h_nav_box').slideToggle(300).toggleClass("open_box");
+        // $(".h_nav_box").children().wrapAll('<div class="header-popup-wrap"></div>');
+        // $(".header-popup-wrap").css({
+        //   'overflow' : 'scroll'
+        // });
         $(this).next('.h_nav_box').find('.link_open_nav').toggleClass("active_mob_link");
         $(this).parents('.header_nav').toggleClass("open_menu");
         $(this).parents('body').toggleClass("b_overflow");
