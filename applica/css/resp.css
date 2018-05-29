@@ -570,6 +570,13 @@
 
 @media (min-width: 0px) and (max-width: 450px) {
 
+   .sbo_left {
+    -ms-align-items: center;
+    align-items: center;
+}
+
+
+
   .page_title h3 {
     line-height: 27px;
   }
@@ -965,5 +972,11 @@
      -webkit-box-pack: justify;
          -ms-flex-pack: justify;
              justify-content: space-between;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1025px) {
+  .h_nav_box.open_box {
+    overflow-y: scroll;
   }
 }
