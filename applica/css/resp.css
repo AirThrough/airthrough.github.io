@@ -978,7 +978,6 @@
 @media (min-width: 0px) and (max-width: 1025px) {
   .h_nav_box.open_box {
     overflow-y: scroll;
-    width: 100%;
   }
 
   .header_nav ul {
