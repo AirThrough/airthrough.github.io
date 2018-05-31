@@ -978,9 +978,22 @@
 @media (min-width: 0px) and (max-width: 1025px) {
   .h_nav_box.open_box {
     overflow-y: scroll;
+    bottom: 5px;
   }
 
   .header_nav ul {
     overflow: scroll;
   }
 }
+
+@media (min-width: 0px) and (max-width: 768px) {
+  .footer .footer_top .ft_one:nth-child(1) {
+    width: 100%;
+  }
+
+  .footer .footer_top {
+    display: block;
+  }
+}
+
+
