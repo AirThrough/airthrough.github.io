@@ -351,7 +351,8 @@ $(document).ready(function() {
        transitionOut: 'none',
        speedIn: 0,
        speedOut: 000,
-       overlayShow: false
+       overlayShow: false,
+       touch: false
     });
 });
 $(document).on('click', '.close_p', function() {

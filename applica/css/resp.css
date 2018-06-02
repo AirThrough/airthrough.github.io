@@ -842,7 +842,8 @@
 }
 
 .stuff_box_one {
-   height: 300px;
+   height: auto;
+   padding-bottom: 20px;
 }
 
 .sbo_left {
@@ -981,6 +982,16 @@
     bottom: 5px;
   }
 
+   .header_nav {
+    padding-right: 10px;
+    margin-left: auto;
+  }
+
+
+  .section_stuff {
+    padding-top: 5px;
+  }
+
 
 }
 
@@ -992,6 +1003,94 @@
   .footer .footer_top {
     display: block;
   }
+
+  .part_link {
+    width: 100%;
+  }
+
+  .part_link .part_link-block {
+    width: 100%;
+  }
+
+  .part_link .part_link-block .link_op {
+    display: inline-block;
+
+
+  }
+
+  .header_nav li .drop_nav li:hover {
+    background: none;
+  }
+
+
+  .ban_home {
+    background: #f6f6f6 url(../images/home_banner_mob.svg) scroll no-repeat bottom right;
+  }
+
+
 }
 
+@media (min-width: 0px) and (max-width: 1100px) {
+
+   .sbo_left {
+    -ms-align-items: center;
+    align-items: center;
+}
+}
+
+@media (min-width: 990px) and (max-width: 1025px) {
+  .new_block {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .partner_block {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .footer .footer_top  .ft_one {
+    display: block;
+  }
+
+
+.footer .footer_top  .ft_one:nth-child(1) {
+            margin: 0;
+            width: auto;
+            max-width: 360px;
+        }
+
+
+.footer .footer_top  .ft_one:nth-child(2) {
+            margin: 0;
+            width: auto;
+        }
+
+.footer .footer_top  .ft_one:nth-child(3) {
+            margin: 0;
+            width: auto;
+             padding-right: 100px;
+        }
+
+.footer .footer_top  .ft_one:nth-child(2) ul {
+   display: flex; 
+            flex-direction: column;
+            justify-content: flex-start;
+            -ms-align-items: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-height: 999px;
+            padding-right: 0px;
+}
+
+.footer .footer_top  .ft_one ul li {
+     margin-right: 40px;
+                margin-bottom: 10px;   
+}
+
+.footer .footer_top  .ft_one:nth-child(2) ul li {
+  margin-bottom: 10px;
+}
+}
 
