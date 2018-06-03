@@ -81,7 +81,7 @@ $(document).ready(function(){
     $('.comments_container').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
-        autoplay:true,
+        autoplay:false,
         arrows:false,
         dots:true,
         responsive: [
@@ -110,7 +110,7 @@ $(document).ready(function(){
         $('.believe_container__ul').slick({
           slidesToShow: 4,
           slidesToScroll: 1,
-          autoplay:true,
+          autoplay:false,
           arrows:false,
           dots:true,
           responsive: [
