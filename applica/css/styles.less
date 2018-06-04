@@ -1587,7 +1587,7 @@ html {
         justify-content: space-between;
         align-items: flex-start;
         margin-top: 48px;
-        & > li{
+         li{
             width: 272px;
             .square{
                 float: left;
@@ -1606,7 +1606,7 @@ html {
                   font-stretch: normal;
                   line-height: normal;
                   letter-spacing: normal;
-                  text-align: left;
+                  text-align: center;
                   color: #ffffff;
             }
             p{
@@ -1619,7 +1619,7 @@ html {
                   font-stretch: normal;
                   line-height: 1.5;
                   letter-spacing: normal;
-                  text-align: left;
+                  text-align: center;
                   color: #6b6b6b;
                   margin-top: 12px;
             }
@@ -2716,6 +2716,34 @@ transition: all 0.35s ease-in-out;
 .success-title {
     margin-bottom: 13px;
 }
+
+// @media (min-width: 1100px) {
+
+// //     .close_wind .close_form {
+// //     background: url('../images/close-bold-black.svg') center no-repeat;
+// //     filter: none;
+// // }
+
+// }
+
+.wg_w__container .offer .slick-dots li {
+    opacity: .15!important;
+    background-color: #fff!important;
+    width: 8px;
+    display: inline-block;
+
+    &.slick-active {
+         opacity: 1!important;
+    }
+
+    button {
+        width: 8px;
+    height: 8px;
+    padding: 0;
+    }
+}
+
+
 
 @media (min-width: 1700px) {
 

@@ -997,6 +997,10 @@
 
 @media (min-width: 0px) and (max-width: 768px) {
 
+  .wg_w__container {
+    padding-bottom: 40px;
+  }
+
   .h_nav_box.open_box {
     box-shadow: 0 0 0px 20px white;
   }

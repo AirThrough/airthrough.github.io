@@ -96,15 +96,42 @@ $(document).ready(function(){
         ]
       });
 
-    if($(window).width() < '769'){
+    if($(window).width() < '1025'){
         $('.workers').slick({
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
-          autoplay:true,
+          autoplay:false,
           arrows:false,
-          dots:true
+          dots:true,
+          responsive: [
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
+            }
+          ]
+        });
+        $('.offer').slick({
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          autoplay:false,
+          arrows:false,
+          dots: true,
+          responsive: [
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
+            }
+          ]
         })
       }
+
+      
 
       if($(window).width() < '1100'){
         $('.believe_container__ul').slick({
