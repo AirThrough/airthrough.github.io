@@ -996,6 +996,11 @@
 }
 
 @media (min-width: 0px) and (max-width: 768px) {
+
+  .h_nav_box.open_box {
+    box-shadow: 0 0 0px 20px white;
+  }
+
   .footer .footer_top .ft_one:nth-child(1) {
     width: 100%;
   }
