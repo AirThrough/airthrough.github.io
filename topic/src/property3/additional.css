@@ -61,7 +61,6 @@ text-decoration: none;
 padding-right: 37px;
 font-size: 14px;
 font-weight: 500;
-white-space: nowrap;
 min-width: 198px;
 line-height: 1;
 display: flex;
@@ -80,6 +79,7 @@ border-radius: 0px;
 	color: #737D9B;
 	font-size: 13px;
 	position: relative;
+	white-space: nowrap;
 }
 .categ__item:hover, .submenu__item:hover {
 background-color: #F6F8FC !important;
@@ -182,7 +182,6 @@ font-size: 14px;
 
 font-weight: 500;
 
-white-space: nowrap;
 
 min-width: 198px;
 
