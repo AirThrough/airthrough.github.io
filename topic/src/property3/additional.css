@@ -12,7 +12,7 @@
 
 .categ__item-submenu {
 	position: absolute;
-	width: 100%;
+	width: auto;
 	min-height: 100%;
 	background: white;
 	top: 0px;
@@ -72,7 +72,7 @@ color: #0A1331;
 padding-top: 7px;
 padding-bottom: 7px;
 padding-left: 7px;
-
+white-space: nowrap;
 border-radius: 0px;
 }
 .categ__item-amount {
@@ -80,6 +80,7 @@ border-radius: 0px;
 	font-size: 13px;
 	position: relative;
 	white-space: nowrap;
+	margin-bottom: -2px;
 }
 .categ__item:hover, .submenu__item:hover {
 background-color: #F6F8FC !important;
@@ -142,6 +143,7 @@ border-radius: 7px;
 -moz-box-shadow: 0 0 28px rgba(194,201,205,0.5);
 
 box-shadow: 0 0 28px rgba(194,201,205,0.5);
+right: auto;
 
 
 }
