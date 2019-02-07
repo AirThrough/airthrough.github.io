@@ -1,0 +1,210 @@
+.selector .selector__list .selector__list-scroll {
+	overflow-y: hidden;
+}
+
+.categ__item:hover > 
+.categ__item-submenu {
+	opacity: 1;
+	/*transition: 0.15s opacity ease-in-out, 0s z-index, 0s pointer-events;*/
+	z-index: 1;
+	pointer-events: auto;
+}
+
+.categ__item-submenu {
+	position: absolute;
+	width: 100%;
+	min-height: 100%;
+	background: white;
+	top: 0px;
+	left: 100%;
+	margin-left: -10px;
+	opacity: 0;
+	z-index: -999;
+	pointer-events: none;
+		-webkit-border-radius: 7px;
+
+-moz-border-radius: 7px;
+
+-ms-border-radius: 7px;
+
+border-radius: 7px;
+max-height: 9999px;
+	border-radius: 7px;
+	list-style-image: none;
+
+-ms-overflow-style: none;
+
+overflow: -moz-scrollbars-none;
+
+background-color: #fff;
+
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+-webkit-box-shadow: 6px 0 8px rgba(194,201,205,0.5);
+
+-moz-box-shadow: 6px 0 8px rgba(194,201,205,0.5);
+
+box-shadow: 6px 0 8px rgba(194,201,205,0.5);
+	/*transition: 0.15s opacity ease-in-out, 0s z-index;*/
+}
+
+.submenu__item:hover >
+.categ__item-submenu {
+	opacity: 1;
+	/*transition: 0.15s opacity ease-in-out, 0s z-index, 0s pointer-events;*/
+	z-index: 1;
+	pointer-events: auto;
+}
+.categ__item, .submenu__item {
+text-decoration: none;
+padding-right: 37px;
+font-size: 14px;
+font-weight: 500;
+white-space: nowrap;
+min-width: 198px;
+line-height: 1;
+display: flex;
+flex-direction: row;
+-ms-align-items: center;
+align-items: center;
+justify-content: space-between;
+color: #0A1331;
+padding-top: 7px;
+padding-bottom: 7px;
+padding-left: 7px;
+
+border-radius: 0px;
+}
+.categ__item-amount {
+	color: #737D9B;
+	font-size: 13px;
+	position: relative;
+}
+.categ__item:hover, .submenu__item:hover {
+background-color: #F6F8FC !important;
+}
+.categ__item:hover > a, .submenu__item:hover > a{
+color: #0A1331 !important;
+}
+.categ__item.has-child > .categ__item-amount::after,
+.submenu__item.has-child > .categ__item-amount::after
+ {
+	display: block;
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -5px;
+	left: 100%;
+	margin-left: 11px;
+	width: 0;
+height: 0;
+border-style: solid;
+border-width: 4px 0 4px 4.5px;
+border-color: transparent transparent transparent #737D9B;
+opacity: 0.3;
+transition: 0.25s all ease-in-out
+}
+.categ__item.has-child:hover > .categ__item-amount::after,
+.submenu__item.has-child:hover > .categ__item-amount::after
+ {
+	opacity: .6;
+	transform: translateX(2px);
+	transition: 0.25s all ease-in-out
+}
+
+
+.categ__item > a {
+ font-weight: bold;
+}
+.categ__item:first-child a {
+	padding-left: 14px !important;
+}
+.selector__elem:first-child {
+	border-radius: 5px 5px 0px 0px;
+}
+.categ__list {
+	width: 100%;
+	border-radius: 5px 5px 0px 0px;
+}
+.wrapper .selector .selector__list {
+	border: none;
+	-webkit-border-radius: 7px;
+
+-moz-border-radius: 7px;
+
+-ms-border-radius: 7px;
+
+border-radius: 7px;
+
+-webkit-box-shadow: 0 0 28px rgba(194,201,205,0.5);
+
+-moz-box-shadow: 0 0 28px rgba(194,201,205,0.5);
+
+box-shadow: 0 0 28px rgba(194,201,205,0.5);
+
+
+}
+.selector--categories .selector__list:before {
+	border: none !important;
+	border-color: white;
+	border-radius: 0 7px 0 7px;
+	-webkit-box-shadow: 0 0 28px rgba(194,201,205,0.5);
+
+-moz-box-shadow: 0 0 28px rgba(194,201,205,0.5);
+
+box-shadow: 0 0 28px rgba(194,201,205,0.5);
+
+}
+.wrapper .selector .selector__list-scroll {
+	max-height: 9999px;
+	border-radius: 7px;
+	list-style-image: none;
+
+-ms-overflow-style: none;
+
+overflow: -moz-scrollbars-none;
+
+background-color: #fff;
+
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+}
+
+.submenu__item {
+	transition: 0.15s all ease-in-out;
+	text-decoration: none;
+
+padding-right: 32px;
+
+font-size: 14px;
+
+font-weight: 500;
+
+white-space: nowrap;
+
+min-width: 198px;
+
+line-height: 1;
+
+display: flex;
+
+align-items: center;
+
+color: #0A1331;
+}
+
+.submenu__item:hover {
+	background-color: #6095fb;
+	transition: 0.15s all ease-in-out;
+}
+
+.submenu__item-link {
+	transition: 0.15s all ease-in-out;
+}
+
+.submenu__item-link:hover {
+	color: white;
+	transition: 0.15s all ease-in-out;
+}

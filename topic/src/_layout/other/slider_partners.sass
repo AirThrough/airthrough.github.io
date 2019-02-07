@@ -1,0 +1,88 @@
+.partners h3
+	padding-bottom: 30px
+	padding-top: 50px
+.partners__list
+	text-align: center
+.partner__item
+	display: inline-block
+	vertical-align: middle
+	width: 90px
+	margin: 0px 11px
+	img
+		width: 100%
+.partners
+	padding-bottom: 65px
+	@include box-shadow(0 7px 20px -4px #a7a7a7)
+
+.partners .slick-dots 
+	bottom: -50px
+.partners .slick-slide div 
+	position: relative
+	height: 100px
+.all-partners
+	width: 140px
+	height: 32px
+	border: 1px solid $main
+	border-radius: 5px
+	font-family: 'sansbold', sans-serif
+	padding: 3px 20px
+	font-size: 18px
+	color: $main
+	@include transition(all .7s)
+	&:hover
+		background: $main
+		color: white
+
+.partners__slider
+	.slick-prev 
+		left: 45%
+		top: 115px
+	
+	.slick-next 
+		right: 45%
+		top: 115px
+.partner-slide img
+	margin: 0 auto
+
+.partners .slick-list 
+	height: 100px
+
+.partners .slick-slide div
+	position: relative
+	height: 100px
+	img
+		position: absolute
+		left: 50%
+		top: 50%
+		@include transform(translate(-50%,-50%))
+	
+
+.partners .button-block 
+	margin-top: 80px
+
+.partners
+	.slick-prev 
+		left: 38%
+		top: 205px
+
+	.slick-next 
+		right: 38%
+		top: 205px
+@media screen and (max-width: 767px)
+	.partner-slide img
+		-webkit-filter: contrast(180%) brightness(95%)
+		filter: contrast(180%) brightness(95%)
+@media screen and (max-width: 480px)
+	.partners h3
+		padding-bottom: 35px
+	.partners
+		.slick-prev
+			left: 38%
+			top: 210px
+		
+		.slick-next 
+			right: 38%
+			top: 210px
+@media screen and (max-width: 360px)
+	.partner-slide img 
+		max-width: 75px
