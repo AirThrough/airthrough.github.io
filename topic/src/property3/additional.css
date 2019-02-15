@@ -80,7 +80,6 @@ border-radius: 0px;
 	font-size: 13px;
 	position: relative;
 	white-space: nowrap;
-	margin-bottom: -2px;
 }
 .categ__item:hover, .submenu__item:hover {
 background-color: #F6F8FC !important;
@@ -115,9 +114,7 @@ transition: 0.25s all ease-in-out
 }
 
 
-.categ__item > a {
- font-weight: bold;
-}
+.categ__item > a {}
 .categ__item:first-child a {
 	padding-left: 14px !important;
 }
