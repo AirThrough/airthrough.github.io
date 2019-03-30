@@ -364,7 +364,9 @@ h1, h2, h3, h4, h5, h6, p {
   padding-top: 10px;
   margin-left: 8%;
   margin-right: 8%;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  -webkit-box-shadow: 7px 7px 20px 6px rgba(0, 0, 0, 0.7);
+          box-shadow: 7px 7px 20px 6px rgba(0, 0, 0, 0.7); }
 
 .guests__block {
   margin-top: 60px; }
@@ -417,7 +419,9 @@ h1, h2, h3, h4, h5, h6, p {
     padding-right: 44px;
     margin-left: 74px;
     margin-right: 74px;
-    position: relative; }
+    position: relative;
+    -webkit-box-shadow: 7px 7px 20px 6px rgba(0, 0, 0, 0.8);
+            box-shadow: 7px 7px 20px 6px rgba(0, 0, 0, 0.8); }
   .gallery__title {
     font-weight: 500;
     font-size: 35px;
