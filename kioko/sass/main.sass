@@ -2,6 +2,7 @@
 $white: #FDFDFD
 $accent: #FF141E
 $main_bg: #0C0C0C
+$light_bg: #131313
 $grey: #666666
 $dark_grey: #9B9B9B
 
@@ -267,6 +268,7 @@ h1, h2, h3, h4, h5, h6, p
 // MENU ===============
 
 .menu 
+	background: $light_bg
 
 	&__nav 
 
@@ -331,6 +333,8 @@ h1, h2, h3, h4, h5, h6, p
 // GUESTS ===============
 
 .guests 
+	background: $light_bg
+	padding: 1px
 
 	&__wrapper 
 		margin-top: 54px
@@ -520,3 +524,13 @@ h1, h2, h3, h4, h5, h6, p
 		text-align: center
 		font-size: 9px 
 		margin-bottom: 25px
+
+
+// NEWSLIST ===============
+
+.newslist 
+
+	&__top-image 
+		background: url('../img/newslist-top-image.jpg') no-repeat
+		background-size: cover 
+		height: 285px
