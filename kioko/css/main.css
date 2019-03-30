@@ -399,6 +399,7 @@ h1, h2, h3, h4, h5, h6, p {
       color: white; }
     .guests__block-about {
       color: #666666;
+      text-transform: lowercase;
       font-weight: 400;
       font-size: 15px;
       margin-bottom: 28px; }
@@ -539,3 +540,81 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-background-size: cover;
           background-size: cover;
   height: 285px; }
+.newslist {
+  background: #131313; }
+  .newslist__top-image {
+    background: url("../img/newslist-top-image.jpg") no-repeat;
+    -webkit-background-size: cover;
+            background-size: cover;
+    height: 285px;
+    margin-bottom: 60px; }
+  .newslist__wrapper {
+    background: #0C0C0C;
+    padding-left: 65px;
+    padding-right: 65px;
+    margin-bottom: 75px;
+    -webkit-box-shadow: 7px 7px 20px 6px rgba(0, 0, 0, 0.5);
+            box-shadow: 7px 7px 20px 6px rgba(0, 0, 0, 0.5); }
+  .newslist__items-wrapper {
+    margin-top: 50px; }
+  .newslist__item {
+    margin-bottom: 165px;
+    cursor: pointer;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-perspective: 300px;
+            perspective: 300px; }
+    .newslist__item:hover .newslist__item-img {
+      -webkit-transform: scale(1.5);
+          -ms-transform: scale(1.5);
+              transform: scale(1.5);
+      -webkit-transition: 0.3s all ease-in-out;
+      -o-transition: 0.3s all ease-in-out;
+      transition: 0.3s all ease-in-out; }
+    .newslist__item-img-frame {
+      overflow: hidden;
+      position: relative; }
+    .newslist__item-img {
+      width: 100%;
+      height: auto;
+      -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+              transform: scale(1);
+      -webkit-transition: 0.3s all ease-in-out;
+      -o-transition: 0.3s all ease-in-out;
+      transition: 0.3s all ease-in-out; }
+    .newslist__item-link {
+      padding-top: 55px;
+      padding-bottom: 73px;
+      padding-left: 22px;
+      padding-right: 22px;
+      font-weight: 700;
+      font-size: 18px;
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      display: block;
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      -webkit-transform: translateZ(4px);
+              transform: translateZ(4px); }
+      .newslist__item-link::before {
+        position: absolute;
+        content: "";
+        display: block;
+        -webkit-box-shadow: inset 0 0 200px 200px rgba(0, 0, 0, 0.7);
+                box-shadow: inset 0 0 200px 200px rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        -webkit-backdrop-filter: blur(2px);
+                backdrop-filter: blur(2px);
+        top: 0;
+        left: 0;
+        -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+        -webkit-transform: translateZ(-2px);
+                transform: translateZ(-2px); }

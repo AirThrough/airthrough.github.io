@@ -381,6 +381,7 @@ h1, h2, h3, h4, h5, h6, p
 
 		&-about 
 			color: $grey
+			text-transform: lowercase
 			font-weight: 400
 			font-size: 15px
 			margin-bottom: 28px
@@ -529,8 +530,76 @@ h1, h2, h3, h4, h5, h6, p
 // NEWSLIST ===============
 
 .newslist 
+	background: $light_bg
 
 	&__top-image 
 		background: url('../img/newslist-top-image.jpg') no-repeat
 		background-size: cover 
 		height: 285px
+		margin-bottom: 60px
+
+	&__wrapper
+		background: $main_bg
+		padding-left: 65px
+		padding-right: 65px
+		margin-bottom: 75px
+		box-shadow: 7px 7px 20px 6px rgba(0,0,0,.5)
+
+	&__items-wrapper 
+		margin-top: 50px
+
+	&__item 
+		margin-bottom: 165px
+		cursor: pointer
+		position: relative
+		transform-style: preserve-3d 
+		perspective: 300px
+
+		&:hover 
+
+			.newslist__item-img 
+				transform: scale(1.5)
+				transition: 0.3s all ease-in-out
+
+		&-img-frame 
+			overflow: hidden
+			position: relative
+
+		&-img 
+			width: 100%
+			height: auto
+			transform: scale(1)
+			transition: 0.3s all ease-in-out
+
+		&-link 
+			padding-top: 55px
+			padding-bottom: 73px
+			padding-left: 22px
+			padding-right: 22px
+			font-weight: 700
+			font-size: 18px 
+			color: white 
+			text-align: center
+			text-transform: uppercase
+			display: block
+			position: absolute
+			bottom: -40px
+			left: 0
+			transform-style: preserve-3d 
+			transform: translateZ(4px)
+
+			&::before
+				position: absolute
+				content: "" 
+				display: block 
+				box-shadow: inset 0 0 200px 200px rgba(0,0,0,0.7)
+				width: 100%
+				height: 100%
+				backdrop-filter: blur(2px)
+				top: 0
+				left: 0
+				transform-style: preserve-3d 
+				transform: translateZ(-2px)
+
+
+

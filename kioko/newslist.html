@@ -8,7 +8,12 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <filter id="blur">
+    <feGaussianBlur stdDeviation="10" />
+  </filter>
+</svg>
+
 	<header class="header">
 
 		<div class="container">
@@ -40,21 +45,28 @@
 
 		<div class="newslist__top-image"></div>
 
-		<div class="newslist__wrapper">
+		
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
+
+						<div class="newslist__wrapper">
 
 						<div class="h2-center-wrapper">
 							<h2 class="h2">Новости</h2>
 						</div>
 
+						<div class="newslist__items-wrapper">
+
 						<div class="row">
 							<div class="col-md-6">
 								<div class="newslist__item">
-									<div class="newslist__item-img-frame"><img src="img/news-1.jpg" alt="" class="newslist__item-img"></div>
+									<div class="newslist__item-img-frame"><img src="img/news-1.jpg" alt="" class="newslist__item-img">
+									</div>
 									<a href="#" class="newslist__item-link">какой то тестовый заголовок
-									на две строки и еще немного</a>
+									на две строки и еще немного
+									<div class="blurr"></div>
+								</a>
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -78,6 +90,8 @@
 									на две строки и еще немного</a>
 								</div>
 							</div>
+						</div>
+
 						</div>
 
 					</div>
