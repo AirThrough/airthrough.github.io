@@ -1,0 +1,520 @@
+// VARS 
+$white: #FDFDFD
+$accent: #FF141E
+$main_bg: #0C0C0C
+$grey: #666666
+$dark_grey: #9B9B9B
+
+* 
+	padding: 0
+	margin: 0
+
+body 
+	font-family: Roboto, sans-serif
+	background: $main_bg
+	color: white
+
+ul 
+	list-style: none 
+	padding: 0
+	margin: 0
+
+	li 
+		margin: 0
+		padding: 0
+
+a 
+	text-decoration: none 
+	color: white 
+
+	&:hover 
+		text-decoration: none 
+		color: white
+
+	&:focus
+		text-decoration: none 
+		color: white
+
+	&:visited
+		text-decoration: none 
+		color: white
+
+h1, h2, h3, h4, h5, h6, p
+	margin: 0
+	padding: 0
+
+
+
+// ELEMENTS 
+
+.btn 
+	font-size: 20px 
+	font-weight: 700
+	text-transform: uppercase
+	padding: 21.9px 84px
+	border: 3px solid $accent
+	border-radius: 50px
+	display: inline-block
+	transition: 0.3s all ease-in-out
+
+	&:hover 
+		background: $accent
+		transition: 0.3s all ease-in-out
+
+	&_main 
+		margin-top: 110px
+
+	&_gallery 
+		padding: 16.9px 129px
+		position: relative
+		z-index: 2
+
+.h2 
+	padding-top: 25px
+	padding-bottom: 25px
+	text-transform: uppercase
+	color: white 
+	display: inline-block
+	font-weight: 500
+	font-size: 30px
+	position: relative
+
+	&::after 
+		content: "" 
+		display: block 
+		position: absolute 
+		width: 50px
+		height: 3px
+		top: 50%
+		margin-top: -1.5px 
+		left: -62px
+		background: white
+
+	&::before
+		content: "" 
+		display: block 
+		position: absolute 
+		width: 50px
+		height: 3px
+		top: 50%
+		margin-top: -1.5px 
+		right: -62px
+		background: white 
+
+
+	&-center-wrapper 
+		text-align: center
+
+
+// HEADER =============
+
+.header 
+	background: $main_bg
+
+	&__logo 
+		padding-top: 15px
+		padding-bottom: 18px
+		display: flex 
+		flex-direction: row 
+		justify-content: center 
+		align-items: center
+		
+		&-img
+			width: 84px
+			height: 115px
+
+
+	&__nav 
+		padding-left: 150px
+		padding-right: 150px
+
+	&__menu 
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between 
+		align-items: center
+
+		&-item 
+
+			&-link 
+				font-weight: 500
+				text-transform: uppercase
+				display: block 
+				padding-bottom: 20px
+				position: relative
+				color: $white
+				font-size: 16px
+				padding-left: 2px
+				padding-right: 2px
+				transition: 0.25s all ease-in-out
+
+
+
+
+				&:hover 
+					color: $accent
+					transition: 0.25s all ease-in-out
+
+					&::after 
+						transform: scale(1)
+						transition: 0.25s all ease-in-out
+
+				&::after 
+					content: "" 
+					display: block 
+					position: absolute 
+					bottom: 2px
+					left: 0
+					width: 100%
+					height: 3px
+					background: $accent
+					transform: scale(0)
+					transition: 0.25s all ease-in-out
+
+				&.header__menu-item-link_cur
+					color: $accent
+					transition: 0.25s all ease-in-out
+
+					&::after 
+						transform: scale(1)
+						transition: 0.25s all ease-in-out
+
+
+
+// MAIN SCREEN ===============
+
+.main-screen
+	background: url('../img/bg-header.png') no-repeat black
+	background-size: cover 
+	text-align: center
+
+	&__title 
+		margin-top: 160px
+		font-size: 35px 
+		font-weight: 300
+		text-transform: uppercase
+		color: white
+		text-align: center
+
+		&_red-bold 
+			font-size: 40px 
+			font-weight: 700
+			color: $accent
+
+		&_white-bold 
+			font-size: 40px 
+			font-weight: 700
+			color: white 
+
+	&__points 
+		text-align: left
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		align-items: flex-start
+		padding-left: 15px
+		padding-right: 15px
+		margin-top: 90px
+
+		&-item 
+			margin-right: 39px
+			flex: 1
+			color: white
+			font-size: 16px 
+			font-weight: 400
+			position: relative
+			padding-left: 15px
+
+			&::after 
+				position: absolute
+				content: "" 
+				display: block 
+				width: 7px
+				height: 7px
+				top: 8px
+				left: 0
+				border-radius: 50% 
+				background: white
+
+			&:last-child 
+				margin-right: 0
+
+	&__anchor 
+		display: inline-block
+		margin-top: 70px
+		margin-bottom: 45px
+		position: relative
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		background: rgba(255,255,255,0)
+
+		&::after 
+			position: absolute
+			top: 50%
+			margin-top: -11px
+			left: 50%
+			margin-left: -8px
+			content: "" 
+			display: block 
+			width: 17px
+			height: 17px
+			transform: rotate(-45deg)
+			border-bottom: 2px solid white
+			border-left: 2px solid white
+
+
+// MENU ===============
+
+.menu 
+
+	&__nav 
+
+		&-list 
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between
+			align-items: flex-start
+
+			&-item 
+				flex: 1
+				font-weight: 900
+				font-size: 25px 
+				text-transform: uppercase
+				text-align: center
+
+				&-link 
+					display: block 
+					padding-top: 254px
+					padding-bottom: 254px
+					position: relative
+
+					&::after 
+						width: 100%
+						height: 100%
+						position: absolute
+						top: 0
+						left: 0
+						content: "" 
+						display: block 
+						background: $accent
+						opacity: 0
+						pointer-events: none 
+						transition: 0.3s all ease-in-out
+
+					&:hover 
+
+						&::after 
+							opacity: .2
+							transition: 0.3s all ease-in-out
+
+				&:nth-child(1) 
+					background: url('../img/menu-pic-1.jpg') no-repeat
+					background-size: cover
+				&:nth-child(2) 
+					background: url('../img/menu-pic-2.jpg') no-repeat
+					background-size: cover
+				&:nth-child(3) 
+					background: url('../img/menu-pic-3.jpg') no-repeat
+					background-size: cover
+				&:nth-child(4) 
+					background: url('../img/menu-pic-4.jpg') no-repeat
+					background-size: cover
+				&:nth-child(5) 
+					background: url('../img/menu-pic-5.jpg') no-repeat
+					background-size: cover
+				&:nth-child(6) 
+					background: url('../img/menu-pic-6.jpg') no-repeat
+					background-size: cover
+
+
+// GUESTS ===============
+
+.guests 
+
+	&__wrapper 
+		margin-top: 54px
+		margin-bottom: 277px
+		background: url('../img/bg-guests.jpg') no-repeat
+		background-size: cover 
+		padding-top: 10px
+		margin-left: 8%
+		margin-right: 8%
+		padding-bottom: 50px
+
+	
+	&__block 
+		margin-top: 60px
+
+		&-image 
+			position: relative
+
+			&-main
+				width: 100%
+				height: auto 
+				position: relative
+				z-index: 2
+
+			&-side 
+				position: absolute
+				z-index: 1
+				top: 100%
+				left: 100%
+				margin-left: -50px
+				margin-top: -190px
+
+		&-info 
+			padding-top: 70px
+			padding-right: 62px
+
+		&-name 
+			text-transform: uppercase
+			font-weight: 400
+			font-size: 25px 
+			margin-bottom: 8px
+			color: white
+
+		&-about 
+			color: $grey
+			font-weight: 400
+			font-size: 15px
+			margin-bottom: 28px
+
+		&-feedback 
+			font-weight: 400
+			font-size: 20px 
+			color: white
+
+// GALLERY ===============
+
+.gallery 
+	background: url('../img/bg-gallery.jpg') no-repeat 
+	background-size: cover 
+	overflow: hidden
+	position: relative
+
+	&__info 
+		margin-top: 100px
+		margin-bottom: 73px
+		background: $main_bg
+		padding-top: 90px
+		padding-bottom: 75px	
+		padding-left: 44px
+		padding-right: 44px
+		margin-left: 74px
+		margin-right: 74px
+		position: relative
+
+	&__title 
+		font-weight: 500
+		font-size: 35px 
+		text-transform: uppercase
+		margin-bottom: 27px
+		z-index: 2
+		position: relative
+
+	&__text 
+		font-weight: 400
+		font-size: 20px
+		margin-bottom: 73px
+		z-index: 2
+		position: relative
+
+	&__side-rect 
+		background: $main_bg
+		opacity: .9 
+		width: 300%	
+		position: absolute
+		top: 60px	
+		height: 77%	
+		right: -140px	
+		z-index: 1
+
+// FOOTER ===============
+
+.footer 
+
+	&__main 
+		margin-top: 50px
+		margin-bottom: 95px
+
+	&__contacts 
+		margin-left: 74px
+		font-weight: 300
+		color: white 
+		font-size: 12px 
+
+		&-item 
+			margin-bottom: 28px
+
+			&-address 
+				margin-bottom: 14px
+
+	&__subtitle 
+		color: $dark_grey
+		font-weight: 400
+		font-size: 15px 
+		margin-bottom: 18px
+
+	&__worktime 
+		color: white 
+		font-size: 18px 
+		font-weight: 400
+		line-height: 20px
+		margin-bottom: 23px
+
+		&_small 
+			font-size: 15px 
+		
+	&__inst 
+		font-weight: 400
+		font-size: 12px 
+		text-transform: uppercase 
+		padding-left: 20px 
+		position: relative 
+		transition: 0.25s all ease-in-out
+
+		&:hover 
+			color: $accent 
+			transition: 0.25s all ease-in-out
+
+		&::after 
+			content: "" 
+			display: block
+			position: absolute
+			width: 12px
+			height: 12px
+			background: url('../img/instagram-logo.svg') no-repeat 
+			background-size: cover
+			top: 50%
+			margin-top: -6.5px
+			left: 0 
+
+	&__nav 
+		font-weight: 500
+		font-size: 12px 
+		text-transform: uppercase
+
+		&-list
+
+			&-item 
+				margin-bottom: 18px
+
+				&-link 
+					transition: 0.25s all ease-in-out
+
+					&:hover 
+						color: $accent
+						transition: 0.25s all ease-in-out
+
+					&.footer__nav-list-item-link_cur
+						color: $accent
+						transition: 0.25s all ease-in-out
+	
+	&__copyright 
+		font-weight: 300
+		text-transform: uppercase
+		color: white 
+		text-align: center
+		font-size: 9px 
+		margin-bottom: 25px
