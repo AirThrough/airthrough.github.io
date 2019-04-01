@@ -47,6 +47,10 @@ h1, h2, h3, h4, h5, h6, p
 	margin: 0
 	padding: 0
 
+button 
+	&:focus 
+		outline: none
+
 
 
 // ELEMENTS 
@@ -899,3 +903,110 @@ h1, h2, h3, h4, h5, h6, p
 
 // JOBS ===============
 
+.jobs 
+	background: $light_bg
+
+	&__header 
+		padding-top: 100px
+		padding-bottom: 100px
+		background: url('../img/jobs-bg.jpg') center no-repeat
+		background-size: cover
+		overflow: hidden
+
+		&-inner 
+			padding-left: 160px
+			margin-right: 84px
+			padding-top: 28px
+			padding-bottom: 40px
+			padding-right: 35px
+			position: relative
+
+			&::before 
+				content: "" 
+				display: block 
+				position: absolute
+				width: 500%
+				height: 100%
+				top: 0
+				right: 0
+				background: rgba(0,0,0,.8)
+
+
+		&-title 
+			color: white 
+			font-size: 35px 
+			text-transform: uppercase
+			font-weight: 500
+			margin-bottom: 25px
+			position: relative
+			z-index: 10
+			line-height: 42px
+
+		&-text 
+			font-size: 20px 
+			color: white 
+			font-weight: 400
+			position: relative
+			z-index: 10
+
+	&__content 
+		margin-top: 8px
+		margin-bottom: 70px
+		margin-right: 15px
+		margin-left: 15px
+
+	&__item 
+		background: $main_bg
+		margin-bottom: 3px
+
+		&-btn 
+			font-size: 35px 
+			font-weight: 500
+			color: white 
+			padding-left: 56px
+			width: 100%
+			height: 100%
+			padding-top: 41.5px
+			padding-bottom: 41.5px
+			background: inherit
+			border: none
+			text-align: left
+			position: relative
+
+			&.jobs__item-btn_active 
+
+				&::after
+					transform: rotate(135deg)
+					transition: 0.3s all ease-in-out
+
+			&::after 
+				content: ""
+				display: block 
+				position: absolute
+				width: 17px
+				height: 17px
+				border-left: 5px solid white
+				border-bottom: 5px solid white
+				transform: rotate(-45deg)
+				right: 65px
+				top: 50%
+				margin-top: -9px
+				transition: 0.3s all ease-in-out
+
+		&-content 
+			border-top: 3px solid $light_bg
+			padding-left: 56px
+			padding-top: 65px
+			padding-bottom: 65px
+			padding-right: 120px
+			background: $main_bg
+			font-weight: 500
+			font-size: 18px
+			display: none
+			opacity: 0
+			transition: 0.3s opacity ease-in-out
+
+			&.jobs__item-content_active 
+				opacity: 1
+				transition: 0.3s opacity ease-in-out
+	

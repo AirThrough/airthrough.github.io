@@ -12,7 +12,7 @@ $(document).ready(function () {
 
 	// BLUR NEWSLIST 
 
-	// if ( Boolean($(".newslist")[0]) ) {
+	if ( Boolean($(".newslist")[0]) ) {
 
 		$(".newslist__item").each(function(){
 			var img = $(this).find('img');
@@ -26,6 +26,18 @@ $(document).ready(function () {
 			});
 		})
 
-	// }
+	}
+
+	// JOBS 
+
+	if ( Boolean($(".jobs")[0]) ) {
+
+		$(".jobs__item-btn").click(function(){
+			$(this).toggleClass("jobs__item-btn_active");
+			$(this).siblings(".jobs__item-content").toggleClass("jobs__item-content_active");
+			$(this).siblings(".jobs__item-content").slideToggle();
+		})
+
+	}
 
 })
