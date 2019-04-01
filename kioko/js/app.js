@@ -44,7 +44,8 @@ $(document).ready(function () {
 
 	if ( Boolean($(".gallery")[0]) ) {
 
-		minH = $(".gallery__img").outerHeight();
+		setTimeout(function(){
+			minH = $(".gallery__img").outerHeight();
 
 		$(".gallery__item").each(function(){
 			var curH = $(this).find(".gallery__img").outerHeight();
@@ -67,6 +68,9 @@ $(document).ready(function () {
 			}
 			
 		});
+	}, 1000);
+
+		
 
 		$('.gallery__img-link').fancybox();
 	}
