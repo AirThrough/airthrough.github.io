@@ -91,6 +91,54 @@ button:focus {
   .h2-center-wrapper {
     text-align: center; }
 
+.simple-header {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow: hidden; }
+  .simple-header_jobs {
+    background: url("../img/jobs-bg.jpg") center no-repeat;
+    -webkit-background-size: cover;
+            background-size: cover; }
+  .simple-header_gallery {
+    background: url("../img/gallery-bg.jpg") center no-repeat;
+    -webkit-background-size: cover;
+            background-size: cover; }
+    .simple-header_gallery .simple-header__inner {
+      margin-right: 70px;
+      padding-right: 50px;
+      padding-left: 140px; }
+  .simple-header__inner {
+    padding-left: 160px;
+    margin-right: 84px;
+    padding-top: 28px;
+    padding-bottom: 40px;
+    padding-right: 35px;
+    position: relative; }
+    .simple-header__inner::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 500%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.8); }
+  .simple-header__title {
+    color: white;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 10;
+    line-height: 42px; }
+  .simple-header__text {
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    position: relative;
+    z-index: 10; }
+
 .header {
   background: #0C0C0C; }
   .header__logo {
@@ -949,44 +997,6 @@ button:focus {
 
 .jobs {
   background: #131313; }
-  .jobs__header {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background: url("../img/jobs-bg.jpg") center no-repeat;
-    -webkit-background-size: cover;
-            background-size: cover;
-    overflow: hidden; }
-    .jobs__header-inner {
-      padding-left: 160px;
-      margin-right: 84px;
-      padding-top: 28px;
-      padding-bottom: 40px;
-      padding-right: 35px;
-      position: relative; }
-      .jobs__header-inner::before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 500%;
-        height: 100%;
-        top: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.8); }
-    .jobs__header-title {
-      color: white;
-      font-size: 35px;
-      text-transform: uppercase;
-      font-weight: 500;
-      margin-bottom: 25px;
-      position: relative;
-      z-index: 10;
-      line-height: 42px; }
-    .jobs__header-text {
-      font-size: 20px;
-      color: white;
-      font-weight: 400;
-      position: relative;
-      z-index: 10; }
   .jobs__content {
     margin-top: 8px;
     margin-bottom: 70px;
@@ -1051,3 +1061,59 @@ button:focus {
         -webkit-transition: 0.3s opacity ease-in-out;
         -o-transition: 0.3s opacity ease-in-out;
         transition: 0.3s opacity ease-in-out; }
+
+.gallery {
+  background: #131313; }
+  .gallery__container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin-top: 90px;
+    margin-bottom: 30px; }
+  .gallery__item {
+    width: -webkit-calc(25% - 14.25px);
+    width: calc(25% - 14.25px);
+    margin-right: 19px;
+    height: 350px;
+    margin-bottom: 13px;
+    overflow: hidden; }
+    .gallery__item:nth-child(4n) {
+      margin-right: 0; }
+  .gallery__img-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative; }
+    .gallery__img-link:hover .gallery__img {
+      -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+              transform: scale(1.2);
+      -webkit-transition: 0.3s all ease-in-out;
+      -o-transition: 0.3s all ease-in-out;
+      transition: 0.3s all ease-in-out; }
+  .gallery__img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    -webkit-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out; }

@@ -40,4 +40,35 @@ $(document).ready(function () {
 
 	}
 
+	// Gallery 
+
+	if ( Boolean($(".gallery")[0]) ) {
+
+		minH = $(".gallery__img").outerHeight();
+
+		$(".gallery__item").each(function(){
+			var curH = $(this).find(".gallery__img").outerHeight();
+			if ( curH < minH ) {
+				minH = curH;
+			}
+
+
+		});
+
+		$(".gallery__item").each(function(){
+			$(this).css({
+				'height' : minH + "px"
+			});
+			var curImg = $(this).find(".gallery__img");
+			if ( curImg.outerHeight() > minH ) {
+				curImg.css({
+					'top': -(curImg.outerHeight() - minH)
+				});
+			}
+			
+		});
+
+		$('.gallery__img-link').fancybox();
+	}
+
 })
