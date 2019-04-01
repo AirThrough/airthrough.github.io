@@ -1091,7 +1091,7 @@ button:focus {
     width: -webkit-calc(25% - 14.25px);
     width: calc(25% - 14.25px);
     margin-right: 19px;
-    height: 350px;
+    height: 250px;
     margin-bottom: 13px;
     overflow: hidden; }
     .gallery__item:nth-child(4n) {

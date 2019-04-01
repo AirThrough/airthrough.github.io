@@ -44,31 +44,31 @@ $(document).ready(function () {
 
 	if ( Boolean($(".gallery")[0]) ) {
 
-	// 	setTimeout(function(){
-	// 		minH = $(".gallery__img").outerHeight();
+		setTimeout(function(){
+			minH = $(".gallery__img").outerHeight();
 
-	// 	$(".gallery__item").each(function(){
-	// 		var curH = $(this).find(".gallery__img").outerHeight();
-	// 		if ( curH < minH ) {
-	// 			minH = curH;
-	// 		}
+		$(".gallery__item").each(function(){
+			var curH = $(this).find(".gallery__img").outerHeight();
+			if ( curH < minH ) {
+				minH = curH;
+			}
 
 
-	// 	});
+		});
 
-	// 	$(".gallery__item").each(function(){
-	// 		$(this).css({
-	// 			'height' : minH + "px"
-	// 		});
-	// 		var curImg = $(this).find(".gallery__img");
-	// 		if ( curImg.outerHeight() > minH ) {
-	// 			curImg.css({
-	// 				'top': -(curImg.outerHeight() - minH)
-	// 			});
-	// 		}
+		$(".gallery__item").each(function(){
+			$(this).css({
+				'height' : minH + "px"
+			});
+			var curImg = $(this).find(".gallery__img");
+			if ( curImg.outerHeight() > minH ) {
+				curImg.css({
+					'top': -(curImg.outerHeight() - minH)
+				});
+			}
 			
-	// 	});
-	// }, 1000);
+		});
+	}, 1500);
 
 		
 
