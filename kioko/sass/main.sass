@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6, p
 // MAIN SCREEN ===============
 
 .main-screen
-	background: url('../img/bg-header.png') no-repeat black
+	background: url('../img/bg-header.png') center no-repeat black
 	background-size: cover 
 	text-align: center
 
@@ -739,7 +739,13 @@ h1, h2, h3, h4, h5, h6, p
 			font-size: 16px 
 			font-weight: 400
 			color: white
-			margin-bottom: 60px
+			margin-bottom: 20px
+			padding-top: 13px
+			padding-bottom: 13px
+			padding-left: 30px
+			padding-right: 30px
+			background: $main_bg
+			box-shadow: 5px 5px 12px 2px rgba(0,0,0,.5)
 
 			&:nth-child(2n) 
 				margin-left: 12%
@@ -773,14 +779,14 @@ h1, h2, h3, h4, h5, h6, p
 				margin-right: 20px
 
 				&-wrapper 
-					background: $light_bg
+					background: $main_bg
 					position: relative
 
 					&::after 
 						content: "" 
 						position: absolute
 						display: block 
-						background: $light_bg
+						background: $main_bg
 						width: 6px
 						height: 20px
 						bottom: 0
@@ -789,7 +795,7 @@ h1, h2, h3, h4, h5, h6, p
 
 
 			&-price 
-				background: $light_bg
+				background: $main_bg
 				position: relative
 				z-index: 2
 				padding-left: 5px
@@ -814,6 +820,7 @@ h1, h2, h3, h4, h5, h6, p
 		color: white 
 		font-weight: 400
 		font-size: 16px 
+		line-height: 19px
 		text-align: center
 		border: 3px solid $light_grey
 		width: 261px
@@ -824,6 +831,7 @@ h1, h2, h3, h4, h5, h6, p
 		justify-content: center
 		align-items: center
 		cursor: pointer
+		border-radius: 50px
 
 		&:hover 
 			color: $accent
@@ -889,4 +897,5 @@ h1, h2, h3, h4, h5, h6, p
 				font-size: 15px 
 				font-weight: 400
 
+// JOBS ===============
 
