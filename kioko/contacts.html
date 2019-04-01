@@ -37,71 +37,60 @@
 		
 	</header>
 
-	<section class="newslist">
+	<section class="contacts"> 
 
-		<div class="newslist__top-image"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="contacts__title">Сеть суши-баров Киоко</h1>
+				</div>
+			</div>
 
-		
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="contacts__map-button-wrapper"><a id="address1" class="contacts__map-button contacts__map-button_active">пр. Почтовый, 35б ТЦ «Либерти», 2 этаж</a></div>
+				</div>
+				<div class="col-md-4">
+					<div class="contacts__map-button-wrapper"><a id="address2" class="contacts__map-button">улица Ватутина, 31</a></div>
+				</div>
+				<div class="col-md-4">
+					<div class="contacts__map-button-wrapper"><a id="address3" class="contacts__map-button">проспект Мира, 7</a></div>
+				</div>
+			</div>
 
-						<div class="newslist__wrapper">
-
-						<div class="h2-center-wrapper">
-							<h2 class="h2">Новости</h2>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="contacts__map-wrapper">
+						<div class="contacts__map">
+							<div id="map" class="contacts__map-inner"></div>
 						</div>
-
-						<div class="newslist__items-wrapper">
-
-						<div class="row">
-							<div class="col-md-6">
-								<div class="newslist__item">
-									<div class="newslist__item-img-frame"><img src="img/news-1.jpg" alt="" class="newslist__item-img">
-
-									</div>
-									<a href="#" class="newslist__item-link"><span class="newslist__item-link-wrapper">какой то тестовый заголовок
-									на две строки и еще немного</span>
-									<div class="newslist__item-img_blurred-container"><div style="background: url('../img/news-1.jpg') no-repeat;background-size: cover;"  class="newslist__item-img_blurred"></div></div>
-									
-								</a>
-								</div>
+						<div class="contacts__mapover">
+							<div class="contacts__mapover-title">Контакты</div>
+							<div class="contacts__mapover-item contacts__mapover-item_worktime">
+								<div class="contacts__mapover-item-title">Режим работы:</div>
+								<div class="contacts__mapover-item-value">с 11:00 до 23:00</div>
 							</div>
-							<div class="col-md-6">
-								<div class="newslist__item">
-									<div class="newslist__item-img-frame"><img src="img/news-2.jpg" alt="" class="newslist__item-img"></div>
-									<a href="#" class="newslist__item-link"><span class="newslist__item-link-wrapper">какой то тестовый заголовок
-									на две строки и еще немного</span>
-									<div class="newslist__item-img_blurred-container"><div style="background: url('../img/news-2.jpg') no-repeat;background-size: cover;"  class="newslist__item-img_blurred"></div></div>
-								</a>
+							<div class="contacts__mapover-item">
+								<div class="contacts__mapover-item-title">Адрес:
 								</div>
+								<div class="contacts__mapover-item-value">
+									пр.Почтовый,35б 
+								ТЦ «Либерти»,2 этаж</div>
 							</div>
-							<div class="col-md-6">
-								<div class="newslist__item">
-									<div class="newslist__item-img-frame"><img src="img/news-2.jpg" alt="" class="newslist__item-img"></div>
-									<a href="#" class="newslist__item-link"><span class="newslist__item-link-wrapper">какой то тестовый заголовок
-									на две строки и еще немного</span>
-								<div class="newslist__item-img_blurred-container"><div style="background: url('../img/news-2.jpg') no-repeat;background-size: cover;"  class="newslist__item-img_blurred"></div></div></a>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="newslist__item">
-									<div class="newslist__item-img-frame"><img src="img/news-1.jpg" alt="" class="newslist__item-img"></div>
-									<a href="#" class="newslist__item-link"><span class="newslist__item-link-wrapper">какой то тестовый заголовок
-									на две строки и еще немного</span>
-									<div class="newslist__item-img_blurred-container"><div style="background: url('../img/news-1.jpg') no-repeat;background-size: cover;"  class="newslist__item-img_blurred"></div></div></a>
-								</div>
+							<div class="contacts__mapover-item">
+								<div class="contacts__mapover-item-title">Телефон</div>
+								<div class="contacts__mapover-item-value">+38 (077) 777-77-77</div>
 							</div>
 						</div>
-
-						</div>
-
 					</div>
+					
 				</div>
 			</div>
 		</div>
 
+
 		
+
 
 	</section>
 
@@ -163,9 +152,17 @@
 		<div class="footer__copyright">© СУШИ-бар Кривой Рог "kioko", 2019.</div>
 
 	</footer>
-
+	
 	<script src="libs/jquery.min.js"></script>
+
+	<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDh_eA7MRR4bEgyQWN7zKRGEFy-kqeWDrU&callback=initialize"
+	type="text/javascript"></script>
+	<script src="js/map.js">
+
+	</script>
+
 	<script src="js/app.js"></script>
+
 
 </body>
 </html>

@@ -5,6 +5,9 @@ $main_bg: #0C0C0C
 $light_bg: #131313
 $grey: #666666
 $dark_grey: #9B9B9B
+$whity: #FFFCFC
+$light_grey: #D7D7D7
+$grey_medium: #9B9B9B
 
 * 
 	padding: 0
@@ -561,15 +564,48 @@ h1, h2, h3, h4, h5, h6, p
 				transform: scale(1.5)
 				transition: 0.3s all ease-in-out
 
+			.newslist__item-img_blurred 
+				transform: scale(1.5)
+				transition: 0.3s all ease-in-out
+
 		&-img-frame 
 			overflow: hidden
 			position: relative
+			box-shadow: 0 10px 25px rgba(0,0,0,.5)
 
 		&-img 
 			width: 100%
 			height: auto
 			transform: scale(1)
 			transition: 0.3s all ease-in-out
+
+			&_blurred 
+				position: absolute
+				top: 0
+				left: -65px
+				filter: blur(10px)
+				transition: 0.3s all ease-in-out
+
+				&::after 
+					background: rgba(0,0,0,.7)
+					position: absolute
+					top: 0
+					left: 0
+					content: "" 
+					display: block
+					width: 100%
+					height: 100%
+				
+				
+				&-container 
+					position: absolute
+					top: 0
+					left: 0
+					height: 140px
+					width: 100%
+					overflow: hidden
+
+
 
 		&-link 
 			padding-top: 55px
@@ -582,24 +618,275 @@ h1, h2, h3, h4, h5, h6, p
 			text-align: center
 			text-transform: uppercase
 			display: block
-			position: absolute
-			bottom: -40px
-			left: 0
-			transform-style: preserve-3d 
-			transform: translateZ(4px)
+			position: relative
+			margin-left: 65px
+			margin-right: 65px
+			margin-top: -140px
+			background: rgba(0,0,0,.7)
 
-			&::before
+			&-wrapper 
+				position: relative
+				z-index: 10
+
+			&::before 
 				position: absolute
 				content: "" 
-				display: block 
-				box-shadow: inset 0 0 200px 200px rgba(0,0,0,0.7)
-				width: 100%
-				height: 100%
-				backdrop-filter: blur(2px)
-				top: 0
-				left: 0
-				transform-style: preserve-3d 
-				transform: translateZ(-2px)
+				display: block
+				background: $accent
+				width: 50px
+				height: 2px
+				top: 21px
+				left: 50%
+				margin-left: -25px
+				z-index: 10
 
+			&::after
+				position: absolute
+				content: "" 
+				display: block
+				background: $accent
+				width: 50px
+				height: 2px
+				bottom: 24px
+				left: 50%
+				margin-left: -25px
+
+// NEWSITEM ===============
+
+.newsitem 
+	background: $light_bg
+
+	&__wrapper
+		background: $main_bg
+		margin-top: 85px
+		margin-bottom: 165px
+		box-shadow: 7px 7px 20px 6px rgba(0,0,0,.5)
+
+	&__top 
+
+		&-pic 
+			width: 100%
+			height: auto
+
+	&__header 
+		padding-left: 49px
+		padding-right: 49px
+		margin-top: 58px
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		align-items: flex-end 
+
+	&__title 
+		font-size: 30px 
+		text-transform: uppercase
+		font-weight: 400
+		color: white 
+
+	&__date 
+		color: $whity
+		font-size: 15px 
+		font-weight: 400
+		white-space: nowrap
+		margin-left: 20px
+
+	&__content 
+		margin-top: 50px
+		padding-left: 49px
+		padding-right: 49px
+		padding-bottom: 40px
+
+	&__text 
+		margin-bottom: 70px
+		font-size: 20px 
+		font-weight: 400
+		color: white
+
+		&:last-child 
+			margin-bottom: 0
+
+// MENUITEM ===============
+
+.menuitem 
+	background: $light_bg
+
+	&__top
+		background: url("../img/menuitem-img.jpg") no-repeat
+		background-size: cover
+		height: 273px
+		display: flex 
+		flex-direction: row 
+		justify-content: center
+		align-items: center
+
+	&__title 
+		font-size: 50px 
+		font-weight: 500
+		color: white 
+		text-transform: uppercase
+
+	&__list 
+		margin-top: 348px
+		margin-bottom: 500px
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		align-items: flex-start
+		flex-wrap: wrap
+
+		&-item 
+			width: 44%
+			font-size: 16px 
+			font-weight: 400
+			color: white
+			margin-bottom: 60px
+
+			&:nth-child(2n) 
+				margin-left: 12%
+
+			&-top 
+				margin-bottom: 20px
+				display: flex 
+				flex-direction: row 
+				justify-content: space-between
+				align-items: flex-end
+				overflow: hidden
+				position: relative
+
+				&::after 
+					content: "............................................................................................................................"
+					display: block 
+					position: absolute
+					width: 100%
+					height: 3px 
+					color: white 
+					font-size: 16px 
+					font-weight: 400
+					left: 0
+					bottom: 20px
+
+			&-name 
+				text-transform: uppercase
+				position: relative 
+				z-index: 2
+				padding-right: 5px
+				margin-right: 20px
+
+				&-wrapper 
+					background: $light_bg
+					position: relative
+
+					&::after 
+						content: "" 
+						position: absolute
+						display: block 
+						background: $light_bg
+						width: 6px
+						height: 20px
+						bottom: 0
+						left: 100%
+
+
+
+			&-price 
+				background: $light_bg
+				position: relative
+				z-index: 2
+				padding-left: 5px
+
+// CONTACTS ===============
+
+.contacts 
+	background: $light_bg
+
+	&__title 
+		font-size: 35px 
+		font-weight: 500
+		color: white 
+		text-align: center
+		margin-top: 135px
+		margin-bottom: 100px
+		text-transform: uppercase
+
+	&__map-button 
+		background: none
+		text-transform: uppercase
+		color: white 
+		font-weight: 400
+		font-size: 16px 
+		text-align: center
+		border: 3px solid $light_grey
+		width: 261px
+		height: 64px
+		transition: 0.25s all ease-in-out
+		display: flex 
+		flex-direction: row 
+		justify-content: center
+		align-items: center
+		cursor: pointer
+
+		&:hover 
+			color: $accent
+			border-color: $accent
+			transition: 0.25s all ease-in-out
+
+
+		&-wrapper 
+			display: flex 
+			flex-direction: row 
+			justify-content: center
+			align-items: center
+
+		&.contacts__map-button_active
+			color: $accent
+			border-color: $accent
+			transition: 0.25s all ease-in-out
+
+	&__map 
+		margin-top: 85px
+		height: 468px
+		width: 100%
+		margin-bottom: 200px
+
+		&-wrapper
+			position: relative
+
+		&-inner 
+			width: 100%
+			height: 100%
+
+	&__mapover 
+		background: rgba(0,0,0,.8)
+		padding: 45px
+		padding-bottom: 55px
+		position: absolute
+		bottom: -85px
+		left: 90px
+
+		&-title 
+			font-size: 18px 
+			font-weight: 400
+			color: white
+			margin-bottom: 20px
+			text-transform: uppercase
+
+		&-item 
+			margin-bottom: 20px
+
+			&.contacts__mapover-item_worktime
+				
+				.contacts__mapover-item-title 
+					margin-bottom: 0
+
+			&-title 
+				color: $grey_medium
+				font-size: 15px 
+				font-weight: 400
+				margin-bottom: 20px
+
+			&-value 
+				color: white 
+				font-size: 15px 
+				font-weight: 400
 
 

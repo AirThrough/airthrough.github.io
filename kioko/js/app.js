@@ -10,4 +10,22 @@ $(document).ready(function () {
 		return false;
 	});
 
+	// BLUR NEWSLIST 
+
+	// if ( Boolean($(".newslist")[0]) ) {
+
+		$(".newslist__item").each(function(){
+			var img = $(this).find('img');
+			var curW = img.outerWidth();
+			var curH = img.outerHeight();
+
+			$(this).find(".newslist__item-img_blurred").css({
+				'top'    : (140-curH) + "px",
+				'height' : curH + "px",
+				'width'  : curW + "px"
+			});
+		})
+
+	// }
+
 })
