@@ -10,6 +10,14 @@ $(document).ready(function () {
 		return false;
 	});
 
+	// MOBILE HEADER 
+
+	$(".header__mobile-menu-btn").click(function(){
+
+		$(this).toggleClass("header__mobile-menu-btn_active");
+		$(".header__mobile-nav-container").toggleClass("header__mobile-nav-container_active");
+	});
+
 	// BLUR NEWSLIST 
 
 	if ( Boolean($(".newslist")[0]) ) {
