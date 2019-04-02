@@ -1,0 +1,100 @@
+// VARS 
+$white: #FDFDFD
+$accent: #FF141E
+$main_bg: #0C0C0C
+$light_bg: #131313
+$grey: #666666
+$dark_grey: #9B9B9B
+$whity: #FFFCFC
+$light_grey: #D7D7D7
+$grey_medium: #9B9B9B
+$black_nav: #060606
+
+.header__mobile 
+	display: none
+
+@media (min-width: 0) and (max-width: 992px) 
+
+	body
+		background: $light_bg
+
+	.main-screen, .menu, .guests, .gallery, .footer
+		display: none
+
+	.header 
+
+		&__logo 
+			display: none 
+
+		&__nav 
+			display: none
+	
+	.header__mobile
+		display: block
+		position: relative
+		
+		&-top 
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between 
+			align-items: center 
+			padding-top: 12px
+			padding-bottom: 12px
+			padding-left: 23px
+			padding-right: 23px
+
+		&-menu 
+
+
+			&-item 
+				font-weight: 700
+				font-size: 12px 
+				text-transform: uppercase
+				margin-bottom: 23px
+
+				&-link 
+					color: white 
+					transition: 0.25s all ease-in-out
+
+					&:hover 
+						color: $accent
+						transition: 0.25s all ease-in-out
+
+					&.header__mobile-menu-item-link_cur
+						color: $accent
+						transition: 0.25s all ease-in-out 
+
+				&:last-child
+					margin-bottom: 0
+
+			&-btn 
+				background: none 
+				border: none
+				width: 32px
+				height: 19px
+				display: block
+				cursor: pointer
+
+				&-line 
+					display: block
+					height: 3.2px
+					width: 100%
+					margin-bottom: 5.5px
+					background: white
+
+		&-nav 
+			padding-top: 55px
+			margin-bottom: 70px
+
+			&-container 
+				padding-left: 42px
+				padding-bottom: 120px
+				min-height: calc(100vh - 62px)
+				background: $black_nav
+				position: absolute 
+				top: 62px 
+				left: -15px
+				width: calc(100% + 30px)
+
+
+
