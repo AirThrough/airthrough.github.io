@@ -61,11 +61,11 @@ $(document).ready(function () {
 				'height' : minH + "px"
 			});
 			var curImg = $(this).find(".gallery__img");
-			if ( curImg.outerHeight() > minH ) {
-				curImg.css({
-					'top': -(curImg.outerHeight() - minH)
-				});
-			}
+			// if ( curImg.outerHeight() > minH ) {
+			// 	curImg.css({
+			// 		'top': -(curImg.outerHeight() - minH)
+			// 	});
+			// }
 			
 		});
 	}, 1500);
