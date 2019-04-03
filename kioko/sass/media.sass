@@ -41,6 +41,9 @@ $grey_gallery: #FFF4F4
 .header__mobile 
 	display: none
 
+.newsitem__top-pic_mobile
+	display: none
+
 @media (min-width: 0) and (max-width: 767px) 
 
 	.main-screen
@@ -64,7 +67,80 @@ $grey_gallery: #FFF4F4
 
 				&::after 
 					display: none
+	
+	.newsitem 
 
+		&__header 
+			display: block
+			margin-top: 45px
+
+		&__title 
+			width: 100%
+			font-size: 15px
+			font-weight: 700
+
+		&__text 
+			font-size: 10px
+			margin-bottom: 30px
+
+		&__content 
+			margin-top: 45px
+
+		&__date 
+			display: none
+
+		&__wrapper 
+			margin-left: -15px
+			margin-right: -15px
+			position: relative
+			margin-top: 0
+			background: none 
+			box-shadow: none
+			margin-bottom: 15px
+
+		&__top 
+			&-pic 
+				display: none
+				&_mobile 
+					display: block
+					width: 100%
+					height: auto
+
+	.simple-header 
+		padding-top: 9px
+		padding-bottom: 9px
+
+		&_gallery
+
+			.simple-header__inner
+				padding-left: 27px
+				padding-right: 20px
+				margin-right: 0
+
+		&__title 
+			font-size: 12px 
+			line-height: normal
+			margin-bottom: 13px
+
+		&__text 
+			font-size: 10px
+
+		&__inner 
+			padding-top: 21px
+			padding-bottom: 25px
+
+	.gallery-page 
+
+		&__container 
+			margin-top: 73px
+			margin-bottom: 83px
+
+		&__item 
+			margin-right: 0
+			width: 25%
+			height: 69px
+			margin-bottom: 0
+			
 
 @media (min-width: 0) and (max-width: 991px) 
 
@@ -449,7 +525,83 @@ $grey_gallery: #FFF4F4
 		&__copyright 
 			padding-bottom: 40px
 			margin-bottom: 0
+	
+	.menuitem 
 
+		&__top 
+			height: 117px
+			background: url('../img/menuitem-img-mobile.jpg') center no-repeat
+			background-size: cover
+
+		&__title 
+			font-size: 15px
+
+		&__list 
+			margin-top: 45px
+			margin-bottom: 60px
+
+			&-item 
+				margin-right: 0
+				margin-left: 0
+				width: 100%
+				padding-left: 42px
+				padding-right: 42px
+				padding-top: 15px
+				padding-bottom: 15px
+				font-size: 12px 
+
+				&:nth-child(2n)
+					margin-left: 0
+
+				&-top 
+					&::after 
+						font-size: 12px
+						bottom: 14px
+						content: "............................................................................................................................................................................................................................................."
+				&-name 
+					&-wrapper 
+						&::after 
+							width: 3px
+
+	.newslist
+
+		&__top-image
+			height: 117px
+			background: url('../img/news-bg-mobile.jpg') center no-repeat
+			background-size: cover 
+			margin-bottom: 7px
+
+		&__wrapper 
+			background: none 
+			box-shadow: none
+			padding-left: 0
+			padding-right: 0
+			position: relative
+			margin-bottom: -45px
+
+		&__item 
+			margin-left: -15px
+			margin-right: -15px
+			margin-bottom: 92px
+
+			&-link 
+				margin-left: 30px
+				margin-right: 30px
+				font-size: 13px
+
+			&-img 
+				&_blurred
+					left: -30px
+
+@media (min-width: 375px) and (max-width: 410px)
+
+	.newslist__item-link
+		font-size: 15px 
+
+@media (min-width: 411px) and (max-width: 992px)
+
+	.newslist__item-link
+		font-size: 18px 					
 
 @media (min-width: 768px) and (max-width: 991px) 
 
@@ -519,6 +671,9 @@ $grey_gallery: #FFF4F4
 			padding-right: 50px
 
 @media (min-width: 992px) and (max-width: 1199px) 
+
+	.newslist__item-link
+		font-size: 13px 
 
 	.menu__nav-list-item-link
 		height: 540px
@@ -611,3 +766,6 @@ $grey_gallery: #FFF4F4
 				padding-top: 10px
 				padding-bottom: 50px
 				box-shadow: 7px 7px 20px 6px rgba(0,0,0,.7)
+
+
+

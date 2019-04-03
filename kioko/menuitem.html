@@ -2,40 +2,86 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>KIOKO</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 	<link rel="stylesheet" href="css/all.min.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
 </head>
 <body>
+	
+	<div class="top-wrapper">
 
+		<header class="header">
 
-	<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
 
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
+						<div class="header__logo">
+							<img class="header__logo-img" src="img/logo.svg" alt="Kioko">
+						</div>
 
-					<div class="header__logo">
-						<img class="header__logo-img" src="img/logo.svg" alt="Kioko">
+						<nav class="header__nav">
+							<ul class="header__menu">
+								<li class="header__menu-item"><a class="header__menu-item-link header__menu-item-link_cur" href="index.html">Главная</a></li>
+								<li class="header__menu-item"><a class="header__menu-item-link" href="menu.html">Меню</a></li>
+								<li class="header__menu-item"><a class="header__menu-item-link" href="#">Новости</a></li>
+								<li class="header__menu-item"><a class="header__menu-item-link" href="#">Вакансии</a></li>
+								<li class="header__menu-item"><a class="header__menu-item-link" href="#">Галерея</a></li>
+								<li class="header__menu-item"><a class="header__menu-item-link" href="#">Контакты</a></li>
+							</ul>
+						</nav>
+
+						<div class="header__mobile">
+							<div class="header__mobile-top">
+								<div class="header__mobile-logo"><img src="img/logo-mobile.svg" alt="" class="header__mobile-logo-img"> </div>
+								<button class="header__mobile-menu-btn">
+									<span class="header__mobile-menu-btn-line"></span>
+									<span class="header__mobile-menu-btn-line"></span>
+									<span class="header__mobile-menu-btn-line"></span>
+								</button>
+							</div>
+							<div class="header__mobile-nav-container">
+								<nav class="header__mobile-nav">
+									<ul class="header__mobile-menu">
+										<li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-item-link header__mobile-menu-item-link_cur">Главная</a></li>
+										<li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-item-link">Меню</a></li>
+										<li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-item-link">Новости</a></li>
+										<li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-item-link">Вакансии</a></li>
+										<li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-item-link">Галерея</a></li>
+										<li class="header__mobile-menu-item"><a href="#" class="header__mobile-menu-item-link">Контакты</a></li>
+									</ul>
+								</nav>
+
+								<a href="#" class="header__mobile-inst">Мы в Instagram</a>
+
+								<ul class="header__mobile-nav-contacts">
+									<li class="header__mobile-nav-contacts-item">
+										<div class="header__mobile-nav-contacts-item-address">пр.Почтовый,35б ТЦ <br> «Либерти»,2 этаж </div>
+										<div class="header__mobile-nav-contacts-item-phone">+380963856969</div>
+									</li>
+									<li class="header__mobile-nav-contacts-item">
+										<div class="header__mobile-nav-contacts-item-address">улица Ватутина,31</div>
+										<div class="header__mobile-nav-contacts-item-phone">+380983856969</div>
+									</li>
+									<li class="header__mobile-nav-contacts-item">
+										<div class="header__mobile-nav-contacts-item-address">проспект Мира,7</div>
+										<div class="header__mobile-nav-contacts-item-phone">+380988856969</div>
+									</li>
+								</ul>
+
+							</div>
+						</div>
+
 					</div>
-
-					<nav class="header__nav">
-						<ul class="header__menu">
-							<li class="header__menu-item"><a class="header__menu-item-link" href="index.html">Главная</a></li>
-							<li class="header__menu-item"><a class="header__menu-item-link" href="menu.html">Меню</a></li>
-							<li class="header__menu-item"><a class="header__menu-item-link  header__menu-item-link_cur" href="#">Новости</a></li>
-							<li class="header__menu-item"><a class="header__menu-item-link" href="#">Вакансии</a></li>
-							<li class="header__menu-item"><a class="header__menu-item-link" href="#">Галерея</a></li>
-							<li class="header__menu-item"><a class="header__menu-item-link" href="#">Контакты</a></li>
-						</ul>
-					</nav>
-
 				</div>
 			</div>
-		</div>
-		
-	</header>
+
+		</header>
+
+	
 
 	<section class="menuitem">
 
@@ -186,6 +232,7 @@
 	
 
 	</section>
+	</div>
 
 	<footer class="footer">	
 
@@ -193,7 +240,7 @@
 
 			<div class="container">
 				<div class="row">
-					<div class="col-md-5">
+					<div class="col-md-5 col-xs-6">
 
 						<ul class="footer__contacts">
 							<li class="footer__contacts-item">
@@ -212,7 +259,7 @@
 						</ul>
 
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-3 col-xs-6">
 						<div class="footer__subtitle">Режим работы:
 						</div>
 						<div class="footer__worktime">
@@ -223,7 +270,7 @@
 					<div class="col-md-2">
 						<nav class="footer__nav">
 							<ul class="footer__nav-list">
-								<li class="footer__nav-list-item"><a href="#" class="footer__nav-list-item-link footer__nav-list-item-link_cur">Главная</a></li>
+								<li class="footer__nav-list-item"><a href="#" class="footer__nav-list-item-link">Главная</a></li>
 								<li class="footer__nav-list-item"><a href="#" class="footer__nav-list-item-link">Меню</a></li>
 								<li class="footer__nav-list-item"><a href="#" class="footer__nav-list-item-link">Новости</a></li>
 								<li class="footer__nav-list-item"><a href="#" class="footer__nav-list-item-link">Вакансии</a></li>

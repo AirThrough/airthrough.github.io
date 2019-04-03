@@ -32,6 +32,20 @@ $(document).ready(function () {
 				'height' : curH + "px",
 				'width'  : curW + "px"
 			});
+		});
+
+		$(window).resize(function(){
+			$(".newslist__item").each(function(){
+				var img = $(this).find('img');
+				var curW = img.outerWidth();
+				var curH = img.outerHeight();
+
+				$(this).find(".newslist__item-img_blurred").css({
+					'top'    : (140-curH) + "px",
+					'height' : curH + "px",
+					'width'  : curW + "px"
+				});
+			});
 		})
 
 	}
@@ -55,20 +69,20 @@ $(document).ready(function () {
 		setTimeout(function(){
 			minH = $(".gallery__img").outerHeight();
 
-		$(".gallery__item").each(function(){
-			var curH = $(this).find(".gallery__img").outerHeight();
-			if ( curH < minH ) {
-				minH = curH;
-			}
+			$(".gallery__item").each(function(){
+				var curH = $(this).find(".gallery__img").outerHeight();
+				if ( curH < minH ) {
+					minH = curH;
+				}
 
 
-		});
-
-		$(".gallery__item").each(function(){
-			$(this).css({
-				'height' : minH + "px"
 			});
-			var curImg = $(this).find(".gallery__img");
+
+			$(".gallery__item").each(function(){
+				$(this).css({
+					'height' : minH + "px"
+				});
+				var curImg = $(this).find(".gallery__img");
 			// if ( curImg.outerHeight() > minH ) {
 			// 	curImg.css({
 			// 		'top': -(curImg.outerHeight() - minH)
@@ -76,7 +90,7 @@ $(document).ready(function () {
 			// }
 			
 		});
-	}, 1500);
+		}, 1500);
 
 		
 
