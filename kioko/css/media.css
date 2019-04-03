@@ -103,6 +103,10 @@
       padding-left: 27px;
       padding-right: 20px;
       margin-right: 0; }
+    .simple-header_jobs .simple-header__inner {
+      padding-left: 27px;
+      padding-right: 20px;
+      margin-right: 0; }
     .simple-header__title {
       font-size: 12px;
       line-height: normal;
@@ -119,7 +123,65 @@
     margin-right: 0;
     width: 25%;
     height: 69px;
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .jobs__content {
+    position: relative;
+    margin-right: -15px;
+    margin-left: -15px; }
+  .jobs__item-btn {
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 42px; }
+    .jobs__item-btn::after {
+      border-width: 2px;
+      width: 8px;
+      height: 8px;
+      margin-top: -6px;
+      right: 42px; }
+  .jobs__item-content {
+    font-size: 10px;
+    font-weight: 500;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    padding-left: 42px;
+    padding-right: 42px; }
+  .contacts__title {
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 75px;
+    margin-bottom: 75px; }
+  .contacts__map {
+    margin-top: 18px;
+    height: 217px;
+    -webkit-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 8px; }
+    .contacts__map-button {
+      font-size: 10px;
+      font-weight: 400;
+      width: 204px;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-bottom: 58px;
+      margin-right: 0;
+      margin-left: 0;
+      height: 50px;
+      line-height: 15px; }
+  .contacts__mapover {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    text-align: center;
+    padding-bottom: 65px;
+    margin-bottom: 55px; }
+    .contacts__mapover-title {
+      font-size: 16px; }
+    .contacts__mapover-item-title {
+      font-size: 15px; }
+    .contacts__mapover-item-value {
+      font-size: 15px; } }
 
 @media (min-width: 320px) and (max-width: 400px) {
   .gallery-page__item {
@@ -131,9 +193,13 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .gallery-page__item {
-    height: 129px; } }
+    height: 129px; }
+  .simple-header_jobs .simple-header__inner {
+    margin-right: 0; } }
 
 @media (min-width: 1024px) and (max-width: 1350px) {
+  .simple-header_jobs .simple-header__inner {
+    margin-right: 0; }
   .gallery-page__item {
     height: 183px; } }
 
