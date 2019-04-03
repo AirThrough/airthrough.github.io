@@ -44,6 +44,8 @@ $grey_gallery: #FFF4F4
 .newsitem__top-pic_mobile
 	display: none
 
+// MAIN 2
+
 @media (min-width: 0) and (max-width: 767px) 
 
 	.main-screen
@@ -140,7 +142,32 @@ $grey_gallery: #FFF4F4
 			width: 25%
 			height: 69px
 			margin-bottom: 0
+
+// FIX GALLERY
+
+@media (min-width: 320px) and (max-width: 400px)
+	
+	.gallery-page__item 
+		height: 60px
+
+@media (min-width: 400px) and (max-width: 767px)	
+
+	.gallery-page__item 
+		height: 69px
+
+@media (min-width: 768px) and (max-width: 1023px)
+
+	.gallery-page__item 
+		height: 129px	
+
+@media (min-width: 1024px) and (max-width: 1350px)
+
+	.gallery-page__item 
+		height: 183px	
+
+// FIX GALLERY END
 			
+// MAIN
 
 @media (min-width: 0) and (max-width: 991px) 
 
@@ -670,6 +697,15 @@ $grey_gallery: #FFF4F4
 			padding-left: 50px
 			padding-right: 50px
 
+	.simple-header
+
+		&__title 
+			font-size: 25px 
+			line-height: normal
+
+		&__text 
+			font-size: 15px
+
 @media (min-width: 992px) and (max-width: 1199px) 
 
 	.newslist__item-link
@@ -740,6 +776,15 @@ $grey_gallery: #FFF4F4
 	.gallery__info
 		margin-left: 30px
 		margin-right: 30px
+
+	.simple-header
+
+		&__title 
+			font-size: 28px 
+			line-height: normal
+
+		&__text 
+			font-size: 15px
 
 @media (min-width: 1200px) and (max-width: 1300px) 
 
