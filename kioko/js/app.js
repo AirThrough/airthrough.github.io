@@ -14,8 +14,31 @@ $(document).ready(function () {
 
 	$(".header__mobile-menu-btn").click(function(){
 
+		if ( !$(this).hasClass('header__mobile-menu-btn_active') ) {
+			$("body").css({
+				'overflow' : 'visible',
+				'height': '100%'
+			});
+			$("html").css({
+				'overflow' : 'hidden'
+			});
+		} else {
+			$("body, html").css({
+				'overflow' : 'auto',
+				'height' : 'auto'
+			});
+			$("html").css({
+				'overflow' : 'auto'
+			});
+			setTimeout(function(){
+				$(".header__mobile-nav-wrapper")[0].scrollTop = 0;
+			}, 500);
+			
+		}
+
 		$(this).toggleClass("header__mobile-menu-btn_active");
 		$(".header__mobile-nav-container").toggleClass("header__mobile-nav-container_active");
+
 	});
 
 	// BLUR NEWSLIST 

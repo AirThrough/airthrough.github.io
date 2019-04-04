@@ -267,7 +267,16 @@ $grey_gallery: #FFF4F4
 	body
 		background: $light_bg
 
+	.top-wrapper
+		padding-top: 62px
+
+
 	.header 
+		position: fixed 
+		top: 0
+		left: 0
+		width: 100%
+		z-index: 3
 
 		&__logo 
 			display: none 
@@ -349,13 +358,19 @@ $grey_gallery: #FFF4F4
 			padding-top: 55px
 			margin-bottom: 70px
 
-			&-container 
+			&-wrapper 
+				overflow-y: auto
 				padding-left: 42px
 				padding-right: 42px
 				padding-bottom: 120px
+				position: absolute
+				width: 100%
+				height: 100%
+
+			&-container 
 				min-height: calc(100vh - 62px)
 				background: $black_nav
-				position: absolute 
+				position: absolute
 				z-index: 10
 				top: 62px 
 				left: -15px
@@ -536,10 +551,23 @@ $grey_gallery: #FFF4F4
 
 			&-info 
 				padding-top: 0
-				padding-left: 5px
-				padding-right: 5px
-				margin-bottom: 40px
-				padding-bottom: 50px
+				padding-left: 15px
+				padding-right: 15px
+				margin-bottom: 22px
+				padding-bottom: 25px
+				text-align: center
+
+				&::after 
+					content: ""
+					display: block 
+					pointer-events: none 
+					position: absolute
+					width: calc(100% - 30px)
+					height: calc(100% - 10px)
+					border: 1px solid $accent
+					border-radius: 113.5px
+					top: -10px
+					left: 15px
 
 			&-name 
 				font-size: 12px 
