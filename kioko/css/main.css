@@ -30,7 +30,8 @@ a {
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  color: white; }
 
 button:focus {
   outline: none; }
@@ -185,7 +186,7 @@ button:focus {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
-    .header__menu-item-link {
+    .header__menu li a {
       font-weight: 500;
       text-transform: uppercase;
       display: block;
@@ -198,19 +199,19 @@ button:focus {
       -webkit-transition: 0.25s all ease-in-out;
       -o-transition: 0.25s all ease-in-out;
       transition: 0.25s all ease-in-out; }
-      .header__menu-item-link:hover {
+      .header__menu li a:hover {
         color: #FF141E;
         -webkit-transition: 0.25s all ease-in-out;
         -o-transition: 0.25s all ease-in-out;
         transition: 0.25s all ease-in-out; }
-        .header__menu-item-link:hover::after {
+        .header__menu li a:hover::after {
           -webkit-transform: scale(1);
               -ms-transform: scale(1);
                   transform: scale(1);
           -webkit-transition: 0.25s all ease-in-out;
           -o-transition: 0.25s all ease-in-out;
           transition: 0.25s all ease-in-out; }
-      .header__menu-item-link::after {
+      .header__menu li a::after {
         content: "";
         display: block;
         position: absolute;
@@ -225,12 +226,12 @@ button:focus {
         -webkit-transition: 0.25s all ease-in-out;
         -o-transition: 0.25s all ease-in-out;
         transition: 0.25s all ease-in-out; }
-      .header__menu-item-link.header__menu-item-link_cur {
+      .header__menu li a.header__menu-item-link_cur {
         color: #FF141E;
         -webkit-transition: 0.25s all ease-in-out;
         -o-transition: 0.25s all ease-in-out;
         transition: 0.25s all ease-in-out; }
-        .header__menu-item-link.header__menu-item-link_cur::after {
+        .header__menu li a.header__menu-item-link_cur::after {
           -webkit-transform: scale(1);
               -ms-transform: scale(1);
                   transform: scale(1);
@@ -484,7 +485,8 @@ button:focus {
     text-transform: uppercase;
     margin-bottom: 27px;
     z-index: 2;
-    position: relative; }
+    position: relative;
+    color: white; }
   .gallery__text {
     font-weight: 400;
     font-size: 20px;
@@ -561,18 +563,18 @@ button:focus {
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase; }
-  .footer__nav-list-item {
+  .footer__nav-list li {
     margin-bottom: 18px; }
-    .footer__nav-list-item-link {
+    .footer__nav-list li a {
       -webkit-transition: 0.25s all ease-in-out;
       -o-transition: 0.25s all ease-in-out;
       transition: 0.25s all ease-in-out; }
-      .footer__nav-list-item-link:hover {
+      .footer__nav-list li a:hover {
         color: #FF141E;
         -webkit-transition: 0.25s all ease-in-out;
         -o-transition: 0.25s all ease-in-out;
         transition: 0.25s all ease-in-out; }
-      .footer__nav-list-item-link.footer__nav-list-item-link_cur {
+      .footer__nav-list li a.footer__nav-list-item-link_cur {
         color: #FF141E;
         -webkit-transition: 0.25s all ease-in-out;
         -o-transition: 0.25s all ease-in-out;
@@ -610,7 +612,8 @@ button:focus {
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
     -webkit-perspective: 300px;
-            perspective: 300px; }
+            perspective: 300px;
+    display: block; }
     .newslist__item:hover .newslist__item-img {
       -webkit-transform: scale(1.5);
           -ms-transform: scale(1.5);
