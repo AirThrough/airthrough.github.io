@@ -1,0 +1,205 @@
+@mixin pseudo 
+     display: block 
+     content: "" 
+     position: absolute
+
+///// ====  FLEX
+
+@mixin froo
+     display: flex
+     flex-direction: row
+     justify-content: flex-start
+     align-items: flex-start
+@mixin froe
+     display: flex
+     flex-direction: row
+     justify-content: flex-start
+     align-items: flex-end
+@mixin fros
+     display: flex
+     flex-direction: row
+     align-items: space-between
+     justify-content: flex-start
+@mixin froc
+     display: flex
+     flex-direction: row
+     align-items: center
+     justify-content: flex-start
+@mixin freo
+     display: flex
+     flex-direction: row
+     justify-content: flex-end
+     align-items: flex-start
+@mixin free
+     display: flex
+     flex-direction: row
+     justify-content: flex-end
+     align-items: flex-end
+@mixin fres
+     display: flex
+     flex-direction: row
+     align-items: space-between
+     justify-content: flex-end
+@mixin frec
+     display: flex
+     flex-direction: row
+     align-items: center
+     justify-content: flex-end
+@mixin frso
+     display: flex
+     flex-direction: row
+     justify-content: space-between
+     align-items: flex-start
+@mixin frse
+     display: flex
+     flex-direction: row
+     justify-content: space-between
+     align-items: flex-end
+@mixin frss
+     display: flex
+     flex-direction: row
+     align-items: space-between
+     justify-content: space-between
+@mixin frsc
+     display: flex
+     flex-direction: row
+     align-items: center
+     justify-content: space-between
+@mixin frco
+     display: flex
+     flex-direction: row
+     justify-content: center
+     align-items: flex-start
+@mixin frce
+     display: flex
+     flex-direction: row
+     justify-content: center
+     align-items: flex-end
+@mixin frcs
+     display: flex
+     flex-direction: row
+     align-items: space-between
+     justify-content: center
+@mixin frcc
+     display: flex
+     flex-direction: row
+     align-items: center
+     justify-content: center
+@mixin fcoo
+     display: flex
+     flex-direction: column
+     justify-content: flex-start
+     align-items: flex-start
+@mixin fcoe
+     display: flex
+     flex-direction: column
+     justify-content: flex-start
+     align-items: flex-end
+@mixin fcos
+     display: flex
+     flex-direction: column
+     align-items: space-between
+     justify-content: flex-start
+@mixin fcoc
+     display: flex
+     flex-direction: column
+     align-items: center
+     justify-content: flex-start
+@mixin fceo
+     display: flex
+     flex-direction: column
+     justify-content: flex-end
+     align-items: flex-start
+@mixin fcee
+     display: flex
+     flex-direction: column
+     justify-content: flex-end
+     align-items: flex-end
+@mixin fces
+     display: flex
+     flex-direction: column
+     align-items: space-between
+     justify-content: flex-end
+@mixin fcec
+     display: flex
+     flex-direction: column
+     align-items: center
+     justify-content: flex-end
+@mixin fcso
+     display: flex
+     flex-direction: column
+     justify-content: space-between
+     align-items: flex-start
+@mixin fcse
+     display: flex
+     flex-direction: column
+     justify-content: space-between
+     align-items: flex-end
+@mixin fcss
+     display: flex
+     flex-direction: column
+     align-items: space-between
+     justify-content: space-between
+@mixin fcsc
+     display: flex
+     flex-direction: column
+     align-items: center
+     justify-content: space-between
+@mixin fcco
+     display: flex
+     flex-direction: column
+     justify-content: center
+     align-items: flex-start
+@mixin fcce
+     display: flex
+     flex-direction: column
+     justify-content: center
+     align-items: flex-end
+@mixin fccs
+     display: flex
+     flex-direction: column
+     align-items: space-between
+     justify-content: center
+@mixin fccc
+     display: flex
+     flex-direction: column
+     align-items: center
+     justify-content: center
+
+
+///// ====  FLEX END
+
+
+/// IMAGES&ICONS
+
+@mixin i($name)
+     background: url('../img/icon-#{$name}.svg') center no-repeat 
+     background-size: 100% auto
+
+@mixin svg($fullname)
+     background: url('../img/#{$fullname}.svg') center no-repeat 
+     background-size: 100% auto
+
+@mixin jpg($fullname)
+     background: url('../img/#{$fullname}.jpg') center no-repeat 
+     background-size: 100% auto
+
+@mixin png($fullname)
+     background: url('../img/#{$fullname}.png') center no-repeat 
+     background-size: 100% auto
+
+
+// PADDINGS 
+
+@mixin p($left, $right, $top, $bottom)
+     padding-left: #{$left}px
+     padding-right: #{$right}px
+     padding-top: #{$top}px
+     padding-bottom: #{$bottom}px
+
+//FIGURES 
+
+@mixin r($d)
+     width: #{$d}px
+     height: #{$d}px
+     border-radius: 50%

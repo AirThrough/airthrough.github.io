@@ -1,0 +1,421 @@
+@import "mixins"
+
+
+@media (min-width: 0px) and (max-width: 767px)
+
+	.pag
+		padding-left: 13px
+		padding-right: 13px
+		margin-top: 0
+
+		&-item 
+			margin-right: 10px
+
+		&-nav 
+			&.prev 
+				margin-right: 15px
+
+			&.next 
+				margin-left: 15px
+
+@media (min-width: 0px) and (max-width: 1250px) 
+
+	.container 
+		padding-left: 15px
+		padding-right: 15px
+
+	.header-nav
+		display: none
+
+	.header 
+
+		&::after 
+			display: none
+
+		&::before 
+			display: none
+
+	.header-phone
+		font-size: 15px
+		padding-top: 15px
+
+	.header-inner
+		+freo
+
+	.header .logo 
+		width: 70px 
+		top: 15px
+		left: 0px
+		margin-left: 0
+
+		img 
+			width: 100%
+
+	.page-wrapper
+		background-size: 450% auto 
+		background-position: 65% top
+
+	.offers-soc
+		+froc 
+		right: 0px
+		top: 15px
+
+	.offers-soc-mail
+		margin-bottom: 0
+		margin-right: 15px
+		transform: scale(0.75)
+
+		&::after 
+			display: none
+
+	.offers-soc-whatsup
+		transform: scale(0.75)
+
+	.h1 
+		font-size: 32px
+		line-height: 28px
+		margin-bottom: 16px
+
+		.small 
+			font-size: 16px
+
+	.offers-slider
+		width: 100%
+
+	.desc
+		font-size: 15px
+		line-height: 20px
+
+	.offers-slider .owl-dots
+		margin-top: 30px
+
+	.offers-banners-item
+		height: auto
+
+	.nav-item 
+		margin-top: -29px
+
+	.nav-item.left
+		left: -11px
+
+	.nav-item.right 
+		right: -11px
+
+	.h2
+		font-size: 26px
+		margin-top: 20px
+
+	.h2.big 
+		font-size: 35px
+
+	.filter-reset
+		position: relative
+		top: auto
+		right: auto
+		margin-left: auto
+		margin-bottom: 15px
+		display: block
+
+	.filter
+		flex-wrap: wrap
+		height: auto
+		display: block
+		padding-bottom: 15px
+		padding-top: 15px
+
+		&-subtitle 
+			margin-bottom: 25px
+
+
+		&-left 
+			display: block
+			padding-top: 15px
+			margin-bottom: 25px
+
+		&-right 
+			display: block
+
+		&-item 
+			margin-right: 0
+			margin-bottom: 15px
+			padding-bottom: 15px
+			margin-left: auto
+			margin-right: auto
+			padding-right: 0
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+
+		&-btn 
+			padding-left: 0
+			margin-left: 0
+			padding-bottom: 15px
+
+	.filter-select.nice-select
+		
+		.list 
+			width: 100%
+			left: 0
+
+	.filter-item:last-child
+		margin-right: auto
+
+	.products-wrapper
+		flex-wrap: wrap
+		justify-content: center
+		display: block
+
+
+	.products-item
+		width: 271px
+		margin-left: auto
+		margin-right: auto !important
+
+		&-play 
+			opacity: 1 !important
+			transform: scale(1) !important
+
+		&-frame 
+			opacity: .5 !important
+
+		&-big 
+			flex-wrap: wrap
+			height: auto
+			padding-bottom: 25px
+
+		&-left 
+			width: 100%
+			height: 364px
+			border-radius: 5px 5px 0 0
+
+		&-right 
+			width: 100%
+			border-radius: 0 0 5px 5px
+
+
+	
+
+	.products-wrapper
+		margin-bottom: 0
+
+	.service 
+		padding-top: 70px
+		padding-bottom: 50px
+
+		&-wrapper 
+			flex-wrap: wrap 
+			margin-left: 0
+			margin-right: 0
+
+		&-item 
+			width: 100%
+			margin-right: 0
+			margin-bottom: 20px
+
+	.service-item-btn .bg
+		opacity: 1 !important
+
+	.service-item-marker
+		width: 114px
+
+	.service-item
+		height: auto
+
+		&-btn 
+			position: relative
+			right: auto
+			bottom: auto
+			margin-left: auto
+			margin-right: -10px
+
+		&-title 
+			br 
+				display: none
+
+	.footer-top
+		flex-wrap: wrap 
+		justify-content: center
+		margin-bottom: 15px
+
+	.footer-logo-wrapper
+		margin-bottom: 50px
+
+	.footer-menu
+		+fccc
+		width: 100%
+
+		li 
+			margin-right: 0
+			margin-bottom: 20px
+
+	.footer-nav 
+		width: 100%
+
+	.footer-main
+		flex-wrap: wrap 
+		justify-content: center
+
+	.footer-text1, .footer-text2
+		text-align: center
+	
+	.footer-phone
+		font-size: 24px
+		text-align: center
+
+	.footer-right
+		padding-right: 0
+		margin-top: 20px
+
+	.footer-text3
+		text-align: center
+
+	.footer 
+		padding-bottom: 50px
+
+	body.no-scroll 
+		overflow-y: hidden
+
+	.popup
+		overflow-y: auto
+
+		&-submit-btn 
+			width: 270px
+
+		&-wrapper 
+			padding-top: 15px
+			padding-bottom: 15px
+			height: auto
+			overflow-y: auto
+
+		&-content 
+			max-width: 300px
+			padding-left: 15px
+			padding-right: 15px
+
+		&-form 
+
+			&-wrapper 
+				flex-wrap: wrap 
+				margin-bottom: 25px
+				
+
+			&-left 
+				width: 100%
+				margin-bottom: 15px
+
+			&-right 
+				width: 100%
+
+
+@media (min-width: 450px) and (max-width: 1250px)
+	
+	.page-wrapper	
+		background-size: 300% auto 
+
+	.filter-left
+		+frso
+		flex-wrap: wrap 
+
+	.filter-right
+		+frso 
+		flex-wrap: wrap
+
+	.filter-item 
+		width: 45%
+
+	.filter-subtitle
+		width: 100%
+
+
+@media (min-width: 767px) and (max-width: 1250px)
+
+	.header .logo
+		width: 130px
+		top: 30px
+
+	.container 
+		padding-left: 30px
+		padding-right: 30px
+
+	.header 
+
+		&-inner 
+			padding-top: 15px
+
+	.h1
+		font-size: 55px
+		font-weight: 900
+		line-height: 48px
+		margin-bottom: 30px
+
+		.small 
+			font-size: 30px
+
+	.desc
+		font-size: 20px 
+		line-height: 27px
+		margin-bottom: 10px
+
+	.offers-slider .owl-dots
+		margin-top: 60px
+
+	.page-wrapper
+		background-size: 250% auto
+
+	.products-item-top
+		overflow: hidden
+
+	.products-wrapper
+		+frco
+
+	.products-item
+		margin-left: 20px !important
+		margin-right: 20px !important
+		
+
+	.products-item-big
+		flex-wrap: nowrap
+		width: 541px
+		height: 374px
+		padding-bottom: 0
+
+	.products-item-left
+		width: 120%
+
+	.products-item-right .products-item-info
+		margin-bottom: 30px
+
+	.service-item
+		max-width: 314px
+		height: 362px
+
+	.service-item-btn
+		position: absolute 
+		right: 24px
+		bottom: 24px
+
+	.footer-right, .footer-left 
+		margin-top: 10px
+		width: 100%
+
+	.footer-soc
+		+frcc
+
+
+@media (min-width: 900px) and (max-width: 1250px)
+
+	.page-wrapper
+		background-size: 200% auto 
+
+	.filter-item
+		width: 23%
+
+
+	.filter-subtitle, .filter-btn
+		width: 23%	
+		margin-right: 0	
+		margin-left: auto	
+		margin-right: auto	
+
+	.filter-btn
+		padding-left: 25px	 
+		padding-right: 0	
+		padding-left: 10px	
