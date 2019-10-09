@@ -8,8 +8,8 @@
 	<link rel="stylesheet" href="libs/owl.carousel.min.css">
 	<link rel="stylesheet" href="libs/nice-select.css">
 	<link rel="stylesheet" href="libs/waves.min.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="css/main.css?ver=02">
+	<link rel="stylesheet" href="css/media.css?ver=02">
 	<style>
 	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 		color: #333333;
@@ -28,12 +28,40 @@
 		transition: 0.25s all ease-in-out;
 	}
 </style>
+<script src="https://kit.fontawesome.com/cc972ce2a2.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	
 	<div class="page-wrapper">
 		
-
+		<div class="player">
+			<div class="container">
+				<div class="player-inner">
+				<div class="player-bar">
+					<div class="player-bar-time">0:00</div>
+				</div>
+				<div class="player-main">
+					<div class="player-trackinfo">
+						<div class="player-trackpic">
+							<img class="player-img" src="img/product1.png" alt="">
+						</div>
+						<div class="player-trackname">GLIMMER IN THE DARKNESS
+						</div>
+					</div>
+					<div class="player-controls">
+						<div class="player-nav prev"></div>
+						<div class="player-play"></div>
+						<div class="player-nav next"></div>
+					</div>
+					<div class="player-volume">
+						<div class="player-volume-icon"><i class="fas fa-volume-up"></i>
+							<i class="fas fa-volume-mute"></i></div>
+						<div class="player-volume-range"></div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
 
 		<header class="header">
 
@@ -54,6 +82,37 @@
 					<a href="tel:+78009005090" class="header-phone">
 						8 (800) <span class="bold">900-50-90</span>
 					</a>
+
+				</div>
+
+				<div class="header-mobile">
+					
+					<div class="header-menu-btn">
+						<span class="header-menu-line"></span>
+						<span class="header-menu-line"></span>
+						<span class="header-menu-line"></span>
+					</div>
+
+					<div class="header-mobile-wrapper">
+						
+						<nav class="header-nav">
+							<ul class="header-menu">
+								<li><a href="#products">Песни</a></li>
+								<li><a href="#service">Услуги</a></li>
+								<li><a href="#contacts">Контакты</a></li>
+							</ul>
+						</nav>
+
+						<a href="tel:+78009005090" class="header-phone">
+							8 (800) <span class="bold">900-50-90</span>
+						</a>
+
+						<div class="offers-soc">
+							<a href="mailto:test@test.test" class="offers-soc-mail"></a>
+							<a href="#" class="offers-soc-whatsup"></a>
+						</div>
+
+					</div>
 
 				</div>
 
@@ -227,535 +286,550 @@
 								<button class="products-item-play"></button>
 								<div class="products-item-label">Хитовость трека: 99%</div>
 								<audio class="products-item-audio" controls>
-								  <source src="audio/track.ogg" type="audio/ogg">
-								  <source src="audio/track.mp3" type="audio/mpeg">
-								  Your browser does not support the audio tag.
-								</audio>
-							</div>
-
-							<div class="products-item-main">
-								
-								<div class="products-item-main-top">
-									<div class="products-item-title">Glimmer in <br>
-									the darkness</div>
-									<div class="products-item-lyrics"></div>
-								</div>
-
-								<ul class="products-item-info">
-									<li class="products-item-info-item">Жанр: поп</li>
-									<li class="products-item-info-item">Вокал: мужской / женский</li>
-								</ul>
-
-							</div>
-
-							<div class="products-item-bottom">
-								<div class="products-item-price">100 000 руб</div>
-								<button class="products-item-btn open-popup" data-popup="apply">Купить</button>
-							</div>
-
-						</div>
-
-						<div class="products-item">
-							
-							<div class="products-item-top">
-								<div class="products-item-frame">
-									<img src="img/product2.png" alt="" class="products-item-img">
-								</div>
-								
-								<button class="products-item-play"></button>
-								<audio class="products-item-audio" controls>
-								  <source src="audio/track.ogg" type="audio/ogg">
-								  <source src="audio/track.mp3" type="audio/mpeg">
-								  Your browser does not support the audio tag.
-								</audio>
-							</div>
-
-							<div class="products-item-main">
-								
-								<div class="products-item-main-top">
-									<div class="products-item-title">1000 причин</div>
-									<div class="products-item-lyrics"></div>
-								</div>
-
-								<ul class="products-item-info">
-									<li class="products-item-info-item">Жанр: поп</li>
-									<li class="products-item-info-item">Вокал: женский</li>
-								</ul>
-
-							</div>
-
-							<div class="products-item-bottom">
-								<div class="products-item-price">65 000 руб</div>
-								<button class="products-item-btn open-popup" data-popup="apply">Купить</button>
-							</div>
-
-						</div>
-
-						<div class="products-item">
-							
-							<div class="products-item-top">
-								<div class="products-item-frame">
-									<img src="img/product3.png" alt="" class="products-item-img">
-								</div>
-								<button class="products-item-play"></button>
-								<audio class="products-item-audio" controls>
-								  <source src="audio/track.ogg" type="audio/ogg">
-								  <source src="audio/track.mp3" type="audio/mpeg">
-								  Your browser does not support the audio tag.
-								</audio>
-								<div class="products-item-label">Хитовость трека: 80%</div>
-							</div>
-
-							<div class="products-item-main">
-								
-								<div class="products-item-main-top">
-									<div class="products-item-title">Больная любовь</div>
-									<div class="products-item-lyrics"></div>
-								</div>
-
-								<ul class="products-item-info">
-									<li class="products-item-info-item">Жанр: поп</li>
-									<li class="products-item-info-item">Вокал: женский</li>
-								</ul>
-
-							</div>
-
-							<div class="products-item-bottom">
-								<div class="products-item-price">45 000 руб</div>
-								<button class="products-item-btn open-popup" data-popup="apply">Купить</button>
-							</div>
-
-						</div>
-
-						<div class="products-item">
-							
-							<div class="products-item-top">
-								<div class="products-item-frame">
-									<img src="img/product4.png" alt="" class="products-item-img">
-								</div>
-								<button class="products-item-play"></button>
-								<audio class="products-item-audio" controls>
-								  <source src="audio/track.ogg" type="audio/ogg">
-								  <source src="audio/track.mp3" type="audio/mpeg">
-								  Your browser does not support the audio tag.
-								</audio>
-								<div class="products-item-label">Хитовость трека: 75%</div>
-							</div>
-
-							<div class="products-item-main">
-								
-								<div class="products-item-main-top">
-									<div class="products-item-title">Никогда не 
-									забывай меня</div>
-									<div class="products-item-lyrics"></div>
-								</div>
-
-								<ul class="products-item-info">
-									<li class="products-item-info-item">Жанр: dance</li>
-									<li class="products-item-info-item">Вокал: мужской</li>
-								</ul>
-
-							</div>
-
-							<div class="products-item-bottom">
-								<div class="products-item-price">35 000 руб</div>
-								<button class="products-item-btn open-popup" data-popup="apply">Купить</button>
-							</div>
-
-						</div>
-
-						<div class="products-item products-item-big">
-							<div class="products-item-left">
-								<img src="img/product5.png" alt="" class="products-item-img-big">
-							</div>
-							<div class="products-item-right">
-								<div class="products-item-marker">
-									<span class="big">100%</span> <br>ХИТ
-								</div>
-								<div class="products-item-lyrics"></div>
-								<div class="products-item-title">Emirates</div>
-								<ul class="products-item-info">
-									<li class="products-item-info-item">Жанр: поп</li>
-									<li class="products-item-info-item">Вокал: мужской / женский</li>
-								</ul>
-								<div class="products-item-price">100 000 руб</div>
-								<button class="products-item-btn waves-on open-popup" data-popup="apply">Купить</button>
-							</div>
-
-						</div>
-
-						<div class="products-item">
-
-							<div class="products-item-top">
-								<div class="products-item-frame">
-									<img src="img/product6.png" alt="" class="products-item-img">
-								</div>
-								<button class="products-item-play"></button>
-								<audio class="products-item-audio" controls>
-								  <source src="audio/track.ogg" type="audio/ogg">
-								  <source src="audio/track.mp3" type="audio/mpeg">
-								  Your browser does not support the audio tag.
-								</audio>
-								<div class="products-item-label">Хитовость трека: 99%</div>
-							</div>
-
-							<div class="products-item-main">
-
-								<div class="products-item-main-top">
-									<div class="products-item-title">Glimmer in <br>
-									the darkness</div>
-									<div class="products-item-lyrics"></div>
-								</div>
-
-								<ul class="products-item-info">
-									<li class="products-item-info-item">Жанр: поп</li>
-									<li class="products-item-info-item">Вокал: мужской / женский</li>
-								</ul>
-
-							</div>
-
-							<div class="products-item-bottom">
-								<div class="products-item-price">100 000 руб</div>
-								<button class="products-item-btn open-popup" data-popup="apply">Купить</button>
-							</div>
-
-						</div>
-
-						<div class="products-item">
-
-							<div class="products-item-top">
-								<div class="products-item-frame">
-									<img src="img/product7.png" alt="" class="products-item-img">
-								</div>
-								<button class="products-item-play"></button>
-								<audio class="products-item-audio" controls>
-								  <source src="audio/track.ogg" type="audio/ogg">
-								  <source src="audio/track.mp3" type="audio/mpeg">
-								  Your browser does not support the audio tag.
-								</audio>
-								<div class="products-item-label">Хитовость трека: 99%</div>
-							</div>
-
-							<div class="products-item-main">
-
-								<div class="products-item-main-top">
-									<div class="products-item-title">Glimmer in <br>
-									the darkness</div>
-									<div class="products-item-lyrics"></div>
-								</div>
-
-								<ul class="products-item-info">
-									<li class="products-item-info-item">Жанр: поп</li>
-									<li class="products-item-info-item">Вокал: мужской / женский</li>
-								</ul>
-
-							</div>
-
-							<div class="products-item-bottom">
-								<div class="products-item-price">100 000 руб</div>
-								<button class="products-item-btn open-popup" data-popup="apply">Купить</button>
-							</div>
-
-						</div>
-
-						<div class="products-item">
-
-							<div class="products-item-top">
-								<div class="products-item-frame">
-									<img src="img/product8.png" alt="" class="products-item-img">
-								</div>
-								<button class="products-item-play"></button>
-								<audio class="products-item-audio" controls>
-								  <source src="audio/track.ogg" type="audio/ogg">
-								  <source src="audio/track.mp3" type="audio/mpeg">
-								  Your browser does not support the audio tag.
-								</audio>
-								<div class="products-item-label">Хитовость трека: 99%</div>
-							</div>
-
-							<div class="products-item-main">
-
-								<div class="products-item-main-top">
-									<div class="products-item-title">Glimmer in <br>
-									the darkness</div>
-									<div class="products-item-lyrics"></div>
-								</div>
-
-								<ul class="products-item-info">
-									<li class="products-item-info-item">Жанр: поп</li>
-									<li class="products-item-info-item">Вокал: мужской / женский</li>
-								</ul>
-
-							</div>
-
-							<div class="products-item-bottom">
-								<div class="products-item-price">100 000 руб</div>
-								<button class="products-item-btn open-popup" data-popup="apply">Купить</button>
-							</div>
-
-						</div>
-
-						<div class="products-item">
-
-							<div class="products-item-top">
-								<div class="products-item-frame">
-									<img src="img/product9.png" alt="" class="products-item-img">
-								</div>
-								<button class="products-item-play"></button>
-								<audio class="products-item-audio" controls>
-								  <source src="audio/track.ogg" type="audio/ogg">
-								  <source src="audio/track.mp3" type="audio/mpeg">
-								  Your browser does not support the audio tag.
-								</audio>
-							</div>
-
-							<div class="products-item-main">
-
-								<div class="products-item-main-top">
-									<div class="products-item-title">Glimmer in <br>
-									the darkness</div>
-									<div class="products-item-lyrics"></div>
-								</div>
-
-								<ul class="products-item-info">
-									<li class="products-item-info-item">Жанр: поп</li>
-									<li class="products-item-info-item">Вокал: мужской / женский</li>
-								</ul>
-
-							</div>
-
-							<div class="products-item-bottom">
-								<div class="products-item-price">100 000 руб</div>
-								<button class="products-item-btn open-popup" data-popup="apply">Купить</button>
-							</div>
-
-						</div>
-
-						<div class="products-item products-item-big">
-							<div class="products-item-left">
-								<img src="img/product10.png" alt="" class="products-item-img-big">
-							</div>
-							<div class="products-item-right">
-								<div class="products-item-marker blue">
-									<span class="big">55%</span> <br>СКИДКА
-								</div>
-								<div class="products-item-lyrics"></div>
-								<div class="products-item-title">Emirates</div>
-								<ul class="products-item-info">
-									<li class="products-item-info-item">Жанр: поп</li>
-									<li class="products-item-info-item">Вокал: мужской / женский</li>
-								</ul>
-								<div class="products-item-price w-discount">45 000 руб</div>
-								<div class="products-item-discount">100 000 руб</div>
-								
-								<button class="products-item-btn waves-on open-popup" data-popup="apply">Купить</button>
-							</div>
-
-						</div>
-
-						
-
-					</div>
-
-					<div class="pag-wrapper">
-
-						<div class="pag">
-							<div class="pag-nav prev"></div>
-							<div class="pag-inner">
-								<div class="pag-item active">1</div>
-								<div class="pag-item">2</div>
-								<div class="pag-item">3</div>
-								<div class="pag-item">4</div>
-							</div>
-
-							<div class="pag-nav next"></div>
-						</div>
-
-					</div>
-
-					
-					
-
-
-				</div>
-
-				
-				
-				
-
-				
-			</section>
-
-			<section id="service" class="service">
-
-				<div class="bg"></div>
-				<div class="container">
-					<div class="service-inner">
-						
-						<h2 class="h2 big">Наши услуги</h2>
-
-						<div class="service-wrapper">
-
-							<div class="service-item">
-								<div class="service-item-inner">
-									<div class="service-item-title">Трек под ключ</div>
-									<ul class="service-item-list">
-										<li class="service-item-point">Определение стиля и структуры трека опираясь на референс. 
-										Ваше видение того, как должен выглядеть трек.</li>
-										<li class="service-item-point">Написание идеи</li>
-										<li class="service-item-point">Создание музыкальной аранжировки</li>
-										<li class="service-item-point">Написание слов</li>
-										<li class="service-item-point">Сдача материала заказчику</li>
-									</ul>
-									<div class="service-item-marker">от <span class="bold"> 7 дней</span></div>
-									<button class="service-item-btn waves-on open-popup" data-popup="apply"><span class="bg"></span>
-										<span class="text">Оставить заявку</span></button>
+									<source src="audio/track.ogg" type="audio/ogg">
+										<source src="audio/track.mp3" type="audio/mpeg">
+											Your browser does not support the audio tag.
+										</audio>
 									</div>
-								</div>
 
-								<div class="service-item">
-									<div class="service-item-inner">
-										<div class="service-item-title">Слова к вашему треку</div>
-										<ul class="service-item-list">
-											<li class="service-item-point">Вы присылаете идею трека</li>
-											<li class="service-item-point">Подбираем настроение и тематику</li>
-											<li class="service-item-point">Пишем текст</li>
-											<li class="service-item-point">Вносим корректировки</li>
+										<div class="products-item-main">
+
+										<div class="products-item-main-top">
+											<div class="products-item-title">Glimmer in <br>
+											the darkness</div>
+											<div class="products-item-lyrics"></div>
+										</div>
+
+										<ul class="products-item-info">
+											<li class="products-item-info-item">Жанр: поп</li>
+											<li class="products-item-info-item">Вокал: мужской / женский</li>
 										</ul>
-										<div class="service-item-marker">от <span class="bold"> 7 дней</span></div>
-										<button class="service-item-btn waves-on open-popup" data-popup="apply"><span class="bg"></span>
-											<span class="text">Оставить заявку</span></button>
-										</div>
+
 									</div>
 
-									<div class="service-item">
-										<div class="service-item-inner">
-											<div class="service-item-title">Аранжировка</div>
-											<ul class="service-item-list">
-												<li class="service-item-point">Вы присылаете своё демо, в котором изложена идея</li>
-												<li class="service-item-point">Подбираем референс и звучание какое хотели бы видеть в 
-												своём треке</li>
-												<li class="service-item-point">Вносим правки, дополняем по желанию</li>
-												<li class="service-item-point">Написание слов</li>
-												<li class="service-item-point">Сдача аранжировки под запись</li>
-											</ul>
-											<div class="service-item-marker">от <span class="bold"> 7 дней</span></div>
-											<button class="service-item-btn waves-on open-popup" data-popup="apply"><span class="bg"></span>
-												<span class="text">Оставить заявку</span></button>
-											</div>
+									<div class="products-item-bottom">
+										<div class="products-item-price">100 000 руб</div>
+										<button class="products-item-btn open-popup" data-popup="apply">Купить</button>
+									</div>
+
+									
+
+								</div>
+
+								<div class="products-item">
+
+									<div class="products-item-top">
+										<div class="products-item-frame">
+											<img src="img/product2.png" alt="" class="products-item-img">
 										</div>
 
-										<div class="service-item">
-											<div class="service-item-inner">
-												<div class="service-item-title">Техническое <br>
-													обеспечение <br>
-												любого мероприятия</div>
-												<ul class="service-item-list">
-													<li class="service-item-point">Звуковые, световые,видео прокатные  инсталяции</li>
-													<li class="service-item-point">Сценические конструкции</li>
+										<button class="products-item-play"></button>
+										<audio class="products-item-audio" controls>
+											<source src="audio/track.ogg" type="audio/ogg">
+												<source src="audio/track.mp3" type="audio/mpeg">
+													Your browser does not support the audio tag.
+												</audio>
+											</div>
+
+											<div class="products-item-main">
+
+												<div class="products-item-main-top">
+													<div class="products-item-title">1000 причин</div>
+													<div class="products-item-lyrics"></div>
+												</div>
+
+												<ul class="products-item-info">
+													<li class="products-item-info-item">Жанр: поп</li>
+													<li class="products-item-info-item">Вокал: женский</li>
 												</ul>
-												<div class="service-item-marker">от <span class="bold"> 7 дней</span></div>
-												<button class="service-item-btn waves-on open-popup" data-popup="apply">
-													<span class="bg"></span>
-													<span class="text">Оставить заявку</span>
-												</button>
+
 											</div>
+
+											<div class="products-item-bottom">
+												<div class="products-item-price">65 000 руб</div>
+												<button class="products-item-btn open-popup" data-popup="apply">Купить</button>
+											</div>
+
 										</div>
 
-									</div>
+										<div class="products-item">
+
+											<div class="products-item-top">
+												<div class="products-item-frame">
+													<img src="img/product3.png" alt="" class="products-item-img">
+												</div>
+												<button class="products-item-play"></button>
+												<audio class="products-item-audio" controls>
+													<source src="audio/track.ogg" type="audio/ogg">
+														<source src="audio/track.mp3" type="audio/mpeg">
+															Your browser does not support the audio tag.
+														</audio>
+														<div class="products-item-label">Хитовость трека: 80%</div>
+													</div>
+
+													<div class="products-item-main">
+
+														<div class="products-item-main-top">
+															<div class="products-item-title">Больная любовь</div>
+															<div class="products-item-lyrics"></div>
+														</div>
+
+														<ul class="products-item-info">
+															<li class="products-item-info-item">Жанр: поп</li>
+															<li class="products-item-info-item">Вокал: женский</li>
+														</ul>
+
+													</div>
+
+													<div class="products-item-bottom">
+														<div class="products-item-price">45 000 руб</div>
+														<button class="products-item-btn open-popup" data-popup="apply">Купить</button>
+													</div>
+
+												</div>
+
+												<div class="products-item">
+
+													<div class="products-item-top">
+														<div class="products-item-frame">
+															<img src="img/product4.png" alt="" class="products-item-img">
+														</div>
+														<button class="products-item-play"></button>
+														<audio class="products-item-audio" controls>
+															<source src="audio/track.ogg" type="audio/ogg">
+																<source src="audio/track.mp3" type="audio/mpeg">
+																	Your browser does not support the audio tag.
+																</audio>
+																<div class="products-item-label">Хитовость трека: 75%</div>
+															</div>
+
+															<div class="products-item-main">
+
+																<div class="products-item-main-top">
+																	<div class="products-item-title">Никогда не 
+																	забывай меня</div>
+																	<div class="products-item-lyrics"></div>
+																</div>
+
+																<ul class="products-item-info">
+																	<li class="products-item-info-item">Жанр: dance</li>
+																	<li class="products-item-info-item">Вокал: мужской</li>
+																</ul>
+
+															</div>
+
+															<div class="products-item-bottom">
+																<div class="products-item-price">35 000 руб</div>
+																<button class="products-item-btn open-popup" data-popup="apply">Купить</button>
+															</div>
+
+														</div>
+
+														<div class="products-item products-item-big">
+															<div class="products-item-left">
+																<button class="products-item-play"></button>
+																<audio class="products-item-audio" controls>
+																	<source src="audio/track.ogg" type="audio/ogg">
+																		<source src="audio/track.mp3" type="audio/mpeg">
+																			Your browser does not support the audio tag.
+																		</audio>
+																		<img src="img/product5.png" alt="" class="products-item-img-big">
+																	</div>
+																	<div class="products-item-right">
+																		<div class="products-item-marker">
+																			<span class="big">100%</span> <br>ХИТ
+																		</div>
+																		<div class="products-item-lyrics"></div>
+																		<div class="products-item-title">Emirates</div>
+																		<ul class="products-item-info">
+																			<li class="products-item-info-item">Жанр: поп</li>
+																			<li class="products-item-info-item">Вокал: мужской / женский</li>
+																		</ul>
+																		<div class="products-item-price">100 000 руб</div>
+																		<button class="products-item-btn waves-on open-popup" data-popup="apply">Купить</button>
+																	</div>
+
+																</div>
+
+																<div class="products-item">
+
+																	<div class="products-item-top">
+																		<div class="products-item-frame">
+																			<img src="img/product6.png" alt="" class="products-item-img">
+																		</div>
+																		<button class="products-item-play"></button>
+																		<audio class="products-item-audio" controls>
+																			<source src="audio/track.ogg" type="audio/ogg">
+																				<source src="audio/track.mp3" type="audio/mpeg">
+																					Your browser does not support the audio tag.
+																				</audio>
+																				<div class="products-item-label">Хитовость трека: 99%</div>
+																			</div>
+
+																			<div class="products-item-main">
+
+																				<div class="products-item-main-top">
+																					<div class="products-item-title">Glimmer in <br>
+																					the darkness</div>
+																					<div class="products-item-lyrics"></div>
+																				</div>
+
+																				<ul class="products-item-info">
+																					<li class="products-item-info-item">Жанр: поп</li>
+																					<li class="products-item-info-item">Вокал: мужской / женский</li>
+																				</ul>
+
+																			</div>
+
+																			<div class="products-item-bottom">
+																				<div class="products-item-price">100 000 руб</div>
+																				<button class="products-item-btn open-popup" data-popup="apply">Купить</button>
+																			</div>
+
+																		</div>
+
+																		<div class="products-item">
+
+																			<div class="products-item-top">
+																				<div class="products-item-frame">
+																					<img src="img/product7.png" alt="" class="products-item-img">
+																				</div>
+																				<button class="products-item-play"></button>
+																				<audio class="products-item-audio" controls>
+																					<source src="audio/track.ogg" type="audio/ogg">
+																						<source src="audio/track.mp3" type="audio/mpeg">
+																							Your browser does not support the audio tag.
+																						</audio>
+																						<div class="products-item-label">Хитовость трека: 99%</div>
+																					</div>
+
+																					<div class="products-item-main">
+
+																						<div class="products-item-main-top">
+																							<div class="products-item-title">Glimmer in <br>
+																							the darkness</div>
+																							<div class="products-item-lyrics"></div>
+																						</div>
+
+																						<ul class="products-item-info">
+																							<li class="products-item-info-item">Жанр: поп</li>
+																							<li class="products-item-info-item">Вокал: мужской / женский</li>
+																						</ul>
+
+																					</div>
+
+																					<div class="products-item-bottom">
+																						<div class="products-item-price">100 000 руб</div>
+																						<button class="products-item-btn open-popup" data-popup="apply">Купить</button>
+																					</div>
+
+																				</div>
+
+																				<div class="products-item">
+
+																					<div class="products-item-top">
+																						<div class="products-item-frame">
+																							<img src="img/product8.png" alt="" class="products-item-img">
+																						</div>
+																						<button class="products-item-play"></button>
+																						<audio class="products-item-audio" controls>
+																							<source src="audio/track.ogg" type="audio/ogg">
+																								<source src="audio/track.mp3" type="audio/mpeg">
+																									Your browser does not support the audio tag.
+																								</audio>
+																								<div class="products-item-label">Хитовость трека: 99%</div>
+																							</div>
+
+																							<div class="products-item-main">
+
+																								<div class="products-item-main-top">
+																									<div class="products-item-title">Glimmer in <br>
+																									the darkness</div>
+																									<div class="products-item-lyrics"></div>
+																								</div>
+
+																								<ul class="products-item-info">
+																									<li class="products-item-info-item">Жанр: поп</li>
+																									<li class="products-item-info-item">Вокал: мужской / женский</li>
+																								</ul>
+
+																							</div>
+
+																							<div class="products-item-bottom">
+																								<div class="products-item-price">100 000 руб</div>
+																								<button class="products-item-btn open-popup" data-popup="apply">Купить</button>
+																							</div>
+
+																						</div>
+
+																						<div class="products-item">
+
+																							<div class="products-item-top">
+																								<div class="products-item-frame">
+																									<img src="img/product9.png" alt="" class="products-item-img">
+																								</div>
+																								<button class="products-item-play"></button>
+																								<audio class="products-item-audio" controls>
+																									<source src="audio/track.ogg" type="audio/ogg">
+																										<source src="audio/track.mp3" type="audio/mpeg">
+																											Your browser does not support the audio tag.
+																										</audio>
+																									</div>
+
+																									<div class="products-item-main">
+
+																										<div class="products-item-main-top">
+																											<div class="products-item-title">Glimmer in <br>
+																											the darkness</div>
+																											<div class="products-item-lyrics"></div>
+																										</div>
+
+																										<ul class="products-item-info">
+																											<li class="products-item-info-item">Жанр: поп</li>
+																											<li class="products-item-info-item">Вокал: мужской / женский</li>
+																										</ul>
+
+																									</div>
+
+																									<div class="products-item-bottom">
+																										<div class="products-item-price">100 000 руб</div>
+																										<button class="products-item-btn open-popup" data-popup="apply">Купить</button>
+																									</div>
+
+																								</div>
+
+																								<div class="products-item products-item-big">
+																									<div class="products-item-left">
+																										<img src="img/product10.png" alt="" class="products-item-img-big">
+																										<button class="products-item-play"></button>
+																<audio class="products-item-audio" controls>
+																	<source src="audio/track.ogg" type="audio/ogg">
+																		<source src="audio/track.mp3" type="audio/mpeg">
+																			Your browser does not support the audio tag.
+																		</audio>
+																									</div>
+																									<div class="products-item-right">
+																										<div class="products-item-marker blue">
+																											<span class="big">55%</span> <br>СКИДКА
+																										</div>
+																										<div class="products-item-lyrics"></div>
+																										<div class="products-item-title">Emirates</div>
+																										<ul class="products-item-info">
+																											<li class="products-item-info-item">Жанр: поп</li>
+																											<li class="products-item-info-item">Вокал: мужской / женский</li>
+																										</ul>
+																										<div class="products-item-price w-discount">45 000 руб</div>
+																										<div class="products-item-discount">100 000 руб</div>
+
+																										<button class="products-item-btn waves-on open-popup" data-popup="apply">Купить</button>
+																									</div>
+
+																								</div>
 
 
-								</div>
-							</div>
-						</section>
 
+																							</div>
 
-					</main>
+																							<div class="pag-wrapper">
 
-					<footer id="contacts" class="footer">
+																								<div class="pag">
+																									<div class="pag-nav prev"></div>
+																									<div class="pag-inner">
+																										<div class="pag-item active">1</div>
+																										<div class="pag-item">2</div>
+																										<div class="pag-item">3</div>
+																										<div class="pag-item">4</div>
+																									</div>
 
+																									<div class="pag-nav next"></div>
+																								</div>
 
-						<div class="container">
-							<div class="footer-inner">
-
-								<div class="footer-top">
-									<div class="footer-logo-wrapper">
-										<img src="img/logo.png" alt="" class="footer-logo">
-									</div>
-									<nav class="footer-nav">
-										<ul class="footer-menu">
-											<li><a href="#products">Песни</a></li>
-											<li><a href="#service">Услуги</a></li>
-											<li><a href="#contacts">Контакты</a></li>
-										</ul>
-									</nav>
-								</div>
-
-								<div class="footer-main">
-
-									<div class="footer-left">
-										<div class="footer-text1">© 2009 - 2019 ADA Company. Все права защищены</div>
-										<div class="footer-text2">Данные юр.лица ОГРН 000000100000111</div>
-										<div class="footer-soc">
-											<div class="footer-soc-title">Мы в социальных сетях:</div>
-											<a href="" class="footer-soc-item mail"></a>
-											<a href="" class="footer-soc-item whatsup"></a>
-										</div>
-									</div>
-									<div class="footer-right">
-										<a href="tel:+78009005090" class="footer-phone">8 (800) 900-50-90</a>
-										<a href="" class="footer-text3">Ada_company@info.ru</a>
-										<div class="footer-text3">г. Москва, ул Тверская, дом 5 (м. Тверская)</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
-
-
-					</footer>
+																							</div>
 
 
 
-				</div>
-
-				<div id="apply" class="popup popup-hide">
-
-					<div class="popup-wrapper">
-						<div class="popup-content">
-							<div class="popup-close"></div>
-							<form action="" class="popup-form disabled">
-								<div class="popup-title">Форма обратной связи</div>
-								<div class="popup-desc">Заполните форму и наш специалист свяжется с вами в ближайшее время</div>
-								<div class="popup-form-wrapper">
-									<div class="popup-form-left">
-										<input type="text" class="popup-field" placeholder="Ваше имя" required>
-										<input type="mail"  class="popup-field" placeholder="E-mail" required>
-										<div class="checkbox-wrapper">
-											<div class="checkbox-body"></div>
-											<div class="checkbox-text">- Нажимая кнопку отправить, я соглашаюсь 
-											на обработку моих персональных данных</div>
-										</div>
-									</div>
-									<div class="popup-form-right">
-										<input id="phone" type="tel" class="popup-field" placeholder="Номер телефона" required>
-										<textarea name="" id="" cols="30" rows="10" placeholder="Комментарий / название трека" class="popup-field popup-textarea"></textarea>
-									</div>
-								</div>
-								<button type="submit" class="popup-submit-btn waves-on ">Отправить заявку</button>
-							</form>
-						</div>
-					</div>
-
-				</div>
 
 
-				<script src="js/all.min.js" defer></script>
-				<script src="libs/nice-select.js" defer></script>
-				<script src="libs/waves.min.js" defer></script>
-				<script src="libs/mask.js" defer></script>
-				<script src="js/app.js" defer></script>
+																						</div>
 
 
-			</body>
-			</html>
+
+
+
+
+																					</section>
+
+																					<section id="service" class="service">
+
+																						<div class="bg"></div>
+																						<div class="container">
+																							<div class="service-inner">
+
+																								<h2 class="h2 big">Наши услуги</h2>
+
+																								<div class="service-wrapper">
+
+																									<div class="service-item">
+																										<div class="service-item-inner">
+																											<div class="service-item-title">Трек под ключ</div>
+																											<ul class="service-item-list">
+																												<li class="service-item-point">Определение стиля и структуры трека опираясь на референс. 
+																												Ваше видение того, как должен выглядеть трек.</li>
+																												<li class="service-item-point">Написание идеи</li>
+																												<li class="service-item-point">Создание музыкальной аранжировки</li>
+																												<li class="service-item-point">Написание слов</li>
+																												<li class="service-item-point">Сдача материала заказчику</li>
+																											</ul>
+																											<div class="service-item-marker">от <span class="bold"> 7 дней</span></div>
+																											<button class="service-item-btn waves-on open-popup" data-popup="apply"><span class="bg"></span>
+																												<span class="text">Оставить заявку</span></button>
+																											</div>
+																										</div>
+
+																										<div class="service-item">
+																											<div class="service-item-inner">
+																												<div class="service-item-title">Слова к вашему треку</div>
+																												<ul class="service-item-list">
+																													<li class="service-item-point">Вы присылаете идею трека</li>
+																													<li class="service-item-point">Подбираем настроение и тематику</li>
+																													<li class="service-item-point">Пишем текст</li>
+																													<li class="service-item-point">Вносим корректировки</li>
+																												</ul>
+																												<div class="service-item-marker">от <span class="bold"> 7 дней</span></div>
+																												<button class="service-item-btn waves-on open-popup" data-popup="apply"><span class="bg"></span>
+																													<span class="text">Оставить заявку</span></button>
+																												</div>
+																											</div>
+
+																											<div class="service-item">
+																												<div class="service-item-inner">
+																													<div class="service-item-title">Аранжировка</div>
+																													<ul class="service-item-list">
+																														<li class="service-item-point">Вы присылаете своё демо, в котором изложена идея</li>
+																														<li class="service-item-point">Подбираем референс и звучание какое хотели бы видеть в 
+																														своём треке</li>
+																														<li class="service-item-point">Вносим правки, дополняем по желанию</li>
+																														<li class="service-item-point">Написание слов</li>
+																														<li class="service-item-point">Сдача аранжировки под запись</li>
+																													</ul>
+																													<div class="service-item-marker">от <span class="bold"> 7 дней</span></div>
+																													<button class="service-item-btn waves-on open-popup" data-popup="apply"><span class="bg"></span>
+																														<span class="text">Оставить заявку</span></button>
+																													</div>
+																												</div>
+
+																												<div class="service-item">
+																													<div class="service-item-inner">
+																														<div class="service-item-title">Техническое <br>
+																															обеспечение <br>
+																														любого мероприятия</div>
+																														<ul class="service-item-list">
+																															<li class="service-item-point">Звуковые, световые,видео прокатные  инсталяции</li>
+																															<li class="service-item-point">Сценические конструкции</li>
+																														</ul>
+																														<div class="service-item-marker">от <span class="bold"> 7 дней</span></div>
+																														<button class="service-item-btn waves-on open-popup" data-popup="apply">
+																															<span class="bg"></span>
+																															<span class="text">Оставить заявку</span>
+																														</button>
+																													</div>
+																												</div>
+
+																											</div>
+
+
+																										</div>
+																									</div>
+																								</section>
+
+
+																							</main>
+
+																							<footer id="contacts" class="footer">
+
+
+																								<div class="container">
+																									<div class="footer-inner">
+
+																										<div class="btn-up waves-on"></div>
+
+																										<div class="footer-top">
+																											<div class="footer-logo-wrapper">
+																												<img src="img/logo.png" alt="" class="footer-logo">
+																											</div>
+																											<nav class="footer-nav">
+																												<ul class="footer-menu">
+																													<li><a href="#products">Песни</a></li>
+																													<li><a href="#service">Услуги</a></li>
+																													<li><a href="#contacts">Контакты</a></li>
+																												</ul>
+																											</nav>
+																										</div>
+
+																										<div class="footer-main">
+
+																											<div class="footer-left">
+																												<div class="footer-text1">© 2009 - 2019 ADA Company. Все права защищены</div>
+																												<div class="footer-text2">Данные юр.лица ОГРН 000000100000111</div>
+																												<div class="footer-soc">
+																													<div class="footer-soc-title">Мы в социальных сетях:</div>
+																													<a href="" class="footer-soc-item mail"></a>
+																													<a href="" class="footer-soc-item whatsup"></a>
+																												</div>
+																											</div>
+																											<div class="footer-right">
+																												<a href="tel:+78009005090" class="footer-phone">8 (800) 900-50-90</a>
+																												<a href="" class="footer-text3">Ada_company@info.ru</a>
+																												<div class="footer-text3">г. Москва, ул Тверская, дом 5 (м. Тверская)</div>
+																											</div>
+																										</div>
+
+																									</div>
+																								</div>
+
+
+																							</footer>
+
+
+
+																						</div>
+
+																						<div id="apply" class="popup popup-hide">
+
+																							<div class="popup-wrapper">
+																								<div class="popup-content">
+																									<div class="popup-close"></div>
+																									<form action="" class="popup-form disabled">
+																										<div class="popup-title">Форма обратной связи</div>
+																										<div class="popup-desc">Заполните форму и наш специалист свяжется с вами в ближайшее время</div>
+																										<div class="popup-form-wrapper">
+																											<div class="popup-form-left">
+																												<input type="mail"  class="popup-field" placeholder="E-mail" required>
+																												<div class="checkbox-wrapper">
+																													<div class="checkbox-body"></div>
+																													<div class="checkbox-text">- Нажимая кнопку отправить, я соглашаюсь 
+																													на обработку моих персональных данных</div>
+																												</div>
+																											</div>
+																											<div class="popup-form-right">
+																												<input id="phone" type="tel" class="popup-field" placeholder="Номер телефона" required>
+																											</div>
+																										</div>
+																										<button type="submit" class="popup-submit-btn waves-on ">Отправить заявку</button>
+																									</form>
+																								</div>
+																							</div>
+
+																						</div>
+
+
+																						<script src="js/all.min.js" defer></script>
+																						<script src="libs/nice-select.js" defer></script>
+																						<script src="libs/waves.min.js" defer></script>
+																						<script src="libs/mask.js" defer></script>
+																						<script src="libs/jquery-ui.min.js" defer></script>
+																						<script src="js/app.js?ver=02" defer></script>
+
+
+																					</body>
+																					</html>
