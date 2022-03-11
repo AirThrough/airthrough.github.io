@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Airbinance</title>
+	<link rel="stylesheet" href="css/fonts.css?ver=14">
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/waves.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
+	<style>
+
+	input[type="search"]::-webkit-search-decoration,
+	input[type="search"]::-webkit-search-cancel-button,
+	input[type="search"]::-webkit-search-results-button,
+	input[type="search"]::-webkit-search-results-decoration {
+		-webkit-appearance:none;
+	}
+	.tab-table::-webkit-scrollbar {
+		width: 6px;
+		border-radius: 5px;
+	}
+
+	/* Track */
+	.tab-table::-webkit-scrollbar-track {
+		background: rgba(0,0,0,.1); 
+		border-radius: 5px;
+	}
+
+	/* Handle */
+	.tab-table::-webkit-scrollbar-thumb {
+		background: #43475a;
+		border-radius: 5px;
+		transition: 0.25s all ease-in-out;
+	}
+
+	/* Handle on hover */
+	.tab-table::-webkit-scrollbar-thumb:hover {
+		background: #585D77;
+		transition: 0.25s all ease-in-out;
+	}
+
+	.search-input-list::-webkit-scrollbar {
+		width: 0px;
+		border-radius: 3px;
+		-webkit-appearance:none;
+	}
+
+	/* Track */
+	.search-input-list::-webkit-scrollbar-track {
+		
+		background: none;
+		border-radius: 3px;
+	}
+
+	/* Handle */
+	.search-input-list::-webkit-scrollbar-thumb {
+		background: #55596a; 
+		border-radius: 3px;
+		transition: 0.25s all ease-in-out;
+	}
+
+	/* Handle on hover */
+	.search-input-list::-webkit-scrollbar-thumb:hover {
+		background: rgba(255,255,255,.1);
+		transition: 0.25s all ease-in-out;
+	}
+
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: white;
+		transition: 0.25s all ease-in-out;
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+		color: white;
+		transition: 0.25s all ease-in-out;
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+		color: white;
+		transition: 0.25s all ease-in-out;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+		color: white;
+		transition: 0.25s all ease-in-out;
+	}
+
+	input[type="text"]:focus::-webkit-input-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+
+	input[type="text"]:focus:-ms-input-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+
+	input[type="text"]:focus:-moz-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+	input[type="text"]:focus::-moz-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+
+	.popup-simple-input-field::-webkit-input-placeholder {
+		color: #a7a7a7;
+		font-family: "Helvetica Neue";
+		font-size: 10px;
+		font-weight: 300;
+		transition: 0.25s all ease-in-out;
+	}
+
+	.popup-simple-input-field::-moz-placeholder  {
+		color: #a7a7a7;
+		font-family: "Helvetica Neue";
+		font-size: 10px;
+		font-weight: 300;
+	}
+
+	.popup-simple-input-field:-ms-input-placeholder {
+		color: #a7a7a7;
+		font-family: "Helvetica Neue";
+		font-size: 10px;
+		font-weight: 300;
+	}
+
+	.popup-simple-input-field:-moz-placeholder  {
+		color: #a7a7a7;
+		font-family: "Helvetica Neue";
+		font-size: 10px;
+		font-weight: 300;
+	}
+
+	.popup-simple-input-field:focus::-webkit-input-placeholder {
+		color: rgba(167,167,167,.3);
+		transition: 0.25s all ease-in-out;
+	}
+	</style>
+
+</head>
+<body>
+
+	<header class="header">
+
+		<div class="header-left">
+
+			<div class="header-menu-btn-wrap">
+
+				<button class="header-burger">
+					<span class="header-burger-line"></span>
+					<span class="header-burger-line"></span>
+					<span class="header-burger-line"></span>
+					<span class="header-burger-bg"></span>
+				</button>
+
+			</div>
+
+			<div class="header-logo">
+				<a class="header-logo-link" href="#">
+					<img class="header-logo-img" src="img/logo.svg" alt="">
+				</a>
+			</div>
+
+			<div class="header-stats">
+
+				<div class="header-stats-item header-stats-item-balance">
+					<div class="header-stats-title">Balance</div>
+					<div class="header-stats-value">$ 120267.09</div>
+				</div>
+				<div class="header-stats-item header-stats-item-deposits">
+					<div class="header-stats-title">Deposits</div>
+					<div class="header-stats-value">$ 369092.02</div>
+				</div>
+				<div class="header-stats-item header-stats-item-pending">
+					<div class="header-stats-title">Pending</div>
+					<div class="header-stats-value">$ 275647.00</div>
+				</div>
+				<div class="header-stats-item header-stats-item-partners">
+					<div class="header-stats-title">Partners</div>
+					<div class="header-stats-value">25647</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="header-right">
+
+
+			<div class="header-lng">
+
+				<select id="language" class="header-lng-select" name="" id="">
+					<option class="flag-icon flag-icon-gb" value="gb" selected="selected">gb</option>
+					<option value="ru">ru</option>
+					<option value="fr">fr</option>
+					<option value="es">es</option>
+					<option value="pt">pt</option>
+					<option value="de">de</option>
+					<option value="pl">pl</option>
+				</select>
+
+			</div>
+
+
+			<div class="header-logout">
+
+				<button class="header-logout-btn btn-yellow btn-logout">Logout</button>
+
+			</div>
+
+		</div>
+
+	</header>
+
+	<main >
+
+		<div class="content-wrapper">
+			
+			<aside class="aside pre-mobile">
+
+				<div class="aside-user">
+					<div class="aside-user-row">
+						<div class="aside-user-main">
+							<div class="aside-user-country flag-icon-background flag-icon-gb"></div>
+							<div class="aside-user-name">Username</div>
+						</div>
+						<a href="#" class="aside-user-settings"></a>
+					</div>
+					<div class="aside-user-row">
+						<div class="aside-user-title">Partner status</div>
+						<div class="aside-user-rating rate">
+							<div class="rate-item"></div>
+							<div class="rate-item"></div>
+							<div class="rate-item bright"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="aside-title">Dashboard</div>
+
+				<nav class="aside-nav">
+					<ul class="aside-menu">
+						<li class="aside-menu-item icon-invest"><a href="" class="aside-menu-link ">My investment</a></li>
+						<li class="aside-menu-item icon-account"><a href="" class="aside-menu-link ">Account upgrade</a></li>
+						<li class="aside-menu-item icon-trading"><a href="/top-up.html" class="aside-menu-link ">Top up & Withdrawal</a></li>
+						<li class="aside-menu-item icon-trading"><a href="/trading-history.html" class="aside-menu-link icon-trading">Trading history</a></li>
+						<li class="aside-menu-item icon-partnership"><a href="" class="aside-menu-link ">Partnership</a></li>
+						<li class="aside-menu-item icon-news"><a href="" class="aside-menu-link ">News</a></li>
+						<li class="aside-menu-item icon-reviews"><a href="" class="aside-menu-link  ">Reviews</a></li>
+					</ul>
+				</nav>
+
+				<div class="aside-extra">
+					<div class="aside-title">Corporate website</div>
+
+					<ul class="aside-menu aside-menu-extra">
+						<li class="aside-menu-item icon-home"><a href="" class="aside-menu-link ">ArBinance Homepage</a></li>
+						<li class="aside-menu-item icon-terms"><a href="" class="aside-menu-link ">Affiliate terms</a></li>
+					</ul>
+
+				</div>
+
+				<div class="aside-bottom">
+
+					<div class="aside-title">Support</div>
+
+					<ul class="aside-support">
+						<li class="aside-support-item">
+							<a href="" class="aside-support-link">
+								<span class="aside-support-icon icon-tg"></span><span class="aside-support-title">Telegram</span>
+							</a>
+						</li>
+						<li class="aside-support-item">
+							<a href="" class="aside-support-link">
+								<span class="aside-support-icon icon-fb"></span>
+								<span class="aside-support-title">Facebook</span>
+							</a>
+						</li>
+					</ul>
+
+				</div>
+
+
+			</aside>
+
+			<div id="not-popup" class="content">
+
+				<div class="simple-block">
+
+
+					<div class="title title-mt0">Deposit processing</div>
+
+					<div class="row">
+						<div class="col col-pd">
+							<div class="popup-extra not-popup">
+								<div class="popup-extra-title">Important</div>
+								<div class="popup-extra-list">
+									<div class="popup-extra-item">Coins will be deposited immediately after 3 network confirmations</div>
+									<div class="popup-extra-item">Please note that you must send exactly that amount in BTC as indicated in the field to the specified address. If the top-up amount and your payment do not match, we will be forced to reject the top-up of the account and refund this amount.</div>
+									<div class="popup-extra-item">Once you complete your payment you will be automatically redirected back to your personal account which will get credited with your first revenue after 24 hours by server time</div>
+									<div class="popup-extra-item">In case of detection of falsification of communication flows or impact, to break the operation of the platform, namely its program code, the deposit application is suspended.</div>
+									<div class="popup-extra-item">The platform is not responsible for any damage or consequences of an erroneous translation of cryptocurrency if the user made a transaction to the wrong address.</div>
+								</div>
+							</div>
+						</div>
+						<div class="col col-pd">
+						
+						<div class="popup-subtitle-gr">Billing details</div>
+
+					<div class="popup-info not-popup">
+						<div class="popup-info-item">
+							<div class="popup-info-title">Date</div>
+							<div class="popup-info-value">30/10/2018 16:27</div>
+							<input type="hidden" value="30/10/2018 16:27">
+						</div>
+					
+						<div class="popup-info-item dark">
+							<div class="popup-info-title">Coin name</div>
+							<div class="popup-info-value">
+								<img src="img/icon-btc.svg" alt="" class="popup-info-value-icon">
+							Bitcoin (BTC)</div>
+							<input type="hidden" value="Bitcoin (BTC)">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Total balance</div>
+							<div class="popup-info-value">00.00000000</div>
+							<input type="hidden" value="00.00000000">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Available balance</div>
+							<div class="popup-info-value popup-info-value_green">00.00000000</div>
+							<input type="hidden" value="00.00000000">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Reserved balance</div>
+							<div class="popup-info-value popup-info-value_yellow">00.00000000</div>
+							<input type="hidden" value="00.00000000">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Deposit amount</div>
+							<div class="popup-info-value popup-info-value_green">$250.00</div>
+							<input type="hidden" value="$250.00">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Coin Rate</div>
+							<div class="popup-info-value popup-info-value_green">$11460.00</div>
+							<input type="hidden" value="$11460.00">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Bitcoin Amount</div>
+							<div class="popup-info-value popup-info-value_green"><span class="white">(BTC)</span> 0.00908076</div>
+							<input type="hidden" value="BTC 0.00908076">
+						</div>
+
+
+
+
+					</div>
+
+
+						<div class="popup-subtitle-gr">Payment details</div>
+
+				
+
+					<div class="popup-payment not-popup">
+						<div class="popup-payment-success">
+							Amount copied to clipboard
+						</div>
+						<div class="popup-payment-title">
+							<img src="img/icon-btc.svg" alt="" class="popup-payment-title-icon">
+							<span class="popup-payment-title-cur">Bitcoin (BTC) </span>
+							<span class="popup-payment-title-info">Amount / Address </span>
+						</div>
+						<div class="popup-payment-amount">
+							<div class="popup-payment-amount-value">BTC <span>0.00076431</span></div>
+							<div class="popup-payment-copy waves-on"></div>
+						</div>
+						<div class="popup-payment-address">
+							<div class="popup-payment-address-value">1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqA</div>
+							<div class="popup-payment-qr open-popup" data-air-popup="qr">
+								<img class="popup-payment-qr-img" src="img/qr-code.svg" alt="">
+							</div>
+							<div class="popup-payment-copy waves-on"></div>
+						</div>
+					</div>
+
+					<div class="not-popup-submit">
+						
+						<button class="btn-red not-popup-submit-btn waves-on">Cancel</button>
+						<button class="btn-yellow not-popup-submit-btn open-popup" data-air-popup="final">Confirm</button>
+
+					</div>
+
+					
+
+
+				</div>
+
+				
+
+
+			</div>
+
+
+
+		</div>
+
+	</main>
+
+
+
+	<div id="qr" class="air-popup air-popup-hide">
+
+		<div class="air-popup-wrapper">
+			<div class="air-popup-content">
+
+				<div class="popup popup_success">
+
+					<div class="popup-header">
+						<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+						<div class="popup-close air-popup-close"></div>
+						<div class="popup-success-check"></div>
+					</div>
+
+					<div class="popup-title popup-title_wide">Transaction QR code</div>
+
+					<div class="popup-success-bottom" style="text-align: center;">
+						Activate application on your phone and use Qr code for get access to transaction.
+					</div>
+
+					<div class="popup-success-qr">
+						<img src="img/qr-code.svg" alt="" class="popup-success-qr-img">
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div id="final" class="air-popup air-popup-hide">
+
+		<div class="air-popup-wrapper">
+			<div class="air-popup-content">
+
+				<div class="popup popup_success">
+
+					<div class="popup-header">
+						<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+						<div class="popup-close air-popup-close"></div>
+						<div class="popup-success-check"></div>
+					</div>
+
+					<div class="popup-title popup-title_wide">Your deposit is being <br>
+ 					processed</div>
+
+					<div class="popup-success-bottom" style="text-align: center;">
+						The system is awaiting payment confirmation from the processing center. You can find out the status of the operation in the transactions table on the Trading history page.
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+	<script src="js/all.min.js" defer></script>
+	<script src="libs/moveit.js"></script>
+	<script src="libs/nice-select.js" defer></script>
+	<script src="js/app.js" defer></script>
+
+
+</body>

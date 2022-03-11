@@ -1,0 +1,868 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title>Airbinance</title>
+ 	<link rel="stylesheet" href="css/fonts.css?ver=14">
+ 	<link rel="stylesheet" href="css/all.min.css">
+ 	<link rel="stylesheet" href="css/waves.css">
+ 	<link rel="stylesheet" href="css/main.css">
+ 	<link rel="stylesheet" href="css/media.css">
+
+ 	<style>
+
+ 	input[type="search"]::-webkit-search-decoration,
+ 	input[type="search"]::-webkit-search-cancel-button,
+ 	input[type="search"]::-webkit-search-results-button,
+ 	input[type="search"]::-webkit-search-results-decoration {
+ 		-webkit-appearance:none;
+ 	}
+ 	.tab-table::-webkit-scrollbar {
+ 		width: 6px;
+ 		border-radius: 5px;
+ 	}
+
+ 	/* Track */
+ 	.tab-table::-webkit-scrollbar-track {
+ 		background: rgba(0,0,0,.1); 
+ 		border-radius: 5px;
+ 	}
+
+ 	/* Handle */
+ 	.tab-table::-webkit-scrollbar-thumb {
+ 		background: #43475a;
+ 		border-radius: 5px;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+
+ 	/* Handle on hover */
+ 	.tab-table::-webkit-scrollbar-thumb:hover {
+ 		background: #585D77;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+
+ 	.search-input-list::-webkit-scrollbar {
+ 		width: 0px;
+ 		border-radius: 3px;
+ 		-webkit-appearance:none;
+ 	}
+
+ 	/* Track */
+ 	.search-input-list::-webkit-scrollbar-track {
+
+ 		background: none;
+ 		border-radius: 3px;
+ 	}
+
+ 	/* Handle */
+ 	.search-input-list::-webkit-scrollbar-thumb {
+ 		background: #55596a; 
+ 		border-radius: 3px;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+
+ 	/* Handle on hover */
+ 	.search-input-list::-webkit-scrollbar-thumb:hover {
+ 		background: rgba(255,255,255,.1);
+ 		transition: 0.25s all ease-in-out;
+ 	}
+
+ 	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+ 		color: white;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+ 	::-moz-placeholder { /* Firefox 19+ */
+ 		color: white;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+ 	:-ms-input-placeholder { /* IE 10+ */
+ 		color: white;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+ 	:-moz-placeholder { /* Firefox 18- */
+ 		color: white;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+
+ 	input[type="text"]:focus::-webkit-input-placeholder
+ 	{
+ 		color: rgba(255,255,255, .4);
+ 		transition: 0.25s all ease-in-out;
+
+ 	}
+
+ 	input[type="text"]:focus:-ms-input-placeholder
+ 	{
+ 		color: rgba(255,255,255, .4);
+ 		transition: 0.25s all ease-in-out;
+
+ 	}
+
+ 	input[type="text"]:focus:-moz-placeholder
+ 	{
+ 		color: rgba(255,255,255, .4);
+ 		transition: 0.25s all ease-in-out;
+
+ 	}
+ 	input[type="text"]:focus::-moz-placeholder
+ 	{
+ 		color: rgba(255,255,255, .4);
+ 		transition: 0.25s all ease-in-out;
+
+ 	}
+ 	</style>
+
+ </head>
+ <body>
+
+ 	<header class="header">
+
+ 		<div class="header-left">
+
+ 			<div class="header-menu-btn-wrap">
+
+ 				<button class="header-burger">
+ 					<span class="header-burger-line"></span>
+ 					<span class="header-burger-line"></span>
+ 					<span class="header-burger-line"></span>
+ 					<span class="header-burger-bg"></span>
+ 				</button>
+
+ 			</div>
+
+ 			<div class="header-logo">
+ 				<a class="header-logo-link" href="#">
+ 					<img class="header-logo-img" src="img/logo.svg" alt="">
+ 				</a>
+ 			</div>
+
+ 			<div class="header-stats">
+
+ 				<div class="header-stats-item header-stats-item-balance">
+ 					<div class="header-stats-title">Balance</div>
+ 					<div class="header-stats-value">$ 120267.09</div>
+ 				</div>
+ 				<div class="header-stats-item header-stats-item-deposits">
+ 					<div class="header-stats-title">Deposits</div>
+ 					<div class="header-stats-value">$ 369092.02</div>
+ 				</div>
+ 				<div class="header-stats-item header-stats-item-pending">
+ 					<div class="header-stats-title">Pending</div>
+ 					<div class="header-stats-value">$ 275647.00</div>
+ 				</div>
+ 				<div class="header-stats-item header-stats-item-partners">
+ 					<div class="header-stats-title">Partners</div>
+ 					<div class="header-stats-value">25647</div>
+ 				</div>
+
+ 			</div>
+
+ 		</div>
+
+ 		<div class="header-right">
+
+
+ 			<div class="header-lng">
+
+ 				<select id="language" class="header-lng-select" name="" id="">
+ 					<option class="flag-icon flag-icon-gb" value="gb" selected="selected">gb</option>
+ 					<option value="ru">ru</option>
+ 					<option value="fr">fr</option>
+ 					<option value="es">es</option>
+ 					<option value="pt">pt</option>
+ 					<option value="de">de</option>
+ 					<option value="pl">pl</option>
+ 				</select>
+
+ 			</div>
+
+
+ 			<div class="header-logout">
+
+ 				<button class="header-logout-btn btn-yellow btn-logout">Logout</button>
+
+ 			</div>
+
+ 		</div>
+
+ 	</header>
+
+ 	<main id="settings">
+
+ 		<div class="content-wrapper">
+
+ 			<aside class="aside pre-mobile">
+
+ 				<div class="aside-user">
+ 					<div class="aside-user-row">
+ 						<div class="aside-user-main">
+ 							<div class="aside-user-country flag-icon-background flag-icon-gb"></div>
+ 							<div class="aside-user-name">Username</div>
+ 						</div>
+ 						<a href="#" class="aside-user-settings"></a>
+ 					</div>
+ 					<div class="aside-user-row">
+ 						<div class="aside-user-title">Partner status</div>
+ 						<div class="aside-user-rating rate">
+ 							<div class="rate-item"></div>
+ 							<div class="rate-item"></div>
+ 							<div class="rate-item bright"></div>
+ 						</div>
+ 					</div>
+ 				</div>
+
+ 				<div class="aside-title">Dashboard</div>
+
+ 				<nav class="aside-nav">
+ 					<ul class="aside-menu">
+ 						<li class="aside-menu-item icon-invest"><a href="" class="aside-menu-link ">My investment</a></li>
+ 						<li class="aside-menu-item icon-account"><a href="" class="aside-menu-link ">Account upgrade</a></li>
+ 						<li class="aside-menu-item icon-trading"><a href="/top-up.html" class="aside-menu-link ">Top up & Withdrawal</a></li>
+ 						<li class="aside-menu-item icon-trading"><a href="/trading-history.html" class="aside-menu-link icon-trading">Trading history</a></li>
+ 						<li class="aside-menu-item icon-partnership"><a href="" class="aside-menu-link ">Partnership</a></li>
+ 						<li class="aside-menu-item icon-news"><a href="" class="aside-menu-link ">News</a></li>
+ 						<li class="aside-menu-item icon-reviews"><a href="" class="aside-menu-link  ">Reviews</a></li>
+ 					</ul>
+ 				</nav>
+
+ 				<div class="aside-extra">
+ 					<div class="aside-title">Corporate website</div>
+
+ 					<ul class="aside-menu aside-menu-extra">
+ 						<li class="aside-menu-item icon-home"><a href="" class="aside-menu-link ">ArBinance Homepage</a></li>
+ 						<li class="aside-menu-item icon-terms"><a href="" class="aside-menu-link ">Affiliate terms</a></li>
+ 					</ul>
+
+ 				</div>
+
+ 				<div class="aside-bottom">
+
+ 					<div class="aside-title">Support</div>
+
+ 					<ul class="aside-support">
+ 						<li class="aside-support-item">
+ 							<a href="" class="aside-support-link">
+ 								<span class="aside-support-icon icon-tg"></span><span class="aside-support-title">Telegram</span>
+ 							</a>
+ 						</li>
+ 						<li class="aside-support-item">
+ 							<a href="" class="aside-support-link">
+ 								<span class="aside-support-icon icon-fb"></span>
+ 								<span class="aside-support-title">Facebook</span>
+ 							</a>
+ 						</li>
+ 					</ul>
+
+ 				</div>
+
+
+ 			</aside>
+
+ 			<div class="content">
+
+ 				<form action="" class="settings-form">
+
+ 					<div class="title">Personal info</div>
+
+ 					<div class="settings-block">
+
+ 						<div class="row">
+ 							<div class="col col-pd">
+
+ 								<div class="acc-log-form-block">
+ 									<div class="acc-log-form-image">
+ 										<div class="acc-log-form-icon icon-login"></div>
+ 									</div>
+ 									<div class="acc-log-form-main">
+ 										<div class="acc-log-form-label">
+ 											<div class="acc-log-form-label-text">
+ 												Login
+ 											</div>
+ 										</div>
+ 										<div class="acc-log-form-input">
+ 											<input disabled="disabled" type="text" class="acc-log-form-field" value="Michael" id="login">
+ 										</div>
+ 									</div>
+ 								</div>
+
+ 								<div class="acc-log-form-block">
+ 									<div class="acc-log-form-image">
+ 										<div class="acc-log-form-icon icon-email"></div>
+ 									</div>
+ 									<div class="acc-log-form-main">
+ 										<div class="acc-log-form-label">
+ 											<div class="acc-log-form-label-text">
+ 												Email
+ 											</div>
+
+ 										</div>
+ 										<div class="acc-log-form-input">
+ 											<input disabled="disabled" id="email" type="text" class="acc-log-form-field" value="Michael@gmail.com">
+ 										</div>
+ 									</div>
+ 								</div>
+
+ 								<div class="acc-log-form-block">
+ 									<div class="acc-log-form-image">
+ 										<div class="acc-log-form-icon icon-globe"></div>
+ 									</div>
+ 									<div class="acc-log-form-main">
+ 										<div class="acc-log-form-label required">
+ 											<div class="acc-log-form-label-text">
+ 												Country
+ 											</div>
+ 										</div>
+ 										<div class="acc-log-form-input">
+ 											<div class="acc-log-form-input-country flag-icon-gb flag-icon-background">
+ 											</div>
+ 											<input disabled="disabled" id="country" type="text" class="acc-log-form-field" value="United Kingdom">
+ 										</div>
+ 									</div>
+ 								</div>
+
+ 							</div>
+ 							<div class="col col-pd">
+
+
+ 								<div class="acc-log-form-block">
+ 									<div class="acc-log-form-image">
+ 										<div class="acc-log-form-icon icon-refer"></div>
+ 									</div>
+ 									<div class="acc-log-form-main">
+ 										<div class="acc-log-form-label">
+ 											<div class="acc-log-form-label-text">
+ 												Referrer
+ 											</div>
+
+ 										</div>
+ 										<div class="acc-log-form-input">
+ 											<input id="referrer" type="text" class="acc-log-form-field" disabled="disabled" value="My_referrer01">
+ 										</div>
+ 									</div>
+ 								</div>
+
+ 								<div class="acc-log-form-block">
+ 									<div class="acc-log-form-image">
+ 										<div class="acc-log-form-icon icon-phone-s"></div>
+ 									</div>
+ 									<div class="acc-log-form-main">
+ 										<div class="acc-log-form-label">
+ 											<div class="acc-log-form-label-text">
+ 												Telephone
+ 											</div>
+
+ 											<div class="acc-log-form-status red">
+ 												Unverified
+ 											</div>
+ 										</div>
+ 										<div class="acc-log-form-input">
+ 											<input disabled="disabled" id="phone" type="number" class="acc-log-form-field" placeholder="Type your Telephone number">
+ 											<button data-air-popup="verify-phone" class="open-popup acc-log-form-verify-btn btn-yellow">
+ 												Verify
+ 											</button>
+ 											<div class="acc-log-form-correct waves-on">
+
+ 											</div>
+ 										</div>
+ 									</div>
+ 									<div class="acc-log-form-error">Telephone number must contain 11 symbols</div>
+ 								</div>
+
+ 								<div class="acc-log-form-block">
+ 									<div class="acc-log-form-image">
+ 										<div class="acc-log-form-icon icon-tg-s"></div>
+ 									</div>
+ 									<div class="acc-log-form-main">
+ 										<div class="acc-log-form-label">
+ 											<div class="acc-log-form-label-text">
+ 												Telegram
+ 											</div>
+
+ 										</div>
+ 										<div class="acc-log-form-input">
+ 											<input disabled="disabled" id="tg" type="text" class="acc-log-form-field"  placeholder="Type your Telegram ID">
+ 											<div class="acc-log-form-correct waves-on">
+
+ 											</div>
+ 										</div>
+ 									</div>
+ 								</div>
+
+
+ 							</div>
+ 						</div>
+
+
+
+ 					</div>
+
+ 					<div class="title">Billing info</div>
+
+
+ 					<div class="settings-block">
+
+ 						<div class="row">
+ 							<div class="col col-pd">
+
+ 								<div class="acc-log-form-block">
+ 									<div class="acc-log-form-image">
+ 										<img class="acc-log-form-currency" src="img/icon-btc.svg" alt="">
+ 									</div>
+ 									<div class="acc-log-form-main">
+ 										<div class="acc-log-form-label">
+ 											<div class="acc-log-form-label-text">
+ 												Bitcoin (BTC)
+ 											</div>
+
+ 										</div>
+ 										<div class="acc-log-form-input">
+ 											<input id="cur1" disabled="disabled"  type="text" class="acc-log-form-field"  placeholder="Type your BTC wallet">
+ 											<div class="acc-log-form-correct waves-on">
+
+ 											</div>
+ 										</div>
+ 									</div>
+ 									<div class="acc-log-form-error">BTC wallet address must contain at least 25 symbols</div>
+ 								</div>
+
+ 								<div class="acc-log-form-block">
+ 									<div class="acc-log-form-image">
+ 										<img class="acc-log-form-currency" src="img/icon-bth.svg" alt="">
+ 									</div>
+ 									<div class="acc-log-form-main">
+ 										<div class="acc-log-form-label">
+ 											<div class="acc-log-form-label-text">
+ 												Bitcoin Cash (BTH)
+ 											</div>
+
+ 										</div>
+ 										<div class="acc-log-form-input">
+ 											<input id="cur2" disabled="disabled"  type="text" class="acc-log-form-field"  placeholder="Type your BTH wallet">
+ 											<div class="acc-log-form-correct waves-on">
+
+ 											</div>
+ 										</div>
+ 									</div>
+ 									<div class="acc-log-form-error">BTC wallet address must contain at least 40 symbols</div>
+ 								</div>
+
+ 								<div class="acc-log-form-block">
+ 									<div class="acc-log-form-image">
+ 										<img class="acc-log-form-currency" src="img/icon-eth.svg" alt="">
+ 									</div>
+ 									<div class="acc-log-form-main">
+ 										<div class="acc-log-form-label">
+ 											<div class="acc-log-form-label-text">
+ 												Etherium (ETH)
+ 											</div>
+
+ 										</div>
+ 										<div class="acc-log-form-input">
+ 											<input id="cur3" disabled="disabled"  type="text" class="acc-log-form-field"  placeholder="Type your ETH wallet">
+ 											<div class="acc-log-form-correct waves-on">
+
+ 											</div>
+ 										</div>
+ 									</div>
+ 									<div class="acc-log-form-error">BTC wallet address must contain at least 40 symbols</div>
+ 								</div>
+
+ 								<div class="acc-log-form-block">
+ 									<div class="acc-log-form-image">
+ 										<img class="acc-log-form-currency small" src="img/icon-acash.svg" alt="">
+ 										<img class="acc-log-form-currency small" src="img/icon-pm.svg" alt="">
+ 										<img class="acc-log-form-currency small" src="img/icon-payeer.svg" alt="">
+ 									</div>
+ 									<div class="acc-log-form-main">
+ 										<div class="acc-log-form-label">
+ 											<div class="acc-log-form-label-logo"></div>
+ 											<div class="acc-log-form-label-attention"></div>
+ 										</div>
+ 										<div class="acc-log-form-input">
+ 											<input id="cur4" disabled="disabled"  type="text" class="acc-log-form-field"  placeholder="Type your COINSWALLET BTC Address">
+ 											<div class="acc-log-form-correct waves-on">
+
+ 											</div>
+ 										</div>
+ 									</div>
+ 									<div class="acc-log-form-error">BTC wallet address must contain at least 25 symbols</div>
+ 								</div>
+
+
+
+ 							</div>
+ 							<div class="col col-pd">
+
+ 								<div class="acc-log-form-block">
+ 									<div class="acc-log-form-image">
+ 										<img class="acc-log-form-currency" src="img/icon-ltc.svg" alt="">
+ 									</div>
+ 									<div class="acc-log-form-main">
+ 										<div class="acc-log-form-label">
+ 											<div class="acc-log-form-label-text">
+ 												Litecoin (LTC)
+ 											</div>
+
+ 										</div>
+ 										<div class="acc-log-form-input">
+ 											<input id="cur5" disabled="disabled"  type="text" class="acc-log-form-field"  placeholder="Type your LTC wallet">
+ 											<div class="acc-log-form-correct waves-on">
+
+ 											</div>
+ 										</div>
+ 									</div>
+ 									<div class="acc-log-form-error">BTC wallet address must contain at least 33 symbols</div>
+ 								</div>
+
+ 								<div class="acc-log-form-block">
+ 									<div class="acc-log-form-image">
+ 										<img class="acc-log-form-currency" src="img/icon-dash.svg" alt="">
+ 									</div>
+ 									<div class="acc-log-form-main">
+ 										<div class="acc-log-form-label">
+ 											<div class="acc-log-form-label-text">
+ 												Dash (DASH)
+ 											</div>
+
+ 										</div>
+ 										<div class="acc-log-form-input">
+ 											<input id="cur6" disabled="disabled"  type="text" class="acc-log-form-field"  placeholder="Type your DASH wallet">
+ 											<div class="acc-log-form-correct waves-on">
+
+ 											</div>
+ 										</div>
+ 									</div>
+ 									<div class="acc-log-form-error">BTC wallet address must contain at least 40 symbols</div>
+ 								</div>
+
+ 								<div class="acc-log-form-block">
+ 									<div class="acc-log-form-image">
+ 										<img class="acc-log-form-currency" src="img/icon-xpr.svg" alt="">
+ 									</div>
+ 									<div class="acc-log-form-main">
+ 										<div class="acc-log-form-label">
+ 											<div class="acc-log-form-label-text">
+ 												Ripple (XRP)
+ 											</div>
+
+ 										</div>
+ 										<div class="acc-log-form-input">
+ 											<input id="cur7" disabled="disabled"  type="text" class="acc-log-form-field"  placeholder="Type your XPR wallet">
+ 											<div class="acc-log-form-correct waves-on">
+
+ 											</div>
+ 										</div>
+ 									</div>
+ 									<div class="acc-log-form-error">BTC wallet address must contain at least 25 symbols</div>
+ 								</div>
+
+ 								<div class="settings-block-attention">
+ 									<div class="settings-block-attention-head">
+ 										<div class="settings-block-attention-icon"></div>
+ 										<div class="settings-block-attention-title">Important:</div>
+ 									</div>
+ 									<div class="settings-block-attention-text">Withdrawals to other payment systems, like Perfect Money, Advanced Cash or Payeer are processed using the BTC address from your CoinsWallet account</div>
+ 								</div>
+
+ 							</div>
+ 						</div>
+
+ 					</div>
+
+ 					<div class="title">Security</div>
+
+ 					<div class="settings-block">
+
+ 						<div class="row">
+ 							<div class="col col-pd">
+ 								<div class="acc-log-form-block">
+ 									<div class="acc-log-form-image">
+ 										<div class="acc-log-form-icon icon-passw"></div>
+ 									</div>
+ 									<div class="acc-log-form-main">
+ 										<div class="acc-log-form-label">
+ 											<div class="acc-log-form-label-text">
+ 												Current password
+ 											</div>
+ 										</div>
+ 										<div class="acc-log-form-input">
+ 											<input id="password" type="password" class="acc-log-form-field" placeholder="Enter your password">
+ 											<div class="acc-log-form-correct waves-on">
+
+ 											</div>
+ 											<a href="/passrecovery.html" class="acc-log-form-forgot link">
+ 												Forgot password?
+ 											</a>
+ 										</div>
+ 									</div>
+ 									<div class="acc-log-form-error">Invalid password</div>
+ 								</div>
+ 							</div>
+ 							<div class="col col-pd">
+ 								<div class="acc-log-form-block">
+ 									<div class="acc-log-form-image">
+ 										<div class="acc-log-form-icon icon-passw"></div>
+ 									</div>
+ 									<div class="acc-log-form-main">
+ 										<div class="acc-log-form-label">
+ 											<div class="acc-log-form-label-text">
+ 												New password
+ 											</div>
+ 											<div class="acc-log-form-label-subtext">
+ 												(must contain at least 8 symbols)
+ 											</div>
+ 										</div>
+ 										<div class="acc-log-form-input">
+ 											<input id="password-new" type="password" class="acc-log-form-field" placeholder="Type your new password">
+ 											<div class="acc-log-form-correct waves-on">
+
+ 											</div>
+ 										</div>
+ 									</div>
+ 									<div class="acc-log-form-error">Invalid password</div>
+ 								</div>
+ 							</div>
+ 						</div>
+
+ 						<div class="settings-minititle">
+ 							Two-factor authentication (2FA)
+ 						</div>
+
+ 						<div class="row">
+ 							<div class="col-pd col">
+ 								<div class="form-radio">
+ 									<div class="form-radio-image">
+ 										<div class="form-radio-icon icon-auth"></div>
+ 									</div>
+ 									<div class="form-radio-main">
+ 										<div class="form-radio-row">
+ 											<button class="form-radio-button"></button>
+ 											<input type="hidden" class="form-radio-input" value="false">
+ 											<div class="form-radio-text">Two-factor authentication by phone number</div>
+ 											<div class="form-radio-attention"></div>
+ 										</div>
+ 										<div class="form-radio-row">
+ 											<button class="form-radio-button"></button>
+ 											<input type="hidden" class="form-radio-input" value="false">
+ 											<div class="form-radio-text">Two-factor authentication by email</div>
+ 											<div class="form-radio-attention"></div>
+ 										</div>
+ 									</div>
+ 								</div>
+ 							</div>
+ 							<div class="col-pd col">
+ 								<div class="settings-block-attention">
+ 									<div class="settings-block-attention-head">
+ 										<div class="settings-block-attention-icon"></div>
+ 										<div class="settings-block-attention-title">Important:</div>
+ 									</div>
+ 									<div class="settings-block-attention-text">When withdrawing a large amount of money, the system will send a confirmation
+ 									code to your phone number or email, you will only need to confirm the transfer</div>
+ 								</div>
+ 							</div>
+ 						</div>
+
+ 					</div>
+
+ 					<div class="title">Notifications</div>
+
+ 					<div class="settings-block">
+
+ 						<div class="row">
+ 							<div class="col col-pd">
+ 								<div class="acc-log-form-block">
+ 									<div class="acc-log-form-image">
+ 										<div class="acc-log-form-icon icon-email-o"></div>
+ 									</div>
+ 									<div class="acc-log-form-main">
+ 										<div class="acc-log-form-label">
+ 											<div class="acc-log-form-label-text">
+ 												Preferred offers
+ 											</div>
+ 											<div class="acc-log-form-label-triangle"></div>
+ 											<div class="acc-log-form-label-subtext">- from and under</div>
+ 											<div class="acc-log-form-label-attention"></div>
+ 										</div>
+ 										<div class="acc-log-form-input">
+ 											<input id="percent" type="number" class="acc-log-form-field"  value="0.01" maxlength="5">
+ 											<div class="acc-log-form-percent">%</div>
+ 											<div class="acc-log-form-triangle"></div>
+ 											<div class="acc-log-form-correct waves-on">
+
+ 											</div>
+ 										</div>
+ 									</div>
+ 								</div>
+ 							</div>
+ 							<div class="col col-pd">
+
+ 								<div class="form-radio">
+ 									<div class="form-radio-image">
+ 										<div class="form-radio-icon icon-auth"></div>
+ 									</div>
+ 									<div class="form-radio-main">
+ 										<div class="form-radio-row">
+ 											<button class="form-radio-button"></button>
+ 											<input type="hidden" class="form-radio-input" value="false">
+ 											<div class="form-radio-text">I want to receive notifications of offers by SMS</div>
+ 											<div class="form-radio-attention"></div>
+ 										</div>
+ 										<div class="form-radio-row">
+ 											<button class="form-radio-button"></button>
+ 											<input type="hidden" class="form-radio-input" value="false">
+ 											<div class="form-radio-text">I want to receive notifications of offers by email</div>
+ 											<div class="form-radio-attention"></div>
+ 										</div>
+ 									</div>
+ 								</div>
+
+ 							</div>
+ 						</div>
+
+ 						<div class="settings-block-attention settings-block-attention_mt">
+ 							<div class="settings-block-attention-head">
+ 								<div class="settings-block-attention-icon"></div>
+ 								<div class="settings-block-attention-title">Important:</div>
+ 							</div>
+ 							<div class="settings-block-attention-text">The platform can inform you about the new profitable offers. Everyone can set up what is minimal profit for a trade.  By this way, you will get SMS or Email notifications with
+ 							all details.</div>
+ 						</div>
+
+ 					</div>
+
+ 					<div class="settings-submit">
+ 						
+ 						<button class="btn-yellow waves-on save-btn">Save</button>
+
+ 					</div>
+
+ 				</form>
+
+
+
+ 			</div>
+
+
+
+ 		</div>
+
+ 	</main>
+
+ 	<div id="verify-phone" class="air-popup air-popup-hide">
+
+ 		<div class="air-popup-wrapper">
+ 			<div class="air-popup-content">
+
+ 				<div class="popup popup_success">
+
+ 					<div class="popup-header">
+ 						<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+
+ 						<div class="popup-close air-popup-close"></div>
+ 						
+ 					</div>
+
+ 					<form action="" class="popup-ver">
+ 							<div class="acc-log-form-block popup-ver-block">
+ 								<div class="acc-log-form-image">
+ 									<div class="acc-log-form-icon icon-phone-ver"></div>
+ 								</div>
+ 								<div class="acc-log-form-main">
+ 									<div class="acc-log-form-label">
+ 										<div class="acc-log-form-label-text">
+ 											Telephone verification
+ 										</div>
+										<div class="acc-log-form-label-aside">
+											Type verification code
+										</div>
+ 									</div>
+ 									<div class="acc-log-form-input">
+ 										<input  id="phone-ver" type="text" class="acc-log-form-field not-disabled" required  placeholder="_   _   _   _   _   _">
+ 										<a href="#" class="acc-log-form-link link">
+ 											Send code again
+ 										</a>
+ 									</div>
+ 								</div>
+ 								<div class="acc-log-form-error">Incorrect verification code</div>
+ 							</div>
+
+ 							<button type="submit" class="btn-yellow popup-ver-btn">Verify</button>
+ 						</form>
+
+
+
+ 					<div class="popup-success-bottom">
+ 						A verification code has been sent to you. Please fill out the form to successfully complete the verification
+ 					</div>
+
+ 				</div>
+
+ 			</div>
+ 		</div>
+
+ 	</div>
+
+ 	<div id="success-ver" class="air-popup  air-popup-hide">
+		
+		<div class="air-popup-wrapper">
+			<div class="air-popup-content">
+				
+				<div class="popup popup_success">
+
+					<div class="popup-header">
+						<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+						<div class="popup-close air-popup-close"></div>
+						<div class="popup-success-check"></div>
+					</div>
+					
+					<div class="popup-title">Verification complete</div>
+					
+					<div class="popup-success-bottom">
+						Verification has been passed, now you can use all the features of the trading platform. Now you have access to be informed about new offers and two-factor authentication by phone number
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div id="success" class="air-popup  air-popup-hide">
+		
+		<div class="air-popup-wrapper">
+			<div class="air-popup-content">
+				
+				<div class="popup popup_success">
+
+					<div class="popup-header">
+						<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+						<div class="popup-close air-popup-close"></div>
+						<div class="popup-success-check"></div>
+					</div>
+					
+					<div class="popup-title">New settings has been saved</div>
+					
+					<div class="popup-success-bottom">
+						Congratulations. Your new settings have taken effect
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+ 	<script src="js/all.min.js" defer></script>
+ 	<script src="libs/moveit.js"></script>
+ 	<script src="libs/nice-select.js" defer></script>
+ 	<script src="libs/mask.js" defer></script>
+ 	<script src="js/app.js" defer></script>
+
+
+ </body>

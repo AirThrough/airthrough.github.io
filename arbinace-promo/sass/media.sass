@@ -1,0 +1,2192 @@
+// by Andrew Rew
+
+@import "mixins"
+@import "stylesheet"
+@import "animation"
+
+
+// PRE
+
+.header-mobile
+	display: none
+
+.mobile
+	display: none
+
+
+// MOBILE SPREADED
+
+@media (min-width: 1150px) and (max-width: 1300px)
+
+	.header-main-ill-user
+		right: 0
+
+@media (min-width: 0px) and (max-width: 1150px)
+
+	.air-popup .air-popup-content 
+		width: 90%
+	
+	.header-burger.active .header-burger-line:nth-child(2)
+		opacity: 0
+		transition: 0.3s all ease-in-out
+
+	.container 
+		padding-left: 30px
+		padding-right: 30px
+
+	.header 
+		padding-bottom: 70px
+		padding-top: 60px
+
+		&-burger 
+	          height: 60px
+	          width: 60px
+	          margin-right: 7px
+	          display: flex 
+	          flex-direction: column 
+	          justify-content: center 
+	          align-items: center
+	          position: relative
+	          transition: 0.25s all ease-in-out
+
+	          &.active
+
+	               .header-burger-line
+
+	                    &:nth-child(1)
+	                         animation: burgerTopLine 0.5s
+	                         transform: translateY(7px) translateX(0) rotate(-45deg)
+
+	               .header-burger-line
+	                    &:nth-child(3)
+	                         animation: burgerBottomLine 0.5s
+	                         transform: translateY(-7px) translateX(0) rotate(45deg)
+
+
+
+	          &:hover 
+
+	               .header-burger-line
+	                    transition: 0.25s all ease-in-out
+	                    opacity: 0.8
+
+	          &-line 
+	               width: 22px
+	               height: 1px
+	               border-radius: 5px 
+	               background: white
+	               display: block 
+	               margin-bottom: 6px
+	               position: relative
+	               z-index: 2
+	               top: 0
+	               transform-origin: 50% 50%
+	               transition: 0.25s all ease-in-out
+	               transform: translateY(0) translateX(0) scaleX(1) rotate(0)
+
+	               &:nth-child(3)
+	                    margin-bottom: 0
+
+	          &-bg 
+	               position: absolute
+	               width: 100%
+	               height: 100%
+	               opacity: .5
+
+
+		&-top 
+			display: none
+		&-nav
+			display: none
+
+		&-mobile 
+			+frsc
+			height: 60px
+			background: rgba(0,0,0,.8)
+			padding-right: 15px
+			transition: 0.5s all ease-in-out
+			position: fixed 
+			top: 0
+			left: 0
+			width: 100%
+			z-index: 100
+
+			&.active 
+				background: rgba(0,0,0,.9)
+				transition: 0.5s all ease-in-out
+
+			&-left 
+				+froc 
+				height: 100%
+
+			&-logo 
+				width: 100px
+				height: 50px
+				background: url('../img/logo.svg') no-repeat
+				background-size: 100% auto 
+				background-position: center
+
+			&-wrapper 
+				position: absolute
+				top: 60px
+				left: 0
+				width: 100%
+				background: rgba(0,0,0,.9)
+				min-height: calc(100vh - 60px)
+				+fcsc
+				padding-top: 40px
+				padding-bottom: 40px
+				transform-origin: 0% 0% 
+				opacity: 0
+				transform: scale(0)
+				transition: 0.5s all ease-in-out
+				z-index: 100
+
+				&.active
+					opacity: 1
+					transform: scale(1)
+					transition: 0.5s all ease-in-out
+
+
+				.header-top-title
+					color: #fff
+
+				.header-nav-account 
+					margin-bottom: 20px
+
+			&-menu 
+				+fccc
+				margin-bottom: 20px
+
+				li 
+
+					a
+						font-size: 16px 
+						font-weight: 700
+						line-height: 22px
+						color: white
+						padding-top: 10px
+						padding-bottom: 10px
+						display: block
+
+			&-lng 
+
+				.nice-select.header-lng-select 
+					height: 39px
+					width: 50px
+
+					&::after 
+						display: none
+
+					.current 
+						padding-left: 0
+		
+
+		// &-main
+
+		// 	&::before 
+		// 		display: none
+
+		// 	&-left 
+		// 		width: 100%
+		// 		padding-bottom: 0
+
+		// 	&-right 
+		// 		width: 100%
+		// 		padding-bottom: 0
+
+		// 	&-inner 
+		// 		+fcoo
+
+		// 	&-title 
+		// 		font-size: 22px
+		// 		line-height: 35px
+		// 		margin-top: 20px
+
+		// 	&-text 
+		// 		font-size: 14px 
+		// 		line-height: 22px
+		// 		padding-right: 20px
+
+		// 	&-ill 
+
+		// 		&-user 
+		// 			display: none 
+
+		// 		&-dash 
+		// 			width: 100%
+		// 			max-width: 400px
+		// 			height: 300px
+		// 			margin-top: 20px
+		// 			margin-bottom: 20px
+
+		// 	&-company 	
+		// 		margin-top: 0
+		// 		flex-wrap: wrap 
+		// 		justify-content: space-between
+
+		// 		&-item 
+		// 			min-width: 48%
+		// 			margin-right: 0
+		// 			margin-bottom: 20px
+
+		// 			&:nth-child(2n-1)
+		// 				margin-right: 4%
+	
+
+	.header-main-title
+		margin-top: 40px
+		white-space: nowrap
+
+	.header-main-text
+		padding-right: 0
+
+	.page-wrapper 
+		
+		background: url('../img/header-bg-3.png') no-repeat #353746
+		background-size: 250% auto 
+		background-position: 100% top
+
+	.header
+
+		&-main 
+
+			&::before 
+				display: none
+
+			&-inner 
+				+fcoo
+
+			&-left 
+				width: 100%
+				padding-bottom: 0
+
+			&-right 
+				width: 100%
+
+	.header-main-ill-user
+		right: 50%
+		margin-right: -240px
+		bottom: -100px
+
+	.header-main-company-item
+		margin-right: 15px
+
+	.home-top
+
+		.row 
+			flex-wrap: wrap 
+
+			.col
+				&:nth-child(2)
+					padding-right: 0 !important
+
+				&:nth-child(3)
+					padding-right: 0 !important
+					padding-left: 0 !important
+					min-width: 100%
+					+frcc
+
+	.home-top-item
+		max-width: 350px
+		margin-bottom: 30px
+
+	.tables-main > .row 
+
+		+fccc
+
+	.offs-ill
+		height: 338px
+		max-width: 630px 
+		margin-left: auto
+		margin-right: auto
+
+	.steps-item
+		width: 100%
+
+	.macbook
+		padding-top: 50px
+
+	.wrapper-2sec
+		.line 
+			display: none
+		.bg 
+			display: none
+
+	.macbook-ill-main
+		transform-origin: 20% 100%
+		margin-left: auto
+		margin-right: auto
+		transform: scale(0.6)
+
+	.macbook-inner
+		max-width: 708px 
+		margin-left: auto
+		margin-right: auto
+
+	.macbook
+		position: relative
+		margin-top: -299px
+
+	.acc-up 
+		background: none
+		padding-bottom: 50px
+
+		&::before 
+			display: none
+
+		&::after 
+			display: none
+
+		.desc 
+			margin-bottom: 50px
+	
+	.tariff-name
+		font-size: 20px
+
+	.security
+		background: none
+
+		&::before 
+			display: none
+
+	.security-ill
+		max-width: 600px
+		height: 500px
+
+	.about-item
+		max-width: 280px
+		margin-left: auto
+		margin-right: auto
+
+	.about-wrapper
+
+		.row 
+			flex-wrap: wrap
+
+			.col 
+				min-width: 45%
+				&:nth-child(2n)
+					padding-right: 0
+
+				&:nth-child(2n-1)
+					padding-left: 0
+
+	.about::after
+		bottom: -164px
+		height: 600px
+		width: 354px
+
+	.footer::after
+		width: 353px
+	
+@media (min-width: 0px) and (max-width: 420px)
+
+	.header-main-ill-user
+		transform: scale(0.7) !important
+		transform-origin: 0% 50%
+		position: relative
+		bottom: auto 
+		right: auto 
+		margin-top: -50px
+
+// MAIN MOBILE
+
+@media (min-width: 0px) and (max-width: 767px)
+
+	#temp-page
+		background-size: 320% auto
+		min-height: 571px
+
+		.temp-logo 
+			img 
+				width: 100px
+				height: 100px
+
+		.header-main-title
+			+fccc
+
+		&::after 
+			bottom: 0
+
+	.tariff
+		max-width: 400px
+		margin-left: auto
+		margin-right: auto
+
+	.home-top .row .col:nth-child(2)
+		+frcc
+
+		.title
+			text-align: center
+
+	.home-top .row .col:nth-child(1)
+		+frcc
+
+		.title
+			text-align: center
+
+	.home-top .row .col:nth-child(3)
+		+frcc
+
+		.title
+			text-align: center
+
+
+
+	.mobile 
+		display: block 
+
+	.up-btn
+		right: 15px
+
+	#chart-tooltip-top
+		display: none !important
+	
+	.footer 
+		padding-top: 20px
+		padding-bottom: 0
+
+		&-bottom 
+			height: auto
+
+			&-link 
+				display: block 
+				margin-top: 15px
+				text-align: center
+
+				&_white 
+					margin-bottom: 15px
+					margin-top: 0
+					margin-right: 0
+
+			.header-top-soc 
+				margin-right: 0
+
+			&-txt 
+				margin-right: 0
+
+			&-support 
+				+fccc
+				margin-right: 0
+
+			&-title 
+				margin-right: 0
+				margin-bottom: 15px
+
+			.container
+				padding-left: 0
+				padding-right: 0
+
+			&-inner 
+				height: auto
+				+fccc
+				padding-top: 15px
+				padding-bottom: 15px
+
+			&-copyright 
+				+fccc
+				margin-bottom: 15px
+
+		&-menu 
+			+fccc
+
+			li
+				margin-right: 0
+				margin-bottom: 20px
+
+	.header-burger.active .header-burger-line:nth-child(2)
+		opacity: 0
+		transition: 0.3s all ease-in-out
+
+	.page-wrapper 
+		
+		
+		background: url('../img/header-bg-3.png') no-repeat #353746
+		background-size: 500% auto 
+		background-position: 100% top
+
+	.container 
+		padding-left: 15px
+		padding-right: 15px
+
+	.header 
+		padding-bottom: 70px
+		padding-top: 60px
+
+		&-burger 
+	          height: 60px
+	          width: 60px
+	          margin-right: 7px
+	          display: flex 
+	          flex-direction: column 
+	          justify-content: center 
+	          align-items: center
+	          position: relative
+	          transition: 0.25s all ease-in-out
+
+	          &.active
+
+	               .header-burger-line
+
+	                    &:nth-child(1)
+	                         animation: burgerTopLine 0.5s
+	                         transform: translateY(7px) translateX(0) rotate(-45deg)
+
+	               .header-burger-line
+	                    &:nth-child(3)
+	                         animation: burgerBottomLine 0.5s
+	                         transform: translateY(-7px) translateX(0) rotate(45deg)
+
+
+
+	          &:hover 
+
+	               .header-burger-line
+	                    transition: 0.25s all ease-in-out
+	                    opacity: 0.8
+
+	          &-line 
+	               width: 22px
+	               height: 1px
+	               border-radius: 5px 
+	               background: white
+	               display: block 
+	               margin-bottom: 6px
+	               position: relative
+	               z-index: 2
+	               top: 0
+	               transform-origin: 50% 50%
+	               transition: 0.25s all ease-in-out
+	               transform: translateY(0) translateX(0) scaleX(1) rotate(0)
+
+	               &:nth-child(3)
+	                    margin-bottom: 0
+
+	          &-bg 
+	               position: absolute
+	               width: 100%
+	               height: 100%
+	               opacity: .5
+
+
+		&-top 
+			display: none
+		&-nav
+			display: none
+
+		&-mobile 
+			+frsc
+			height: 60px
+			background: rgba(0,0,0,.8)
+			padding-right: 15px
+			transition: 0.5s all ease-in-out
+			position: fixed 
+			top: 0
+			left: 0
+			width: 100%
+			z-index: 100
+
+			&.active 
+				background: rgba(0,0,0,.9)
+				transition: 0.5s all ease-in-out
+
+			&-left 
+				+froc 
+				height: 100%
+
+			&-logo 
+				width: 100px
+				height: 50px
+				background: url('../img/logo.svg') no-repeat
+				background-size: 100% auto 
+				background-position: center
+
+			&-wrapper 
+				position: absolute
+				top: 60px
+				left: 0
+				width: 100%
+				background: rgba(0,0,0,.9)
+				min-height: calc(100vh - 60px)
+				+fcsc
+				padding-top: 40px
+				padding-bottom: 40px
+				transform-origin: 0% 0% 
+				opacity: 0
+				transform: scale(0)
+				transition: 0.5s all ease-in-out
+				z-index: 100
+
+				&.active
+					opacity: 1
+					transform: scale(1)
+					transition: 0.5s all ease-in-out
+
+
+				.header-top-title
+					color: #fff
+
+				.header-nav-account 
+					margin-bottom: 20px
+
+			&-menu 
+				+fccc
+				margin-bottom: 20px
+
+				li 
+
+					a
+						font-size: 16px 
+						font-weight: 700
+						line-height: 22px
+						color: white
+						padding-top: 10px
+						padding-bottom: 10px
+						display: block
+
+			&-lng 
+
+				.nice-select.header-lng-select 
+					height: 39px
+					width: 50px
+
+					&::after 
+						display: none
+
+					.current 
+						padding-left: 0
+		
+
+		&-main
+
+			&::before 
+				display: none
+
+			&-left 
+				width: 100%
+				padding-bottom: 0
+
+			&-right 
+				width: 100%
+				padding-bottom: 0
+
+			&-inner 
+				+fcoo
+
+			&-title 
+				font-size: 22px
+				line-height: 35px
+				margin-top: 20px
+
+			&-text 
+				font-size: 14px 
+				line-height: 22px
+				padding-right: 20px
+
+			&-ill 
+
+				&-user 
+					right: 0
+					position: static
+					margin-left: auto
+					margin-right: auto
+					transform: scale(0.9)
+
+				&-dash 
+					width: 100%
+					max-width: 400px
+					height: 300px
+					margin-top: 20px
+					margin-bottom: 20px
+					margin-left: auto
+					margin-right: auto
+
+			&-company 	
+				margin-top: 0
+				flex-wrap: wrap 
+				justify-content: space-between
+
+				&-item 
+					min-width: 48%
+					margin-right: 0
+					margin-bottom: 20px
+
+					&:nth-child(2n-1)
+						margin-right: 4%
+
+
+
+	.header-lng-select .list li::after 
+		left: 10px
+
+
+	.h2 
+		font-size: 22px
+
+	.desc 
+		line-height: normal 
+		font-size: 15px 
+		width: 100%
+		margin-bottom: 30px
+
+	.tables 
+		padding-top: 0
+		padding-bottom: 30px
+
+		&::before 
+			display: none
+
+		&-main 
+			padding-left: 10px
+			padding-right: 10px
+			padding: 0px
+			background: none 
+			box-shadow: none
+
+			.tab-table_mid1, .tab-table_mid2, .tab-table_mid3, .tab-table_mid4
+				min-width: 540px
+
+			.row 
+				flex-direction: column
+				justify-content: flex-start
+				align-items: flex-start
+
+				.col 
+					padding: 0 !important
+
+
+	.tab-table.tab-table_home
+		min-width: 900px 
+		overflow-x: auto
+	
+	
+	.home-top-block
+		max-width: 370px 
+		margin-left: auto
+		margin-right: auto
+
+	.home-top-item
+		margin-bottom: 20px
+
+	.home-top 
+		.row 
+			flex-direction: column
+			justify-content: flex-start
+			align-items: flex-start
+
+			.col 
+				padding-left: 0
+				padding-right: 0
+				width: 100%
+
+	.chart-top-left, .chart.chart_home .chart-top
+		+fcoo
+
+	.chart.chart_home .chart-top
+		padding-left: 15px
+		padding-top: 15px
+
+	.chart.chart_home
+		.chart-wrapper
+			position: relative
+			min-width: 1032px !important
+			max-width: 1032px !important
+			width: 1032px !important
+			min-height: 245px
+			max-height: 245px
+			margin-bottom: 30px
+
+	.chart-stats-item
+		width: 100%
+		margin-right: 0
+	.chart-stats-value, .chart-stats-title, .chart-stats-profval
+		font-size: 11px
+
+	.chart-stats-profit
+		margin-left: 15px
+		max-width: 170px
+		width: 170px
+		min-width: 0
+
+	.chart.chart_home .chart-top-item
+		margin-bottom: 15px
+
+	.offs 
+		padding-bottom: 30px
+
+		&-inner 
+			flex-direction: column
+			justify-content: flex-start
+			align-items: flex-start
+
+		&-left 
+			width: 100%
+
+		&-right 
+			width: 100%
+
+	.h3 
+		font-size: 18px
+		line-height: 25px 
+
+	.simple-text
+		font-size: 14px 
+		line-height: 23px
+
+	.simple-list li
+		font-size: 14px 
+		line-height: 23px
+		padding-right: 0
+
+		&::after 
+			top: 2px
+
+	.offs-ill
+		width: 100%
+		max-width: 400px 
+		height: 366px
+		margin-left: auto
+		margin-right: auto
+
+	.wrapper-2sec 
+
+		.line 
+			display: none 
+
+		.bg 
+			display: none
+
+
+	.steps 
+		padding-bottom: 50px
+		.steps-item
+			flex-direction: column
+			width: 100%
+			+fccc
+
+
+	.steps-item:nth-child(2n-1)
+		flex-direction: column
+		+fccc
+
+		.steps-main-info
+			padding-left: 20px
+			padding-right: 20px
+
+		&::after 
+			transform: none
+
+	.steps-main::before
+		transform: none
+		left: 50%
+		right: auto 
+		margin-left: -110px
+
+	.steps-item:nth-child(2n-1) .steps-main::before
+		transform: none
+		left: 50%
+		right: auto 
+		margin-left: -110px
+
+	.steps-item:nth-child(2n-1) .steps-main-info
+		padding-right: 20px
+		text-align: center
+
+	.steps-main-info
+		padding-right: 0
+		padding-left: 20px
+		padding-right: 20px
+		text-align: center
+
+	.steps-main-img
+		margin: 0 !important
+
+	.steps-main
+		padding-bottom: 20px !important
+		margin-left: auto !important
+		margin-right: auto !important
+
+	.steps-item:nth-child(2n-1) .steps-main
+		margin-right: 0
+		+fccc
+	.steps-main
+		margin-right: 0
+		+fccc
+		
+
+		&::after 
+			transform: none
+
+	.steps-item:nth-child(2n-1) .steps-main::after
+		transform: none
+
+	.steps-text
+		margin-top: 20px
+
+		.h2 
+			padding-bottom: 0
+			line-height: 30px	
+
+	.macbook 
+		padding-top: 0	
+		padding-bottom: 30px
+		margin-top: 0
+
+		&-ill 
+			+fccc
+			&-bottom 
+				max-width: 350px 
+				margin-left: auto
+				margin-right: auto	
+
+		.macbook-ill-screen
+			transform: none
+
+			&::after 
+				display: none
+
+			video 
+				transform: scale(0.275)
+				transform-origin: 0% 0%
+
+			&_mobile 
+				display: block
+
+	.macbook-ill-main
+		width: 260px
+		height: 190px
+		padding: 10px
+		padding-top: 10px
+		border-width: 1px
+		border-radius: 15px
+		margin-left: auto
+		margin-right: auto
+		transform: none
+
+	// ACCOUNT UPGRADE PAGE 
+
+
+	.upgrade-planlist 
+		margin-bottom: 30px
+		max-width: 450px 
+		margin-left: auto
+		margin-right: auto
+
+	.upgrade-user 
+		max-width: 450px 
+		margin-left: auto
+		margin-right: auto
+
+	.upgrade-top-row, .upgrade-plans-row
+		+fcoo
+
+		.col 
+			width: 100%
+			padding: 0
+
+	.upgrade-stats 
+		min-width: 700px
+		height: auto
+
+	.upgrade-plans-switcher
+		justify-content: center
+		margin-left: 0
+
+	.tariff 
+		margin-bottom: 30px
+
+	.tariff-list-item
+		font-size: 12px
+
+	.upgrade-plans
+		margin-bottom: 0
+
+	.acc-up .desc
+		margin-bottom: 30px
+
+	.acc-up 
+		background: none
+		padding-bottom: 50px
+
+		.h2 
+			line-height: 30px
+
+		&::after 
+			display: none 
+
+		&::before 
+			display: none
+
+		.title 
+			text-align: center
+
+	.upgrade-plans-block.absolute
+		width: 100%
+
+	.security 
+		background: none
+		padding-bottom: 50px
+
+		&-wrapper
+			flex-wrap: wrap 
+
+		&-item 
+			width: 100%
+			margin-bottom: 30px !important
+
+		&::before 
+			top: auto 
+			bottom: 50px
+			left: 15px 
+			width: 290px
+			height: 50px
+			background-size: 100% auto
+			background-repeat: no-repeat
+
+
+		&::after 
+			width: 290px
+			height: 100px
+			background-size: 100% auto
+			background-repeat: no-repeat
+			right: 15px
+			top: 143px
+
+		.desc 
+			margin-bottom: 70px
+
+		&-ill 
+			width: 100%
+			max-width: 400px 
+			height: 260px
+			margin-top: 0
+
+	.about 
+		padding-top: 50px
+		background: none
+		padding-bottom: 0
+
+		&::before
+			display: none
+
+		&::after 
+			display: none
+
+		.bg 
+			display: none
+
+		.line 
+			display: none
+
+		.desc 
+			margin-bottom: 30px
+
+		&-item 
+			max-width: 280px
+			margin-left: auto
+			margin-right: auto
+
+		&-wrapper
+
+			.row 
+				+fcoo 
+
+				.col 
+					width: 100%
+					padding: 0 !important
+
+@media (min-width: 600px) and (max-width: 767px)
+
+	.macbook .macbook-ill-screen video
+		transform: scale(0.487)
+
+
+	.macbook-ill-main
+		width: 450px
+		height: 321px
+
+		
+
+	.macbook-ill-bottom
+		max-width: 570px
+
+	.macbook .macbook-ill-screen
+
+		&::after 
+			display: block
+
+
+// PARTNERSHIP_PAGE
+@media (min-width: 0px) and (max-width: 767px)
+
+	.partners-advs
+		&-wrapper
+			+fccc
+			position: relative
+			margin-bottom: 30px
+
+			&-2 
+				+fccc
+		
+		&-block
+			width: 100%
+			margin-right: 0
+			margin-bottom: 20px
+			height: 320px
+			max-width: 300px
+
+			&-title 
+				font-size: 19px 
+
+			&-desc 
+				width: 70% 
+				line-height: 23px
+				font-size: 14px
+
+		&-item 
+			width: 100%
+			margin-right: 0
+			margin-bottom: 20px
+			max-width: 300px
+
+			&:nth-child(1)
+				position: relative
+				margin-top: -80px
+
+		&-title 
+			font-size: 27px 
+			line-height: 18px
+
+		&-number 
+			font-size: 53px 
+			line-height: 53px
+
+		&-icon 	
+			margin-bottom: 12px
+
+
+@media (min-width: 0px) and (max-width: 1200px)
+	
+	
+	.header-main-title.header-main-title_center
+		+fccc
+		font-size: 20px
+
+		.header-main-title-yellow
+			margin-bottom: 10px
+
+	.contacts 
+		background: #313445
+		padding-bottom: 30px
+
+		&-wrapper 
+			height: auto
+			width: auto
+			background: none
+			padding-top: 0
+			margin-top: 30px
+
+		&-title 
+			margin-left: auto
+			margin-right: auto
+			margin-top: 70px
+
+		&-side 
+			display: none
+
+		.desc 
+			width: 100%
+
+		&-form 
+			width: auto
+			margin-right: 0
+
+			.contacts-form-row-textarea
+				margin-top: 0
+
+			&-row 
+				+fcoo
+				margin-bottom: 0
+
+			&-block 
+				margin-right: 0 !important
+				width: 100%
+				margin-bottom: 20px
+
+	.stages-wrapper 
+		+fccc
+		margin-top: 30px
+
+	.stages .bg-1::after
+		display: none
+
+	.stages 
+		padding-bottom: 20px
+		background: #313445
+
+		&-numbers-bg 
+			display: none
+
+		&-item 
+			width: 100%
+			margin-right: 0
+			max-width: 243px 
+			margin-bottom: 30px
+
+		&-bottom 
+			display: none
+
+	.profit 
+		background: #313445
+		padding-bottom: 150px
+
+		&-wrapper
+			background: none
+			background-position: center top
+			height: 400px
+
+			&::after 
+				+pseudo 
+				+svg(profit-graph)
+				width: 280px
+				left: 50%
+				margin-left: -140px
+				top: 0
+				height: 180px
+
+		&-caption 
+			position: relative
+			bottom: auto 
+			right: auto
+			padding-top: 180px
+			width: 280px
+			margin-left: auto
+			margin-right: auto
+
+	.clocks .bg
+		display: none
+
+	.clocks .clocks-slider > .clocks-arrow
+		bottom: 47px
+		top: auto
+
+	.tab-table.tab-table_partners-page
+		min-width: 1000px
+
+	.clocks-wrapper
+		margin-bottom: 20px
+
+	.clocks 
+		padding-bottom: 30px
+		background: #313445
+		padding-top: 0
+
+	#partnership.page-wrapper .footer
+		background: #313445
+		padding-top: 30px
+
+	#partnership
+
+		.footer 
+			padding-top: 0
+
+			&::after 
+				display: none
+
+		
+		.h2 
+			line-height: 29px
+
+		.header-main-ill-partners
+			height: 529px
+			max-width: 335px 
+			margin-left: auto
+			margin-right: auto
+
+		&.page-wrapper
+			background: url('../img/header-bg-sq.png') no-repeat #353746
+			background-size: 250% auto 
+			background-position: 100% top
+
+		.header-main-text.header-main-text_center
+			br 
+				display: none
+
+		.header-main-title-white::after
+			width: 100%
+			left: 0
+
+		.header-main-title-yellow::after
+			width: 100%
+			left: 0
+
+		.header-main-ill-partners::after
+			display: none
+
+	.partners-advs .bg-geo-1
+		width: 140%
+		left: -20%
+		top: -225px
+
+	.partners-advs
+		padding-top: 0
+
+		.bg-geo-2
+			background-position: center 101%
+
+		.partners-advs-block:nth-child(3) .partners-advs-block-bg
+			background-position: 7px top
+
+		&-wrapper
+
+			&-2 
+				+fccc
+		
+		&-block
+			width: 100%
+			margin-right: 0
+			margin-bottom: 20px
+			height: 320px
+			max-width: 300px
+
+			&-title 
+				font-size: 19px 
+
+			&-desc 
+				width: 70% 
+				line-height: 23px
+				font-size: 14px
+
+		&-item 
+			width: 100%
+			margin-right: 0
+			margin-bottom: 20px
+			max-width: 300px
+
+			&:nth-child(1)
+				position: relative
+				margin-top: -80px
+
+		&-title 
+			font-size: 27px 
+			line-height: 18px
+
+		&-number 
+			font-size: 53px 
+			line-height: 53px
+
+		&-icon 	
+			margin-bottom: 12px
+	
+	
+
+	
+
+@media (min-width: 404px) and (max-width: 1200px)
+	
+	.nn 
+		display: none
+
+	.partners-advs-item:nth-child(1)
+		margin-top: 0px
+
+	.header-main-text.header-main-text_center
+		max-width: 400px
+
+	#partnership
+		.desc 
+			max-width: 400px
+
+@media (min-width: 768px) and (max-width: 1200px)
+
+	#temp-page
+		background-size: 320% auto
+		min-height: 671px
+
+		.temp-logo 
+			img 
+				width: 100px
+				height: 100px
+
+		.header-main-title
+			+fccc
+
+		&::after 
+			bottom: 0
+
+	.contacts 
+
+		&-form 
+
+			&-row 
+				+frso
+
+			&-block 
+				width: 48%
+
+				&.contacts-form-block-textarea
+					width: 100%
+
+	.partners-advs-item:nth-child(1)
+		margin-top: 50px
+
+	.header-main-title.header-main-title_center
+		font-size: 40px
+		margin-bottom: 40px
+
+	.header-main-text.header-main-text_center
+		max-width: 551px
+
+	#partnership .header-main-ill-partners
+		max-width: 700px
+		margin-top: 0
+
+	.partners-advs .bg-geo-1
+		top: -260px
+
+	.partners-advs-item
+		margin-top: 50px
+		width: 32%
+
+	.partners-advs-wrapper
+		margin-bottom: 80px
+
+	#partnership .desc
+		max-width: 100% 
+		width: 100%
+
+	.partners-advs-wrapper-2
+		+frso 
+		justify-content: space-around
+
+		.partners-advs-block 
+			width: 48%
+
+	.stages-wrapper	
+		+frso 
+		justify-content: space-around
+		flex-wrap: wrap
+
+		.stages-item 
+			margin-right: 5%
+			margin-left: 5%
+
+	.profit-wrapper::after
+		width: 700px
+		margin-left: -350px
+		height: 455px
+
+	.profit-wrapper
+		padding-top: 470px
+		height: auto
+
+	.profit-caption
+		padding-top: 0
+		+frso
+		width: 100%
+
+	.profit 
+		.desc 
+			margin-bottom: 0
+
+	.partners-advs .bg-geo-1
+		top: -367px 
+
+@media (min-width: 1024px) and (max-width: 1200px)
+
+	.partners-advs .bg-geo-1
+		top: -407px
+
+@media (min-width: 0px) and (max-width: 767px)
+
+	.reviews-nav 
+		display: block
+
+	.reviews-row-3
+		display: block
+
+	.reviews-row-1, .reviews-row-2
+		display: none
+
+@media (min-width: 360px) and (max-width: 767px)
+
+	.reviews-nav.reviews-nav-prev
+		left: 10px
+
+	.reviews-nav.reviews-nav-next
+		right: 10px
+
+@media (min-width: 0px) and (max-width: 1250px)
+
+	#about 
+		
+		background-size: 544% auto
+
+		.header-main-right
+			width: 100%
+		
+		.header-bg-bottom
+			background: url('../img/header-bg-about-bottom-simple.png') center no-repeat
+			background-size: 100% auto
+			background-position: left bottom
+			z-index: 5
+
+	.header-main-title-yellow::after
+		width: 100%
+		height: 2px
+		bottom: 0
+
+	.header-main-title-white::after
+		width: 100%
+		height: 2px
+		bottom: 0
+		left: 0
+
+	.header-main .about-ill
+		width: 280px
+		height: 300px
+		top: -61px
+		margin-left: auto
+		margin-right: auto
+		left: 50%
+		margin-left: -140px
+
+	.about-who
+		padding-top: 40px
+		background: linear-gradient(180deg, #2C3144 0%, #2E2F3B 100%)
+
+	.about-who .bg-2
+		bottom: 0
+		height: 500px
+		display: none
+		background-position: center top
+		top: auto
+
+	.about-who .bg-1
+		display: none
+
+	.header-main-desc
+		line-height: normal 
+		font-size: 20px
+
+	.header-main.header-main_about .header-main-left
+		width: 100%
+
+	.header-main.header-main_about 
+		
+		.header-main-desc
+			br 
+				display: none
+
+		.header-main-inner 
+			+fcoo
+	
+	.header 
+
+		&-main 
+
+			&-title 
+				+fcoo
+
+	.about-who
+		padding-bottom: 50px
+
+	.about-who-main
+		margin-top: 80px
+		margin-bottom: 30px
+		background: none
+		+fcoo 
+		height: auto
+		padding-top: 0
+		text-align: center
+		margin-left: 0
+		margin-right: 0
+		padding-left: 15px
+		padding-right: 15px
+		padding-top: 55px
+		padding-bottom: 15px
+		background-image: linear-gradient(117deg, #565a6f 0%, #3e4257 100%)
+		border-radius: 7px 
+		border: 1px solid $accent 
+		box-shadow: 0 0 10px 10px rgba(0,0,0,.2)
+
+		&::after 
+			+pseudo 
+			width: 223px
+			height: 100px
+			+svg(text-header)
+			top: -50px
+			left: 50%
+			margin-left: -111px
+
+	.about-who-main-col
+		width: 100%
+		font-size: 15px 
+		line-height: normal
+		margin-bottom: 20px
+
+	.about-who-video 
+		width: 100%
+	
+	.features
+		padding-bottom: 50px
+
+	.features-wrapper
+		+fcoo
+
+	.features-item
+		width: 100%
+		max-width: 333px
+		margin-left: auto
+		margin-right: auto
+
+	.gallery .owl-item
+		+frcc
+
+	.features-item-title
+		font-size: 19px
+		margin-bottom: 20px
+
+	.features-item-main
+		padding-top: 165px
+
+	.features-item-text
+		font-size: 18px 
+		line-height: normal
+
+	.reviews-item
+		margin-right: 0
+
+	.slick-slide > div
+		+frcc
+
+	.reviews-total
+		margin-bottom: 50px
+
+	.reviews-row-2 .reviews-item
+		transform: none
+
+	.reviews-row .slick-track
+		padding-bottom: 20px
+
+	.reviews-bottom
+		margin-top: 70px
+
+	.gallery-logo-col
+		max-width: 450px 
+		margin-left: auto
+		margin-right: auto
+
+	.gallery .bg-1
+		display: none
+
+	.gallery
+		padding-top: 0
+		background: #2E2F3B
+		padding-bottom: 0
+
+	.gallery-item
+		max-width: 100%
+		padding-top: 0
+		padding-bottom: 0
+		height: auto
+
+	.gallery .owl-item.center .gallery-item-container
+		margin-left: 0
+		margin-right: 0
+		box-shadow: none
+
+	.gallery-item-container
+		height: auto
+		margin-left: 10px
+		margin-right: 10px
+
+	.gallery-nav.gallery-nav-prev
+		left: -12px
+		top: 50%
+		margin-top: -30px
+
+	.gallery-nav.gallery-nav-next
+		right: -12px
+		top: 50%
+		margin-top: -30px
+
+	.gallery-dots-wrapper 
+		display: none
+
+	.gallery-logo-wrapper
+		margin-top: 30px
+		+fcoo
+
+	.gallery-logo-col
+		width: 100%
+		margin-bottom: 22px
+
+	.gallery-logo-item_big.gallery-logo-item
+		margin-bottom: 0
+
+		img 
+			width: 26%
+
+	.gallery-logo-item
+		height: auto
+		padding: 15px
+		padding-top: 30px
+		padding-bottom: 30px
+		+frcc
+
+		img 
+			width: 90%
+
+	.gallery .bg-2
+		display: none
+
+	#about .footer 
+		padding-top: 50px
+		background: #2E2F3B
+		border-top: none
+
+		&::after 
+			background-color: #2E2F3B
+			display: none
+
+@media (min-width: 500px) and (max-width: 1250px)
+
+	#about 
+
+		.btn-down 
+			margin-bottom: 50px
+
+		.header-main .about-ill
+			top: -96px
+
+@media (min-width: 500px) and (max-width: 1250px)
+
+	#about 
+
+		.header-main .about-ill
+			top: -115px
+
+		.header-bg-bottom
+			bottom: -1px
+
+@media (min-width: 768px) and (max-width: 1250px)
+
+	#about 
+
+
+		.header-main .about-ill
+			width: 450px
+			height: 450px
+			top: -140px
+
+	.reviews .bg-1
+		top: 400px
+
+	.reviews .bg-2
+		height: 400px
+
+@media (min-width: 900px) and (max-width: 1250px)
+
+	.features-wrapper
+		+frso 
+		flex-wrap: wrap 
+
+	.features-item
+		width: 45%
+
+@media (min-width: 1000px) and (max-width: 1250px)
+
+
+	#about .btn-down
+		margin-bottom: 170px
+
+	#about .header-main .about-ill
+		height: 550px
+		width: 550px
+		top: -300px
+
+	.gallery-logo-wrapper
+		+frso
+
+	.gallery-logo-item_big.gallery-logo-item
+		height: 300px
+
+	.gallery-logo-item_big.gallery-logo-item img
+		width: 50%
+
+	.gallery-logo-col
+		width: 31%
+
+		&:nth-child(3)
+			.gallery-logo-item img
+				width: 60%
+
+	.gallery-logo-item
+		height: 139px
+
+	.gallery-logo-item img
+		width: 80%
+
+
+
+// HOW_IT_WORKS 
+
+
+
+@media (min-width: 0px) and (max-width: 1023px)
+
+	#how-it-works.page-wrapper .footer
+		margin-top: 0
+		background: #313445
+		padding-top: 30px
+		border-top: 1px solid #43475a
+
+		&::after 
+			display: none
+
+	#how-it-works.page-wrapper
+		background-size: 500%
+
+		.header-main
+			padding-bottom: 200px
+
+		.header-main-title-yellow
+			margin-bottom: 0
+
+			&::after 
+				left: 0
+				width: 100%
+
+		.header-main-text.header-main-text_center
+			br 
+				display: none
+
+	.ill-how 
+		top: auto 
+		bottom: -30px
+		height: 500px
+		background-position: center bottom
+
+	.hiw-steps-row
+		+fcoo
+
+	.hiw-steps-way
+		display: none
+
+	.hiw-steps-item
+		width: 100%
+		position: relative
+		max-width: 320px 
+		margin-left: auto
+		margin-right: auto
+
+	.hiw-steps-item-text
+		font-size: 21px 
+		line-height: 28px
+
+	.hiw-steps-row:nth-child(1) .hiw-steps-item:nth-child(1) .hiw-steps-item-main::after,
+	.hiw-steps-row:nth-child(1) .hiw-steps-item:nth-child(3) .hiw-steps-item-main::after,
+	.hiw-steps-row:nth-child(2) .hiw-steps-item:nth-child(1) .hiw-steps-item-main::after,
+	.hiw-steps-row:nth-child(2) .hiw-steps-item:nth-child(2) .hiw-steps-item-main::after
+		top: 0	
+		left: 0	
+		+png(hiw-step-bg-c)
+		width: 100%	
+		transform: none
+
+	.hiw-steps-item-main
+		margin-top: -84px
+		padding-top: 69px
+		height: 300px
+
+		&::after 
+			height: 345px
+
+	.hiw-steps-wrapper
+		margin-top: 50px
+
+	.hiw-steps-row:nth-child(2),
+	.hiw-steps-row:nth-child(3)
+		margin-top: 0
+
+	.hiw-steps-row:nth-child(2) .hiw-steps-item
+		flex-direction: column
+
+		.hiw-steps-item-main
+			flex-direction: column
+			margin-top: -84px
+			padding-top: 69px
+			margin-bottom: 0
+
+	.hiw-steps-row:nth-child(2) .hiw-steps-item-icon
+		+svg(hiw-step-icon)
+
+	.hiw-steps .bg
+		height: 200px
+		background-position: center top
+
+	.videos-item 
+		width: calc(100% - 6px) !important
+		box-shadow: none
+		margin-bottom: 50px
+		margin-top: 0 !important
+		+frcc
+
+		video 
+			margin-left: auto
+			margin-right: auto
+
+	.videos 
+		padding-top: 30px
+
+	.bg-side 
+		display: none
+
+	.videos-side-item
+		width: 100%
+		margin-bottom: 50px
+
+	.videos .bg-angled-short
+		display: none
+
+	.videos-side
+		margin-bottom: 50px
+
+	.videos-side-item-text
+		font-size: 16px 
+		line-height: 25px
+
+	.videos-side-item-title
+		font-size: 22px 
+		line-height: 17px
+
+	.videos .bg-angled-middle
+		bottom: 137px
+
+
+	.videos .bg-angled.top 
+		background-position: center bottom
+		bottom: 730px
+
+	.get-started-inner
+		+fcoo 
+
+	.get-started-main
+		width: 320px
+		min-width: 320px
+		margin-left: 50% 
+		left: -160px
+		margin-top: 287px
+		height: 455px
+
+	.get-started-title-1
+		font-size: 37px 
+		letter-spacing: 11px 
+		top: 178px
+		left: 40px
+
+	.get-started-title-2
+		font-size: 37px 
+		top: 147px
+		left: 200px
+
+	.get-started-title-3
+		font-size: 37px 
+		top: 200px
+		left: 37px
+
+	.get-started-subtitle
+		font-size: 21px 
+		letter-spacing: 5px 
+		left: 97px
+		top: 252px
+
+	.get-started-text
+		line-height: normal 
+		font-size: 10px 
+		width: 120px
+		left: 50%
+		margin-left: -73px
+		top: 300px
+
+	.get-started-tariff
+		padding-top: 0
+
+	#how-it-works.page-wrapper .main
+		background-image: none
+
+	.get-started
+		padding-bottom: 50px
+
+	.get-started-tariff
+		margin-left: 0
+		margin-left: auto
+		margin-right: auto
+		width: auto
+		max-width: 370px
+
+	.tariff-price.changed .tariff-price-old
+		top: 3px
+		left: 12px
+
+	.videos-subtitle
+		text-align: center
+
+
+@media (min-width: 0px) and (max-width: 500px)
+	
+	.videos 
+		padding-top: 0 !important
+		margin-top: -50px
+
+@media (min-width: 0px) and (max-width: 767px)
+
+	#how-it-works.page-wrapper
+
+		.h2 
+			line-height: 28px
+			br 
+				display: none
+	
+	.hiw-steps .bg
+		height: 267px
+
+	.hiw-steps
+		padding-bottom: 150px
+	
+
+
+@media (min-width: 375px) and (max-width: 767px)
+	
+	#how-it-works.page-wrapper
+
+		.header-main
+			padding-bottom: 300px
+
+@media (min-width: 768px) and (max-width: 1023px)
+
+	.hiw-steps .bg
+		height: 300px
+
+	#how-it-works.page-wrapper .header-main
+		padding-bottom: 506px
+
+	.ill-how
+		height: 679px
+
+@media (min-width: 1022px) and (max-width: 1024px)
+
+		.videos .bg-angled-middle
+			height: 836px
+			bottom: 326px
+
+@media (min-width: 1020px) and (max-width: 1200px)
+	
+	.videos-side
+		margin-bottom: 100px
+		
+	.bg-side-5, .bg-side-4
+		display: none
+
+	.videos-item
+		width: calc(100% - 8px) !important
+		box-shadow: none 
+		+frcc
+		margin-bottom: 100px
+		margin-top: 0 !important
+
+	#how-it-works.page-wrapper
+
+		.header-main-title.header-main-title_center
+			+frco
+
+			.header-main-title-yellow
+				margin-left: 15px
+				margin-right: 15px
+
+	.ill-how
+		top: 70px
+
+	#how-it-works.page-wrapper
+		background-size: 200% auto 
+
+		.header-main-text.header-main-text_center
+			br 	
+				display: none 
+
+	.hiw-steps .bg
+		background-position: center top 
+		height: 370px
+
+	.hiw-steps-way
+		width: 870px
+		margin-left: -435px
+
+	.hiw-steps-row:nth-child(1) .hiw-steps-item:nth-child(1) .hiw-steps-item-main::after
+		width: 109.5%
+		top: -17px
+
+	.hiw-steps-item-main::after
+		width: 105%
+		left: -9px
+		top: 8px
+
+	.hiw-steps-row:nth-child(1) .hiw-steps-item:nth-child(3) .hiw-steps-item-main::after
+		right: -57px
+		top: -22px
+		width: 109.5%
+
+	.hiw-steps-row:nth-child(2) .hiw-steps-item:nth-child(1) .hiw-steps-item-main::after
+		width: 109.5%
+		left: -58px
+		top: 25px
+
+	.hiw-steps-row:nth-child(2) .hiw-steps-item:nth-child(2) .hiw-steps-item-main::after
+		width: 109.5%
+		right: -55px
+		top: 21px
+
+	.hiw-steps-row:nth-child(2) .hiw-steps-item-number
+		margin-top: -17px
+
+	.hiw-steps-row:nth-child(2) .hiw-steps-item-text
+		margin-bottom: 26px
+
+	.hiw-steps-item-text
+		font-size: 26px 
+		line-height: 39px
+		margin-bottom: 21px
+
+	.hiw-steps-wrapper
+		width: 964px
+		margin-left: auto
+		margin-right: auto 
+
+	.videos .bg-angled-short
+		display: none 
+
+	.videos .bg-angled-middle
+		height: 858px
+		bottom: 305px
+
+	.get-started-main
+		margin-top: 130px
+		left: 50%
+		margin-left: -356px
+
+	.get-started-inner
+		+fcoo
+
+	#how-it-works.page-wrapper .main
+		background-image: none 
+
+	.get-started-tariff
+		margin-left: auto
+		margin-right: auto
+		padding-top: 50px
+		margin-bottom: 50px
+
+	#how-it-works.page-wrapper .footer
+		padding-top: 132px

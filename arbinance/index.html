@@ -1,0 +1,2442 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title>Airbinance</title>
+ 	<link rel="stylesheet" href="css/fonts.css?ver=14">
+ 	<link rel="stylesheet" href="css/all.min.css">
+ 	<link rel="stylesheet" href="css/waves.css">
+ 	<link rel="stylesheet" href="css/main.css">
+ 	<link rel="stylesheet" href="css/media.css">
+
+ 	<style>
+
+ 	input[type="search"]::-webkit-search-decoration,
+ 	input[type="search"]::-webkit-search-cancel-button,
+ 	input[type="search"]::-webkit-search-results-button,
+ 	input[type="search"]::-webkit-search-results-decoration {
+ 		-webkit-appearance:none;
+ 	}
+ 	.tab-table::-webkit-scrollbar {
+ 		width: 6px;
+ 		border-radius: 5px;
+ 	}
+
+ 	/* Track */
+ 	.tab-table::-webkit-scrollbar-track {
+ 		background: rgba(0,0,0,.1); 
+ 		border-radius: 5px;
+ 	}
+
+ 	/* Handle */
+ 	.tab-table::-webkit-scrollbar-thumb {
+ 		background: #43475a;
+ 		border-radius: 5px;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+
+ 	/* Handle on hover */
+ 	.tab-table::-webkit-scrollbar-thumb:hover {
+ 		background: #585D77;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+
+ 	.search-input-list::-webkit-scrollbar {
+ 		width: 0px;
+ 		border-radius: 3px;
+ 		-webkit-appearance:none;
+ 	}
+
+ 	/* Track */
+ 	.search-input-list::-webkit-scrollbar-track {
+
+ 		background: none;
+ 		border-radius: 3px;
+ 	}
+
+ 	/* Handle */
+ 	.search-input-list::-webkit-scrollbar-thumb {
+ 		background: #55596a; 
+ 		border-radius: 3px;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+
+ 	/* Handle on hover */
+ 	.search-input-list::-webkit-scrollbar-thumb:hover {
+ 		background: rgba(255,255,255,.1);
+ 		transition: 0.25s all ease-in-out;
+ 	}
+
+ 	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+ 		color: white;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+ 	::-moz-placeholder { /* Firefox 19+ */
+ 		color: white;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+ 	:-ms-input-placeholder { /* IE 10+ */
+ 		color: white;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+ 	:-moz-placeholder { /* Firefox 18- */
+ 		color: white;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+
+ 	input[type="text"]:focus::-webkit-input-placeholder
+ 	{
+ 		color: rgba(255,255,255, .4);
+ 		transition: 0.25s all ease-in-out;
+
+ 	}
+
+ 	input[type="text"]:focus:-ms-input-placeholder
+ 	{
+ 		color: rgba(255,255,255, .4);
+ 		transition: 0.25s all ease-in-out;
+
+ 	}
+
+ 	input[type="text"]:focus:-moz-placeholder
+ 	{
+ 		color: rgba(255,255,255, .4);
+ 		transition: 0.25s all ease-in-out;
+
+ 	}
+ 	input[type="text"]:focus::-moz-placeholder
+ 	{
+ 		color: rgba(255,255,255, .4);
+ 		transition: 0.25s all ease-in-out;
+
+ 	}
+ </style>
+
+</head>
+<body>
+
+	<header class="header">
+
+		<div class="header-left">
+
+			<div class="header-menu-btn-wrap">
+
+				<button class="header-burger">
+					<span class="header-burger-line"></span>
+					<span class="header-burger-line"></span>
+					<span class="header-burger-line"></span>
+					<span class="header-burger-bg"></span>
+				</button>
+
+			</div>
+
+			<div class="header-logo">
+				<a class="header-logo-link" href="#">
+					<img class="header-logo-img" src="img/logo.svg" alt="">
+				</a>
+			</div>
+
+			<div class="header-stats">
+
+				<div class="header-stats-item header-stats-item-balance">
+					<div class="header-stats-title">Balance</div>
+					<div class="header-stats-value">$ 120267.09</div>
+				</div>
+				<div class="header-stats-item header-stats-item-deposits">
+					<div class="header-stats-title">Deposits</div>
+					<div class="header-stats-value">$ 369092.02</div>
+				</div>
+				<div class="header-stats-item header-stats-item-pending">
+					<div class="header-stats-title">Pending</div>
+					<div class="header-stats-value">$ 275647.00</div>
+				</div>
+				<div class="header-stats-item header-stats-item-partners">
+					<div class="header-stats-title">Partners</div>
+					<div class="header-stats-value">25647</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="header-right">
+
+
+			<div class="header-lng">
+
+				<select id="language" class="header-lng-select" name="" id="">
+					<option class="flag-icon flag-icon-gb" value="gb" selected="selected">gb</option>
+					<option value="ru">ru</option>
+					<option value="fr">fr</option>
+					<option value="es">es</option>
+					<option value="pt">pt</option>
+					<option value="de">de</option>
+					<option value="pl">pl</option>
+				</select>
+
+			</div>
+
+
+			<div class="header-logout">
+
+				<button class="header-logout-btn btn-yellow btn-logout">Logout</button>
+
+			</div>
+
+		</div>
+
+	</header>
+
+	<main id="home">
+
+		<div class="content-wrapper">
+			
+			<aside class="aside pre-mobile">
+
+ 				<div class="aside-user">
+ 					<div class="aside-user-row">
+ 						<div class="aside-user-main">
+ 							<div class="aside-user-country flag-icon-background flag-icon-gb"></div>
+ 							<div class="aside-user-name">Username</div>
+ 						</div>
+ 						<a href="#" class="aside-user-settings"></a>
+ 					</div>
+ 					<div class="aside-user-row">
+ 						<div class="aside-user-title">Partner status</div>
+ 						<div class="aside-user-rating rate">
+ 							<div class="rate-item"></div>
+ 							<div class="rate-item"></div>
+ 							<div class="rate-item bright"></div>
+ 						</div>
+ 					</div>
+ 				</div>
+
+ 				<div class="aside-title">Dashboard</div>
+
+ 				<nav class="aside-nav">
+ 					<ul class="aside-menu">
+ 						<li class="aside-menu-item icon-invest"><a href="" class="aside-menu-link ">My investment</a></li>
+ 						<li class="aside-menu-item icon-account"><a href="" class="aside-menu-link ">Account upgrade</a></li>
+ 						<li class="aside-menu-item icon-trading"><a href="/top-up.html" class="aside-menu-link ">Top up & Withdrawal</a></li>
+ 						<li class="aside-menu-item icon-trading"><a href="/trading-history.html" class="aside-menu-link icon-trading">Trading history</a></li>
+ 						<li class="aside-menu-item icon-partnership"><a href="" class="aside-menu-link ">Partnership</a></li>
+ 						<li class="aside-menu-item icon-news"><a href="" class="aside-menu-link ">News</a></li>
+ 						<li class="aside-menu-item icon-reviews"><a href="" class="aside-menu-link  ">Reviews</a></li>
+ 					</ul>
+ 				</nav>
+
+ 				<div class="aside-extra">
+ 					<div class="aside-title">Corporate website</div>
+
+ 					<ul class="aside-menu aside-menu-extra">
+ 						<li class="aside-menu-item icon-home"><a href="" class="aside-menu-link ">ArBinance Homepage</a></li>
+ 						<li class="aside-menu-item icon-terms"><a href="" class="aside-menu-link ">Affiliate terms</a></li>
+ 					</ul>
+
+ 				</div>
+
+ 				<div class="aside-bottom">
+
+ 					<div class="aside-title">Support</div>
+
+ 					<ul class="aside-support">
+ 						<li class="aside-support-item">
+ 							<a href="" class="aside-support-link">
+ 								<span class="aside-support-icon icon-tg"></span><span class="aside-support-title">Telegram</span>
+ 							</a>
+ 						</li>
+ 						<li class="aside-support-item">
+ 							<a href="" class="aside-support-link">
+ 								<span class="aside-support-icon icon-fb"></span>
+ 								<span class="aside-support-title">Facebook</span>
+ 							</a>
+ 						</li>
+ 					</ul>
+
+ 				</div>
+
+
+ 			</aside>
+
+			<div class="content">
+
+
+
+				<div class="home-top">
+					<div class="row">
+						<div class="col col-pd">
+							<div class="home-top-item">
+								<div class="title">Trading amount</div>
+								<div class="home-top-block home-top-block_diagram">
+									
+									<div class="home-top-diagram">
+
+										<svg width="137" height="137">
+											<path d="" id="diagram-home-1-green"
+											fill="none" stroke="#41bf50" stroke-width="19" />
+											<path d=""
+											fill="none" id="diagram-home-1-yellow" stroke="#E4B940" stroke-width="19" />
+											<path d="" id="diagram-home-1-red"
+											fill="none" stroke="#f25b5b" stroke-width="19" />
+										</svg>
+										
+										<div class="home-top-diagram-center">
+											<div class="home-top-diagram-icon"></div>
+										</div>
+
+									</div>
+
+
+									<div class="home-top-info">
+										<div class="home-top-info-item">
+											<div class="home-top-info-title home-top-info-title_yellow">Total trading volume:</div>
+											<div class="home-top-info-value">
+												<img class="home-top-info-icon" src="img/icon-usd.svg" alt="">
+												<div class="home-top-info-value-text">2353</div>
+											</div>
+										</div>
+										<div class="home-top-info-item">
+											<div class="home-top-info-title home-top-info-title_red">Weekly trading volume:</div>
+											<div class="home-top-info-value">
+												<img class="home-top-info-icon" src="img/icon-usd.svg" alt="">
+												<div class="home-top-info-value-text">135</div>
+											</div>
+										</div>
+										<div class="home-top-info-item">
+											<div class="home-top-info-title home-top-info-title_green">Today’s trading volume:</div>
+											<div class="home-top-info-value">
+												<img class="home-top-info-icon" src="img/icon-usd.svg" alt="">
+												<div class="home-top-info-value-text">17</div>
+											</div>
+										</div>
+									</div>
+
+
+
+								</div>
+							</div>
+						</div>
+						<div class="col col-pd">
+							<div class="home-top-item">
+								<div class="title">Weekly amount of trades</div>
+								<div class="home-top-block home-top-block_graph">
+									
+									<div id="chart-wrapper-top" class="chart-wrapper chart-wrapper-top">
+										<canvas id="chart-top" width="350" height="152"></canvas>
+									</div>
+									<div id="chart-tooltip-top" class="chart-tooltip-custom">
+										<table></table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col col-pd">
+							<div class="home-top-item">
+								<div class="title">Trading volume / profit</div>
+								<div class="home-top-block home-top-block_diagram">
+									
+									<div class="home-top-diagram">
+
+										<svg width="137" height="137">
+											<path d="" id="diagram-home-2-green"
+											fill="none" stroke="#41bf50" stroke-width="19" />
+											<path d="" id="diagram-home-2-red"
+											fill="none" stroke="#f25b5b" stroke-width="19" />
+										</svg>
+										
+										<div class="stats-diagram-text">24%</div>
+
+									</div>
+
+
+									<div class="home-top-info">
+										<div class="home-top-info-item">
+											<div class="home-top-info-title home-top-info-title_gradBlue">Total daily trading volume:</div>
+											<div class="home-top-info-value">
+												<img class="home-top-info-icon" src="img/icon-usd.svg" alt="">
+												<div class="home-top-info-value-text">235347.00</div>
+											</div>
+											<div class="home-top-info-value">
+												<img class="home-top-info-icon" src="img/icon-btc.svg" alt="">
+												<div class="home-top-info-value-text">1.03412350</div>
+											</div>
+										</div>
+										<div class="home-top-info-item">
+											<div class="home-top-info-title home-top-info-title_gradOrange">Total daily trading profit:</div>
+											<div class="home-top-info-value">
+												<img class="home-top-info-icon" src="img/icon-usd.svg" alt="">
+												<div class="home-top-info-value-text">235347.00</div>
+											</div>
+											<div class="home-top-info-value">
+												<img class="home-top-info-icon" src="img/icon-btc.svg" alt="">
+												<div class="home-top-info-value-text">1.03412350</div>
+											</div>
+										</div>
+									</div>
+
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+
+				<div class="home-offers">
+					<div class="row">
+						<div class="col col-pd">
+							<div class="title">Trading</div>
+
+							<div class="home-tab">
+
+								<div class="home-tab-nav">
+
+									<div class="home-tab-nav-wrapper">
+
+										<button data-tab="offer-tab-1" class="home-tab-nav-item waves-on-yellow active">Best offers</button>
+										<button data-tab="offer-tab-2" class="home-tab-nav-item waves-on-yellow ">Manual search</button>
+
+									</div>
+
+								</div>
+
+								<div class="home-tab-wrapper">
+
+
+									<div id="offer-tab-1" class="home-tab-container  ">
+
+										<div class="home-tab-row">
+
+											<div class="home-tab-col">
+
+												<div class="home-tab-head">
+													<div class="home-tab-head-title">Offers</div>
+													<div class="home-tab-head-subtitle">choose your best offer</div>
+												</div>
+
+												<div class="home-tab-content align-fix">
+
+													<div class="home-tab-preloader">
+														<div class="home-tab-preloader-text">We are looking the best arbitrage
+														offers for you</div>
+														<div class="home-tab-preloader-circle home-tab-preloader-circle_animated">
+
+															<svg width="50" height="50">
+																<path id="mini-accrual-line" fill="none" stroke="#3877FF" stroke-width="4" stroke-linecap="round" d="M 45.67323765728999 17.47555684683529 A 22 22 0 0 0 25 3"></path>
+															</svg>
+
+														</div>
+													</div>
+
+													<div class="offers">
+
+														<div class="offers-item" data-offer="16.48%;$ 23165.00;3.18%;51.05%;33 min;400.00$;500.00$" data-pair="eth;Poloniex|eth;Coinbase">
+															<div class="offers-item-main">
+																<div class="offers-item-currency">
+																	<div class="offers-item-currency-item">
+																		<img class="offers-item-currency-icon" src="img/icon-eth.svg" alt="">
+																		<div class="offers-item-currency-title">ETH</div>
+																		<img src="img/icon-stock-1.svg" alt="" class="offers-item-currency-service">
+																	</div>
+																	<div class="offers-item-currency-item">
+																		<img class="offers-item-currency-icon" src="img/icon-eth.svg" alt="">
+																		<div class="offers-item-currency-title">ETH</div>
+																		<img src="img/icon-stock-2.svg" alt="" class="offers-item-currency-service">
+																	</div>
+																</div>
+																<div class="offers-item-right">
+																	<div class="offers-item-profit">
+																		<div class="offers-item-profit-title">Profit</div>
+																		<div class="offers-item-profit-value">2.7%</div>
+																	</div>
+																	<div class="offers-item-bottom">
+																		<div class="offers-item-bottom-title">Offer valid:</div>
+																		<div class="offers-item-bottom-timer" data-time="00:10:15">00h : 10m : 15s</div>
+																	</div>
+																</div>
+															</div>
+															
+														</div>
+
+														<div class="offers-item offers-item_active" data-offer="36.48%;$ 1165.00;3.38%;51.05%;3 min;400.00$;500.00$" data-pair="btc;Bitmex|btc;Huobi">
+															<div class="offers-item-main">
+																<div class="offers-item-currency">
+																	<div class="offers-item-currency-item">
+																		<img class="offers-item-currency-icon" src="img/icon-btc.svg" alt="">
+																		<div class="offers-item-currency-title">BTC</div>
+																		<img src="img/icon-stock-3.svg" alt="" class="offers-item-currency-service">
+																	</div>
+																	<div class="offers-item-currency-item">
+																		<img class="offers-item-currency-icon" src="img/icon-btc.svg" alt="">
+																		<div class="offers-item-currency-title">BTC</div>
+																		<img src="img/icon-stock-4.svg" alt="" class="offers-item-currency-service">
+																	</div>
+																</div>
+																<div class="offers-item-right">
+																	<div class="offers-item-profit">
+																		<div class="offers-item-profit-title">Profit</div>
+																		<div class="offers-item-profit-value">2.7%</div>
+																	</div>
+																	<div class="offers-item-bottom">
+																		<div class="offers-item-bottom-title">Offer valid:</div>
+																		<div class="offers-item-bottom-timer" data-time="00:00:05">00h : 00m : 05s</div>
+																	</div>
+																</div>
+															</div>
+															
+														</div>
+
+														<div class="offers-item" data-offer="6.48%;$ 265.00;3.18%;51.05%;23 min;200.00$;400.00$" data-pair="bch;Bitbuy|bch;Huobi">
+															<div class="offers-item-main">
+																<div class="offers-item-currency">
+																	<div class="offers-item-currency-item">
+																		<img class="offers-item-currency-icon" src="img/icon-bth.svg" alt="">
+																		<div class="offers-item-currency-title">BTH</div>
+																		<img src="img/icon-stock-5.svg" alt="" class="offers-item-currency-service">
+																	</div>
+																	<div class="offers-item-currency-item">
+																		<img class="offers-item-currency-icon" src="img/icon-bth.svg" alt="">
+																		<div class="offers-item-currency-title">BTH</div>
+																		<img src="img/icon-stock-6.svg" alt="" class="offers-item-currency-service">
+																	</div>
+																</div>
+																<div class="offers-item-right">
+																	<div class="offers-item-profit">
+																		<div class="offers-item-profit-title">Profit</div>
+																		<div class="offers-item-profit-value">2.7%</div>
+																	</div>
+																	<div class="offers-item-bottom">
+																		<div class="offers-item-bottom-title">Offer valid:</div>
+																		<div class="offers-item-bottom-timer" data-time="03:59:02">03h : 59m : 02s</div>
+																	</div>
+																</div>
+															</div>
+															
+														</div>
+
+														<div class="offers-item" data-offer="5.48%;$ 2165.00;13.18%;1.05%;13 min;600.00$;700.00$" data-pair="xpr;Bitbuy|xpr;Huobi">
+															<div class="offers-item-main">
+																<div class="offers-item-currency">
+																	<div class="offers-item-currency-item">
+																		<img class="offers-item-currency-icon" src="img/icon-xpr.svg" alt="">
+																		<div class="offers-item-currency-title">XPR</div>
+																		<img src="img/icon-stock-7.svg" alt="" class="offers-item-currency-service">
+																	</div>
+																	<div class="offers-item-currency-item">
+																		<img class="offers-item-currency-icon" src="img/icon-xpr.svg" alt="">
+																		<div class="offers-item-currency-title">XPR</div>
+																		<img src="img/icon-stock-8.svg" alt="" class="offers-item-currency-service">
+																	</div>
+																</div>
+																<div class="offers-item-right">
+																	<div class="offers-item-profit">
+																		<div class="offers-item-profit-title">Profit</div>
+																		<div class="offers-item-profit-value">2.7%</div>
+																	</div>
+																	<div class="offers-item-bottom">
+																		<div class="offers-item-bottom-title">Offer valid:</div>
+																		<div class="offers-item-bottom-timer" data-time="03:59:02">03h : 59m : 02s</div>
+																	</div>
+																</div>
+															</div>
+															
+														</div>
+
+
+													</div>
+
+												</div>
+
+											</div>
+											<div class="home-tab-col">
+												<div class="home-tab-head home-tab-head_icons">
+
+													<div class="home-tab-head-pair">
+														<div class="home-tab-head-item">
+															<div class="home-tab-head-item-currency icon-btc"></div>
+															<div class="home-tab-head-item-title">Stock</div>
+														</div>
+														<div class="home-tab-head-slash">/</div>
+														<div class="home-tab-head-item">
+															<div class="home-tab-head-item-currency icon-btc"></div>
+															<div class="home-tab-head-item-title">Stock</div>
+														</div>
+													</div>
+
+
+													<div class="home-tab-head-subtitle">investment portfolio</div>
+												</div>
+												<div class="home-tab-content home-tab-content_small-pd">
+
+													<ul class="home-tab-list home-tab-list_search">
+
+														<li class="home-tab-list-item">
+															<div class="home-tab-list-item-title">Difference:</div>
+															<div id="curDiff" class="home-tab-list-item-value">6.48%</div>
+														</li>
+														<li class="home-tab-list-item">
+															<div class="home-tab-list-item-title">Volume 24h:</div>
+															<div id="curVolume" class="home-tab-list-item-value">$ 23165.00</div>
+														</li>
+														<li class="home-tab-list-item">
+															<div class="home-tab-list-item-title">Pure profit:</div>
+															<div id="curProfit" class="home-tab-list-item-value green">3.18%</div>
+														</li>
+														<li class="home-tab-list-item">
+															<div class="home-tab-list-item-title">Fee:</div>
+															<div id="curFee" class="home-tab-list-item-value red">51.05%</div>
+														</li>
+
+														<li class="home-tab-list-item">
+															<div class="home-tab-list-item-title">Processing:</div>
+															<div id="curProc" class="home-tab-list-item-value">3 min</div>
+														</li>
+													</ul>
+
+
+												</div>
+
+												<ul class="home-tab-list home-tab-list_bottom">
+													
+													<li class="home-tab-list-item">
+														<div class="home-tab-list-item-title">Buy price:</div>
+														<div id="curBuyPrice" class="home-tab-list-item-value green">0.00$</div>
+													</li>
+													<li class="home-tab-list-item">
+														<div class="home-tab-list-item-title">Sell price:</div>
+														<div id="curSellPrice" class="home-tab-list-item-value red">0.00$</div>
+													</li>
+												</ul>
+
+												<div class="home-tab-chekout">
+													<div class="home-tab-chekout-title">Check out</div>
+													<div class="home-tab-chekout-form">
+														<div class="simple-input-block">
+															<label for="" class="simple-input-label">Asset</label>
+															<div class="search-input-wrapper search-input-wrapper_small">
+																<div class="search-input-main">	
+																	<div class="search-input-image">
+																		<img src="img/icon-btc.svg" class="search-input-icon" alt="">
+																		<div class="search-input-currency">BTC</div>
+																	</div>
+																	<input id="currency-buy" type="text" class="search-input" value="BTC" >
+																</div>
+																<div class="search-input-content">
+																	<ul class="search-input-list">
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-default.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">All</div>
+																			</div>
+																			<div class="search-input-item-value">All</div>
+																		</li>
+																		<li class="search-input-item selected">
+																			<div class="search-input-image">
+																				<img src="img/icon-btc.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">BTC</div>
+																			</div>
+																			<div class="search-input-item-value">BTC</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-bth.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">BTH</div>
+																			</div>
+																			<div class="search-input-item-value">BTH</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-eth.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">ETH</div>
+																			</div>
+																			<div class="search-input-item-value">ETH</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-ltc.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">LTC</div>
+																			</div>
+																			<div class="search-input-item-value">
+																			LTC</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-dash.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">Dash</div>
+																			</div>
+																			<div class="search-input-item-value">Dash</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-xpr.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">XPR</div>
+																			</div>
+																			<div class="search-input-item-value">XPR</div>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+														<div class="simple-input-block">
+															<label for="" class="simple-input-label">Trade amount</label>
+															<div class="simple-input-wrapper simple-input-wrapper_check">
+
+																<div class="simple-input-before">USD</div>
+																<input id="trade-amount" type="number" class="simple-input" placeholder="0.00" data-available="23989">
+
+															</div>
+														</div>
+
+													</div>
+												</div>
+
+
+											</div>
+
+										</div>
+										<div class="home-tab-footer ">
+
+											<div class="home-tab-balance">
+												<div class="home-tab-balance-title">Available balance</div>
+												<div class="home-tab-balance-wrapper">
+
+													<div class="home-tab-balance-block">
+														<div class="home-tab-balance-success">The entire amount is copied</div> 
+														<div class="home-tab-balance-image">
+															<img src="img/icon-btc.svg" alt="" class="home-tab-balance-icon">
+														</div>
+														<div class="home-tab-balance-main">
+															<div class="home-tab-balance-label">Bitcoin (BTC)</div>
+															<div class="home-tab-balance-inner">
+																<div class="home-tab-balance-fields">
+																	<div class="home-tab-balance-cur">BTC 02.68768500</div>
+																	<div class="home-tab-balance-usd">$ 283.00</div>
+																</div>
+																<div class="home-tab-balance-copy waves-on"></div>
+															</div>
+														</div>
+													</div>
+
+
+													<div class="home-tab-balance-block">
+														<div class="home-tab-balance-success">The entire amount is copied</div>
+														<div class="home-tab-balance-image">
+															<img src="img/icon-bth.svg" alt="" class="home-tab-balance-icon">
+														</div>
+														<div class="home-tab-balance-main">
+															<div class="home-tab-balance-label">Bitcoin Cash (BTH)</div>
+															<div class="home-tab-balance-inner">
+																<div class="home-tab-balance-fields">
+																	<div class="home-tab-balance-cur">BTH 00.98768500</div>
+																	<div class="home-tab-balance-usd">$ 119.78</div>
+																</div>
+																<div class="home-tab-balance-copy waves-on"></div>
+															</div>
+														</div>
+													</div>
+
+
+													<div class="home-tab-balance-block">
+														<div class="home-tab-balance-success">The entire amount is copied</div>
+														<div class="home-tab-balance-image">
+															<img src="img/icon-eth.svg" alt="" class="home-tab-balance-icon">
+														</div>
+														<div class="home-tab-balance-main">
+															<div class="home-tab-balance-label">Etherium (ETH)</div>
+															<div class="home-tab-balance-inner">
+																<div class="home-tab-balance-fields">
+																	<div class="home-tab-balance-cur">ETH 18.76576430</div>
+																	<div class="home-tab-balance-usd">$ 1965.78</div>
+																</div>
+																<div class="home-tab-balance-copy waves-on"></div>
+															</div>
+														</div>
+													</div>
+
+
+													<div class="home-tab-balance-block unavailable">
+														<div class="home-tab-balance-error">Insufficient funds on balance</div>
+														<div class="home-tab-balance-image">
+															<img src="img/icon-xpr.svg" alt="" class="home-tab-balance-icon">
+														</div>
+														<div class="home-tab-balance-main">
+															<div class="home-tab-balance-label">Ripple (XRP)</div>
+															<div class="home-tab-balance-inner">
+																<div class="home-tab-balance-fields">
+																	<div class="home-tab-balance-cur">XRP 0.00000000</div>
+																	<div class="home-tab-balance-usd">$ 0.00</div>
+																</div>
+																<div class="home-tab-balance-copy waves-on"></div>
+															</div>
+														</div>
+													</div>
+
+
+													<div class="home-tab-balance-block">
+														<div class="home-tab-balance-success">The entire amount is copied</div>
+														<div class="home-tab-balance-image">
+															<img src="img/icon-ltc.svg" alt="" class="home-tab-balance-icon">
+														</div>
+														<div class="home-tab-balance-main">
+															<div class="home-tab-balance-label">Litecoin (LTC)</div>
+															<div class="home-tab-balance-inner">
+																<div class="home-tab-balance-fields">
+																	<div class="home-tab-balance-cur">LTC 9.00006430</div>
+																	<div class="home-tab-balance-usd">$ 57.78</div>
+																</div>
+																<div class="home-tab-balance-copy waves-on"></div>
+															</div>
+														</div>
+													</div>
+
+
+													<div class="home-tab-balance-block unavailable">
+														<div class="home-tab-balance-error">Insufficient funds on balance</div>
+														<div class="home-tab-balance-image">
+															<img src="img/icon-dash.svg" alt="" class="home-tab-balance-icon">
+														</div>
+														<div class="home-tab-balance-main">
+															<div class="home-tab-balance-label">DASH (DASH)</div>
+															<div class="home-tab-balance-inner">
+																<div class="home-tab-balance-fields">
+																	<div class="home-tab-balance-cur">DASH 0.00000000</div>
+																	<div class="home-tab-balance-usd">$ 0.00</div>
+																</div>
+																<div class="home-tab-balance-copy waves-on"></div>
+															</div>
+														</div>
+													</div>
+
+
+												</div>
+											</div>
+
+										</div>
+										<div class="home-tab-bottom">
+											<button class="home-tab-button open-popup" data-air-popup="trade">
+												<span class="home-tab-button-text">Submit</span>
+												<span class="home-tab-button-circle">
+													<span class="home-tab-button-checkmark"></span>
+													<span class="home-tab-button-checkmark"></span>
+												</span>
+											</button>
+										</div>
+
+
+
+									</div>
+
+									<div id="offer-tab-2" class="home-tab-container absolute hidden default">
+
+										<div class="home-tab-row">
+
+											<div class="home-tab-col">
+
+												<div class="home-tab-head">
+													<div class="home-tab-head-title">Manual search</div>
+													<div class="home-tab-head-subtitle">choose your best offer</div>
+												</div>
+
+												<div class="home-tab-content home-tab-content_search align-fix-2">
+
+													<div class="home-tab-search">	
+														
+														<div class="home-tab-search-title green">Buy offer</div>
+
+
+														<div class="search-input-block d">
+															<div class="search-input-title">Choose trading pair <span class="caption green">(Buy)</span></div>
+															<div class="search-input-wrapper">
+																<div class="search-input-main">	
+																	<div class="search-input-image">
+																		<img src="img/icon-default.svg" alt="" class="search-input-icon">
+
+																		<div class="search-input-currency">COIN</div>
+																	</div>
+																	<input id="currency-buy" type="text" class="search-input" value="Choose a pair" >
+																</div>
+																<div class="search-input-content">
+																	<div class="search-input-field-wrapper">
+																		<input type="search" class="search-input-field">
+																	</div>
+																	<ul class="search-input-list">
+																		<li class="search-input-item ">
+																			<div class="search-input-image">
+																				<img src="img/icon-btc.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">BTC</div>
+																			</div>
+																			<div class="search-input-item-value">Bitcoin</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-bth.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">BTH</div>
+																			</div>
+																			<div class="search-input-item-value">Bitcoin Cash</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-eth.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">ETH</div>
+																			</div>
+																			<div class="search-input-item-value">Etherium</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-ltc.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">LTC</div>
+																			</div>
+																			<div class="search-input-item-value">
+																			Litecoin</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-dash.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">Dash</div>
+																			</div>
+																			<div class="search-input-item-value">Dash</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-xpr.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">XPR</div>
+																			</div>
+																			<div class="search-input-item-value">Ripple</div>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+
+														<div class="search-input-block d">
+															<div class="search-input-title">Choose trading pair <span class="caption green">(Buy)</span></div>
+															<div class="search-input-wrapper">
+																<div class="search-input-main">	
+																	<div class="search-input-image">
+																		<img src="img/icon-stock-3.svg" alt="" class="search-input-logo">
+																		<div class="search-input-image-default">
+																			<div class="search-input-image-default-img"></div>
+																			<div class="search-input-image-default-text">Logo</div>
+																		</div>
+																	</div>
+																	<input id="company-buy" type="text" class="search-input" value="Choose an exchange" >
+																</div>
+																<div class="search-input-content">
+																	<div class="search-input-field-wrapper">
+																		<input type="search" class="search-input-field">
+																	</div>
+																	<ul class="search-input-list">
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-stock-1.svg" alt="" class="search-input-logo">
+																			</div>
+																			<div class="search-input-item-value">Huobi</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-stock-2.svg" alt="" class="search-input-logo">
+																			</div>
+																			<div class="search-input-item-value">Poloniex</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-stock-3.svg" alt="" class="search-input-logo">
+																			</div>
+																			<div class="search-input-item-value">Bitmex</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-stock-4.svg" alt="" class="search-input-logo">
+																			</div>
+																			<div class="search-input-item-value">Bitbuy</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-stock-5.svg" alt="" class="search-input-logo">
+																			</div>
+																			<div class="search-input-item-value">Coinbase</div>
+																		</li>
+																		
+																	</ul>
+																</div>
+															</div>
+														</div>
+
+														<div class="home-tab-search-title red">Sell offer</div>
+
+														<div class="search-input-block d">
+															<div class="search-input-title">Choose trading pair <span class="caption red">(Sell)</span></div>
+															<div class="search-input-wrapper">
+																<div class="search-input-main">	
+																	<div class="search-input-image">
+																		<img src="img/icon-default.svg" alt="" class="search-input-icon">
+																		<div class="search-input-currency">COIN</div>
+																	</div>
+																	<input id="currency-sell" type="text" class="search-input" value="Choose a pair" >
+																</div>
+																<div class="search-input-content">
+																	<div class="search-input-field-wrapper">
+																		<input type="search" class="search-input-field">
+																	</div>
+																	<ul class="search-input-list">
+																		<li class="search-input-item ">
+																			<div class="search-input-image">
+																				<img src="img/icon-btc.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">BTC</div>
+																			</div>
+																			<div class="search-input-item-value">Bitcoin</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-bth.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">BTH</div>
+																			</div>
+																			<div class="search-input-item-value">Bitcoin Cash</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-eth.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">ETH</div>
+																			</div>
+																			<div class="search-input-item-value">Etherium</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-ltc.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">LTC</div>
+																			</div>
+																			<div class="search-input-item-value">
+																			Litecoin</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-dash.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">Dash</div>
+																			</div>
+																			<div class="search-input-item-value">Dash</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-xpr.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">XPR</div>
+																			</div>
+																			<div class="search-input-item-value">Ripple</div>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+
+														<div class="search-input-block d">
+															<div class="search-input-title">Choose trading pair <span class="caption red">(Sell)</span></div>
+															<div class="search-input-wrapper">
+																<div class="search-input-main">	
+																	<div class="search-input-image">
+																		<img src="img/icon-stock-1.svg" alt="" class="search-input-logo">
+																		<div class="search-input-image-default">
+																			<div class="search-input-image-default-img"></div>
+																			<div class="search-input-image-default-text">Logo</div>
+																		</div>
+																	</div>
+																	<input id="company-sell" type="text" class="search-input" value="Choose an exchange" >
+																</div>
+																<div class="search-input-content">
+																	<div class="search-input-field-wrapper">
+																		<input type="search" class="search-input-field">
+																	</div>
+																	<ul class="search-input-list">
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-stock-1.svg" alt="" class="search-input-logo">
+																			</div>
+																			<div class="search-input-item-value">Huobi</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-stock-2.svg" alt="" class="search-input-logo">
+																			</div>
+																			<div class="search-input-item-value">Poloniex</div>
+																		</li>
+																		<li class="search-input-item ">
+																			<div class="search-input-image">
+																				<img src="img/icon-stock-3.svg" alt="" class="search-input-logo">
+																			</div>
+																			<div class="search-input-item-value">Bitmex</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-stock-4.svg" alt="" class="search-input-logo">
+																			</div>
+																			<div class="search-input-item-value">Bitbuy</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-stock-5.svg" alt="" class="search-input-logo">
+																			</div>
+																			<div class="search-input-item-value">Coinbase</div>
+																		</li>
+																		
+																	</ul>
+																</div>
+															</div>
+														</div>
+														
+													</div>
+
+												</div>
+
+											</div>
+											<div class="home-tab-col">
+												<div class="home-tab-head home-tab-head_icons">
+
+													<div id="searchPair" class="home-tab-head-pair">
+														<div class="home-tab-head-item">
+															<img class="home-tab-head-item-currency" id="buyCurHead" src="img/icon-default.svg" alt="">
+															<div id="buyCompanyHead" class="home-tab-head-item-title">Exchange</div>
+														</div>
+														<div class="home-tab-head-slash">/</div>
+														<div class="home-tab-head-item">
+															<img class="home-tab-head-item-currency" id="sellCurHead" src="img/icon-default.svg" alt="">
+															<div id="sellCompanyHead" class="home-tab-head-item-title">Exchange</div>
+														</div>
+													</div>
+
+
+													<div class="home-tab-head-subtitle">investment portfolio</div>
+												</div>
+												<div class="home-tab-content home-tab-content_small-pd">
+
+													<ul class="home-tab-list home-tab-list_search">
+
+														<li class="home-tab-list-item">
+															<div class="home-tab-list-item-title">Difference:</div>
+															<div id="curDiff1" class="home-tab-list-item-value">6.48%</div>
+														</li>
+														<li class="home-tab-list-item">
+															<div class="home-tab-list-item-title">Volume 24h:</div>
+															<div id="curVolume1" class="home-tab-list-item-value">$ 23165.00</div>
+														</li>
+														<li class="home-tab-list-item">
+															<div class="home-tab-list-item-title">Pure profit:</div>
+															<div id="curProfit1" class="home-tab-list-item-value green">3.18%</div>
+														</li>
+														<li class="home-tab-list-item">
+															<div class="home-tab-list-item-title">Fee:</div>
+															<div id="curFee1" class="home-tab-list-item-value red">51.05%</div>
+														</li>
+
+														<li class="home-tab-list-item">
+															<div class="home-tab-list-item-title">Processing:</div>
+															<div id="curProc1" class="home-tab-list-item-value">3 min</div>
+														</li>
+													</ul>
+
+
+												</div>
+
+
+												
+
+												<ul class="home-tab-list home-tab-list_bottom">
+													
+													<li class="home-tab-list-item">
+														<div class="home-tab-list-item-title">Buy price:</div>
+														<div id="curBuyPrice1" class="home-tab-list-item-value green">0.00$</div>
+													</li>
+													<li class="home-tab-list-item">
+														<div class="home-tab-list-item-title">Sell price:</div>
+														<div id="curSellPrice1" class="home-tab-list-item-value red">0.00$</div>
+													</li>
+												</ul>
+
+												<div class="home-tab-chekout">
+													<div class="home-tab-chekout-title">Check out</div>
+													<div class="home-tab-chekout-form">
+														<div class="simple-input-block">
+															<label for="" class="simple-input-label">Asset</label>
+															<div class="search-input-wrapper search-input-wrapper_small">
+																<div class="search-input-main">	
+																	<div class="search-input-image">
+																		<img src="img/icon-default.svg" alt="" class="search-input-icon">
+																		<div class="search-input-currency">BTC</div>
+																	</div>
+																	<input id="currency-buy" type="text" class="search-input" value="Asset" >
+																</div>
+																<div class="search-input-content">
+																	<ul class="search-input-list">
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-default.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">All</div>
+																			</div>
+																			<div class="search-input-item-value">All</div>
+																		</li>
+																		<li class="search-input-item selected">
+																			<div class="search-input-image">
+																				<img src="img/icon-btc.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">BTC</div>
+																			</div>
+																			<div class="search-input-item-value">BTC</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-bth.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">BTH</div>
+																			</div>
+																			<div class="search-input-item-value">BTH</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-eth.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">ETH</div>
+																			</div>
+																			<div class="search-input-item-value">ETH</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-ltc.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">LTC</div>
+																			</div>
+																			<div class="search-input-item-value">
+																			LTC</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-dash.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">Dash</div>
+																			</div>
+																			<div class="search-input-item-value">Dash</div>
+																		</li>
+																		<li class="search-input-item">
+																			<div class="search-input-image">
+																				<img src="img/icon-xpr.svg" alt="" class="search-input-icon">
+																				<div class="search-input-currency">XPR</div>
+																			</div>
+																			<div class="search-input-item-value">XPR</div>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+														<div class="simple-input-block">
+															<label for="" class="simple-input-label">Trade amount</label>
+															<div class="simple-input-wrapper simple-input-wrapper_check">
+
+																<div class="simple-input-before">USD</div>
+																<input id="trade-amount1" type="number" class="simple-input" placeholder="0.00" data-available="23989">
+
+															</div>
+														</div>
+
+													</div>
+												</div>
+
+												
+
+
+
+
+											</div>
+
+
+
+										</div>
+
+										<div class="home-tab-footer home-tab-footer_row">
+
+											<div class="home-tab-balance">
+												<div class="home-tab-balance-title">Available balance</div>
+												<div class="home-tab-balance-wrapper">
+
+													<div class="home-tab-balance-block">
+														<div class="home-tab-balance-success">The entire amount is copied</div> 
+														<div class="home-tab-balance-image">
+															<img src="img/icon-btc.svg" alt="" class="home-tab-balance-icon">
+														</div>
+														<div class="home-tab-balance-main">
+															<div class="home-tab-balance-label">Bitcoin (BTC)</div>
+															<div class="home-tab-balance-inner">
+																<div class="home-tab-balance-fields">
+																	<div class="home-tab-balance-cur">BTC 02.68768500</div>
+																	<div class="home-tab-balance-usd">$ 283.00</div>
+																</div>
+																<div class="home-tab-balance-copy waves-on"></div>
+															</div>
+														</div>
+													</div>
+
+
+													<div class="home-tab-balance-block">
+														<div class="home-tab-balance-success">The entire amount is copied</div>
+														<div class="home-tab-balance-image">
+															<img src="img/icon-bth.svg" alt="" class="home-tab-balance-icon">
+														</div>
+														<div class="home-tab-balance-main">
+															<div class="home-tab-balance-label">Bitcoin Cash (BTH)</div>
+															<div class="home-tab-balance-inner">
+																<div class="home-tab-balance-fields">
+																	<div class="home-tab-balance-cur">BTH 00.98768500</div>
+																	<div class="home-tab-balance-usd">$ 119.78</div>
+																</div>
+																<div class="home-tab-balance-copy waves-on"></div>
+															</div>
+														</div>
+													</div>
+
+
+													<div class="home-tab-balance-block">
+														<div class="home-tab-balance-success">The entire amount is copied</div>
+														<div class="home-tab-balance-image">
+															<img src="img/icon-eth.svg" alt="" class="home-tab-balance-icon">
+														</div>
+														<div class="home-tab-balance-main">
+															<div class="home-tab-balance-label">Etherium (ETH)</div>
+															<div class="home-tab-balance-inner">
+																<div class="home-tab-balance-fields">
+																	<div class="home-tab-balance-cur">ETH 18.76576430</div>
+																	<div class="home-tab-balance-usd">$ 1965.78</div>
+																</div>
+																<div class="home-tab-balance-copy waves-on"></div>
+															</div>
+														</div>
+													</div>
+
+
+													<div class="home-tab-balance-block unavailable">
+														<div class="home-tab-balance-error">Insufficient funds on balance</div>
+														<div class="home-tab-balance-image">
+															<img src="img/icon-xpr.svg" alt="" class="home-tab-balance-icon">
+														</div>
+														<div class="home-tab-balance-main">
+															<div class="home-tab-balance-label">Ripple (XRP)</div>
+															<div class="home-tab-balance-inner">
+																<div class="home-tab-balance-fields">
+																	<div class="home-tab-balance-cur">XRP 0.00000000</div>
+																	<div class="home-tab-balance-usd">$ 0.00</div>
+																</div>
+																<div class="home-tab-balance-copy waves-on"></div>
+															</div>
+														</div>
+													</div>
+
+
+													<div class="home-tab-balance-block">
+														<div class="home-tab-balance-success">The entire amount is copied</div>
+														<div class="home-tab-balance-image">
+															<img src="img/icon-ltc.svg" alt="" class="home-tab-balance-icon">
+														</div>
+														<div class="home-tab-balance-main">
+															<div class="home-tab-balance-label">Litecoin (LTC)</div>
+															<div class="home-tab-balance-inner">
+																<div class="home-tab-balance-fields">
+																	<div class="home-tab-balance-cur">LTC 9.00006430</div>
+																	<div class="home-tab-balance-usd">$ 57.78</div>
+																</div>
+																<div class="home-tab-balance-copy waves-on"></div>
+															</div>
+														</div>
+													</div>
+
+
+													<div class="home-tab-balance-block unavailable">
+														<div class="home-tab-balance-error">Insufficient funds on balance</div>
+														<div class="home-tab-balance-image">
+															<img src="img/icon-dash.svg" alt="" class="home-tab-balance-icon">
+														</div>
+														<div class="home-tab-balance-main">
+															<div class="home-tab-balance-label">DASH (DASH)</div>
+															<div class="home-tab-balance-inner">
+																<div class="home-tab-balance-fields">
+																	<div class="home-tab-balance-cur">DASH 0.00000000</div>
+																	<div class="home-tab-balance-usd">$ 0.00</div>
+																</div>
+																<div class="home-tab-balance-copy waves-on"></div>
+															</div>
+														</div>
+													</div>
+
+
+												</div>
+											</div>
+
+										</div>
+
+										<div class="home-tab-bottom">
+											<button class="home-tab-button open-popup" data-air-popup="trade">
+												<span class="home-tab-button-text">Submit</span>
+												<span class="home-tab-button-circle">
+													<span class="home-tab-button-checkmark"></span>
+													<span class="home-tab-button-checkmark"></span>
+												</span>
+											</button>
+										</div>
+
+
+									</div>
+
+								</div>
+
+
+							</div>
+
+						</div>
+						<div class="col col-pd">
+							<div class="title">Active investment</div>
+
+							<div class="home-tab home-tab_actives home-tab_pre">
+								
+								<div class="home-tab-container">
+
+									<div class="home-tab-row">
+										<div class="home-tab-col home-tab-col_wide">
+
+											<div class="home-tab-title-single">Tradings</div>
+											<div class="home-tab-subtitle-single">List of active tradings</div>
+
+											<div class="home-tab-head home-tab-head_actives">
+
+
+												<div class="search-input-wrapper search-input-wrapper_small double-select">
+													<div class="search-input-main">	
+														<div class="search-input-image">
+															<img src="img/icon-btc.svg" alt="" class="search-input-icon">
+															<span class="search-input-slash">/</span>
+															<img src="img/icon-bth.svg" alt="" class="search-input-icon">
+														</div>
+														<input id="trading-select" type="text" class="search-input" value="BitMEX / Poloniex" >
+														<input type="hidden" class="search-input-double-hidden" value="BTC / BTH">
+													</div>
+													<div class="search-input-content">
+														<ul class="search-input-list">
+															<li class="search-input-item selected">
+																<div data-hidden="BTC / BTH" class="search-input-image">
+																	<img src="img/icon-btc.svg" alt="" class="search-input-icon">
+																	<span class="search-input-slash">/</span>
+																	<img src="img/icon-bth.svg" alt="" class="search-input-icon">
+																</div>
+																<div class="search-input-item-value">BitMEX / Poloniex</div>
+															</li>
+															<li class="search-input-item">
+																<div class="search-input-image" data-hidden="LTC / XPR" >
+																	<img src="img/icon-ltc.svg" alt="" class="search-input-icon">
+																	<span class="search-input-slash">/</span>
+																	<img src="img/icon-xpr.svg" alt="" class="search-input-icon">
+																</div>
+																<div class="search-input-item-value">EXMO / Coinbase</div>
+															</li>
+															<li class="search-input-item">
+																<div class="search-input-image" data-hidden="BTH / ETH" >
+																	<img src="img/icon-bth.svg" alt="" class="search-input-icon">
+																	<span class="search-input-slash">/</span>
+																	<img src="img/icon-eth.svg" alt="" class="search-input-icon">
+																</div>
+																<div class="search-input-item-value">EXMO / Coinbase</div>
+															</li>
+															<li class="search-input-item">
+																<div class="search-input-image" data-hidden="DASH / ETH">
+																	<img src="img/icon-dash.svg" alt="" class="search-input-icon">
+																	<span class="search-input-slash">/</span>
+																	<img src="img/icon-eth.svg" alt="" class="search-input-icon">
+																</div>
+																<div class="search-input-item-value">EXMO / Huobi</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+
+
+
+
+												<!-- <select name="" id="trading-select" class="trading-select">
+													<option value="default" selected="selected">Stock exchanges</option>
+													<option value="BTC|BTH|Coinbase|Huobi">Coinbase / Huobi</option>
+													<option value="ETH|LTC|Poloniex|Huobi">Poloniex / Huobi</option>
+													<option value="DASH|XPR|Exmo|Coinbase">EXMO / Coinbase</option>
+													<option value="BTC|DASH|Bitmex|Poliniex">BitMEX / Poloniex</option>
+												</select> -->
+											</div>
+
+											<div class="home-tab-wrapper2">
+												<div class="home-tab-preloader">
+													<div class="home-tab-preloader-text">Loading...</div>
+													<div class="home-tab-preloader-circle home-tab-preloader-circle_animated">
+
+														<svg width="50" height="50">
+															<path id="mini-accrual-line" fill="none" stroke="#3877FF" stroke-width="4" stroke-linecap="round" d="M 45.67323765728999 17.47555684683529 A 22 22 0 0 0 25 3"></path>
+														</svg>
+
+													</div>
+												</div>
+
+												<div class="home-tab-content home-tab-content_short">
+
+													<ul class="home-tab-list home-tab-list_2col">
+														<li class="home-tab-list-item">
+															<div class="home-tab-list-item-title">Buy price:</div>
+															<div class="home-tab-list-item-value green">$0.00</div>
+														</li>
+														<li class="home-tab-list-item">
+															<div class="home-tab-list-item-title">Sell price:</div>
+															<div class="home-tab-list-item-value red">$0.00</div>
+														</li>
+														<li class="home-tab-list-item">
+															<div class="home-tab-list-item-title">Difference:</div>
+															<div class="home-tab-list-item-value">0.00%</div>
+														</li>
+														<li class="home-tab-list-item">
+															<div class="home-tab-list-item-title">Fee:</div>
+															<div class="home-tab-list-item-value red">0.00%</div>
+														</li>
+														<li class="home-tab-list-item">
+															<div class="home-tab-list-item-title">Pure profit:</div>
+															<div class="home-tab-list-item-value">0.00%</div>
+														</li>
+														<li class="home-tab-list-item">
+															<div class="home-tab-list-item-title">Processing:</div>
+															<div class="home-tab-list-item-value">0 min</div>
+														</li>
+													</ul>
+
+												</div>
+
+												<div class="home-tab-range">
+													<div class="home-tab-range-top">
+														<div class="home-tab-range-timer" data-time="00:08:09">00h : 00m : 00s</div>
+														<div class="home-tab-range-amount">0%</div>
+													</div>
+													<div class="home-tab-range-scale">
+														<div class="home-tab-range-scale-completed" data-completed="20%"></div>
+														<div class="home-tab-range-scale-default"></div>
+													</div>
+												</div>
+
+
+												<div class="home-tab-head home-tab-head_small">
+													<div class="home-tab-head-title">Trade Timeline</div>
+													<div class="home-tab-head-subtitle">track each step of trading</div>
+												</div>
+
+												<div class="home-tab-content">
+
+
+													<ul class="home-tab-steps">
+														<li class="home-tab-step home-tab-step_default" data-text="Choose one of the timeline steps for detailed info."><span class="home-tab-step-digit">1</span>
+															<div class="home-tab-step-dots">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent" class="home-tab-step-circle"/>
+																</svg>
+															</div>
+															<div class="home-tab-step-dots yellow">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#E4B940" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent" class="home-tab-step-circle"/>
+																</svg>
+															</div>
+														</li>
+														<li class="home-tab-step" data-text="Text 2"><span class="home-tab-step-digit">2</span>
+															<div class="home-tab-step-dots">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+																</svg>
+															</div>
+															<div class="home-tab-step-dots yellow">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#E4B940" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent" class="home-tab-step-circle"/>
+																</svg>
+															</div>
+														</li>
+														<li class="home-tab-step" data-text="Text 3"><span class="home-tab-step-digit">3</span>
+															<div class="home-tab-step-dots">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+																</svg>
+															</div>
+															<div class="home-tab-step-dots yellow">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#E4B940" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent" class="home-tab-step-circle"/>
+																</svg>
+															</div>
+														</li>
+														<li class="home-tab-step" data-text="Text 4"><span class="home-tab-step-digit">4</span>
+															<div class="home-tab-step-dots">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+																</svg>
+															</div>
+															<div class="home-tab-step-dots yellow">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#E4B940" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent" class="home-tab-step-circle"/>
+																</svg>
+															</div>
+														</li>
+														<li class="home-tab-step" data-text="Text 5"><span class="home-tab-step-digit" data-text="Text 5">5</span>
+															<div class="home-tab-step-dots">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+																</svg>
+															</div>
+															<div class="home-tab-step-dots yellow">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#E4B940" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent" class="home-tab-step-circle"/>
+																</svg>
+															</div>
+														</li>
+														<li class="home-tab-step disabled" data-text="Text 6"><span class="home-tab-step-digit" data-text="Text 6">6</span>
+															<div class="home-tab-step-dots">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+																</svg>
+															</div>
+															<div class="home-tab-step-dots yellow">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#E4B940" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent" class="home-tab-step-circle"/>
+																</svg>
+															</div>
+														</li>
+														<li class="home-tab-step disabled" data-text="Text 7"><span class="home-tab-step-digit" data-text="Text 7">7</span>
+															<div class="home-tab-step-dots">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+																</svg>
+															</div>
+															<div class="home-tab-step-dots yellow">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#E4B940" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent" class="home-tab-step-circle"/>
+																</svg>
+															</div>
+														</li>
+														<li class="home-tab-step disabled" data-text="Text 8"><span class="home-tab-step-digit" >8</span>
+															<div class="home-tab-step-dots">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+																</svg>
+															</div>
+															<div class="home-tab-step-dots yellow">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#E4B940" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent" class="home-tab-step-circle"/>
+																</svg>
+															</div>
+														</li>
+														<li class="home-tab-step disabled" data-text="Text 9"><span class="home-tab-step-digit">9</span>
+															<div class="home-tab-step-dots">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+																</svg>
+															</div>
+															<div class="home-tab-step-dots yellow">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#E4B940" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent" class="home-tab-step-circle"/>
+																</svg>
+															</div>
+														</li>
+														<li class="home-tab-step disabled" data-text="Text 10"><span class="home-tab-step-digit">10</span>
+															<div class="home-tab-step-dots">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+																</svg>
+															</div>
+															<div class="home-tab-step-dots yellow">
+																<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																	<circle cx="15" cy="15" r="14" stroke="#E4B940" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent" class="home-tab-step-circle"/>
+																</svg>
+															</div>
+														</li>
+													</ul>
+
+													<div class="home-tab-step-subtitle">Timeline Info</div>
+
+													<div class="home-tab-step-info">Choose one of the timeline steps for detailed info.</div>
+												</div>
+											</div>
+
+										</div>
+
+									</div>
+
+
+									
+
+
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="title">Trading profit (hourly graph)</div>
+				
+				<div class="chart chart_home">
+					
+					<div class="chart-top">
+						<div class="chart-top-left">
+							<div class="chart-top-item chart-top-item_red">
+								<div class="chart-title">Total daily trading volume:</div>
+								<div class="chart-value">$ 47.00</div>
+							</div>
+							<div class="chart-top-item chart-top-item_green">
+								<div class="chart-title">Total daily trading profit:</div>
+								<div class="chart-value">$ 549.00</div>
+							</div>
+						</div>
+						<div class="chart-top-right">
+							<div class="chart-top-side">
+								<button class="btn-yellow chart-top-btn">Top up balance</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="chart-wrapper-scroll">
+						<div id="chart-wrapper-home" class="chart-wrapper">
+							<canvas id="chart-home" width="1032" height="245"></canvas>
+						</div>
+
+						<div id="chartjs-tooltip" class="chart-tooltip-custom">
+							<table></table>
+						</div>
+					</div>
+
+					<div class="chart-stats">
+						<div class="chart-stats-item">
+							<div class="chart-stats-item-row">
+								<div class="chart-stats-currency">
+									<img class="chart-stats-icon" src="img/icon-btc.svg" alt="">
+									<div class="chart-stats-value green green">2.03412350</div>
+								</div>
+								<div class="chart-stats-profit">
+									<div class="chart-stats-title">Last profit:</div>
+									<div class="chart-stats-profval green">+0.03412350</div>
+								</div>
+							</div>
+							<div class="chart-stats-item-row">
+								<div class="chart-stats-currency">
+									<img class="chart-stats-icon" src="img/icon-usd.svg" alt="">
+									<div class="chart-stats-value green">$ 120267.09</div>
+								</div>
+								<div class="chart-stats-profit">
+									<div class="chart-stats-title">Last profit:</div>
+									<div class="chart-stats-profval green">+$ 1202.09</div>
+								</div>
+							</div>
+						</div>
+						<div class="chart-stats-item">
+							<div class="chart-stats-item-row">
+								<div class="chart-stats-currency">
+									<img class="chart-stats-icon" src="img/icon-eth.svg" alt="">
+									<div class="chart-stats-value red">0.00000000</div>
+								</div>
+								<div class="chart-stats-profit">
+									<div class="chart-stats-title">Last profit:</div>
+									<div class="chart-stats-profval red">$ 0.00</div>
+								</div>
+							</div>
+							<div class="chart-stats-item-row">
+								<div class="chart-stats-currency">
+									<img class="chart-stats-icon" src="img/icon-usd.svg" alt="">
+									<div class="chart-stats-value red">+0.00000000</div>
+								</div>
+								<div class="chart-stats-profit">
+									<div class="chart-stats-title">Last profit:</div>
+									<div class="chart-stats-profval red">+$ 0000.00</div>
+								</div>
+							</div>
+						</div>
+						<div class="chart-stats-item">
+							<div class="chart-stats-item-row">
+								<div class="chart-stats-currency">
+									<img class="chart-stats-icon" src="img/icon-xpr.svg" alt="">
+									<div class="chart-stats-value red">2.03412350</div>
+								</div>
+								<div class="chart-stats-profit">
+									<div class="chart-stats-title">Last profit:</div>
+									<div class="chart-stats-profval red">+0.03412350</div>
+								</div>
+							</div>
+							<div class="chart-stats-item-row">
+								<div class="chart-stats-currency">
+									<img class="chart-stats-icon" src="img/icon-usd.svg" alt="">
+									<div class="chart-stats-value red">2.03412350</div>
+								</div>
+								<div class="chart-stats-profit">
+									<div class="chart-stats-title">Last profit:</div>
+									<div class="chart-stats-profval red">+0.03412350</div>
+								</div>
+							</div>
+						</div>
+						<div class="chart-stats-item">
+							<div class="chart-stats-item-row">
+								<div class="chart-stats-currency">
+									<img class="chart-stats-icon" src="img/icon-bth.svg" alt="">
+									<div class="chart-stats-value green">1.03412350</div>
+								</div>
+								<div class="chart-stats-profit">
+									<div class="chart-stats-title">Last profit:</div>
+									<div class="chart-stats-profval red">+0.00000000</div>
+								</div>
+							</div>
+							<div class="chart-stats-item-row">
+								<div class="chart-stats-currency">
+									<img class="chart-stats-icon" src="img/icon-usd.svg" alt="">
+									<div class="chart-stats-value green">2.03412350</div>
+								</div>
+								<div class="chart-stats-profit">
+									<div class="chart-stats-title">Last profit:</div>
+									<div class="chart-stats-profval red">+$ 0000.00</div>
+								</div>
+							</div>
+						</div>
+						<div class="chart-stats-item">
+							<div class="chart-stats-item-row">
+								<div class="chart-stats-currency">
+									<img class="chart-stats-icon" src="img/icon-ltc.svg" alt="">
+									<div class="chart-stats-value green">2.03412350</div>
+								</div>
+								<div class="chart-stats-profit">
+									<div class="chart-stats-title">Last profit:</div>
+									<div class="chart-stats-profval green">+0.03412350</div>
+								</div>
+							</div>
+							<div class="chart-stats-item-row">
+								<div class="chart-stats-currency">
+									<img class="chart-stats-icon" src="img/icon-usd.svg" alt="">
+									<div class="chart-stats-value green">2.03412350</div>
+								</div>
+								<div class="chart-stats-profit">
+									<div class="chart-stats-title">Last profit:</div>
+									<div class="chart-stats-profval green">+0.03412350</div>
+								</div>
+							</div>
+						</div>
+						<div class="chart-stats-item">
+							<div class="chart-stats-item-row">
+								<div class="chart-stats-currency">
+									<img class="chart-stats-icon" src="img/icon-dash.svg" alt="">
+									<div class="chart-stats-value green">2.03412350</div>
+								</div>
+								<div class="chart-stats-profit">
+									<div class="chart-stats-title">Last profit:</div>
+									<div class="chart-stats-profval green">+0.03412350</div>
+								</div>
+							</div>
+							<div class="chart-stats-item-row">
+								<div class="chart-stats-currency">
+									<img class="chart-stats-icon" src="img/icon-usd.svg" alt="">
+									<div class="chart-stats-value green">2.03412350</div>
+								</div>
+								<div class="chart-stats-profit">
+									<div class="chart-stats-title">Last profit:</div>
+									<div class="chart-stats-profval green">+0.03412350</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="title">Daily trades</div>
+
+				<div class="tab-block tab-block_home">
+					
+					<div id="home-stats" class="tab-table tab-table_home">
+						<div class="tab-table-row tab-table-head">
+							<div class="tab-table-cell">Date</div>
+							<div class="tab-table-cell">State</div>
+							<div class="tab-table-cell">Trading pair</div>
+							<div class="tab-table-cell">Buy price</div>
+							<div class="tab-table-cell">Sell price</div>
+							<div class="tab-table-cell">Pure profit</div>
+							<div class="tab-table-cell">Fee</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color green">
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-pair">
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-eth.svg" alt="">
+										<div class="cell-company">Poloniex</div>
+									</div>
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-eth.svg" alt="">
+										<div class="cell-company">Coinbase</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">8.09080774 (ETH)</div>
+							<div class="tab-table-cell">8.09080774 (ETH)</div>
+							<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+							<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color red">
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-pair">
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-ltc.svg" alt="">
+										<div class="cell-company">Poloniex</div>
+									</div>
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-ltc.svg" alt="">
+										<div class="cell-company">Coinbase</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">8.09080774 (LTC)</div>
+							<div class="tab-table-cell">8.09080774 (LTC)</div>
+							<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+							<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color red">
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-pair">
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-bth.svg" alt="">
+										<div class="cell-company">Poloniex</div>
+									</div>
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-bth.svg" alt="">
+										<div class="cell-company">Coinbase</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">8.09080774 (ETH)</div>
+							<div class="tab-table-cell">8.09080774 (ETH)</div>
+							<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+							<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color yellow">
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-pair">
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-dash.svg" alt="">
+										<div class="cell-company">Poloniex</div>
+									</div>
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-dash.svg" alt="">
+										<div class="cell-company">Coinbase</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">8.09080774 (ETH)</div>
+							<div class="tab-table-cell">8.09080774 (ETH)</div>
+							<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+							<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color green">
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-pair">
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-xpr.svg" alt="">
+										<div class="cell-company">Poloniex</div>
+									</div>
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-xpr.svg" alt="">
+										<div class="cell-company">Coinbase</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">8.09080774 (ETH)</div>
+							<div class="tab-table-cell">8.09080774 (ETH)</div>
+							<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+							<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color green">
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-pair">
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-eth.svg" alt="">
+										<div class="cell-company">Poloniex</div>
+									</div>
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-eth.svg" alt="">
+										<div class="cell-company">Coinbase</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">8.09080774 (ETH)</div>
+							<div class="tab-table-cell">8.09080774 (ETH)</div>
+							<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+							<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color green">
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-pair">
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-eth.svg" alt="">
+										<div class="cell-company">Poloniex</div>
+									</div>
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-eth.svg" alt="">
+										<div class="cell-company">Coinbase</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">8.09080774 (ETH)</div>
+							<div class="tab-table-cell">8.09080774 (ETH)</div>
+							<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+							<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color green">
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-pair">
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-eth.svg" alt="">
+										<div class="cell-company">Poloniex</div>
+									</div>
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-eth.svg" alt="">
+										<div class="cell-company">Coinbase</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">8.09080774 (ETH)</div>
+							<div class="tab-table-cell">8.09080774 (ETH)</div>
+							<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+							<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color green">
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-pair">
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-eth.svg" alt="">
+										<div class="cell-company">Poloniex</div>
+									</div>
+									<div class="cell-pair-item">
+										<img class="cell-icon" src="img/icon-eth.svg" alt="">
+										<div class="cell-company">Coinbase</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">8.09080774 (ETH)</div>
+							<div class="tab-table-cell">8.09080774 (ETH)</div>
+							<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+							<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+						</div>
+						
+
+
+					</div>
+
+				</div>
+
+				<div class="row">
+					<div class="col col-pd">
+						<div class="title">Active investment</div>
+
+						<div class="home-tab home-tab_actives home-tab_pre">
+
+							<div class="home-tab-container">
+
+								<div class="home-tab-row">
+									<div class="home-tab-col home-tab-col_wide">
+
+										<div class="home-tab-title-single">Tradings</div>
+										<div class="home-tab-subtitle-single">List of active tradings</div>
+
+										<div class="home-tab-head home-tab-head_actives">
+											<div class="search-input-wrapper search-input-wrapper_small double-select">
+													<div class="search-input-main">	
+														<div class="search-input-image">
+															<img src="img/icon-default.svg" alt="" class="search-input-icon">
+															<span class="search-input-slash">/</span>
+															<img src="img/icon-default.svg" alt="" class="search-input-icon">
+														</div>
+														<input id="trading-select" type="text" class="search-input" value="Stock exchanges" >
+														<input type="hidden" class="search-input-double-hidden" value="Stock exchanges">
+													</div>
+													<div class="search-input-content">
+														<ul class="search-input-list">
+															<li class="search-input-item selected">
+																<div data-hidden="Stock exchanges" class="search-input-image">
+																	<img src="img/icon-default.svg" alt="" class="search-input-icon">
+																	<span class="search-input-slash">/</span>
+																	<img src="img/icon-default.svg" alt="" class="search-input-icon">
+																</div>
+																<div class="search-input-item-value">Stock exchanges</div>
+															</li>
+															
+														</ul>
+													</div>
+												</div>
+										</div>
+
+										<div class="home-tab-wrapper2">
+											<div class="home-tab-preloader">
+												<div class="home-tab-preloader-text">Loading...</div>
+												<div class="home-tab-preloader-circle home-tab-preloader-circle_animated">
+
+													<svg width="50" height="50">
+														<path id="mini-accrual-line" fill="none" stroke="#3877FF" stroke-width="4" stroke-linecap="round" d="M 45.67323765728999 17.47555684683529 A 22 22 0 0 0 25 3"></path>
+													</svg>
+
+												</div>
+											</div>
+											
+											<div class="home-tab-content home-tab-content_short">
+
+												<ul class="home-tab-list home-tab-list_2col">
+													<li class="home-tab-list-item">
+														<div class="home-tab-list-item-title">Buy price:</div>
+														<div class="home-tab-list-item-value green">$0.00</div>
+													</li>
+													<li class="home-tab-list-item">
+														<div class="home-tab-list-item-title">Sell price:</div>
+														<div class="home-tab-list-item-value red">$0.00</div>
+													</li>
+													<li class="home-tab-list-item">
+														<div class="home-tab-list-item-title">Difference:</div>
+														<div class="home-tab-list-item-value">0.00%</div>
+													</li>
+													<li class="home-tab-list-item">
+														<div class="home-tab-list-item-title">Fee:</div>
+														<div class="home-tab-list-item-value red">0.00%</div>
+													</li>
+													<li class="home-tab-list-item">
+														<div class="home-tab-list-item-title">Pure profit:</div>
+														<div class="home-tab-list-item-value">0.00%</div>
+													</li>
+													<li class="home-tab-list-item">
+														<div class="home-tab-list-item-title">Processing:</div>
+														<div class="home-tab-list-item-value">0 min</div>
+													</li>
+												</ul>
+
+											</div>
+
+											<div class="home-tab-range">
+												<div class="home-tab-range-top">
+													<div class="home-tab-range-timer" data-time="00:08:09">00h : 00m : 00s</div>
+													<div class="home-tab-range-amount">0%</div>
+												</div>
+												<div class="home-tab-range-scale">
+													<div class="home-tab-range-scale-completed" data-completed="20%"></div>
+													<div class="home-tab-range-scale-default"></div>
+												</div>
+											</div>
+
+
+											<div class="home-tab-head home-tab-head_small">
+												<div class="home-tab-head-title">Trade Timeline</div>
+												<div class="home-tab-head-subtitle">track each step of trading</div>
+											</div>
+
+											<div class="home-tab-content">
+
+
+												<ul class="home-tab-steps">
+													<li class="home-tab-step home-tab-step_default" data-text="Choose one of the timeline steps for detailed info."><span class="home-tab-step-digit">1</span>
+														<div class="home-tab-step-dots">
+															<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent" class="home-tab-step-circle"/>
+															</svg>
+														</div>
+													</li>
+													<li class="home-tab-step" data-text="Text 2"><span class="home-tab-step-digit">2</span>
+														<div class="home-tab-step-dots">
+															<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+															</svg>
+														</div>
+													</li>
+													<li class="home-tab-step" data-text="Text 3"><span class="home-tab-step-digit">3</span>
+														<div class="home-tab-step-dots">
+															<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+															</svg>
+														</div>
+													</li>
+													<li class="home-tab-step" data-text="Text 4"><span class="home-tab-step-digit">4</span>
+														<div class="home-tab-step-dots">
+															<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+															</svg>
+														</div>
+													</li>
+													<li class="home-tab-step" data-text="Text 5"><span class="home-tab-step-digit" data-text="Text 5">5</span>
+														<div class="home-tab-step-dots">
+															<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+															</svg>
+														</div>
+													</li>
+													<li class="home-tab-step" data-text="Text 6"><span class="home-tab-step-digit" data-text="Text 6">6</span>
+														<div class="home-tab-step-dots">
+															<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+															</svg>
+														</div>
+													</li>
+													<li class="home-tab-step" data-text="Text 7"><span class="home-tab-step-digit" data-text="Text 7">7</span>
+														<div class="home-tab-step-dots">
+															<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+															</svg>
+														</div>
+													</li>
+													<li class="home-tab-step" data-text="Text 8"><span class="home-tab-step-digit" >8</span>
+														<div class="home-tab-step-dots">
+															<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+															</svg>
+														</div>
+													</li>
+													<li class="home-tab-step" data-text="Text 9"><span class="home-tab-step-digit">9</span>
+														<div class="home-tab-step-dots">
+															<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+															</svg>
+														</div>
+													</li>
+													<li class="home-tab-step" data-text="Text 10"><span class="home-tab-step-digit">10</span>
+														<div class="home-tab-step-dots">
+															<svg width="30" height="30" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="15" cy="15" r="14" stroke="#43475A" stroke-width="2" stroke-dasharray="0 5.5" stroke-linecap="round" fill="transparent"/>
+															</svg>
+														</div>
+													</li>
+												</ul>
+
+												<div class="home-tab-step-subtitle">Timeline Info</div>
+
+												<div class="home-tab-step-info">Choose one of the timeline steps for detailed info.</div>
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+
+
+
+
+
+							</div>
+
+						</div>
+
+					</div>
+					<div class="col col-pd"></div>
+				</div>
+
+			</div>
+
+
+
+		</div>
+		
+	</main>
+	
+
+	<div id="trade" class="air-popup air-popup-hide">
+		
+		<div class="air-popup-wrapper">
+			<div class="air-popup-content">
+				
+				<form id="trade1" action="" method="post" class="popup popup_trade">
+
+					<div class="popup-header">
+						<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+						<div class="popup-close air-popup-close"></div>
+					</div>
+
+					<div class="popup-title">Trade confirmation</div>
+
+					<div class="popup-info popup-info_trade">
+						<!-- <div class="popup-info-item">
+							<div class="popup-info-title">Date</div>
+							<div class="popup-info-value">30/10/2018 16:27</div>
+							<input type="hidden" value="30/10/2018 16:27">
+						</div> -->
+						
+						<div class="popup-info-item dark">
+							<div class="popup-info-title">Trading pair:</div>
+							<div class="popup-info-value  thin">
+								<img src="img/icon-bth.svg" alt="" class="popup-info-value-icon">
+								/
+								<img src="img/icon-eth.svg" alt="" class="popup-info-value-icon">
+								Poloniex / Huobi
+							  </div>
+							<input type="hidden" value="30/10/2018 16:27">
+						</div>
+
+						<div class="popup-info-item dark">
+							<div class="popup-info-title">Buy price</div>
+							<div class="popup-info-value green">$125.00</div>
+							<input type="hidden" value="00.00000000">
+						</div>
+						<div class="popup-info-item dark">
+							<div class="popup-info-title">Sell price</div>
+							<div class="popup-info-value red">$173.00 </div>
+							<input type="hidden" value="00.00000000">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Difference:</div>
+							<div class="popup-info-value">2.14%</div>
+							<input type="hidden" value="2.14%">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Volume 24h:</div>
+							<div class="popup-info-value">$ 764653.00</div>
+							<input type="hidden" value="$ 764653.00">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Pure profit:</div>
+							<div class="popup-info-value green">$48.00/2.78%</div>
+							<input type="hidden" value="$48.00/2.78%">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Fee:</div>
+							<div class="popup-info-value red">$4.03/0.22%</div>
+							<input type="hidden" value="$4.03/0.22%">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Processing:</div>
+							<div class="popup-info-value">17 min</div>
+							<input type="hidden" value="17 min">
+						</div>
+
+						<div class="popup-info-item dark">
+							<div class="popup-info-title">Asset:</div>
+							<div class="popup-info-value green">
+							<img src="img/icon-btc.svg" alt="" class="popup-info-value-icon">
+							Bitcoin (BTC)</div>
+							<input type="hidden" value="Bitcoin (BTC)">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Trade amount:</div>
+							<div class="popup-info-value green">$250.00</div>
+							<input type="hidden" value="$250.00">
+						</div>
+
+						
+						
+					</div>
+
+					<!-- <div class="popup-extra">
+						<div class="popup-extra-title">Important</div>
+						<div class="popup-extra-list">
+							<div class="popup-extra-item">After confirmation, the status of the transaction will be displayed in the <a href="#" class="link">Active trading</a> section.</div>
+						</div>
+					</div> -->
+
+					<div class="popup-submit">
+						<button class="btn-yellow popup-btn">Confirm</button>
+					</div>
+
+				</form>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div id="popup-s" class="air-popup air-popup-hide">
+
+			<div class="air-popup-wrapper">
+				<div class="air-popup-content">
+
+					<div class="popup popup_success">
+
+						<div class="popup-header">
+							<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+							<div class="popup-close air-popup-close"></div>
+							<div class="popup-success-check"></div>
+						</div>
+
+						<div class="popup-title popup-title_wide">Trading successfully created</div>
+
+						<div class="popup-success-bottom center">
+							You are able to check information about all active tradings in the My investment -> Active tradings
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+
+
+	<script src="js/all.min.js" defer></script>
+	<script src="libs/moveit.js"></script>
+	<script src="libs/nice-select.js" defer></script>
+	<script src="js/app.js" defer></script>
+
+
+</body>

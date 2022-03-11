@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Airbinance</title>
+	<link rel="stylesheet" href="css/fonts.css?ver=14">
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/waves.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
+	<style>
+
+	input[type="search"]::-webkit-search-decoration,
+	input[type="search"]::-webkit-search-cancel-button,
+	input[type="search"]::-webkit-search-results-button,
+	input[type="search"]::-webkit-search-results-decoration {
+		-webkit-appearance:none;
+	}
+	.tab-table::-webkit-scrollbar {
+		width: 6px;
+		border-radius: 5px;
+	}
+
+	/* Track */
+	.tab-table::-webkit-scrollbar-track {
+		background: rgba(0,0,0,.1); 
+		border-radius: 5px;
+	}
+
+	/* Handle */
+	.tab-table::-webkit-scrollbar-thumb {
+		background: #43475a;
+		border-radius: 5px;
+		transition: 0.25s all ease-in-out;
+	}
+
+	/* Handle on hover */
+	.tab-table::-webkit-scrollbar-thumb:hover {
+		background: #585D77;
+		transition: 0.25s all ease-in-out;
+	}
+
+	.search-input-list::-webkit-scrollbar {
+		width: 0px;
+		border-radius: 3px;
+		-webkit-appearance:none;
+	}
+
+	/* Track */
+	.search-input-list::-webkit-scrollbar-track {
+		
+		background: none;
+		border-radius: 3px;
+	}
+
+	/* Handle */
+	.search-input-list::-webkit-scrollbar-thumb {
+		background: #55596a; 
+		border-radius: 3px;
+		transition: 0.25s all ease-in-out;
+	}
+
+	/* Handle on hover */
+	.search-input-list::-webkit-scrollbar-thumb:hover {
+		background: rgba(255,255,255,.1);
+		transition: 0.25s all ease-in-out;
+	}
+
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: white;
+		transition: 0.25s all ease-in-out;
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+		color: white;
+		transition: 0.25s all ease-in-out;
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+		color: white;
+		transition: 0.25s all ease-in-out;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+		color: white;
+		transition: 0.25s all ease-in-out;
+	}
+
+	input[type="text"]:focus::-webkit-input-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+
+	input[type="text"]:focus:-ms-input-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+
+	input[type="text"]:focus:-moz-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+	input[type="text"]:focus::-moz-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+
+	.popup-simple-input-field::-webkit-input-placeholder {
+		color: #a7a7a7;
+font-family: "Helvetica Neue";
+font-size: 10px;
+font-weight: 300;
+transition: 0.25s all ease-in-out;
+	}
+
+	.popup-simple-input-field::-moz-placeholder  {
+		color: #a7a7a7;
+font-family: "Helvetica Neue";
+font-size: 10px;
+font-weight: 300;
+	}
+
+	.popup-simple-input-field:-ms-input-placeholder {
+		color: #a7a7a7;
+font-family: "Helvetica Neue";
+font-size: 10px;
+font-weight: 300;
+	}
+
+	.popup-simple-input-field:-moz-placeholder  {
+		color: #a7a7a7;
+font-family: "Helvetica Neue";
+font-size: 10px;
+font-weight: 300;
+	}
+
+	.popup-simple-input-field:focus::-webkit-input-placeholder {
+		color: rgba(167,167,167,.3);
+		transition: 0.25s all ease-in-out;
+	}
+</style>
+
+</head>
+<body>
+
+	<header class="header">
+
+		<div class="header-left">
+
+			<div class="header-menu-btn-wrap">
+
+				<button class="header-burger">
+					<span class="header-burger-line"></span>
+					<span class="header-burger-line"></span>
+					<span class="header-burger-line"></span>
+					<span class="header-burger-bg"></span>
+				</button>
+
+			</div>
+
+			<div class="header-logo">
+				<a class="header-logo-link" href="#">
+					<img class="header-logo-img" src="img/logo.svg" alt="">
+				</a>
+			</div>
+
+			<div class="header-stats">
+
+				<div class="header-stats-item header-stats-item-balance">
+					<div class="header-stats-title">Balance</div>
+					<div class="header-stats-value">$ 120267.09</div>
+				</div>
+				<div class="header-stats-item header-stats-item-deposits">
+					<div class="header-stats-title">Deposits</div>
+					<div class="header-stats-value">$ 369092.02</div>
+				</div>
+				<div class="header-stats-item header-stats-item-pending">
+					<div class="header-stats-title">Pending</div>
+					<div class="header-stats-value">$ 275647.00</div>
+				</div>
+				<div class="header-stats-item header-stats-item-partners">
+					<div class="header-stats-title">Partners</div>
+					<div class="header-stats-value">25647</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="header-right">
+
+
+			<div class="header-lng">
+
+				<select id="language" class="header-lng-select" name="" id="">
+					<option class="flag-icon flag-icon-gb" value="gb" selected="selected">gb</option>
+					<option value="ru">ru</option>
+					<option value="fr">fr</option>
+					<option value="es">es</option>
+					<option value="pt">pt</option>
+					<option value="de">de</option>
+					<option value="pl">pl</option>
+				</select>
+
+			</div>
+
+
+			<div class="header-logout">
+
+				<button class="header-logout-btn btn-yellow btn-logout">Logout</button>
+
+			</div>
+
+		</div>
+
+	</header>
+
+	<main id="account-upgrade">
+
+		<div class="content-wrapper">
+			
+			<aside class="aside pre-mobile">
+
+				<div class="aside-user">
+					<div class="aside-user-row">
+						<div class="aside-user-main">
+							<div class="aside-user-country flag-icon-background flag-icon-gb"></div>
+							<div class="aside-user-name">Username</div>
+						</div>
+						<a href="#" class="aside-user-settings"></a>
+					</div>
+					<div class="aside-user-row">
+						<div class="aside-user-title">Partner status</div>
+						<div class="aside-user-rating rate">
+							<div class="rate-item"></div>
+							<div class="rate-item"></div>
+							<div class="rate-item bright"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="aside-title">Dashboard</div>
+
+				<nav class="aside-nav">
+					<ul class="aside-menu">
+						<li class="aside-menu-item icon-invest"><a href="" class="aside-menu-link ">My investment</a></li>
+						<li class="aside-menu-item icon-account"><a href="" class="aside-menu-link ">Account upgrade</a></li>
+						<li class="aside-menu-item icon-trading"><a href="/top-up.html" class="aside-menu-link ">Top up & Withdrawal</a></li>
+						<li class="aside-menu-item icon-trading"><a href="/trading-history.html" class="aside-menu-link icon-trading">Trading history</a></li>
+						<li class="aside-menu-item icon-partnership"><a href="" class="aside-menu-link ">Partnership</a></li>
+						<li class="aside-menu-item icon-news"><a href="" class="aside-menu-link ">News</a></li>
+						<li class="aside-menu-item icon-reviews"><a href="" class="aside-menu-link  ">Reviews</a></li>
+					</ul>
+				</nav>
+
+				<div class="aside-extra">
+					<div class="aside-title">Corporate website</div>
+
+					<ul class="aside-menu aside-menu-extra">
+						<li class="aside-menu-item icon-home"><a href="" class="aside-menu-link ">ArBinance Homepage</a></li>
+						<li class="aside-menu-item icon-terms"><a href="" class="aside-menu-link ">Affiliate terms</a></li>
+					</ul>
+
+				</div>
+
+				<div class="aside-bottom">
+
+					<div class="aside-title">Support</div>
+
+					<ul class="aside-support">
+						<li class="aside-support-item">
+							<a href="" class="aside-support-link">
+								<span class="aside-support-icon icon-tg"></span><span class="aside-support-title">Telegram</span>
+							</a>
+						</li>
+						<li class="aside-support-item">
+							<a href="" class="aside-support-link">
+								<span class="aside-support-icon icon-fb"></span>
+								<span class="aside-support-title">Facebook</span>
+							</a>
+						</li>
+					</ul>
+
+				</div>
+
+
+			</aside>
+
+			<div class="content">
+
+
+				<div class="row upgrade-top-row">
+					<div class="col col-pd">
+
+						<div class="title">Account status</div>
+
+						<div class="upgrade-user">
+							<div class="upgrade-user-top">
+								<div class="upgrade-user-top-left">
+									<div class="upgrade-user-status">VERIFIED</div>
+									<div class="upgrade-user-name">Username</div>
+								</div>
+								<div class="upgrade-user-top-right">
+									<div class="stars stars-premium">
+										<div class="star"></div>
+										<div class="star"></div>
+									</div>
+									<div class="upgrade-user-current">Premium</div>
+								</div>
+							</div>
+							<div class="upgrade-user-bottom"><button data-air-popup="verify-1" class="upgrade-user-btn btn-yellow open-popup">Verify</button></div>
+						</div>
+
+						<div class="upgrade-planlist">
+							<div class="upgrade-planlist-item disabled">
+								<div class="upgrade-planlist-item-border border-dash-wrapper">
+									<canvas class="border-dash"></canvas>
+								</div>
+								<div class="upgrade-planlist-stars stars stars-simple">
+									<div class="border-dash-wrapper upgrade-planlist-stars-border">
+										<canvas class="border-dash" ></canvas>
+									</div>
+									<div class="star"></div>
+								</div>
+								<div class="upgrade-planlist-text">Starter</div>
+							</div>
+							<div class="upgrade-planlist-item disabled">
+								<div class="upgrade-planlist-item-border border-dash-wrapper">
+									<canvas class="border-dash"></canvas>
+								</div>
+								<div class="upgrade-planlist-stars stars stars-simple">
+									<div class="border-dash-wrapper upgrade-planlist-stars-border">
+										<canvas class="border-dash" ></canvas>
+									</div>
+									<div class="star"></div>
+									<div class="star"></div>
+								</div>
+								<div class="upgrade-planlist-text">Basic</div>
+							</div>
+							<div class="upgrade-planlist-item disabled">
+								<div class="upgrade-planlist-item-border border-dash-wrapper">
+									<canvas class="border-dash"></canvas>
+								</div>
+								<div class="upgrade-planlist-stars stars stars-simple">
+									<div class="border-dash-wrapper upgrade-planlist-stars-border">
+										<canvas class="border-dash" ></canvas>
+									</div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+								</div>
+								<div class="upgrade-planlist-text">Standard</div>
+							</div>
+							<div class="upgrade-planlist-item current">
+								<div class="upgrade-planlist-item-border border-dash-wrapper">
+									<canvas class="border-dash"></canvas>
+								</div>
+								<div class="upgrade-planlist-stars stars stars-premium">
+									<div class="border-dash-wrapper upgrade-planlist-stars-border">
+										<canvas class="border-dash" ></canvas>
+									</div>
+									<div class="star"></div>
+								</div>
+								<div class="upgrade-planlist-text">Premium</div>
+
+								<div class="upgrade-planlist-expires">
+									<div class="upgrade-planlist-expires-title">Expires</div>
+									<div class="upgrade-planlist-expires-value">30/11/2019</div>
+								</div>
+							</div>
+							<div class="upgrade-planlist-item">
+								<div class="upgrade-planlist-item-border border-dash-wrapper">
+									<canvas class="border-dash"></canvas>
+								</div>
+								<div class="upgrade-planlist-stars stars stars-premium">
+									<div class="border-dash-wrapper upgrade-planlist-stars-border">
+										<canvas class="border-dash" ></canvas>
+									</div>
+									<div class="star"></div>
+									<div class="star"></div>
+								</div>
+								<div class="upgrade-planlist-text">Premium Plus</div>
+							</div>
+							<div class="upgrade-planlist-item">
+								<div class="upgrade-planlist-item-border border-dash-wrapper">
+									<canvas class="border-dash"></canvas>
+								</div>
+								<div class="upgrade-planlist-stars stars stars-premium">
+									<div class="border-dash-wrapper upgrade-planlist-stars-border">
+										<canvas class="border-dash" ></canvas>
+									</div>
+									<div class="star"></div>
+									<div class="star"></div>
+									<div class="star"></div>
+								</div>
+								<div class="upgrade-planlist-text">Premium Expert</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="col col-3 col-pd">
+
+						<div class="title">Comparison table</div>
+
+						<div class="upgrade-stats tab-table">
+
+							<div class="upgrade-stats-top">
+								<div class="upgrade-stats-item">
+									<div class="upgrade-stats-user">
+										<div class="upgrade-stats-user-country lag-icon-background flag-icon-gb"></div>
+										<div class="upgrade-stats-user-info">
+											<div class="upgrade-stats-user-status">UNVERIFIED</div>
+											<div class="upgrade-stats-user-name">Username</div>
+										</div>
+									</div>
+								</div>
+								<div class="upgrade-stats-item">
+									<div class="upgrade-stats-item-title">Current state</div>
+									<div class="upgrade-stats-item-status">Newbie</div></div>
+									<div class="upgrade-stats-item">
+
+										<select name="" id="upgrade-select" class="upgrade-stats-select">
+											<option data-verified="false" value="Starter"  data-table="$25;true;true;24;1;1;1;20">Starter</option>
+											<option data-verified="false" value="Basic" data-table="$50;true;true;24;2;1;2;50">Basic</option>
+											<option data-verified="false" value="Standard" data-table="$75;true;true;18;5;2;2;75">Standard</option>
+											<option data-verified="true" value="Premium" data-table="$100;true;true;12;3;1;2;100">Premium</option>
+											<option data-verified="true" value="Premium Plus" data-table="$250;true;true;12;10;2;3;500">Premium Plus</option>
+											<option data-verified="true" selected value="Premium Expert" data-table="$500;true;true;6;25;3;5;2000">Premium Expert</option>
+										</select>
+
+									</div>
+								</div>
+
+								<div class="upgrade-stats-table">
+									<div class="upgrade-stats-row">
+										<div class="upgrade-stats-item">Verification</div>
+										<div class="upgrade-stats-item red upper">UNVERIFIED
+										</div>
+										<div class="upgrade-stats-item green upper">VERIFIED</div>
+									</div>
+									<div class="upgrade-stats-row">
+										<div class="upgrade-stats-item">Price per month</div>
+										<div class="upgrade-stats-item bold green">$0</div>
+										<div class="upgrade-stats-item  bold green">$500</div>
+									</div>
+									<div class="upgrade-stats-row">
+										<div class="upgrade-stats-item">E-email notifications about offers</div>
+										<div class="upgrade-stats-item">
+											<div class="upgrade-stats-item-space">
+											</div>
+										</div>
+										<div class="upgrade-stats-item"><div class="upgrade-stats-item-check"></div></div>
+									</div>
+									<div class="upgrade-stats-row">
+										<div class="upgrade-stats-item">SMS notifications</div>
+										<div class="upgrade-stats-item">
+											<div class="upgrade-stats-item-space"></div>
+										</div>
+										<div class="upgrade-stats-item"><div class="upgrade-stats-item-check"></div></div>
+									</div>
+									<div class="upgrade-stats-row">
+										<div class="upgrade-stats-item">Support</div>
+										<div class="upgrade-stats-item"><div class="text-colored"> up to  <span class="green bold"> 24 </span>  hours</div></div>
+										<div class="upgrade-stats-item"><div class="text-colored"> up to  <span class="green bold"> 6  </span> hours</div></div>
+									</div>
+									<div class="upgrade-stats-row">
+										<div class="upgrade-stats-item"><div class="text-colored"> Max Trading volume - <span class="green bold"> 3 </span> BTC</div></div>
+										<div class="upgrade-stats-item"><div class="text-colored">  <span class="green bold"> 1  </span> BTC</div></div>
+										<div class="upgrade-stats-item"><div class="text-colored">  <span class="green bold"> 25 </span>  BTC</div></div>
+									</div>
+									<div class="upgrade-stats-row">
+										<div class="upgrade-stats-item">Max trade at same time</div>
+										<div class="upgrade-stats-item"><div class="text-colored">  <span class="green bold"> 1  </span> trade</div></div>
+										<div class="upgrade-stats-item"><div class="text-colored"> <span class="green bold"> 3</span> trade</div></div>
+									</div>
+									<div class="upgrade-stats-row">
+										<div class="upgrade-stats-item">Max withdrawal request per day</div>
+										<div class="upgrade-stats-item"><div class="text-colored"> <span class="green bold"> 1</span> withdrawal</div></div>
+										<div class="upgrade-stats-item"><div class="text-colored">  <span class="green bold"> 5  </span> withdrawal</div></div>
+									</div>
+									<div class="upgrade-stats-row">
+										<div class="upgrade-stats-item"><div class="text-colored"> No more than <span class="green bold"> 100</span> first level partners </div></div>
+										<div class="upgrade-stats-item"><div class="text-colored"> <span class="green bold"> 25</span> partners </div></div>
+										<div class="upgrade-stats-item"><div class="text-colored"> <span class="green bold"> 2000  </span> partners </div></div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+					<div class="title">Account upgrade</div>
+
+					<div class="upgrade-plans">
+
+
+						<div class="upgrade-plans-switcher">
+
+							<div class="upgrade-plans-switcher-title waves-on red">UNVERIFIED</div>
+							<button class="upgrade-plans-switcher-button right"></button>
+							<div class="upgrade-plans-switcher-title waves-on green">VERIFIED</div>
+
+						</div>
+
+						<div class="upgrade-plans-container">
+
+
+							<div id="upgrade-1" class="upgrade-plans-block">
+								<div class="upgrade-plans-row row">
+
+									<div class="col col-pd">
+
+										<div class="upgrade-plans-item tariff">
+											<div class="tariff-head">
+												<div class="tariff-stars stars stars-premium">
+													<div class="star"></div>
+												</div>
+												<div class="tariff-name">Premium</div>
+												<div class="tariff-verified">For verified accounts</div>
+												<div class="tariff-desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</div>
+											</div>
+											<div class="tariff-price">
+												<div class="tariff-price-value">$100</div>
+												<div class="tariff-price-period">Per Month</div>
+											</div>
+											<ul class="tariff-list">
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">E-email notifications about offers</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">SMS notifications</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Support up to <span class="bold green"> 12</span> hours</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max Trading volume - <span class="bold green"> 3</span> BTC</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max <span class="bold green"> 1</span> trade at same time</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max <span class="bold green"> 2</span> withdrawal request per day</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">No more than <span class="bold green"> 100</span> first level partners </div>
+												</li>
+											</ul>
+											<div class="tariff-submit"><button class="tariff-btn btn-yellow disabled">Only for verified accounts</button></div>
+										</div>
+
+									</div>
+
+									<div class="col col-pd">								
+										<div class="upgrade-plans-item tariff selected tariff_recommended">
+											<div class="tariff-head">
+												<div class="tariff-stars stars stars-premium">
+													<div class="star"></div>
+													<div class="star"></div>
+												</div>
+												<div class="tariff-name">Premium Plus</div>
+												<div class="tariff-verified"></div>
+												<div class="tariff-desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</div>
+											</div>
+											<div class="tariff-price">
+												<div class="tariff-price-value">$250</div>
+												<div class="tariff-price-period">Per Month</div>
+											</div>
+											<ul class="tariff-list">
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">E-email notifications about offers</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">SMS notifications</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Support up to <span class="bold green"> 12</span> hours</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max Trading volume - <span class="bold green">10</span> BTC</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max <span class="bold green">2</span> trade at same time</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max <span class="bold green">3</span> withdrawal request per day</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">No more than <span class="bold green"> 500</span> first level partners </div>
+												</li>
+											</ul>
+											<div class="tariff-submit"><button data-air-popup="upgrade-popup-1" class="tariff-btn btn-yellow open-popup">Upgrade</button></div>
+										</div>
+
+									</div>
+
+									<div class="col col-pd">
+										<div class="upgrade-plans-item tariff">
+											<div class="tariff-head">
+												<div class="tariff-stars stars stars-premium">
+													<div class="star"></div>
+													<div class="star"></div>
+													<div class="star"></div>
+												</div>
+												<div class="tariff-name">Premium Expert</div>
+												<div class="tariff-verified"></div>
+												<div class="tariff-desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</div>
+											</div>
+											<div class="tariff-price">
+												<div class="tariff-price-value">$500</div>
+												<div class="tariff-price-period">Per Month</div>
+											</div>
+											<ul class="tariff-list">
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">E-email notifications about offers</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">SMS notifications</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Support up to <span class="bold green"> 6</span> hours</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max Trading volume - <span class="bold green">25</span> BTC</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max <span class="bold green">3</span> trade at same time</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max <span class="bold green">5</span> withdrawal request per day</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">No more than <span class="bold green"> 2000</span> first level partners </div>
+												</li>
+											</ul>
+											<div class="tariff-submit"><button data-air-popup="upgrade-popup-1" class="tariff-btn btn-yellow open-popup">Upgrade</button></div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div id="upgrade-2" class="upgrade-plans-block absolute hidden">
+								<div class="upgrade-plans-row row">
+
+									<div class="col col-pd">
+
+										<div class="upgrade-plans-item tariff">
+											<div class="tariff-head">
+												<div class="tariff-stars stars stars-simple">
+													<div class="star"></div>
+												</div>
+												<div class="tariff-name">Starter</div>
+												<div class="tariff-verified"></div>
+												<div class="tariff-desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</div>
+											</div>
+											<div class="tariff-price">
+												<div class="tariff-price-value">$25</div>
+												<div class="tariff-price-period">Per Month</div>
+											</div>
+											<ul class="tariff-list">
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">E-email notifications about offers</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">SMS notifications</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Support up to <span class="bold green"> 12</span> hours</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max Trading volume - <span class="bold green"> 3</span> BTC</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max <span class="bold green"> 1</span> trade at same time</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max <span class="bold green"> 2</span> withdrawal request per day</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">No more than <span class="bold green"> 100</span> first level partners </div>
+												</li>
+											</ul>
+											<div class="tariff-submit"><button data-air-popup="upgrade-popup-1" class="tariff-btn btn-yellow open-popup">Upgrade</button></div>
+										</div>
+
+									</div>
+
+									<div class="col col-pd">								
+										<div class="upgrade-plans-item tariff selected tariff_recommended">
+											<div class="tariff-head">
+												<div class="tariff-stars stars stars-simple">
+													<div class="star"></div>
+													<div class="star"></div>
+												</div>
+												<div class="tariff-name">Basic</div>
+												<div class="tariff-verified"></div>
+												<div class="tariff-desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</div>
+											</div>
+											<div class="tariff-price">
+												<div class="tariff-price-value">$50</div>
+												<div class="tariff-price-period">Per Month</div>
+											</div>
+											<ul class="tariff-list">
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">E-email notifications about offers</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">SMS notifications</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Support up to <span class="bold green"> 12</span> hours</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max Trading volume - <span class="bold green">10</span> BTC</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max <span class="bold green">2</span> trade at same time</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max <span class="bold green">3</span> withdrawal request per day</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">No more than <span class="bold green"> 500</span> first level partners </div>
+												</li>
+											</ul>
+											<div class="tariff-submit"><button data-air-popup="upgrade-popup-1" class="tariff-btn btn-yellow open-popup">Upgrade</button></div>
+										</div>
+
+									</div>
+
+									<div class="col col-pd">
+										<div class="upgrade-plans-item tariff">
+											<div class="tariff-head">
+												<div class="tariff-stars stars stars-simple">
+													<div class="star"></div>
+													<div class="star"></div>
+													<div class="star"></div>
+												</div>
+												<div class="tariff-name">Standard</div>
+												<div class="tariff-verified"></div>
+												<div class="tariff-desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</div>
+											</div>
+											<div class="tariff-price">
+												<div class="tariff-price-value">$75</div>
+												<div class="tariff-price-period">Per Month</div>
+											</div>
+											<ul class="tariff-list">
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">E-email notifications about offers</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">SMS notifications</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Support up to <span class="bold green"> 6</span> hours</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max Trading volume - <span class="bold green">25</span> BTC</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max <span class="bold green">3</span> trade at same time</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">Max <span class="bold green">5</span> withdrawal request per day</div>
+												</li>
+												<li class="tariff-list-item tariff-list-item_checked">
+
+													<div class="tariff-list-item-text">No more than <span class="bold green"> 2000</span> first level partners </div>
+												</li>
+											</ul>
+											<div class="tariff-submit"><button data-air-popup="upgrade-popup-1" class="tariff-btn btn-yellow open-popup">Upgrade</button></div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+
+
+
+
+					</div>
+				</div>
+
+
+
+			</div>
+
+		</main>
+
+		<div id="verify-1" class="air-popup air-popup-hide">
+
+			<div class="air-popup-wrapper">
+				<div class="air-popup-content">
+
+					<form id="verify-form-1" action="" method="post" class="popup popup_verify">
+
+						<div class="popup-header">
+							<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+							<div class="popup-close air-popup-close"></div>
+						</div>
+
+						<div class="popup-title">Account verification</div>
+
+
+
+						<div class="popup-input-block popup-input-block_simple">
+							<label for="" class="popup-input-label">Phone number</label>
+							<div class="popup-input-subtext">You will get verification code to your phone</div>
+							<div class="popup-input-wrapper">
+
+								<input type="tel" required class="popup-input" placeholder="Type your phone">
+
+							</div>
+						</div>
+
+						<div class="popup-submit">
+							<button class="btn-yellow popup-btn">Submit</button>
+						</div>
+
+					</form>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div id="verify-2" class="air-popup air-popup-hide">
+
+			<div class="air-popup-wrapper">
+				<div class="air-popup-content">
+
+					<form id="verify-form-2" action="" method="post" class="popup popup_verify">
+
+						<div class="popup-header">
+							<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+							<div class="popup-close air-popup-close"></div>
+						</div>
+
+						<div class="popup-title">Account verification</div>
+
+
+
+						<div class="popup-input-block popup-input-block_simple">
+							<label for="" class="popup-input-label">Verification code</label>
+							<div class="popup-input-wrapper">
+
+								<input type="number" required class="popup-input" placeholder="Type your verification code">
+
+							</div>
+						</div>
+
+						<div class="popup-submit">
+							<button class="btn-yellow popup-btn">Submit</button>
+						</div>
+
+					</form>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div id="verify-3" class="air-popup  air-popup-hide">
+
+			<div class="air-popup-wrapper">
+				<div class="air-popup-content">
+
+					<div class="popup popup_success">
+
+						<div class="popup-header">
+							<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+							<div class="popup-close air-popup-close"></div>
+							<div class="popup-success-check"></div>
+						</div>
+
+						<div class="popup-title">Verification complete</div>
+
+						<div class="popup-success-bottom">
+							You have just verified your account. Now you can upgrade your account using Premium Plans. Go to <a class="link air-popup-close" href="3">Upgrade account</a>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div id="upgrade-popup-1" class="air-popup air-popup-hide">
+
+			<div class="air-popup-wrapper">
+				<div class="air-popup-content">
+
+					<form id="upgrade-form-1" action="" method="post" class="popup popup_upgrade">
+
+						<div class="popup-header">
+							<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+							<div class="popup-close air-popup-close"></div>
+						</div>
+
+						<div class="popup-title">Upgrade confirmation</div>
+
+						<div class="popup-info">
+							<div class="popup-info-item">
+								<div class="popup-info-title">Date</div>
+								<div class="popup-info-value">30/10/2018 16:27</div>
+								<input type="hidden" value="30/10/2018 16:27">
+							</div>
+							<div class="popup-info-item">
+								<div class="popup-info-title">Expiration date</div>
+								<div class="popup-info-value">30/10/2018 16:27</div>
+								<input type="hidden" value="30/10/2018 16:27">
+							</div>
+							<div class="popup-info-item popup-info-item_upgrade">
+								<div class="popup-info-title">Current status</div>
+								<div class="popup-info-value">
+									<div class="popup-info-stars stars stars-simple popup-info-stars_faded">
+										<div class="star"></div>
+									</div>
+									<div class="popup-info-value-text">Newbie</div>
+								</div>
+								<input type="hidden" value="Newbie">
+							</div>
+							<div class="popup-info-item popup-info-item_upgrade">
+								<div class="popup-info-title">Upgrade status</div>
+								<div class="popup-info-value">
+									<div class="popup-info-stars stars stars-premium">
+										<div class="star"></div>
+										<div class="star"></div>
+									</div>
+									<div class="popup-info-value-text">Premium Plus</div>
+								</div>
+								<input type="hidden" value="Premium Plus">
+							</div>
+							<div class="popup-info-item">
+								<div class="popup-info-title">(USD) Price</div>
+								<div class="popup-info-value popup-info-value_green">$250.00</div>
+								<input type="hidden" value="$250.00">
+							</div>
+						</div>
+
+
+
+						<div class="popup-submit">
+							<button id="upgrade-by-b" class="btn-yellow popup-btn">Upgrade from balance</button>
+							<button id="upgrade-by-d"  class="btn-yellow popup-btn btn-transparent">Direct Upgrade</button>
+						</div>
+
+					</form>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div id="upgrade-popup-b" class="air-popup air-popup-hide">
+
+			<div class="air-popup-wrapper">
+				<div class="air-popup-content">
+
+					<form id="upgrade-form-b" action="" method="post" class="popup popup_upgrade">
+
+						<div class="popup-header">
+							<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+							<div class="popup-close air-popup-close"></div>
+						</div>
+
+						<div class="popup-title">Upgrade confirmation</div>
+
+						<div class="popup-info">
+							<div class="popup-info-item">
+								<div class="popup-info-title">Date</div>
+								<div class="popup-info-value">30/10/2018 16:27</div>
+								<input type="hidden" value="30/10/2018 16:27">
+							</div>
+							<div class="popup-info-item">
+								<div class="popup-info-title">Expiration date</div>
+								<div class="popup-info-value">30/10/2018 16:27</div>
+								<input type="hidden" value="30/10/2018 16:27">
+							</div>
+							<div class="popup-info-item popup-info-item_upgrade">
+								<div class="popup-info-title">Current status</div>
+								<div class="popup-info-value">
+									<div class="popup-info-stars stars stars-simple popup-info-stars_faded">
+										<div class="star"></div>
+									</div>
+									<div class="popup-info-value-text">Newbie</div>
+								</div>
+								<input type="hidden" value="Newbie">
+							</div>
+							<div class="popup-info-item popup-info-item_upgrade">
+								<div class="popup-info-title">Upgrade status</div>
+								<div class="popup-info-value">
+									<div class="popup-info-stars stars stars-premium">
+										<div class="star"></div>
+										<div class="star"></div>
+									</div>
+									<div class="popup-info-value-text">Premium Plus</div>
+								</div>
+								<input type="hidden" value="Premium Plus">
+							</div>
+							<div class="popup-info-item">
+								<div class="popup-info-title">(USD) Price</div>
+								<div class="popup-info-value popup-info-value_green">$250.00</div>
+								<input type="hidden" value="$250.00">
+							</div>
+						</div>
+
+						<div class="popup-subtitle mrg-fix">
+							Choose the balance
+						</div>
+
+						<div class="popup-balance-wrapper">
+
+							<div class="popup-balance-item">
+								<input required type="radio" class="popup-balance-radio" name="wallet" value="Bitcoin (BTC)">
+								<div class="popup-balance-left"></div>
+								<div class="popup-balance-main">
+									<div class="popup-balance-title">
+										<img src="img/icon-btc.svg" alt="" class="popup-balance-title-icon">
+										<div class="popup-balance-title-text">Bitcoin (BTC)</div>
+									</div>
+									<div class="popup-balance-cur">BTC 2.68768500</div>
+									<div class="popup-balance-usd">$ 283.00</div>
+								</div>
+							</div>
+
+							<div class="popup-balance-item">
+								<input required type="radio" class="popup-balance-radio" name="wallet" value="Bitcoin Cash (BTH)">
+								<div class="popup-balance-left"></div>
+								<div class="popup-balance-main">
+									<div class="popup-balance-title">
+										<img src="img/icon-bth.svg" alt="" class="popup-balance-title-icon">
+										<div class="popup-balance-title-text">Bitcoin Cash (BTH)</div>
+									</div>
+									<div class="popup-balance-cur">BTH 0.98768500</div>
+									<div class="popup-balance-usd">$ 119.78</div>
+								</div>
+							</div>
+
+							<div class="popup-balance-item">
+								<input required type="radio" class="popup-balance-radio" name="wallet" value="Etherium (ETH)">
+								<div class="popup-balance-left"></div>
+								<div class="popup-balance-main">
+									<div class="popup-balance-title">
+										<img src="img/icon-eth.svg" alt="" class="popup-balance-title-icon">
+										<div class="popup-balance-title-text">Etherium (ETH)</div>
+									</div>
+									<div class="popup-balance-cur">ETH 18.76576430</div>
+									<div class="popup-balance-usd">$ 1965.78</div>
+								</div>
+							</div>
+
+							<div class="popup-balance-item">
+								<input required type="radio" class="popup-balance-radio" name="wallet" value="Litecoin (LTC)">
+								<div class="popup-balance-left"></div>
+								<div class="popup-balance-main">
+									<div class="popup-balance-title">
+										<img src="img/icon-ltc.svg" alt="" class="popup-balance-title-icon">
+										<div class="popup-balance-title-text">Litecoin (LTC)</div>
+									</div>
+									<div class="popup-balance-cur">LTC 9.00006430</div>
+									<div class="popup-balance-usd">$ 57.78</div>
+								</div>
+							</div>
+
+							<div class="popup-balance-item unavailable">
+								<input required type="radio" class="popup-balance-radio" name="wallet" value="Ripple (XRP)">
+								<div class="popup-balance-item-error">
+									Insufficient funds on balance
+								</div>
+								<div class="popup-balance-left"></div>
+								<div class="popup-balance-main">
+									<div class="popup-balance-title">
+										<img src="img/icon-xpr.svg" alt="" class="popup-balance-title-icon">
+										<div class="popup-balance-title-text">Ripple (XRP)</div>
+									</div>
+									<div class="popup-balance-cur">XRP 0.00000000</div>
+									<div class="popup-balance-usd">$ 0.00</div>
+								</div>
+							</div>
+
+
+
+							<div class="popup-balance-item unavailable">
+								<input required type="radio" class="popup-balance-radio" name="wallet" value="DASH (DASH)">
+								<div class="popup-balance-item-error">
+									Insufficient funds on balance
+								</div>
+								<div class="popup-balance-left"></div>
+								<div class="popup-balance-main">
+									<div class="popup-balance-title">
+										<img src="img/icon-dash.svg" alt="" class="popup-balance-title-icon">
+										<div class="popup-balance-title-text">DASH (DASH)</div>
+									</div>
+									<div class="popup-balance-cur">DASH 0.00000000</div>
+									<div class="popup-balance-usd">$ 0.00</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="popup-warning">
+							<div class="popup-warning-title">Important</div>
+							<ul class="popup-warning-list">
+								<li class="popup-warning-item">Once you complete your payment you will be automatically redirected back to your personal account which will get credited with your deposit</li>
+
+							</ul>
+						</div>
+
+
+
+						<div class="popup-submit">
+							<button class=" disabled btn-yellow popup-btn success-btn">Confirm</button>
+						</div>
+
+					</form>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div id="upgrade-popup-d" class="air-popup air-popup-hide">
+
+			<div class="air-popup-wrapper">
+				<div class="air-popup-content">
+
+					<form id="upgrade-form-d" action="" method="post" class="popup popup_upgrade">
+
+						<div class="popup-header">
+							<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+							<div class="popup-close air-popup-close"></div>
+						</div>
+
+						<div class="popup-title">Upgrade confirmation</div>
+
+						<div class="popup-info">
+							<div class="popup-info-item">
+								<div class="popup-info-title">Date</div>
+								<div class="popup-info-value">30/10/2018 16:27</div>
+								<input type="hidden" value="30/10/2018 16:27">
+							</div>
+							<div class="popup-info-item">
+								<div class="popup-info-title">Expiration date</div>
+								<div class="popup-info-value">30/10/2018 16:27</div>
+								<input type="hidden" value="30/10/2018 16:27">
+							</div>
+							<div class="popup-info-item popup-info-item_upgrade">
+								<div class="popup-info-title">Current status</div>
+								<div class="popup-info-value">
+									<div class="popup-info-stars stars stars-simple popup-info-stars_faded">
+										<div class="star"></div>
+									</div>
+									<div class="popup-info-value-text">Newbie</div>
+								</div>
+								<input type="hidden" value="Newbie">
+							</div>
+							<div class="popup-info-item popup-info-item_upgrade">
+								<div class="popup-info-title">Upgrade status</div>
+								<div class="popup-info-value">
+									<div class="popup-info-stars stars stars-premium">
+										<div class="star"></div>
+										<div class="star"></div>
+									</div>
+									<div class="popup-info-value-text">Premium Plus</div>
+								</div>
+								<input type="hidden" value="Premium Plus">
+							</div>
+							<div class="popup-info-item">
+								<div class="popup-info-title">(USD) Price</div>
+								<div class="popup-info-value popup-info-value_green">$250.00</div>
+								<input type="hidden" value="$250.00">
+							</div>
+							<div class="popup-info-item">
+								<div class="popup-info-title center">
+								<img src="img/icon-btc.svg" alt="" class="popup-info-title-icon">
+								Bitcoin Rate</div>
+								<div class="popup-info-value popup-info-value_green">$11460.00</div>
+								<input type="hidden" value="$11460.00">
+							</div>
+							<div class="popup-info-item">
+								<div class="popup-info-title center">
+								<img src="img/icon-btc.svg" alt="" class="popup-info-title-icon">
+								Bitcoin Amount</div>
+								<div class="popup-info-value popup-info-value_green">$250.00</div>
+								<input type="hidden" value="BTC 0.00908076">
+							</div>
+						</div>
+
+						<div class="popup-subtitle mrg-fix">
+							Send direct
+						</div>
+
+						<div class="popup-payment">
+							<div class="popup-payment-success">
+								Amount copied to clipboard
+							</div>
+							<div class="popup-payment-title">
+								<img src="img/icon-btc.svg" alt="" class="popup-payment-title-icon">
+								<span class="popup-payment-title-cur">Bitcoin (BTC) </span>
+								<span class="popup-payment-title-info">Amount / Address </span>
+							</div>
+							<div class="popup-payment-amount">
+								<div class="popup-payment-amount-value">BTC <span>0.00076431</span></div>
+								<div class="popup-payment-copy waves-on"></div>
+							</div>
+							<div class="popup-payment-address">
+								<div class="popup-payment-address-value">1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqA</div>
+								<div class="popup-payment-qr">
+									<img class="popup-payment-qr-img" src="img/qr-code.svg" alt="">
+								</div>
+								<div class="popup-payment-copy waves-on"></div>
+							</div>
+						</div>
+
+						<div class="popup-simple-input">
+							<div class="popup-simple-input-image">
+									<div class="popup-simple-input-icon icon-hash"></div>
+							</div>
+							<div class="popup-simple-input-main">
+								<div class="popup-simple-input-title">Transaction Hash</div>
+								<div class="popup-simple-input-wrapper">
+									<input required type="text" placeholder="Paste your transaction hash here" class="popup-simple-input-field">
+								</div>
+							</div>
+						</div>
+
+
+
+						<div class="popup-warning">
+							<div class="popup-warning-title">Important</div>
+							<ul class="popup-warning-list">
+								<li class="popup-warning-item">Deposit transfer sum should exactly as requested, otherwise deposit will not get credited
+								</li>
+								<li class="popup-warning-item">
+									Once you complete your payment you will be automatically 
+									redirected back to your personal account which will get credited with your first revenue after 24 hours by server time
+								</li>
+
+							</ul>
+						</div>
+
+
+
+						<div class="popup-submit">
+							<button class="btn-yellow popup-btn">Confirm</button>
+						</div>
+
+					</form>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div id="upgrade-popup-s" class="air-popup air-popup-hide">
+
+			<div class="air-popup-wrapper">
+				<div class="air-popup-content">
+
+					<div class="popup popup_success">
+
+						<div class="popup-header">
+							<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+							<div class="popup-close air-popup-close"></div>
+							<div class="popup-success-check"></div>
+						</div>
+
+						<div class="popup-title popup-title_wide">Account upgrade complete</div>
+
+						<div class="popup-success-bottom">
+							You have just upgraded your account to Premium Plus. Now you can earn extra profit within your investment.
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div id="upgrade-popup-qr" class="air-popup air-popup-hide">
+
+			<div class="air-popup-wrapper">
+				<div class="air-popup-content">
+
+					<div class="popup popup_success">
+
+						<div class="popup-header">
+							<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+							<div class="popup-close air-popup-close"></div>
+							<div class="popup-success-check"></div>
+						</div>
+
+						<div class="popup-title popup-title_wide">Transaction QR code</div>
+
+						<div class="popup-success-bottom">
+							Activate application on your phone and use Qr code for get access to transaction.
+						</div>
+
+						<div class="popup-success-qr">
+							<img src="img/qr-code.svg" alt="" class="popup-success-qr-img">
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+		<script src="js/all.min.js" defer></script>
+		<script src="libs/moveit.js"></script>
+		<script src="libs/nice-select.js" defer></script>
+		<script src="js/app.js" defer></script>
+
+
+	</body>

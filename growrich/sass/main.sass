@@ -1,0 +1,5691 @@
+// by Andrew Rew
+
+
+@import "stylesheet"
+@import "animation"
+
+@mixin placeholder()
+  input::-webkit-input-placeholder
+   	@content
+  input:-moz-placeholder
+    @content
+  input::-moz-placeholder
+    @content
+  input:-ms-input-placeholder
+    @content
+  textarea::-webkit-input-placeholder
+   	@content
+  textarea:-moz-placeholder
+    @content
+  textarea::-moz-placeholder
+    @content
+  textarea:-ms-input-placeholder
+    @content
+
+@mixin pseudo 
+	display: block 
+	content: "" 
+	position: absolute
+
+//=================================
+// COMMON
+
+body, html 
+	padding: 0
+	margin: 0
+	font-family: 'Helvetica Neue'
+	font-size: 16px 
+	font-weight: normal
+	color: $heading_1
+	background: $bg
+
+ul 
+	list-style: none 
+	padding: 0
+	margin: 0
+
+a 
+	text-decoration: none 
+	color: black 
+
+	&:hover 
+		text-decoration: none 
+		color: black 
+
+	&:focus 
+		text-decoration: none 
+		color: black 
+		outline: none 
+
+	&:active 
+		text-decoration: none 
+		color: black 
+
+	&:visited 
+		text-decoration: none 
+
+input:-webkit-autofill
+  	box-shadow: inset 0 0 0 1000px white
+  	&:hover, &:focus, &:active
+    	box-shadow: inset 0 0 0 1000px white
+
+button 
+	cursor: pointer
+
+	&:focus 
+		outline: none 
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button,
+::-webkit-calendar-picker-indicator
+	-webkit-appearance: none
+	margin: 0
+
+.pagination-wrapper
+	text-align: center
+
+.rating 
+	display: flex 
+	flex-direction: row 
+	justify-content: flex-start 
+	align-items: center
+
+	.star 
+		width: 18px
+		height: 18px
+		svg path 
+			fill: $border 
+
+		&.active 
+			svg path 
+				fill: $accent 
+
+.pagination 
+	position: relative
+	display: inline-block
+
+	&-nav 
+		position: absolute
+		width: 100%
+		z-index: 0 
+		top: 0
+		left: 0
+		height: 100%
+
+		&-prev 
+			width: 24px
+			height: 24px
+			position: absolute
+			top: 50%
+			margin-top: -12px
+			left: -34px
+			cursor: pointer
+			border-radius: 50% 
+			border: 1px solid $bg 
+			transition: 0.25s all ease-in-out
+			z-index: -1 
+			background: white
+			
+			&::before
+				+pseudo
+				width: 100%
+				height: 100%
+				border-radius: 50% 
+				background: linear-gradient(90deg, $accent 0%, $accent2 100%)
+				top: 0
+				left: 0
+				z-index: -1
+				opacity: 0
+				transition: 0.25s all ease-in-out
+
+
+			&::after 
+				content: "" 
+				display: block
+				position: absolute
+				border-left: 1px solid $heading_1
+				border-top: 1px solid $heading_1
+				width: 8px
+				height: 8px
+				top: 50%
+				margin-top: -4px
+				left: 50%
+				margin-left: -3px
+				transform: rotate(-45deg)
+
+			&:hover 
+				background: $accent
+				transition: 0.25s all ease-in-out
+
+				&::after 
+					border-color: white 
+					transition: 0.25s all ease-in-out
+
+				&::before 
+					opacity: 1
+					transition: 0.25s all ease-in-out
+
+		&-next 
+			width: 24px
+			height: 24px
+			position: absolute
+			top: 50%
+			margin-top: -12px
+			right: -34px
+			cursor: pointer
+			border-radius: 50% 
+			border: 1px solid $bg 
+			transition: 0.25s all ease-in-out
+			z-index: -1 
+			background: white
+
+			&::before
+				+pseudo
+				width: 100%
+				height: 100%
+				border-radius: 50% 
+				background: linear-gradient(90deg, $accent 0%, $accent2 100%)
+				top: 0
+				left: 0
+				z-index: -1
+				opacity: 0
+				transition: 0.25s all ease-in-out
+
+
+			&::after 
+				content: "" 
+				display: block
+				position: absolute
+				border-right: 1px solid $heading_1
+				border-top: 1px solid $heading_1
+				width: 8px
+				height: 8px
+				top: 50%
+				margin-top: -4px
+				right: 50%
+				margin-right: -2.5px
+				transform: rotate(45deg)
+
+			&:hover 
+				background: $accent
+				transition: 0.25s all ease-in-out
+
+				&::after 
+					border-color: white 
+					transition: 0.25s all ease-in-out
+
+				&::before 
+					opacity: 1
+					transition: 0.25s all ease-in-out
+
+	&-numbers 
+		display: flex 
+		flex-direction: row 
+		justify-content: center
+		align-items: center
+
+		&-item 
+			position: relative
+			z-index: 10
+			cursor: pointer
+			border-radius: 50% 
+			width: 36px
+			height: 36px
+			border: 1px solid $bg 
+			display: flex 
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			transition: 0.25s all ease-in-out
+			font-size: 14px 
+			margin-right: 5px
+			background: white
+
+			&::before
+				+pseudo
+				width: 100%
+				height: 100%
+				border-radius: 50% 
+				background: linear-gradient(90deg, $accent 0%, $accent2 100%)
+				top: 0
+				left: 0
+				z-index: -1
+				opacity: 0
+				transition: 0.25s all ease-in-out
+
+			&:last-child
+				margin-right: 0
+
+			&:hover 
+				background: lighten($accent, 10%)
+				color: white 
+				transition: 0.25s all ease-in-out
+
+				&::before 
+					opacity: 1
+					transition: 0.25s all ease-in-out
+
+			&.active 
+				color: white 
+				transition: 0.25s all ease-in-out
+
+				&::before
+					opacity: 1
+					transition: 0.25s all ease-in-out
+
+	&-nav 
+		position: absolute
+
+.page-wrapper
+	display: flex 
+	flex-direction: row 
+	justify-content: space-between
+
+.yellow-btn 
+	font-family: 'Helvetica Neue'
+	position: relative
+	font-size: 14px 
+	font-weight: bold 
+	color: white !important
+	border-radius: 20px 
+	background: linear-gradient(90deg, $accent, $accent2)
+	padding: 10.6px 79.77px 
+	padding-top: 11.8px 
+	padding-bottom: 9.4px
+	border: none 
+	cursor: pointer 
+	box-shadow: 0 2px 2px 0px rgba(0,0,0,0.25)
+	transition: 0.3s all ease-in-out
+
+	&.save-btn 
+		padding: 10.6px 59.77px 
+
+	&.disabled 
+		cursor: default 
+		background: $disable
+		opacity: .7
+		transition: 0.3s all ease-in-out
+
+	&.arrow-left 
+
+		&::after 
+			right: auto
+			left: 10px
+			transform: rotate(180deg)
+
+	&:hover 
+		box-shadow: 0 4px 4px 0px rgba(0,0,0,0.25)
+		transform: translateY(-2px)
+		transition: 0.3s all ease-in-out
+
+	&:active 
+		box-shadow: 0 4px 4px 0px rgba(0,0,0,0)
+		transform: translateY(1px)
+		transition: 0.3s all ease-in-out
+
+	&::after 
+		position: absolute
+		top: 50%
+		margin-top: -14px
+		right: 10px
+		width: 28px
+		height: 28px
+		content: ""
+		background: url('../img/arrow-right.svg') center no-repeat rgba(255,255,255,0.2)
+		background-size: 19.1px 13.6px
+		display: block
+		border-radius: 50%
+
+.red-btn 
+	font-family: 'Helvetica Neue'
+	position: relative
+	font-size: 14px 
+	font-weight: bold 
+	color: white !important
+	border-radius: 20px 
+	background: $subaccent_1
+	padding: 10.6px 50px 
+	padding-right: 20.9px
+	padding-top: 11.8px 
+	padding-bottom: 9.4px
+	border: none 
+	cursor: pointer 
+	box-shadow: 0 2px 2px 0px rgba(0,0,0,0.25)
+	transition: 0.3s all ease-in-out
+
+	&.disabled 
+		cursor: default 
+		background: $disable
+		opacity: .7
+		transition: 0.3s all ease-in-out
+
+	&:hover 
+		box-shadow: 0 4px 4px 0px rgba(0,0,0,0.25)
+		transform: translateY(-2px)
+		transition: 0.3s all ease-in-out
+
+	&:active 
+		box-shadow: 0 4px 4px 0px rgba(0,0,0,0)
+		transform: translateY(1px)
+		transition: 0.3s all ease-in-out
+
+	&::after 
+		position: absolute
+		top: 50%
+		margin-top: -7px
+		left: 21px
+		width: 20px
+		height: 15px
+		content: ""
+		background: url('../img/icon-logout.svg') center no-repeat
+		background-size: cover 
+		display: block
+
+.btn-small 
+	font-size: 14px 
+	font-weight: bold 
+	border: none 
+	border-radius: 14px
+	padding: 5.6px 31px 
+	box-shadow: 0 2px 2px 0px rgba(0,0,0,0.24)
+	transition: 0.3s all ease-in-out
+
+	&:hover 
+		box-shadow: 0 3px 3px 1px rgba(0,0,0,0.14)
+		transform: translateY(-2px) 
+		transition: 0.3s all ease-in-out
+	
+	&:active 
+		box-shadow: 0 3px 3px 1px rgba(0,0,0,0.0)
+		transform: translateY(1px) 
+		transition: 0.3s all ease-in-out
+
+.btn-red 
+	background: $subaccent_1
+	color: white 
+
+.btn-yellow 
+	background: linear-gradient(90deg, $accent, $accent2)
+	color: white 
+
+.attention
+
+	&-title 
+		font-size: 12px 
+		font-weight: bold 
+		color: $subaccent_1 
+		padding-left: 18px
+		background: url('../img/icon-attention.svg') center left no-repeat 
+		background-size: 12px 12px 
+		padding-top: 2px
+		padding-bottom: 2px
+		border-bottom: 1px solid $bg 
+		margin-bottom: 10px
+
+	&-point 
+		padding-left: 15px
+		position: relative 
+		font-size: 10px 
+		font-weight: 300
+		color: $border 
+		margin-bottom: 7px
+
+		&:last-child 
+			margin-bottom: 0
+
+		&::after 
+			content: "" 
+			display: block 
+			position: absolute
+			top: 3px 
+			left: 0
+			width: 8px
+			height: 8px
+			border-radius: 50% 
+			border: 3.5px solid $subaccent_1 
+			background: white 
+
+#withdrawal-1 
+	display: none 
+
+#active-deposits 
+	display: none 
+
+#transaction-2
+	display: none 
+
+#transaction-3
+	display: none 
+
+#my-stats-2
+	display: none 
+
+#my-stats-3 
+	display: none 
+
+#partner-stats-2 
+	display: none 
+
+#partner-stats-3 
+	display: none 
+
+
+//=================================
+// HEADER 
+
+.header 
+	position: relative
+	height: 60px
+	background: $heading_2
+	box-shadow: 0px 2px 10px 5px rgba(0,0,0, 0.18)
+	z-index: 100
+
+	.menu-button 
+		height: 60px
+		width: 60px
+		background: $accent
+		display: flex 
+		flex-direction: column
+		justify-content: center 
+		align-items: center
+		cursor: pointer
+
+		&:hover 
+			
+			.menu-button-line 
+				transform: scale(1.1)
+				transition: 0.2s all ease-in
+
+				&:first-child 
+					transform: scale(1.1) translateY(-1px)
+
+				&:last-child 
+					transform: scale(1.1) translateY(1px)
+
+		&-line 
+			background: white 
+			width: 20px
+			height: 2px
+			border-radius: 2px
+			margin-bottom: 5px
+			transform: scaleY(1.01)
+			transition: 0.2s all ease-in
+
+			&:last-child 
+				margin-bottom: 0
+
+	.logo 
+		padding-left: 32px
+		display: flex 
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		height: 60px
+
+		img 
+			width: 163px
+			height: 40px
+
+	&-major-info 
+		height: 60px
+		display: flex 
+		flex-direction: row 
+		justify-content: center
+		align-items: center
+
+		.currency 
+			height: inherit
+			display: flex 
+			flex-direction: row 
+			justify-content: center
+			align-items: center
+
+			&-main-label 
+				font-size: 14px 
+				margin-right: 20px
+
+			&-item 
+				height: inherit
+				padding-top: 6px
+				padding-bottom: 6px
+				display: flex 
+				flex-direction: column
+				justify-content: space-around
+				align-items: center
+				background: $bg 
+				min-width: 90px
+				margin-right: 10px
+
+				&-logo 
+
+				&-course 
+					color: $subaccent_2
+					font-size: 12px 
+
+	&-time 
+		height: 60px
+		display: flex 
+		flex-direction: row 
+		justify-content: center
+		align-items: center
+		margin-right: 20px
+
+		&-label 
+			font-size: 14px 
+			margin-right: 20px
+
+		&-value 
+			height: inherit
+			background: $bg
+			color: $subaccent_2
+			font-size: 24px 
+			display: flex 
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			padding: 6px
+			font-weight: 900
+
+	&-support 
+		height: 60px
+		display: flex 
+		flex-direction: row 
+		justify-content: center
+		align-items: center
+		margin-right: 20px
+
+		&-label 
+			font-size: 14px 
+			margin-right: 20px
+
+		&-link 
+			height: inherit
+			width: 60px
+			display: block 
+			position: relative
+
+			&::after 
+				content: ""
+				position: absolute 
+				display: block 
+				top: 50%
+				left: 50%
+
+			&:hover 
+				opacity: .85
+				transition: 0.35s all ease-in-out
+
+			&.telegram 
+				background: linear-gradient(45deg, #1E96C8 0%, #1E96C8 30%, #37AEE2 70%, #37AEE2 100%)
+				transition: 0.35s all ease-in-out
+				overflow: hidden
+
+				&::after 
+					width: 33px
+					height: 28px
+					background: url(../img/telegram.svg) no-repeat 
+					background-size: 100% 
+					margin-top: -14px
+					margin-left: -17px
+
+				&:hover 
+					&::after 
+						animation: teleFly 0.55s ease-in-out
+
+			&.email 
+				background: $accent
+
+				&::after 
+					width: 30px
+					height: 30px
+					background: url(../img/email.svg) no-repeat 
+					background-size: 100% 
+					margin-top: -15px
+					margin-left: -15px
+
+	&-language 
+		height: 60px
+		display: flex 
+		flex-direction: row 
+		justify-content: center
+		align-items: center
+
+		&-label 
+			font-size: 14px 
+			margin-right: 20px
+
+		&-switcher 
+			height: inherit
+			
+			.nice-select 
+				height: inherit
+				width: 60px
+				padding: 0
+				margin: 0
+				border: none 
+				float: none 
+				background: $accent
+				border-radius: 0
+				position: relative
+ 
+				&::after 
+					display: none 
+
+				.current 
+					display: block
+					height: 100%
+					width: 100%
+					font-size: 0
+					background-size: 24px 24px 
+					background-position: center
+					position: relative
+
+					&::after 
+						content: ""
+						display: block 
+						position: absolute 
+						top: 50%
+						margin-top: -12px
+						left: 50%
+						margin-left: -12px
+						width: 24px
+						height: 24px
+						background: transparent
+						box-shadow: 0 0 0 5px $accent
+						border-radius: 50%
+						transition: 0.2s all ease-in-out
+
+				.list 
+					margin: 0
+					padding: 0
+					border: none 
+					transform: translate(0px) scale(1)
+					width: 100%
+					border-radius: 0px
+					border-bottom: 1px solid $bg 
+					background: transparent 
+					box-shadow: none 
+					overflow: visible 
+
+
+					li 
+						margin: 0
+						padding: 0
+						width: 100%
+						height: 60px
+						border: 1px solid $bg 
+						padding-top: 40px
+						line-height: 15px
+						display: block 
+						text-align: center
+						font-weight: bold 
+						font-size: 12px 
+						color: $heading_1
+						border-radius: 0px
+						text-transform: uppercase
+						border-bottom: none 
+						position: relative
+						transition: 0.8s transform ease-in-out, 0.3s opacity ease-in-out
+						background-size: 24px 24px 
+						background-position: 17px 10px
+						transform-style: preserve-3d
+
+						&:hover 
+							transition: 0.2s all ease-in-out
+
+							&::before 
+								background: $bg
+								transition: 0.2s all ease-in-out
+
+							&::after 
+								box-shadow: 0 0 0 5px $bg
+								transition: 0.2s all ease-in-out
+
+						&::before
+							content: ""
+							background: white 
+							width: 100%
+							height: 60px
+							display: block 
+							bottom: 0
+							left: 0
+							position: absolute
+							z-index: -1
+							transition: 0.2s all ease-in-out
+							transform: translateZ(-1px)
+
+						&.selected 
+							color: white 
+
+							&:hover 
+								&::before 
+									background: $accent
+								&::after 
+									box-shadow: 0 0 0 5px $accent 
+
+							&::before 
+								background: $accent
+							&::after  
+								box-shadow: 0 0 0 5px $accent 
+
+						&::after 
+							content: ""
+							display: block 
+							position: absolute 
+							top: 10px
+							left: 17px
+							width: 24px
+							height: 24px
+							background: transparent
+							box-shadow: 0 0 0 5px white 
+							border-radius: 50%
+							transition: 0.2s all ease-in-out
+
+//=================================
+// Lefthand menu 
+
+.aside 
+	width: 256px
+	min-width: 256px
+	padding: 0
+	margin: 0
+	background: $heading_2
+	box-shadow: 2px 10px 10px 5px rgba(0,0,0, 0.18)
+	min-height: calc(100vh - 60px)
+	padding-bottom: 50px
+	transition: 0.3s all ease-in-out
+	
+
+	&-user-info 
+		transition: 0.3s all ease-in-out
+		transition-delay: 0.3s
+
+		&-main 
+			background: $bg 
+			height: 60px
+			display: flex 
+			flex-direction: row 
+			justify-content: center
+			align-items: center
+
+			.user-country 
+				width: 24px
+				height: 24px
+				margin-right: 10px
+				border-radius: 50%
+
+			.user-name 
+				font-weight: bold 
+				font-size: 16px 
+				margin-right: 40px
+
+			.user-rate 
+				display: flex 
+				flex-direction: row 
+				justify-content: flex-start 
+				align-items: center
+
+				.star 
+					width: 18px
+					height: 18px
+					svg path 
+						fill: $border 
+
+					&.active 
+						svg path 
+							fill: $accent 
+
+	&-user-info-balance 
+		padding: 10px
+		padding-left: 27px
+		padding-right: 24px
+		border: 1px solid $bg
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		align-items: center
+
+		&__title 
+			color: #95989A
+			font-size: 14px 
+			margin-right: 38px
+			background: url('../img/icon-balance.svg') no-repeat
+			padding-left: 34px
+			background-size: 24px 24px 
+			height: 24px
+			line-height: 24px
+
+		&__value 
+			font-weight: bold
+			font-size: 14px 
+			color: $subaccent_2
+
+	&-user-info-currencies 
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between 
+		align-items: center
+		flex-wrap: wrap 
+
+		&-item 
+			width: 50%
+			padding: 6px
+			padding-top: 7px
+			border-left: 1px solid $bg 
+			border-bottom: 1px solid $bg 
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between
+			align-items: center
+
+			&:nth-child(2n+1) 
+				padding-left: 27px
+				padding-right: 7px
+
+			&:nth-child(2n)
+				padding-right: 27px
+				padding-left: 7px
+				border-right: 1px solid $bg 
+
+			.currencies-item-value
+				font-size: 12px 
+				color: $subaccent_2
+
+			.currencies-type 
+				width: 24px
+				height: 24px
+
+				&-1
+					background: url('../img/icon-cur-1@2x.png') no-repeat
+					background-size: cover
+
+				&-2
+					background: url('../img/icon-cur-2@2x.png') no-repeat
+					background-size: cover
+
+				&-3
+					background: url('../img/icon-cur-3@2x.png') no-repeat
+					background-size: cover
+
+				&-4
+					background: url('../img/icon-cur-4@2x.png') no-repeat
+					background-size: cover
+
+	&-user-info-pending 
+		padding: 10px
+		padding-left: 27px
+		padding-right: 24px
+		border: 1px solid $bg
+		border-top: none 
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		align-items: center
+
+		&__title 
+			color: #95989A
+			font-size: 14px 
+			margin-right: 38px
+			background: url('../img/icon-pending.svg') no-repeat
+			padding-left: 34px
+			background-size: 24px 24px 
+			height: 24px
+			line-height: 24px
+
+		&__value 
+			font-weight: bold
+			font-size: 14px 
+			color: $accent
+
+	.dashboard-menu 
+		transition: 0.3s all ease-in-out
+		transition-delay: 0s
+
+		&-title
+			white-space: nowrap
+			
+			font-size: 12px 
+			font-weight: bold 
+			padding: 20px 30px 
+			padding-left: 27px
+			transition: 0.3s all ease-in-out
+
+			&:nth-child(3) 
+				padding-bottom: 13px
+
+		&-list 
+			width: 100%
+			border-top: 1px solid $bg 
+			
+			li 
+				width: 100%
+				background: white
+				box-shadow: inset 0 0 0 0 $accent
+				transition: 0.35s all ease-in-out
+				position: relative
+
+				&::before
+					+pseudo
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					background: linear-gradient(90deg, $accent 0%, $accent2 100%)
+					opacity: 0
+					transition: 0.35s all ease-in-out
+
+
+				&:hover 
+					transition: 0.35s all ease-in-out
+
+					&::before 
+						opacity: 1
+						transition: 0.35s all ease-in-out
+
+					a 
+						color: white 
+						transition: 0.25s all ease-in-out
+
+						&::before 
+							opacity: 1
+							transition: 0.35s all ease-in-out
+
+						&::after 
+							opacity: 0
+							transition: 0.35s all ease-in-out
+
+				&:nth-child(1) a::after
+					background: url('../img/icon-menu-1.svg') no-repeat
+					background-size: 24px 24px 
+
+				&:nth-child(2) a::after
+					background: url('../img/icon-menu-2.svg') no-repeat
+					background-size: 24px 24px 
+
+				&:nth-child(3) a::after
+					background: url('../img/icon-menu-3.svg') no-repeat
+					background-size: 24px 24px 
+
+				&:nth-child(4) a::after
+					background: url('../img/icon-menu-4.svg') no-repeat
+					background-size: 24px 24px 
+
+				&:nth-child(5) a::after
+					background: url('../img/icon-menu-5.svg') no-repeat
+					background-size: 24px 24px 
+
+				&:nth-child(6) a::after
+					background: url('../img/icon-menu-6.svg') no-repeat
+					background-size: 24px 24px 
+
+
+				&:nth-child(1) a::before
+					background: url('../img/icon-menu-1-white.svg') no-repeat
+					background-size: 24px 24px 
+
+				&:nth-child(2) a::before
+					background: url('../img/icon-menu-2-white.svg') no-repeat
+					background-size: 24px 24px 
+
+				&:nth-child(3) a::before
+					background: url('../img/icon-menu-3-white.svg') no-repeat
+					background-size: 24px 24px 
+
+				&:nth-child(4) a::before
+					background: url('../img/icon-menu-4-white.svg') no-repeat
+					background-size: 24px 24px 
+
+				&:nth-child(5) a::before
+					background: url('../img/icon-menu-5-white.svg') no-repeat
+					background-size: 24px 24px 
+
+				&:nth-child(6) a::before
+					background: url('../img/icon-menu-6-white.svg') no-repeat
+					background-size: 24px 24px 
+
+				a 
+					position: relative
+					display: flex 
+					flex-direction: column 
+					justify-content: center
+					align-items: flex-start
+					width: 100%
+					padding-top: 17px
+					padding-bottom: 17px
+					font-size: 14px 
+					padding-left: 80px
+					border-bottom: 1px solid $bg
+					font-weight: bold
+					transition: 0.3s all ease-in-out
+					min-height: 51px 
+
+					&::before 
+						content: ""
+						display: block 
+						position: absolute
+						top: 50%
+						left: 24px
+						margin-top: -12px
+						width: 24px
+						height: 24px
+						opacity: 0
+						transition: 0.35s all ease-in-out
+
+					&::after 
+						content: ""
+						display: block 
+						position: absolute
+						top: 50%
+						left: 24px
+						margin-top: -12px
+						width: 24px
+						height: 24px
+						opacity: 1
+						transition: 0.35s all ease-in-out
+
+		&-bottom-list 
+			width: 100%
+			transition: 0.3s all ease-in-out
+			
+			li 
+				width: 100%
+
+				a 
+					position: relative
+					display: flex 
+					flex-direction: column 
+					justify-content: center
+					align-items: flex-start
+					width: 100%
+					padding-top: 12px
+					padding-bottom: 12px
+					font-size: 14px 
+					padding-left: 80px
+					transition: 0.3s all ease-in-out
+					color: $link
+
+					&:hover 
+						color: $accent 
+						transition: 0.25s all ease-in-out
+
+					&:active 
+						opacity: .4
+						transition: 0.25s all ease-in-out
+	
+	&.opened-desktop 
+		width: 60px
+		min-width: 60px
+		transition: 0.3s all ease-in-out
+		transition-delay: 0.3s
+
+
+		.aside-user-info
+			// opacity: 0
+			// height: 0
+			// transform: translateX(-200px)
+			transform: scaleY(0)
+			transition: 0.3s all ease-in-out
+			transition-delay: 0.3s
+			.aside-user-info-main
+				opacity: 0
+				transform: translateX(-200px)
+				transition: 0.3s all ease-in-out
+			.aside-user-info-balance
+				opacity: 0
+				transform: translateX(-200px)
+				transition: 0.3s all ease-in-out
+			.aside-user-info-currencies
+				opacity: 0
+				transform: translateX(-200px)
+				transition: 0.3s all ease-in-out
+			.aside-user-info-pending
+				opacity: 0
+				transform: translateX(-200px)
+				transition: 0.3s all ease-in-out
+
+
+		.dashboard-menu
+			transform: translateY(-220px)
+			transition: 0.3s all ease-in-out
+			transition-delay: 0.6s
+			&-title 
+				//height: 60px
+				opacity: 0
+				transition: 0.3s all ease-in-out
+			&-list 
+				li 
+					a 
+						padding: 0
+						height: 60px
+						font-size: 0
+						color: transparent
+						transition: 0.3s all ease-in-out
+
+						&::before 
+							margin: 0
+							left: 18px
+							top: 18px
+						&::after 
+							margin: 0
+							left: 18px
+							top: 18px
+			&-bottom-list
+				opacity: 0
+				transform: translateX(-200px)
+				transition: 0.3s all ease-in-out
+
+
+
+//=================================
+// PAGE CONTENT -- COMMON
+
+.content-wrapper
+	margin-top: 30px
+	margin-left: 15px
+	margin-right: 15px
+	padding-bottom: 40px
+	flex-grow: 1
+
+	.mini-stats 
+		margin-bottom: 30px
+
+		&-item 
+			padding: 20px
+			border-radius: 4px
+			padding-top: 24px
+
+			&.mini-income 
+				background: $subaccent_2
+
+			&.mini-withdrawals
+				background: #FE5461
+
+			&.mini-deposit 
+				background: $accent
+				position: relative
+				height: 100%
+
+				.mini-stats-item__title
+					margin-bottom: 12px
+
+				.mini-stats-item__values
+					flex-direction: column
+					align-items: flex-start
+
+					.values-item
+						margin: 0
+						margin-top: 19px
+
+				.mini-stats-item_diagram
+					position: absolute
+					top: 52px
+					right: 20px
+
+					&::after 
+						content: ""
+						display: block 
+						position: absolute
+						width: 33px
+						height: 29px
+						background: url('../img/icon-deposit-diagram.svg') no-repeat
+						background-size: cover 
+						top: 50%
+						margin-top: -17px
+						left: 50%
+						margin-left: -17px
+
+			&.mini-accrual 
+				background: $link
+				display: flex 
+				flex-direction: row 
+				justify-content: space-between
+				align-items: center
+				flex-wrap: wrap 
+
+				.mini-stats-item_diagram
+					position: relative
+
+					.time-block 
+						position: absolute
+						top: 0
+						left: 0
+						right: 0
+						bottom: 0
+						display: flex 
+						flex-direction: column
+						justify-content: center
+						align-items: center
+						color: $heading_2
+
+						.time-value 
+							margin-bottom: 4px
+							font-size: 18px 
+							font-weight: 900
+
+						.time-title 
+							font-size: 12px 
+				
+				.mini-stats-item__title
+					width: 100%
+					&::before 
+						background: url('../img/icon-next-accrual.svg') no-repeat
+						background-size: cover
+						width: 24px
+						height: 23px
+
+				.mini-stats-item__values
+					max-width: 100px 
+					margin-bottom: 0
+
+
+			&__title 
+				position: relative
+				font-weight: bold 
+				font-size: 14px 
+				color: $heading_2
+				padding-left: 40px
+				margin-bottom: 20px
+
+				&::before 
+					content: ""
+					display: block
+					position: absolute
+					top: -4px
+					left: 0
+					height: 21px
+					width: 24px
+					background: url('../img/icon-money.svg') no-repeat
+
+			&__values
+				display: flex 
+				flex-direction: row 
+				justify-content: flex-start
+				align-items: center 
+				margin-bottom: 20px
+
+				.values-item 
+					margin-right: 25px
+
+				.v_label 
+					color: $heading_2
+					font-size: 12px 
+					margin-bottom: 2px
+
+				.v_amount 
+					color: $heading_2
+					font-size: 18px 
+					font-weight: 900
+
+			&_graph 
+
+				.axis-y 
+
+					li 
+						position: relative
+						padding-top: 5px
+						padding-bottom: 5px
+						font-size: 10px 
+						color: $heading_2
+						display: flex 
+						flex-direction: row 
+						justify-content: flex-end 
+						align-items: center 
+						height: 20px
+
+						.point 
+							position: absolute
+							top: 4px
+							right: 90%
+							margin-right: 7px
+
+
+						.line 
+							width: 90%
+							background: white 
+							opacity: .2
+							height: 1px
+							display: block 
+							margin-left: 7px
+
+				.axis-x 
+					position: relative
+					margin-top: -5px
+					display: flex 
+					flex-direction: row 
+					justify-content: space-between
+					align-items: center
+					margin-left: 23px
+					padding-left: 11px
+					padding-right: 2px
+
+					li 
+						font-size: 10px 
+						color: $heading_2
+						position: relative
+
+						.line 
+							background: $accent
+							width: 8px
+							height: 22px
+							border-radius: 4px 
+							position: absolute
+							left: 50%
+							margin-left: -3.5px
+							bottom: 100%
+							margin-bottom: 5px
+							display: block
+
+	.main-info 
+
+		&-block 
+
+			&-title 
+				font-size: 24px 
+				margin-bottom: 30px
+				font-weight: 900
+
+			&-tabs 
+				margin-bottom: 20px
+				display: flex 
+				flex-direction: row 
+				justify-content: flex-start
+				align-items: center
+				width: 100%
+				border-bottom: 1px solid $border
+
+				.single-tab
+					position: relative
+					font-size: 16px 
+					font-weight: bold
+					color: $border
+					padding-bottom: 10px
+					padding-left: 15px
+					padding-right: 15px
+					transition: 0.3s all ease-in-out
+
+					&::after 
+						content: ""
+						position: absolute
+						display: block
+						bottom: -1px
+						left: 0
+						width: 100%
+						height: 0.8px
+						background: $accent
+						transform: scale(0)
+						transform-origin: 0 0
+						transition: 0.3s all ease-in-out
+
+					&:first-child
+						padding-left: 0
+
+					&.active
+						color: $heading_1
+						transition: 0.3s all ease-in-out
+
+						&::after 
+							transform: scale(1)
+							transition: 0.3s all ease-in-out
+
+//=================================
+// COMMON TABLE BLOCK 
+
+.table-block 
+	background: $heading_2
+	border-radius: 4px 
+	padding: 20px
+
+	&-only-table 
+		padding-top: 0
+		.table-block-classic-table
+			.table-head
+				border-top: none 
+
+	&-title 
+		font-size: 24px 
+		color: $border
+		margin-bottom: 20px
+		text-align: center
+		font-weight: 900
+	
+	&-subtitle 
+		font-weight: bold
+		font-size: 12px 
+		margin-bottom: 5px
+
+	&-calc_input 
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		flex-wrap: wrap 
+
+		.calc_input-item 
+			cursor: pointer
+			margin-bottom: 20px
+			width: calc(33.333% - 13.333px)
+			text-align: center
+			padding: 5px
+			border: 1px solid $bg
+			box-shadow: 0 0 0 0 rgba(0,0,0,0)
+			transition: 0.3s all ease-in-out
+			position: relative
+
+			.input-title 
+				color: $bg 
+				font-size: 22px 
+				font-weight: 900
+				margin-bottom: 5px
+				transition: 0.3s all ease-in-out
+				position: relative
+				z-index: 2
+
+			.input-value 
+				color: $subaccent_2
+				font-size: 30px 
+				font-weight: 900
+				position: relative
+				z-index: 2
+
+			.calc-radio 
+				display: none 
+
+			&:hover 
+				box-shadow: 0 10px 15px 0px rgba(0,0,0,0.1)
+				transition: 0.3s all ease-in-out
+
+			&::after 
+				+pseudo
+				width: 100%
+				height: 100%
+				left: 0
+				top: 0
+				border: 1px solid white
+				opacity: 0
+				background: linear-gradient(90deg, $accent 0%, $accent2 100%)
+				transition: 0.3s all ease-in-out
+				z-index: 0
+
+			&.active 
+				background: transparent
+				border-color: white 
+				box-shadow: 0 10px 15px 0px rgba(0,0,0,0.1)
+				transition: 0.3s all ease-in-out
+
+				&::after 
+					opacity: 1
+					transition: 0.3s all ease-in-out
+
+				.input-title
+					color: $heading_2
+					transition: 0.3s all ease-in-out
+
+	&-two_col_table 
+		padding-top: 8px
+		padding-bottom: 8px
+		margin-bottom: 20px
+		border-top: 1px solid $bg 
+		border-bottom: 1px solid $bg 
+
+		.single-col 
+
+			.single-cell 
+				padding-top: 5.3px
+				padding-bottom: 5.3px
+				display: flex 
+				flex-direction: row 
+				justify-content: space-between
+
+				.cell-title 
+					padding-left: 25px
+					background: url('../img/green-yes.png') no-repeat
+					background-size: 14px 14px 
+					font-size: 12px 
+
+				.cell-value 
+					font-size: 12px 
+					color: $subaccent_2
+					font-weight: bold
+
+	&-wallets 
+		margin-bottom: 10px
+
+	.wallet-item 
+		position: relative
+		cursor: pointer
+		border-radius: 19px 
+		padding-left: 28px
+		margin-bottom: 20px 
+		background: $bg
+		display: flex 
+		flex-direction: row 
+		justify-content: flex-end 
+		align-items: center
+		transition: 0.3s all ease-in-out
+
+		&::before 
+			content: ""
+			position: absolute
+			top: 50%
+			margin-top: -6px
+			left: 8px
+			width: 12px
+			height: 12px
+			border-radius: 50% 
+			background: url('../img/check-green.svg') no-repeat white 
+			background-size: 7px 5px 
+			background-position: 2.88px 3.95px
+			box-shadow: inset 0 0 12px 12px white 
+			transition: 0.3s all ease-in-out
+
+		&::after 
+			content: ""
+			position: absolute
+			top: 50%
+			margin-top: -6px
+			left: 8px
+			width: 12px
+			height: 12px
+			border-radius: 50% 
+			background: url('../img/check-red.svg') no-repeat white 
+			background-size: 7px 5px 
+			background-position: 2.88px 3.95px
+			box-shadow: inset 0 0 12px 12px white 
+			transition: 0.3s all ease-in-out
+
+
+		&-1 
+			.wallet-item-id 
+				background: url('../img/icon-cur-1@2x.png') no-repeat
+				background-size: 12px 12px 
+				background-position: 5px center
+				background-color: #fff
+
+		&-2 
+			.wallet-item-id 
+				background: url('../img/icon-cur-2@2x.png') no-repeat
+				background-size: 12px 12px 
+				background-position: 5px center
+				background-color: #fff
+
+		&-3 
+			.wallet-item-id 
+				background: url('../img/icon-cur-3@2x.png') no-repeat
+				background-size: 12px 12px 
+				background-position: 5px center
+				background-color: #fff
+
+		&-4 
+			.wallet-item-id 
+				background: url('../img/icon-cur-4@2x.png') no-repeat
+				background-size: 12px 12px 
+				background-position: 5px center
+				background-color: #fff
+
+		&.chosen 
+			background: $subaccent_2
+			transition: 0.3s all ease-in-out
+
+			&::before 
+				box-shadow: inset 0 0 0 0 transparent
+				transition: 0.3s all ease-in-out
+
+			&::after 
+				opacity: 0
+				transition: 0.3s all ease-in-out
+
+			.wallet-item-id 
+				border-color: $subaccent_2
+				color: $link
+				transition: 0.3s all ease-in-out
+
+			.wallet-item-balance
+				color: $subaccent_2
+				border-color: $subaccent_2
+				transition: 0.3s all ease-in-out
+
+			&.error 
+				background: $subaccent_1
+				transition: 0.3s all ease-in-out
+
+				&::before 
+					opacity: 0
+					transition: 0.3s all ease-in-out
+
+				&::after 
+					opacity: 1
+					box-shadow: inset 0 0 0 0 transparent
+					transition: 0.3s all ease-in-out
+
+				.wallet-item-id 
+					border-color: $subaccent_1
+					color: $disable
+					transition: 0.3s all ease-in-out
+
+					&::after
+						content: ""
+						display: block 
+						position: absolute
+						background: url('../img/icon-warning.svg') no-repeat
+						width: 17px
+						height: 15px
+						background-size: cover 
+						top: 50%
+						margin-top: -7.5px
+						right: 21px
+
+				.wallet-item-balance
+					color: $subaccent_1
+					border-color: $subaccent_1
+					transition: 0.3s all ease-in-out
+
+				.wallet-item-notify
+					display: block 
+					
+		
+		&.low-balance
+
+			.wallet-item-balance 
+				color: $subaccent_1
+				transition: 0.3s all ease-in-out
+
+		&.error
+
+		&-id 
+			position: relative
+			width: 55%
+			padding-left: 22px
+			padding-top: 4.5px
+			padding-bottom: 5.5px
+			color: $disable
+			font-weight: 300
+			border: 1px solid $bg 
+			font-size: 12px 
+			transition: 0.3s all ease-in-out
+
+		&-balance 
+			width: 45%
+			background: white 
+			border: 1px solid $bg 
+			border-radius: 0 19px 19px 0
+			border-left: none 
+			padding-left: 5px
+			padding-top: 4.5px
+			padding-bottom: 5.5px
+			color: $disable
+			font-weight: 300
+			font-size: 12px 
+			transition: 0.3s all ease-in-out
+
+		&-edit 
+			position: absolute
+			top: 50%
+			width: 12px
+			height: 12px
+			margin-top: -6px
+			right: 5px
+			background: url('../img/icon-edit.svg') no-repeat
+			background-size: cover 
+			transition: 0.25s all ease-in-out
+
+			&:hover 
+				transform: scale(1.1)
+				transition: 0.25s all ease-in-out
+
+		&-notify 
+			display: none 
+			position: absolute
+			color: $subaccent_1
+			top: 100%
+			margin-top: 2px
+			left: 0
+			font-size: 11px 
+			font-weight: 300
+
+		.wallet-radio 
+			display: none 
+	
+	.result-invest 
+		margin-bottom: 35px
+
+		&-input_wrap
+			position: relative
+
+			&::before 
+				content: "$"
+				display: block
+				position: absolute
+				height: 100%
+				top: 0
+				left: 0
+				width: 38px
+				border-right: 1px solid $bg
+				display: flex 
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				font-size: 12px 
+				font-weight: bold
+				padding-left: 4px
+
+
+			.input-block 
+				font-size: 12px 
+				font-weight: bold
+				border-radius: 19px 
+				border: 1px solid $bg 
+				padding-left: 48px
+				padding-top: 11px
+				padding-bottom: 11px
+				width: 100%
+				transition: 0.3s all ease-in-out
+
+				&.disabled
+					color: $bg 
+					transition: 0.3s all ease-in-out
+
+				&:focus 
+					outline: none 
+
+			.input-block-notify 
+				display: none 
+				position: absolute
+				color: $subaccent_1
+				top: 100%
+				margin-top: 2px
+				left: 0
+				font-size: 11px 
+				font-weight: 300
+
+			&.error 
+				.input-block-notify 
+					display: block
+
+
+		&-output 
+
+			.titles-row 
+				display: flex 
+				flex-direction: row 
+				justify-content: flex-start
+				align-items: center
+
+				.table-block-subtitle 
+					width: 33.33333%
+
+			.outputs-row 
+				display: flex 
+				flex-direction: row 
+				justify-content: flex-start
+				align-items: center
+				border: 1px solid $bg 
+				border-radius: 19px 
+
+				.output 
+					padding-left: 10px
+					width: 33.33333%
+					padding-top: 7px
+					padding-bottom: 7px
+					font-size: 20px 
+					font-weight: 900
+					color: $subaccent_2
+					transition: 0.3s all ease-in-out
+
+					&.disabled 
+						color: $bg
+						transition: 0.3s all ease-in-out
+
+					&:nth-child(2) 
+						border-left: 1px solid $bg
+						border-right: 1px solid $bg
+	
+	.submit-block 
+		display: flex 
+		flex-direction: row 
+		justify-content: center
+		align-items: center
+		margin-bottom: 10px 
+
+	&-select 
+
+		.nice-select 
+			position: relative
+			float: none
+			width: 100%
+			border: 1px solid $border-color
+			border-radius: 25px
+			padding-left: 55px
+
+			&::after 
+				right: 19px
+				border-width: 1px
+				border-color: #303030
+				margin-top: -3px
+
+			&::before 
+				content: ""
+				display: block 
+				position: absolute
+				top: 0
+				right: 40px
+				height: 100%
+				width: 40px
+				border-right: 1px solid $border-color
+
+			.num 
+				font-family: Arial, sans-serif
+
+			.current 
+				font-family: 'Helvetica Neue'
+				font-size: 14px
+
+				&::before 
+					content: ""
+					display: block
+					position: absolute 
+					top: 0
+					left: 0
+					width: 40px
+					height: 100%
+					border-right: 1px solid $border-color
+
+				&::after 
+					content: ""
+					position: absolute
+					top: 50%
+					margin-top: -6px
+					left: 16px
+					border-radius: 50%
+					width: 12px
+					height: 12px
+					background: transparent
+					transition: 0.25s all ease-in-out
+
+				&.current-green
+					&::after 
+						background: #33933E
+						transition: 0.25s all ease-in-out
+
+				&.current-red
+					&::after 
+						background: red
+						transition: 0.25s all ease-in-out
+
+				&.current-yellow
+					&::after 
+						background: yellow 
+						transition: 0.25s all ease-in-out
+
+
+			.list 
+				width: 100%
+				border-radius: 20px
+
+				li 
+					padding-left: 55px
+					position: relative
+					border-bottom: 1px solid $border-color
+
+					&::before 
+						content: ""
+						display: block
+						position: absolute 
+						top: 0
+						left: 0
+						width: 40px
+						height: 100%
+						border-right: 1px solid $border-color
+
+					&::after 
+						content: ""
+						position: absolute
+						top: 50%
+						margin-top: -6px
+						left: 16px
+						border-radius: 50%
+						width: 12px
+						height: 12px
+						background: transparent
+						transition: 0.25s all ease-in-out
+
+					&.option-green
+						&::after 
+							background: #33933E
+							transition: 0.25s all ease-in-out
+
+					&.option-red
+						&::after 
+							background: red
+							transition: 0.25s all ease-in-out
+
+					&.option-yellow
+						&::after 
+							background: yellow 
+							transition: 0.25s all ease-in-out
+		
+		&.select-no-colors 
+			.nice-select
+				padding-left: 12px
+				.list 
+					li 
+						padding-left: 12px
+
+
+	&-one-col 
+		margin-top: 30px
+
+		&-list 
+			padding-top: 17px
+			padding-bottom: 17px
+			border-bottom: 1px solid $accent
+			border-top: 1px solid $accent
+			list-style: none 
+			padding-left: 0
+			margin: 0
+
+			li 
+				padding-left: 25px
+				position: relative
+				padding-top: 6px
+				padding-bottom: 6px
+				display: flex 
+				flex-direction: row 
+				justify-content: space-between
+				font-size: 12px 
+
+				.table-value 
+					color: $subaccent_2
+					font-weight: bold
+
+				&::before 
+					content: ""
+					position: absolute
+					top: 50%
+					margin-top: -7px
+					left: 0
+					width: 14px
+					height: 14px
+					background: url('../img/green-yes.png') no-repeat
+
+	&-diagram 
+		margin-top: 30px
+
+		&-title
+			position: absolute
+			top: 55%
+			width: 100%
+			text-align: center
+			color: #7F7F7F
+			font-size: 18px
+
+		&-time 
+			position: absolute
+			width: 100%
+			text-align: center
+			top: 33%
+			color: #303030
+			font-size: 32px 
+			font-weight: 900
+
+		&-round 
+			width: 200px
+			height: 200px
+			margin-left: auto
+			margin-right: auto
+			position: relative
+
+	&-stage-block 
+		margin-top: 30px
+
+	&-stages 
+		list-style: none 
+		padding: 0
+		margin: 0
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		align-items: center
+
+		li 
+			padding-left: 3px
+			padding-right: 3px
+			flex-grow: 1
+			text-align: center
+			.num 
+				color: #A7A7A7
+				font-size: 16px 
+				margin-bottom: 5px
+				transition: 0.35s all ease-in-out
+
+			.indicator 
+				width: 92.49%
+				height: 10px
+				margin-left: auto
+				margin-right: auto
+				border-radius: 10px 
+				border: 1px solid #EAEAEA
+				margin-bottom: 5px
+				transition: 0.35s all ease-in-out
+
+			.sum 
+				color: #A7A7A7
+				font-weight: bold
+				font-size: 12px 
+				transition: 0.35s all ease-in-out
+
+			&.active 
+
+				.num 
+					color: $accent
+					transition: 0.35s all ease-in-out
+
+				.sum 
+					color: $subaccent_2 
+					transition: 0.35s all ease-in-out
+
+				.indicator 
+					background: $accent 
+					transition: 0.35s all ease-in-out	
+
+	&-input-date 
+		position: relative
+
+		.text-cover-date-input
+			width: 100%
+			position: absolute
+			z-index: 0
+			border-radius: 15px 
+			border: 1px solid $bg 
+			padding-left: 12px
+			padding-top: 7.6px
+			padding-bottom: 7.6px
+			font-size: 12px 
+			color: $heading_1
+
+		.date-input
+			position: relative
+			z-index: 9
+			padding-top: 4.4px
+			padding-bottom: 4.4px
+			width: 100%
+			font-size: 12px 
+
+	&-input-text 
+
+		input 
+			width: 100%
+			border-radius: 15px 
+			border: 1px solid $bg 
+			padding-left: 12px
+			padding-top: 7.6px
+			padding-bottom: 7.6px
+			font-size: 12px 
+			color: $heading_1
+
+			&:focus 
+				outline: none 
+
+	&-filter 
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap 
+		margin-bottom: 10px
+
+		&-type-2 
+			.table-block-filter-item 
+				&:nth-child(4) 
+					width: 11% 
+
+		.nice-select
+			height: auto
+			line-height: normal
+			padding-top: 5.5px
+			padding-bottom: 6.5px
+			padding-left: 24px
+			box-shadow: none 
+			border-radius: 15px 
+
+			&::before
+				display: none 
+
+			&::after 
+				right: 11px
+
+			.list
+				border-radius: 15px 
+
+				li 
+					padding-left: 24px
+					font-size: 12px 
+					min-height: 0 
+					line-height: normal 
+					height: auto
+					padding-top: 5px
+					padding-bottom: 5px
+
+					&:last-child
+						border-bottom: none 
+
+					&.option 
+						color: $heading_1
+
+
+					&:hover 
+						background: $accent
+						color: white 
+
+					&::before 
+						display: none 
+
+					&::after 
+						left: 7px
+
+
+					&[data-value="active"] 
+						&::after 
+							background: $subaccent_2
+					&[data-value="pending"] 
+						&::after 
+							background: $accent
+					&[data-value="rejected"] 
+						&::after 
+							background: $subaccent_1
+					&[data-value="bitcoin"] 
+						&::after 
+							background: url("../img/icon-cur-1.png") no-repeat
+							background-size: cover 
+					&[data-value="advanced_cash"] 
+						&::after 
+							background: url("../img/icon-cur-3.png") no-repeat
+							background-size: cover 
+					&[data-value="perfect_money"] 
+						&::after 
+							background: url("../img/icon-cur-2.png") no-repeat
+							background-size: cover 
+					&[data-value="payeer"] 
+						&::after 
+							background: url("../img/icon-cur-4.png") no-repeat
+							background-size: cover 
+
+						
+			.current
+				font-size: 12px 
+
+				&.pending 
+					&::after 
+						background: $accent
+				&.active 
+					&::after 
+						background: $subaccent_2
+				&.rejected 
+					&::after 
+						background: $subaccent_1
+				&.bitcoin 
+						&::after 
+							background: url("../img/icon-cur-1.png") no-repeat
+							background-size: cover 
+				&.advanced_cash 
+					&::after 
+						background: url("../img/icon-cur-3.png") no-repeat
+						background-size: cover 
+				&.perfect_money
+					&::after 
+						background: url("../img/icon-cur-2.png") no-repeat
+						background-size: cover 
+				&.payeer
+					&::after 
+						background: url("../img/icon-cur-4.png") no-repeat
+						background-size: cover 
+
+
+				&::after 
+					left: 7px
+
+				&::before
+					display: none 
+
+		&-item 
+			margin-bottom: 12px
+
+
+			&:nth-child(1) 
+				width: 21%
+				margin-right: 20px
+
+			&:nth-child(2) 
+				width: 20%
+				margin-right: 20px
+
+			&:nth-child(3) 
+				width: 20%
+				margin-right: 20px
+			
+			&:nth-child(4) 
+				width: 25%
+
+			&:nth-child(5) 
+				width: 20%
+				margin-right: 20px
+
+			&:nth-child(6) 
+				width: 20% 
+				margin-right: 20px
+
+		&-submit 
+			flex-grow: 1
+			display: flex 
+			flex-direction: row 
+			align-items: center
+			justify-content: flex-end
+
+			.btn-red 
+				margin-right: 20px
+
+
+	&-classic-table 
+		margin-bottom: 30px
+
+		.table-head 
+			padding-left: 20px
+			padding-right: 20px
+			margin-left: -20px
+			margin-right: -20px
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between
+			align-items: center
+			font-size: 12px 
+			font-weight: bold 
+			padding-top: 11.5px
+			padding-bottom: 11.5px
+			border-top: 1px solid $bg 
+			border-bottom: 1px solid $bg 
+
+			li
+
+				&:nth-child(1) 
+					width: 22%
+				&:nth-child(2) 
+					width: 17.2%
+				&:nth-child(3) 
+					width: 25%
+				&:nth-child(4) 
+					width: 17.6%
+				&:nth-child(5) 
+					width: 18%
+
+		.table-row 
+			padding-left: 20px
+			padding-right: 20px
+			margin-left: -20px
+			margin-right: -20px
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between
+			align-items: center
+			font-size: 12px 
+			height: 39px
+			border-bottom: 1px solid $bg 
+			transition: 0.3s all ease-in-out
+
+			&.before-show 
+				opacity: 0
+				height: 0
+				transform: scaleY(0)
+				border-width: 0
+				transition: 0.3s all ease-in-out
+			&.before-remove
+				height: 0
+				opacity: 0
+				transform: scaleY(0)
+				transition: 0.3s all ease-in-out
+
+			li
+
+				&:nth-child(1) 
+					width: 22%
+				&:nth-child(2) 
+					width: 17.2%
+				&:nth-child(3) 
+					width: 25%
+				&:nth-child(4) 
+					width: 17.6%
+				&:nth-child(5) 
+					width: 18%
+
+				&.wallet 
+					display: flex 
+					flex-direction: row 
+					justify-content: flex-start
+					align-items: center
+
+				.state-indicator 
+					width: 12px
+					height: 12px
+					border-radius: 50% 
+
+					&.active 
+						background: $subaccent_2
+
+					&.pending 
+						background: $accent
+
+					&.rejected 
+						background: $subaccent_1
+				
+				&.amount
+
+					&.amount-regular
+						.amount-value 
+							color: $subaccent_2
+							font-weight: normal
+
+					&.amount-value-regular-bottom
+						.amount-value
+							color: $subaccent_2
+							font-weight: bold 
+
+					
+
+				.amount-value 
+					display: inline-block
+					color: white 
+					border-radius: 7px 
+					padding-top: 1px
+					padding-bottom: 1.3px
+					padding-left: 5px
+					padding-right: 5px
+
+					&.plus 
+						background: $subaccent_2
+
+					&.minus 
+						background: $subaccent_1
+
+				.wallet-type 
+					width: 24px
+					height: 24px
+					border-radius: 50% 
+					margin-right: 10px
+
+					&-bitcoin 
+						background: url('../img/icon-cur-1@2x.png') no-repeat
+						background-size: cover 
+
+					&-perfect-money 
+						background: url('../img/icon-cur-2@2x.png') no-repeat
+						background-size: cover 
+
+					&-avdanced-cash 
+						background: url('../img/icon-cur-3@2x.png') no-repeat
+						background-size: cover 
+
+					&-payeer 
+						background: url('../img/icon-cur-4@2x.png') no-repeat
+						background-size: cover 
+
+				.wallet-details 
+					width: 24px
+					height: 24px
+					border-radius: 50% 
+					margin-right: 10px
+					background: url('../img/icon-view@2x.png') no-repeat
+					background-size: cover 
+
+				.wallet-link-out 
+					position: relative
+					width: 24px
+					height: 24px
+					border-radius: 50% 
+					border: 1px solid $accent
+					transition: 0.3s all ease-in-out
+
+					&::after 
+						content: ""
+						width: 12px
+						height: 12px
+						display: block 
+						position: absolute
+						top: 50%
+						margin-top: -6px
+						left: 50%
+						margin-left: -6px
+						background: url('../img/icon-link-out.svg') center no-repeat
+						background-size: cover 
+						transition: 0.3s all ease-in-out
+
+
+					&:hover 
+						
+						&::after 
+							transform: scale(1.1)
+							transition: 0.3s all ease-in-out
+
+
+			&-bottom 
+				justify-content: flex-end
+				padding-right: calc(20px + 7.5%)
+
+				li
+
+					&:nth-child(1) 
+						width: auto
+					&:nth-child(2) 
+						width: auto
+					&:nth-child(3) 
+						width: auto
+					&:nth-child(4) 
+						width: auto
+					&:nth-child(5) 
+						width: auto
+
+					&.amount 
+						width: 23%
+						text-align: right
+
+						.amount-value
+							font-weight: bold
+							padding-bottom: 1.5px
+
+	
+//=================================
+// DATEPICKER
+
+.date-input 
+	opacity: 0
+
+.ui-datepicker
+	background: #fff
+	border-radius: 4px 
+	padding: 0
+	font-family: 'Helvetica Neue'
+	font-size: 12px 
+	font-weight: bold 
+	width: 250px
+	box-shadow: 0 0 2px 2px rgba(0,0,0,0.03)
+
+	.ui-datepicker-next 
+		cursor: pointer
+		width: 21px
+		height: 21px
+		top: 50%
+		right: 16px
+		margin-top: -10.5px
+		border-radius: 50% 
+		background: #fff
+		transition: 0.25s all ease-in-out
+
+		&:hover 
+			background: lighten($accent, 30%)
+			transition: 0.25s all ease-in-out
+
+			span 
+				transform: scale(1.1) rotate(135deg)
+				border-color: white 
+				transition: 0.25s all ease-in-out
+
+		span
+			top: 50%
+			margin-top: -4px
+			left: 60%
+			transform: rotate(135deg)
+			display: block 
+			position: absolute
+			width: 8px
+			height: 8px
+			border-top: 1px solid $border
+			border-left: 1px solid $border
+			transition: 0.25s all ease-in-out
+
+	.ui-datepicker-prev
+		cursor: pointer
+		width: 21px
+		height: 21px
+		left: 16px
+		top: 50%
+		margin-top: -10.5px		
+		border-radius: 50% 
+		background: #fff
+		transition: 0.25s all ease-in-out
+
+		&:hover 
+			background: lighten($accent, 30%)
+			transition: 0.25s all ease-in-out
+
+			span 
+				transform: scale(1.1) rotate(-45deg)
+				border-color: white 
+				transition: 0.25s all ease-in-out
+
+		span
+			top: 50%
+			margin-top: -4px
+			left: 75%
+			transform: rotate(-45deg)
+			display: block 
+			position: absolute
+			width: 8px
+			height: 8px
+			border-top: 1px solid $border
+			border-left: 1px solid $border
+			transition: 0.25s all ease-in-out
+
+	.ui-datepicker-header 
+		background: $bg
+		padding-left: 25px
+		padding-right: 25px
+		padding-top: 4.5px
+		padding-bottom: 4.5px
+		width: 100%
+		border-radius: 4px 4px 0 0
+
+		.ui-datepicker-title
+			font-family: 'Helvetica Neue'
+			font-size: 12px 
+			font-weight: bold 
+
+	.ui-datepicker-calendar
+		width: 90%
+		margin-left: auto
+		margin-right: auto
+
+		th 
+			color: #7F7F7F
+			text-transform: uppercase
+			text-align: center
+
+		td 
+			margin-top: 3px
+			margin-bottom: 3px
+			margin-left: 3px
+			margin-right: 3px
+			width: 32px
+			height: 32px
+			border-radius: 50%
+			transition: 0.25s all ease-in-out
+			position: relative
+
+			&:hover 
+
+				a 
+					color: white 
+					transition: 0.25s all ease-in-out
+
+				&::after 
+					transform: scale(1)
+					transition: 0.25s all ease-in-out
+
+			
+			&::after 
+				width: 70%
+				height: 70%
+				content: "" 
+				display: block
+				background: lighten($accent, 30%)
+				border-radius: 50%
+				position: absolute
+				top: 15%
+				left: 15%
+				z-index: -1
+				transform: scale(0)
+				transition: 0.25s all ease-in-out
+
+
+			&.ui-datepicker-today 
+				
+				&::after 
+					width: 80%
+					height: 80%
+					left: 10%
+					top: 10%
+					background: lighten($accent, 30%)
+					transform: scale(1)
+				a 
+					color: white
+
+			&.ui-datepicker-current-day
+				&::after 
+					width: 80%
+					height: 80%
+					left: 10%
+					top: 10%
+					background: $accent
+					transform: scale(1)
+				a 
+					color: white 
+
+			&.ui-datepicker-other-month 
+
+				&:hover 
+					a 
+						color: white 
+				a 
+					color: #E5E5E5
+			a 
+				text-align: center
+				color: #999999
+				transition: 0.25s all ease-in-out
+
+
+
+
+
+//=================================
+// NEWSLIST PAGE 
+
+.newslist 
+
+	&-item 
+		display: block 
+		background: white 
+		box-shadow: 0 3px 6px 2px rgba(0,0,0,0.1)
+		padding-bottom: 12px
+		margin-bottom: 30px
+		cursor: pointer
+		transition: 0.25s all ease-in-out
+		max-width: 480px 
+		margin-left: auto
+		margin-right: auto
+
+		&:hover 
+			transform: translateY(-4px)
+			box-shadow: 0 7px 8px 3px rgba(0,0,0,0.15)
+			transition: 0.25s all ease-in-out
+
+		&-img-block 
+			position: relative
+			margin-bottom: 10px
+			overflow: hidden
+			max-height: 280px
+
+			&:hover 
+
+				img 
+					transform: scale(1.25) 
+					transition: 0.4s all ease-in-out
+
+			img 
+				width: 100%
+				transition: 0.4s all ease-in-out
+
+		&-title 
+			font-size: 24px 
+			line-height: 32px
+			padding-left: 11px
+			padding-right: 10px
+			margin-bottom: 11px
+			font-weight: 900
+
+		&-date 
+			font-size: 14px 
+			padding-left: 11px
+
+
+//=================================
+// NEWSITEM PAGE 
+
+
+.newsitem 
+	
+
+	&-wrapper 
+		padding: 30px
+		padding-bottom: 40px
+		box-shadow: 0px 3px 6px 2px rgba(0,0,0,0.1)
+		background: white 
+	
+	&-img-block
+		margin-bottom: 20px
+		img 
+			width: 100%
+	
+	&-title 
+		font-size: 40px 
+		vertical-align: middle
+		display: inline-block
+		margin-right: 20px 
+		font-weight: 900
+
+	&-date 
+		position: relative
+		transform: translateY(3px)
+		vertical-align: middle
+		display: inline-block
+		border-radius: 24px 
+		background: $accent
+		padding: 3px 12px 
+		color: white 
+		font-size: 20px 
+
+	&-text 
+		p 
+			font-size: 24px 
+			line-height: 36px
+			padding-right: 20px
+
+	&-bottom 
+		margin-top: 50px
+		text-align: center
+
+		.yellow-btn
+			display: inline-block
+
+
+//=================================
+// LIVE STATS PAGE 
+
+.popover 
+	position: absolute
+	top: 0
+	left: 0
+	border-radius: 4px 
+	background: rgba(0,0,0,0.6) 
+	padding: 5px
+	padding-bottom: 5.4px 
+	opacity: 0
+	transition: 0.4s all ease-in-out
+	pointer-events: none 
+	display: flex 
+	flex-direction: column 
+	justify-content: center
+	align-items: center
+	min-width: 76px 
+
+	&.hidden-on-start 
+		opacity: 0 !important
+
+
+	&::after 
+		content: "" 
+		display: block 
+		position: absolute
+		top: 99.9%
+		left: 50%
+		margin-left: -4px
+		width: 0
+		height: 0
+		border-style: solid 
+		border-width: 4px 4px 0 4px 
+		border-color: rgba(0,0,0,0.6) transparent transparent transparent 
+
+	&.active 
+		opacity: 1
+		transition: 0.4s all ease-in-out
+
+	&-title 
+		font-weight: bold
+		font-size: 12px 
+		color: white 
+		margin-bottom: 6px
+
+	&-param 
+		position: relative
+		padding-left: 17px
+		font-size: 12px 
+		color: white 
+		margin-bottom: 6px
+
+		&:last-child 
+			margin-bottom: 0
+
+		&.red 
+			&::after 
+				border: 2px solid $subaccent_1
+
+		&.green 
+			&::after 
+				border: 2px solid $subaccent_2
+
+		&::after 
+			position: absolute
+			content: "" 
+			display: block 
+			top: 50%
+			left: 0
+			margin-top: -5.3px
+			height: 10px
+			width: 10px
+			box-sizing: border-box 
+			border-radius: 50% 
+			background: white  
+
+
+.livestats 
+
+	.table-block-classic-table
+		overflow: hidden
+
+	&-simple-block 
+		margin-bottom: 30px
+
+		.table-block 
+			box-shadow: 0 3px 4px 2px rgba(0,0,0,0.1)
+			padding-bottom: 30px
+			padding-left: 0
+			padding-right: 0
+
+			.table-block-classic-table
+				.table-row
+					margin-left: 0
+					margin-right: 0
+				.table-head
+					margin-left: 0
+					margin-right: 0
+
+	&-graph-weekly-graph
+		
+
+	.main-info-block-title 
+		margin-bottom: 20px
+
+		.small-text 
+			font-size: 12px 
+			color: $border
+			font-weight: normal
+
+	&-graph-block
+		background: white 
+		border-radius: 4px 
+		box-shadow: 0 3px 4px 2px rgba(0,0,0,0.1)
+		padding: 20px
+		padding-top: 18px
+		padding-bottom: 18px
+		display: flex 
+		flex-direction: row 
+		justify-content: flex-start
+		align-items: center
+
+	&-graph 
+
+		&-item 
+			display: flex 
+			flex-direction: column 
+			justify-content: center
+			align-items: flex-start
+
+			&.livestats-graph-diagram 
+				width: 31%
+				padding-right: 20px
+				border-right: 1px solid $bg
+
+		&-circle 
+			position: relative
+			margin-bottom: 20px
+			display: flex 
+			align-self: center
+
+			&::after 
+				content: ""
+				display: block 
+				position: absolute
+				width: 33px
+				height: 29px
+				background: url('../img/icon-deposit-diagram-grey.svg') no-repeat
+				background-size: cover 
+				top: 50%
+				margin-top: -17px
+				left: 50%
+				margin-left: -17px
+
+		&-param 
+			padding-top: 7px
+			padding-bottom: 7px
+			width: 100%
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between
+			align-items: center
+
+			&.param-red 
+				.livestats-graph-label::after 
+					border: 2px solid $subaccent_1
+
+			&.param-green 
+				.livestats-graph-label::after 
+					border: 2px solid $subaccent_2
+
+			&.param-yellow 
+				.livestats-graph-label::after 
+					border: 2px solid $accent
+
+		&-label 
+			font-size: 12px 
+			color: $border 
+			padding-left: 20px
+			position: relative
+
+			&::after 
+				content: "" 
+				position: absolute
+				display: block 
+				top: 50%
+				margin-top: -5.3px
+				left: 0
+				width: 10px
+				height: 10px
+				border-radius: 50% 
+
+		&-value 
+			font-size: 12px 
+
+		&-weekly-graph 
+			padding-left: 20px 
+			padding-right: 20px
+			width: 33.5%
+
+		&-users-stats
+			padding-left: 20px 
+			padding-right: 0px
+			border-left: 1px solid $bg
+			flex-grow: 1
+
+			.livestats-graph-param 
+				padding-top: 6px
+				padding-bottom: 6px
+
+			.param-yellow
+				.livestats-graph-value
+					color: $accent
+			.param-red
+				.livestats-graph-value
+					color: $subaccent_1
+			.param-green
+				.livestats-graph-value
+					color: $subaccent_2
+
+		&-list-horizontal 
+			width: 100%
+			margin-bottom: 15px
+
+			.horizontal-line 
+				height: 30px
+				margin-bottom: 9px
+				width: 50%
+				border-radius: 0 15px 15px 0
+
+				&-yellow 
+					background: $accent
+				&-red 
+					background: $subaccent_1
+				&-green 
+					background: $subaccent_2
+
+				&:last-child
+					margin-bottom: 0
+
+		&-vertical-list 
+			width: 100%
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between
+			align-items: center
+			padding-top: 115px
+			margin-bottom: 10px
+
+			li 
+				position: relative
+				display: flex 
+				flex-direction: row 
+				justify-content: center
+				align-items: center
+				width: 14.285%
+				text-align: center
+
+				&:hover 
+
+					.graph-label 
+						color: white 
+						background: $accent
+						transition: 0.3s all ease-in-out
+
+			.graph-line 
+				position: absolute
+				bottom: 100%
+				margin-bottom: 7px
+				width: 100%
+				left: 0
+				padding-left: 14.5%
+				padding-right: 14.5%
+
+				.green-line 
+					width: 100%
+					height: 50px
+					background: $subaccent_2
+					min-height: 10px !important 
+
+				.red-line 
+					width: 100%
+					height: 50px
+					background: $subaccent_1
+					border-radius: 75px 75px 0 0
+					min-height: 10px !important 
+
+
+			.graph-popover 
+				position: absolute
+				z-index: -9999
+				display: none 
+
+			.graph-label 
+				width: 18px
+				height: 18px
+				display: flex 
+				flex-direction: column 
+				justify-content: center
+				align-items: center
+				align-self: center
+				font-size: 12px 
+				color: $border 
+				border-radius: 50% 
+				background: transparent
+				transition: 0.3s all ease-in-out
+
+
+.table-block-classic-table.table-last-reg 
+	background: white 
+	padding-left: 20px
+	padding-right: 20px
+	border-radius: 4px 
+	box-shadow: 0 3px 4px 2px rgba(0,0,0,0.1)
+	padding-top: 1px
+
+	.table-head 
+		border-top: none 
+
+		li 
+			&:nth-child(1) 
+				width: 30%
+			&:nth-child(2) 
+				width: 30%
+			&:nth-child(3) 
+				width: 18%
+
+
+	.table-row 
+
+		&:last-child
+			border: none 
+
+		li 
+			&:nth-child(1) 
+				width: 30%
+			&:nth-child(2) 
+				width: 30%
+				display: flex 
+				flex-direction: row 
+				justify-content: flex-start 
+				align-items: center
+			&:nth-child(3) 
+				width: 18%
+
+			.icon-color 
+				margin-right: 5px
+				width: 12px
+				height: 12px
+				border-radius: 50% 
+				overflow: hidden
+
+				
+.table-block-classic-table_type2 
+	padding-top: 0
+
+
+	.table-head
+		border-top: none
+
+		li 
+			&:nth-child(1) 
+				width: 20%
+			&:nth-child(2)
+				width: 22%
+			&:nth-child(3) 
+				width: 20%
+			&:last-child 
+				width: 12%
+	.table-row
+
+		li 
+			&:nth-child(1) 
+				width: 20%
+			&:nth-child(2)
+				width: 22%
+				display: flex 
+				flex-direction: row 
+				justify-content: flex-start 
+				align-items: center
+			&:nth-child(3) 
+				width: 20%
+			&:last-child 
+				width: 12%
+
+			.icon-color 
+				margin-right: 5px
+				width: 12px
+				height: 12px
+				border-radius: 50% 
+				overflow: hidden
+
+
+
+.table-block-classic-3-col 
+
+	.table-head
+		li 
+			&:nth-child(1)
+				width: 35%
+			&:nth-child(2)
+				width: 35%
+
+	.table-row
+		li 
+			&:nth-child(1)
+				width: 35%
+			&:nth-child(2)
+				width: 35%
+				display: flex 
+				flex-direction: row 
+				justify-content: flex-start 
+				align-items: center
+				.icon-color 
+					margin-right: 5px
+					width: 12px
+					height: 12px
+					border-radius: 50% 
+					overflow: hidden
+
+			&.amount-regular.amount
+
+				.amount-value 
+					color: $subaccent_2
+					font-weight: normal
+
+				
+//=================================
+// PARTNERSHIP PAGE 
+
+.partners 
+
+	.main-info-block
+		margin-bottom: 35px
+
+.rank-stats 
+	padding: 20px
+	border-radius: 4px 
+	box-shadow: 0 3px 4px 2px rgba(0,0,0,0.1) 
+	background: white 
+
+	#my-rank 
+		// width: 360px
+		// height: 208px
+
+	&-graph 
+		padding-top: 45px
+		display: flex 
+		flex-direction: row 
+		justify-content: center
+		align-items: center
+		position: relative
+		max-width: 550px
+		margin-left: auto
+		margin-right: auto 
+
+		&-arrow 
+			position: absolute
+			top: 138px
+			left: 50%
+			margin-left: -8px
+			width: 15px
+			height: 107px
+			background: url('../img/rank-arrow.svg') no-repeat
+			transform: rotate(-90deg) 
+			transform-origin: 50% 99.5px
+			transition: ease-out
+
+	&-point 
+		position: absolute 
+		width: 25px
+		height: 25px
+		display: flex 
+		flex-direction: column 
+		justify-content: center
+		align-items: center
+		font-weight: bold 
+		font-size: 12px 
+		color: white 
+		border-radius: 50% 
+
+		&-1 
+			top: 60%
+			left: 3%
+			background: $border 
+		&-2 
+			top: 18%
+			left: 27%
+			background: $subaccent_1
+		&-3 
+			top: 18%
+			right: 27%
+			background: $accent
+		&-4 
+			top: 60%
+			right: 3%
+			background: $subaccent_2
+
+	&-canvas-wrap
+		position: relative
+
+	&-value 
+		position: absolute
+		font-size: 12px 
+		font-weight: 100 
+
+		&-1 
+			bottom: 10px
+			left: 50%
+			margin-left: -78px
+
+		&-2 
+			top: 67%
+			left: 33%
+
+		&-3 
+			top: 57%
+			left: 45.5%
+		&-4 
+			top: 67%
+			right: 33%
+		&-5 
+			bottom: 10px
+			right: 50%
+			margin-right: -78px
+
+	&-item 
+		position: absolute
+		display: flex 
+		flex-direction: column 
+		justify-content: center
+		align-items: center
+
+		.rank-human-icon 
+			width: 10px
+			height: 24px
+			margin-bottom: 2px
+
+		.rank-name 
+			font-size: 12px 
+			margin-bottom: 4px
+
+		.rank-percentage 
+			font-size: 12px 
+
+		.rank-stars 
+			margin-bottom: 4px
+
+		&-1 
+			bottom: 21px
+			left: 0
+			.rank-human-icon 
+				background: url('../img/icon-human-1.svg') no-repeat
+				background-size: cover 
+		&-2 
+			top: 0
+			left: 20%
+			.rank-human-icon 
+				background: url('../img/icon-human-2.svg') no-repeat
+				background-size: cover 
+		&-3 
+			top: 0
+			right: 20%
+			.rank-human-icon 
+				background: url('../img/icon-human-3.svg') no-repeat
+				background-size: cover 
+		&-4 
+			bottom: 21px
+			right: 0
+			.rank-human-icon 
+				background: url('../img/icon-human-4.svg') no-repeat
+				background-size: cover 
+	
+	&-info 
+		margin-top: 15px
+
+		&-main 
+			display: flex 
+			flex-direction: row 
+			justify-content: center
+			align-items: center
+			align-self: center
+			margin-bottom: 10px
+
+			.rank-label 
+				font-size: 13px 
+				padding-top: 5.4px
+				padding-bottom: 5.4px
+				padding-left: 12px
+				padding-right: 18px
+				border: 1px solid $bg 
+				border-radius: 14px 0 0 14px 
+
+			.rank-rate 
+				border: 
+					top: 1px solid $bg
+					bottom: 1px solid $bg
+				padding: 4px 5px 
+			
+			.rank-money 
+				color: $subaccent_2
+				font-size: 20px 
+				padding-top: 1px
+				padding-bottom: 1px
+				padding-right: 11px
+				padding-left: 7px
+				border: 1px solid $bg 
+				border-radius: 0 14px 14px 0
+				background: $bg 
+				font-weight: 900
+
+	&-attention 
+		
+		.attention-title 
+			font-size: 12px 
+			font-weight: bold 
+			color: $subaccent_1 
+			padding-left: 18px
+			background: url('../img/icon-attention.svg') center left no-repeat 
+			background-size: 12px 12px 
+			padding-top: 2px
+			padding-bottom: 2px
+			border-bottom: 1px solid $bg 
+			margin-bottom: 10px
+
+		.attention-point 
+			padding-left: 15px
+			position: relative 
+			font-size: 10px 
+			font-weight: 300
+			color: $border 
+			margin-bottom: 7px
+
+			&:last-child 
+				margin-bottom: 0
+
+			&::after 
+				content: "" 
+				display: block 
+				position: absolute
+				top: 50%
+				margin-top: -4.5px
+				left: 0
+				width: 8px
+				height: 8px
+				border-radius: 50% 
+				border: 3.5px solid $subaccent_1 
+				background: white 
+
+	
+	
+.cashback
+	padding: 20px
+	border-radius: 4px 
+	box-shadow: 0 3px 4px 2px rgba(0,0,0,0.1) 
+	background: white 
+
+	&-level 
+		margin-bottom: 10px
+
+		&-label 
+			font-size: 12px 
+			font-weight: bold 
+			margin-bottom: 10px
+
+		&-range 
+
+		&-scale 
+			position: relative
+			width: 100%
+			margin-top: 8px
+			height: 20px
+			margin-bottom: 10px
+
+			li 
+				position: absolute
+				font-size: 12px 
+
+				&:first-child 
+					margin-left: 0 !important
+
+				&:last-child 
+					margin-left: -13px !important
+
+				&::after 
+					content: "" 
+					display: block 
+					position: absolute
+					bottom: 100%
+					margin-bottom: 2px
+					left: 50%
+					margin-left: -0.5px
+					width: 0.8px
+					height: 6px
+					background: $bg 
+
+	&-bottom 
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between 
+		align-items: bottom 
+		margin-bottom: 8px
+
+	&-tax 
+		width: 47%
+
+		&-label 
+			font-size: 14px 
+			font-weight: bold 
+			margin-bottom: 7px
+
+		&-input 
+			width: 100%
+			padding-left: 50px
+			padding-top: 11.2px
+			padding-bottom: 11.2px
+			border: 1px solid $bg 
+			border-radius: 20px  
+			color: $subaccent_1
+			font-size: 12px 
+			font-weight: 300
+
+			&-wrapper
+				position: relative
+
+				&::after 
+					content: ""
+					width: 40px
+					height: 100%
+					position: absolute
+					left: 0
+					top: 0
+					display: block 
+					background: url('../img/icon-tax.svg') no-repeat 
+					background-size: 18px 18px 
+					background-position: 13px center
+					border-right: 1px solid $bg
+
+	&-submit 
+		display: flex 
+		flex-direction: column 
+		justify-content: flex-end 
+		padding-bottom: 2px
+
+
+.copylinks 
+	min-height: 315px 
+	padding: 20px
+	padding-top: 30px
+	border-radius: 4px 
+	box-shadow: 0 3px 4px 2px rgba(0,0,0,0.1) 
+	background: white 
+
+	&-title 
+		font-size: 12px 
+		font-weight: bold 
+		margin-bottom: 8px
+
+	&-main
+		display: flex 
+		flex-direction: column 
+		justify-content: flex-start
+		align-items: flex-start
+		margin-bottom: 20px
+
+		&-wrap 
+			display: flex 
+			flex-direction: row 
+			justify-content: flex-start
+			align-items: center
+			border: 1px solid $bg 
+			border-radius: 20px 
+			position: relative
+
+		&-linkout 
+			display: block 
+			width: 40px
+			height: 38px
+			background: url('../img/icon-link-out.svg') center no-repeat 
+			background-size: 12px 12px 
+			background-position: 55% center
+			
+			transition: 0.3s all ease-in-out
+
+			&:hover 
+				transform: scale(1.2)
+				transition: 0.3s all ease-in-out
+
+		&-link 
+			height: 100%
+			height: 38px
+			border-left: 1px solid $bg 
+			font-size: 12px 
+			color: $link 
+			font-weight: 300
+			padding-left: 10px
+			padding-top: 11.2px
+			padding-bottom: 11.2px
+			padding-right: 50px
+			font-weight: 300
+
+		&-copy 
+			font-size: 14px 
+			font-weight: bold 
+			color: #fff
+			height: 38px
+			border-left: 1px solid $bg
+			padding-left: 37px 
+			line-height: 38px
+			padding-right: 15px
+			border-radius: 0 20px 20px 0
+			background: url('../img/icon-copy.svg') no-repeat $accent
+			background-size: 12px 14px 
+			background-position: 13px center
+
+			&:hover 
+				opacity: .8
+				transition: 0.25s all ease-in-out 
+
+			&:active 
+				opacity: .5
+				transition: 0.25s all ease-in-out 
+
+
+			&:visited 
+				color: white 
+
+	&-banner
+
+		&-wrap 
+			margin-bottom: 10px
+			display: flex 
+			flex-direction: row 
+			justify-content: flex-start
+			align-items: stretch
+
+		&-size 
+			font-size: 12px 
+			padding-left: 12px
+			padding-right: 18px
+			padding-top: 8.2px
+			padding-bottom: 6.2px
+			border: 1px solid $bg 
+			border-radius: 20px 0 0 20px 
+			border-right: none 
+
+		&-view 
+			cursor: pointer
+			background: url('../img/icon-view.svg') center no-repeat 
+			background-size: 18px 10px 
+			width: 30px
+			border: 1px solid $bg 
+
+		&-link 
+			flex-grow: 1
+			color: $link 
+			font-size: 12px 
+			padding-top: 7.2px
+			padding-bottom: 7.2px
+			padding-left: 10px
+			font-weight: 300
+			border: 1px solid $bg 
+			border-left: none 
+
+		&-copy 
+			cursor: pointer
+			width: 30px
+			border: 1px solid $bg
+			border-left: none 
+			border-radius: 0 20px 20px 0
+			background: url('../img/icon-copy.svg') no-repeat center $accent
+			background-size: 12px 14px 
+
+			&:hover 
+				opacity: .8
+				transition: 0.25s all ease-in-out 
+
+			&:active 
+				opacity: .5
+				transition: 0.25s all ease-in-out 
+
+
+.chart-block 
+	font-family: 'Helvetica Neue'
+	position: relative
+	box-shadow: 0 3px 4px 2px rgba(0,0,0,0.1)
+	padding: 0
+
+	&-wrapper 
+		padding: 20px
+
+	&-levels 
+
+		.levels-wrapper 
+			display: flex 
+			flex-direction: row 
+			justify-content: flex-start
+			align-items: center 
+			position: relative 
+			padding-top: 15px
+			padding-bottom: 15px
+			padding-left: 15px
+
+			.save-button
+				position: absolute 
+				right: 0
+				top: 0
+
+			.chart-block-summary 
+				flex-direction: column 
+				align-items: flex-start
+				margin-bottom: 0
+				margin-left: 10%
+				width: 40%
+
+				.legend-item 
+					margin-bottom: 33px
+					margin-right: 0
+					white-space: nowrap
+
+					&:last-child 
+						margin-bottom: 0
+
+	&-summary 
+		padding-right: 10px
+		margin-bottom: 25px
+		display: flex 
+		flex-direction: row 
+		justify-content: flex-end 
+		align-items: center 
+
+		.legend-item 
+			margin-right: 30px
+			padding-left: 20px
+			position: relative 
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between
+			align-items: bottom
+
+			&::before 
+				content: ""
+				display: block 
+				position: absolute 
+				width: 10px
+				height: 10px
+				border-radius: 50% 
+				background: white 
+				top: 3px
+				// margin-top: -5px
+				left: 0
+
+			&-green 
+				&::before 
+					border: 2px solid $subaccent_2
+			&-red 
+				&::before 
+					border: 2px solid $subaccent_1
+			&-yellow
+				&::before 
+					border: 2px solid $accent
+
+			&-title 
+				font-weight: 300
+				font-size: 12px 
+				color: $border 
+				margin-right: 32px
+
+			&-value 
+				//transform: translateY(1px)
+				white-space: nowrap
+				font-size: 12px 
+
+	.save-button 
+		border: none 
+		display: block 
+		background: url('../img/icon-save.svg') center no-repeat 
+		background-size: 14px 14px 
+		width: 18px
+		height: 18px
+		transition: 0.2s all ease-in-out
+		position: relative
+		z-index: 11
+		transform-style: preserve-3d
+		perspective: 100px 
+		&:hover 
+			//transform: scale(1.1)
+			transition: 0.2s all ease-in-out
+
+		&.loading 
+			.btn-preloader
+				animation: save_button 0.8s linear infinite 
+
+				
+	
+		.btn-preloader
+			position: absolute
+			top: -50%
+			left: -50%
+			width: 200%
+			height: 200%
+			display: block 
+			border-radius: 50% 
+			background: $accent 
+			opacity: 0
+			transform: translateZ(-5px) scale(0)
+
+		// &::before 
+		// 	content: ""
+		// 	display: block 
+		// 	position: absolute
+		// 	top: -50%
+		// 	left: -50%
+		// 	border-radius: 100px 100px 0 0
+		// 	width: 200%
+		// 	height: 100%
+		// 	border-top: 1px solid $accent 
+		// 	border-left: 1px solid $accent 
+		// 	border-right: 1px solid $accent 
+		// 	transform-origin: 50% 100%
+		// 	background: transparent
+		// 	opacity: 0
+		// 	transition: 0.25s opacity ease-in-out
+				
+			
+
+
+	.chart-tooltip-custom 
+		transition: 0.3s all ease-in-out 
+		pointer-events: none 
+		background: $bg 
+		border-radius: 4px 
+		z-index: 9999
+		//box-shadow: 0 1px 3px 1px rgba(0,0,0,0.1)
+
+		table 
+
+			thead 
+				 tr 
+				 	th 
+				 		text-align: left !important
+				 		font-size: 12px !important 
+				 		font-weight: bold !important 
+				 		color: $border !important 
+				 		padding-bottom: 3px !important
+
+			tbody 
+
+				tr 
+					td 
+						padding-bottom: 3px !important
+						span 
+							display: inline-block 
+							width: 9px
+							height: 9px
+							border-width: 2px 
+							border-style: solid 
+							background: white !important
+							border-radius: 50% 
+							margin-right: 5px
+
+	.polar-chart-wrapper 
+		width: 259px
+		height: 259px
+		padding: 9px
+		border-radius: 50% 
+		border: 1px solid $bg 
+
+
+.table-block-classic-table-4-col 
+
+	.table-row li:nth-child(2)
+		width: 25%
+
+	.table-head li:nth-child(2)
+		width: 25%
+
+
+.table-block-classic-table-6-col
+
+	.table-head
+
+		li 
+			&:nth-child(1)
+				width: 16%
+			&:nth-child(3)
+				width: 15%
+			&:nth-child(5)
+				width: 20%
+			&:nth-child(6)
+				width: 16%
+
+
+	.table-row
+
+		li 
+			&:nth-child(1)
+				width: 16%
+			&:nth-child(3)
+				width: 15%
+			&:nth-child(5)
+				width: 20%
+			&:nth-child(6)
+				width: 16%
+
+			&.amount 
+				&.amount-regular
+					.amount-value
+						font-weight: 300
+
+			&.level
+
+				.level-value 
+					width: 24px
+					height: 24px 
+					display: flex 
+					flex-direction: column 
+					justify-content: center
+					align-items: center
+					border: 1px solid $accent 
+					border-radius: 50%
+
+			&.contact-info 
+				display: flex 
+				flex-direction: row 
+				justify-content: flex-start
+				align-items: center
+				
+				.contact-info-link
+					display: block 
+					width: 24px
+					height: 24px
+					border: 1px solid $accent 
+					border-radius: 50%
+					margin-right: 5px
+
+					&:last-child
+						margin-right: 0px
+
+					&-mail 
+						background: url('../img/icon-contact-mail.svg') center no-repeat
+						background-size: 12px 12px 
+					&-telegram 
+						background: url('../img/icon-contact-telegram.svg') center no-repeat
+						background-size: 12px 12px 
+					&-skype 
+						background: url('../img/icon-contact-skype.svg') center no-repeat
+						background-size: 12px 12px 
+
+
+
+		&-bottom 
+			padding-right: 20px
+			li 
+				&:nth-child(1)
+					width: auto
+				&:nth-child(2)
+					width: 26%
+
+					border-radius: 50%
+	
+	
+// Range Slider 
+
+.ui-slider-horizontal
+	width: 100%
+	border-radius: 10px 
+	background: $bg 
+	height: 6px
+	background: linear-gradient(90deg, $accent 0%, $accent 10%, $bg 10.1%, $bg 100%)
+
+	.ui-slider-handle
+		width: 12px
+		height: 12px
+		border-radius: 50% 
+		background: linear-gradient(180deg, #FAFAFA 0%, #DDDDDD 100%) 
+		box-shadow: 0 1px 4px 1px rgba(0,0,0,0.35)
+		top: 50% 
+		margin-top: -7px
+		cursor: pointer
+		margin-left: -6px
+
+		&.ui-state-focus 
+			outline: none 
+
+
+//=================================
+// SETTINGS PAGE 
+
+.settings
+	margin-bottom: 30px
+
+	&-item 
+		margin-bottom: 25px	
+
+		&:nth-child(3) 
+			margin-bottom: 0	
+
+		&-password 
+			
+			.settings-input-icon 
+				background: url('../img/icon-password.svg') center no-repeat
+				background-size: 18px 18px 
+				background-position: 13px 10px 
+
+		&-login 
+
+			.settings-input-icon 
+				background: url('../img/icon-login.svg') center no-repeat
+				background-size: 18px 18px  
+
+		&-email 
+
+			.settings-input-icon 
+				background: url('../img/icon-email-letter.svg') center no-repeat
+				background-size: 18px 18px  
+
+		&-country  
+
+			.settings-input-icon 
+				background-size: 20px 20px
+				background-position: center 
+				position: relative
+
+				&::after 
+					content: "" 
+					display: block 
+					height: 18px	
+					width: 18px	
+					position: absolute
+					top: 50%	
+					margin-top: -8.8px	
+					left: 50%	
+					margin-left: -8.8px	
+					border-radius: 50% 
+					box-shadow: 0 0 0 10px white 
+					background: rgba(0,0,0,0) 
+
+		&-wallet 
+
+
+			&-bitcoin
+				.settings-input-icon
+					background: url('../img/icon-cur-1@2x.png') center no-repeat
+					background-size: 24px 24px  
+			&-perfect_money
+				.settings-input-icon
+					background: url('../img/icon-cur-3@2x.png') center no-repeat
+					background-size: 24px 24px
+			&-advanced_cash
+				.settings-input-icon
+					background: url('../img/icon-cur-2@2x.png') center no-repeat
+					background-size: 24px 24px
+			&-payeer
+				.settings-input-icon
+					background: url('../img/icon-cur-4@2x.png') center no-repeat
+					background-size: 24px 24px
+
+		&-representative 
+
+			.settings-input-icon 
+				background: url('../img/icon-representative.svg') center no-repeat
+				background-size: 18px 18px  
+
+		&-telegram 
+
+			.settings-input-icon 
+				background: url('../img/icon-contact-telegram.svg') center no-repeat
+				background-size: 18px 18px  
+
+		&-skype 
+
+			.settings-input-icon 
+				background: url('../img/icon-contact-skype.svg') center no-repeat
+				background-size: 18px 18px  
+
+	&-wrapper 
+		padding: 30px 20px  
+		border-radius: 4px 
+		box-shadow: 0 3px 4px 2px rgba(0,0,0,0.1) 
+		background: white 
+
+	&-subtitle 
+		font-size: 14px 
+		font-weight: bold 
+		margin-bottom: 5px 
+		height: 20px
+
+		.exp 
+			font-weight: 100 
+			color: $border
+
+		sup 
+			color: $subaccent_1
+
+	&-input-wrap 
+		border: 1px solid $bg 
+		border-radius: 25px 
+		height: 40px	
+		display: flex 
+		flex-direction: row 
+		justify-content: flex-start
+		align-items: center
+		transition: 0.25s all ease-in-out
+		position: relative
+
+		&::after 
+			content: " "
+			display: block 
+			position: absolute
+			opacity: 0
+			background: url('../img/icon-warning.svg') center no-repeat
+			transition: 0.25s all ease-in-out
+			top: 50%
+			width: 17px
+			height: 15px
+			margin-top: -7px
+			right: 55px
+			pointer-events: none 
+
+		&::before 
+			content: " "
+			display: block 
+			position: absolute
+			opacity: 0
+			background: url('../img/icon-check-big.svg') center no-repeat
+			transition: 0.25s all ease-in-out
+			top: 50%
+			width: 17px
+			height: 15px
+			margin-top: -7px
+			right: 55px
+			pointer-events: none 
+
+		&.success 
+			border-color: $subaccent_2 
+			transition: 0.25s all ease-in-out
+
+			&::before 
+				opacity: 1
+				transition: 0.25s all ease-in-out
+
+			.settings-input-icon 
+				border-color: $subaccent_2 
+				transition: 0.25s all ease-in-out
+
+			.settings-input-subbutton
+				border-color: $subaccent_2 
+				transition: 0.25s all ease-in-out
+
+			.settings-input-wallet-name
+				border-color: $subaccent_2
+				transition: 0.25s all ease-in-out
+
+
+		&.error 
+			border-color: $subaccent_1 
+			transition: 0.25s all ease-in-out
+
+			&::after 
+				opacity: 1
+				transition: 0.25s all ease-in-out
+
+			.settings-input-icon 
+				border-color: $subaccent_1 
+				transition: 0.25s all ease-in-out
+
+			.settings-input-subbutton
+				border-color: $subaccent_1 
+				transition: 0.25s all ease-in-out
+
+			.settings-notify
+				opacity: 1
+				transition: 0.25s all ease-in-out
+
+			.settings-input-wallet-name
+				border-color: $subaccent_1
+				transition: 0.25s all ease-in-out
+
+	&-input-icon 
+		width: 40px	
+		height: 100%	
+		border-right: 1px solid $bg 
+		transition: 0.25s all ease-in-out
+
+	&-input 
+		height: 100%
+		flex-grow: 1 
+		border: none 
+		line-height: 40px	
+		padding-left: 15px
+		font-size: 14px 
+		color: $border 
+		border-radius: 25px 
+
+		&:disabled
+			background: white 
+
+		&:focus 
+			outline: none 
+			color: $heading_1
+			transition: 0.25s all ease-in-out
+
+		&-wallet-name 
+			font-size: 12px 
+			width: 100px
+			height: 100%
+			line-height: 40px
+			border-right: 1px solid $bg 
+			text-align: center
+
+	&-input-subbutton 
+		width: 40px	
+		height: 100%	
+		border-left: 1px solid $bg 
+		cursor: pointer
+
+		&.skype-button 
+			background: url('../img/icon-contact-skype.svg') center no-repeat
+			background-size: 18px 18px 
+
+		&.telegram-button 
+			background: url('../img/icon-contact-telegram.svg') center no-repeat
+			background-size: 18px 18px 
+			background-position: 10px 11px 
+			filter: grayscale(100%)
+			opacity: .7	
+			transition: 0.3s all ease-in-out
+
+			&:hover 
+				filter: grayscale(0%) 
+				opacity: 1
+				transition: 0.3s all ease-in-out
+
+		&.edit-button 
+			background: url('../img/icon-correct.svg') center no-repeat
+			background-size: 13px 13px 
+
+		&.view-button 
+			background: url('../img/icon-view-password.svg') center no-repeat
+			background-size: 16px 13px 
+			background-position: 10px 11px 
+			position: relative
+			transition: 0.2s all ease-in-out
+
+			&::after 
+				height: 0.8px
+				width: 20px
+				position: absolute
+				top: 50% 
+				margin-top: -2px
+				left: 50%
+				margin-left: -10.5px
+				content: "" 
+				display: block 
+				background: $heading_1
+				transform: rotate(-45deg) scaleX(1)
+				transition: 0.2s all ease-in-out
+
+			&.active 
+				transition: 0.2s all ease-in-out
+				&::after 
+					transform: rotate(-45deg) scaleX(0) 
+					transition: 0.2s all ease-in-out
+
+	&-submit 
+		margin-top: 40px
+
+		&-wrap 
+			display: flex 
+			flex-direction: row 
+			justify-content: flex-end
+			align-items: center
+
+			.save-btn
+				margin-left: 20px
+
+	&-notify 
+		opacity: 0
+		position: absolute
+		top: 100%
+		margin-top: 5px
+		font-size: 12px 
+		font-weight: 300 
+		color: $subaccent_1 
+
+//=================================
+// REVIEWS PAGE 
+
+
+.reviews 
+
+	&-submit 
+		display: flex 
+		flex-direction: row 
+		justify-content: flex-end 
+		align-items: center
+
+	&-block 
+		padding: 30px  
+		border-radius: 4px 
+		box-shadow: 0 3px 4px 2px rgba(0,0,0,0.1) 
+		background: white 
+
+		&#reviews-2
+			background: none 
+			box-shadow: none 
+			padding: 0
+
+	&-input 
+		width: 100%
+		border: 1px solid $bg 
+		padding: 10.6px 20px 
+		padding-left: 15px
+		border-radius: 25px 
+		color: $border 
+		font-size: 14px 
+		transition: 0.25s all ease-in-out
+		margin-bottom: 8px
+
+		&-file 
+			position: absolute
+			width: 60px
+			height: 60px
+			opacity: 0
+			top: 0
+			left: 0
+			cursor: pointer !important
+
+			&.added 
+				width: 0
+				height: 0
+				pointer-events: none 
+
+		&:focus 
+			outline: none 
+			color: $heading_1
+			transition: 0.25s all ease-in-out
+
+		&-textarea 
+			resize: none 
+			border-radius: 4px 
+			min-height: 80px 
+
+		&-video 
+			border-radius: 0 25px 25px 0 
+
+		&-icon 
+			width: 40px
+			height: 40px
+			border: 1px solid $bg 
+			border-radius: 25px 0 0 25px 
+			background: url('../img/icon-youtube.svg') center no-repeat
+			background-size: 21px 21px 
+			border-right: none 
+
+		&-wrapper
+			display: flex 
+			flex-direction: row 
+			justify-content: flex-start
+			align-items: center
+			position: relative
+
+			.reviews-input 
+				flex-grow: 1 
+				margin-bottom: 0
+
+		&-photo-button 
+			width: 60px
+			height: 60px
+			border: 1px solid $accent 
+			border-radius: 2px 
+			padding-top: 35px
+			font-size: 12px 
+			text-align: center
+			background: url('../img/icon-photo-add.svg') no-repeat
+			background-size: 29px 27px 
+			background-position: 17px 8px 
+			margin-right: 20px
+			cursor: pointer 
+		
+		&-photo-item 
+			color: $link 
+			font-size: 14px 
+			margin-right: 10px
+			height: 60px
+			display: flex 
+			flex-direction: column
+			justify-content: center
+			align-items: center
+
+
+		&-item 
+			margin-bottom: 40px
+
+			&-attachments 
+				display: flex 
+				flex-direction: row 
+				justify-content: flex-start
+				align-items: center
+				flex-wrap: wrap
+
+				.reviews-input-add_text 
+					flex-grow: 1
+					color: $border 
+					font-weight: 100
+					font-size: 14px 
+					margin-left: 10px
+					color: $border
+					width: 80%
+					margin-bottom: 11px
+				.reviews-input-label 
+					margin-bottom: 12px
+
+				.reviews-input-wrapper 
+					flex-wrap: wrap 
+
+		&-label 
+			font-size: 14px 
+			font-weight: bold 
+			margin-bottom: 8px
+
+			sup 
+				color: $subaccent_1
+
+		&-count 
+			font-size: 12px 
+			display: flex 
+			flex-direction: row 
+			justify-content: flex-end
+			transition: 0.25s all ease-in-out
+
+			&.green 
+				color: $subaccent_2
+				transition: 0.25s all ease-in-out
+			&.yellow 
+				color: $accent
+				transition: 0.25s all ease-in-out
+			&.red 
+				color: $subaccent_1
+				transition: 0.25s all ease-in-out
+
+	&-subtitle
+		font-size: 14px 
+		font-weight: bold 
+		padding-bottom: 10px 
+		border-bottom: 1px solid $bg 
+		margin-bottom: 15px 
+
+	&-info-block 
+		font-size: 14px 
+		color: $border 
+		position: relative
+		padding-left: 30px
+		line-height: 22px
+		margin-bottom: 30px
+
+		&.allowed 
+			background: url('../img/icon-check-round.svg') left 2px no-repeat
+			background-size: 18px 18px 
+		&.warning
+			background: url('../img/icon-attention.svg') left 2px no-repeat
+			background-size: 18px 18px 
+
+	.publication
+		position: relative
+
+		&-date 
+			position: absolute
+			top: 2px
+			right: 0
+			font-size: 12px 
+
+
+		&-author 
+			display: flex 
+			flex-direction: row 
+			justify-content: flex-start
+			align-items: center 
+
+			&-country
+				margin-right: 6px
+				width: 12px
+				height: 12px
+				border-radius: 50%
+
+			&-name 
+				font-size: 14px 
+				font-weight: bold 
+
+		&-main 
+			margin-top: 20px
+			padding: 20px  
+			border-radius: 4px 
+			box-shadow: 0 3px 4px 2px rgba(0,0,0,0.1) 
+			background: white 
+			margin-bottom: 30px
+			position: relative
+
+		&-title 
+			font-size: 16px 
+			font-weight: bold 
+			margin-bottom: 20px
+
+		&-number
+			position: absolute 
+			top: 23px
+			right: 20px
+			font-size: 12px 
+
+		&-text 
+			font-size: 14px 
+			color: $border 
+			line-height: 22px
+			margin-bottom: 30px
+
+		&-addition 
+			display: flex 
+			flex-direction: row 
+			justify-content: flex-start
+			align-items: top
+
+			&-item 
+				margin-right: 10px
+				height: 60px
+				width: auto
+				position: relative
+
+				img 
+					height: 60px
+					width: auto
+
+				.video-button
+					position: absolute
+					top: 50%
+					margin-top: -9px
+					left: 50%
+					margin-left: -13px
+					width: 28px
+					height: 20px
+					background: url('../img/icon-play.svg') center no-repeat
+					background-size: 100%
+					transition: 0.25s all ease-in-out
+					cursor: pointer 
+
+					&:hover 
+						transform: scale(1.1)
+						transition: 0.25s all ease-in-out
+
+					&:active 
+						transform: scale(0.8)
+						transition: 0.15s all ease-in-out
+
+			&-icon 
+				width: 60px
+				height: 60px
+				border: 1px solid $bg 
+				background: url('../img/icon-file.svg') center no-repeat
+				background-size: 19px 24px 
+				margin-right: 20px
+
+			&-call-pic 
+				width: 360px
+				height: 60px
+				background: url('../img/share-call@2x.jpg') center no-repeat
+				background-size: 360px auto 
+
+	.pagination-wrapper
+		margin-top: 40px
+		display: flex 
+		flex-direction: row 
+		justify-content: center
+		align-items: center
+
+//=================================
+// singup PAGE 
+
+.account 
+	height: 100vh
+	min-height: 720px 
+	display: flex 
+	width: 100%
+
+	&-right
+		width: 50%
+		height: 100%
+		position: relative
+		overflow: hidden 
+		
+		img 
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+
+	&-left 
+		width: 50%
+		background: white 
+		min-height: 100%
+		padding: 35px
+		padding-top: 70px
+		position: relative
+		display: flex 
+		flex-direction: column
+		justify-content: center
+		align-items: flex-start
+
+
+		.logo 
+			width: 164px
+			position: absolute
+			top: 35px
+			left: 35px
+
+			img 
+				width: 100%
+	
+	&-header-title 
+		text-align: center
+		font-size: 32px 
+		margin-bottom: 30px
+		width: 100%
+		font-weight: 900
+
+	&-field
+		border: 1px solid $bg 
+		border-radius: 25px 
+		height: 40px
+		display: flex 
+		flex-direction: row 
+		justify-content: flex-start
+		align-items: center
+		position: relative
+
+		&::before 
+			content: "" 
+			position: absolute
+			display: block 
+			background: url('../img/icon-warning.svg') center no-repeat
+			width: 17px
+			height: 15px
+			background-size: cover 
+			right: 15px
+			top: 50%
+			margin-top: -7.5px 
+			transition: 0.25s all ease-in-out
+			opacity: 0
+
+		&::after
+			content: "" 
+			position: absolute
+			display: block 
+			background: url('../img/icon-check-big.svg') center no-repeat
+			width: 17px
+			height: 15px
+			background-size: 100% auto 
+			right: 15px
+			top: 50%
+			margin-top: -7.5px 
+			transition: 0.25s all ease-in-out
+			opacity: 0
+
+
+		&-item 
+			width: 100%
+			margin-bottom: 20px
+
+		&-label 
+			font-weight: bold 
+			font-size: 14px 
+			margin-bottom: 7px
+
+			sup 
+				color: $subaccent_1
+
+			.subtext 
+				font-size: 14px 
+				font-weight: 300 
+				color: $border 
+
+		&-icon 
+			height: 100%
+			width: 40px
+			min-width: 40px 
+			border-right: 1px solid $bg 
+			transition: 0.25s all ease-in-out
+
+		&-input 
+			border: none 
+			height: 100%
+			width: 100%
+			background: none 
+			font-size: 14px 
+			color: $border 
+			transition: 0.25s all ease-in-out
+			padding-left: 15px
+			border-radius: 25px 
+
+			&:focus 
+				outline: none 
+				color: $heading_1
+				transition: 0.25s all ease-in-out
+
+		&-login 
+			.account-field-icon 
+				background: url('../img/icon-login.svg') center no-repeat
+				background-size: 18px 18px 
+		&-email 
+			.account-field-icon 
+				background: url('../img/icon-email-letter.svg') center no-repeat
+				background-size: 18px 18px 
+		&-representative
+			.account-field-icon 
+				background: url('../img/icon-representative.svg') center no-repeat
+				background-size: 18px 18px 
+		&-representative
+			.account-field-icon 
+				background: url('../img/icon-representative.svg') center no-repeat
+				background-size: 18px 18px
+		&-password
+			.account-field-icon 
+				background: url('../img/icon-account-password.svg') center no-repeat
+				background-size: 18px 18px
+
+			&::after 
+				right: 55px
+				z-index: 1
+				pointer-events: none 
+			&::before 
+				right: 55px
+				z-index: 1
+				pointer-events: none 
+
+			&-singin 
+				&::after 
+					right: 193px
+					z-index: 1
+					pointer-events: none 
+				&::before 
+					right: 193px
+					z-index: 1
+					pointer-events: none 
+
+		&-select 
+			border: none 
+			width: 100%
+
+			&::after 
+				right: 55px
+				z-index: 1
+				pointer-events: none 
+			&::before 
+				right: 55px
+				z-index: 1
+				pointer-events: none 
+
+		&-notify 
+			color: $subaccent_1
+			font-size: 12px 
+			font-weight: 300 
+			position: absolute
+			top: 100%
+			left: 0
+			margin-top: 3px
+			opacity: 0
+			transition: 0.25s all ease-in-out
+
+		&-eye
+			background: url('../img/icon-view-password.svg') center no-repeat
+			background-size: 16px 13px 
+			background-position: 10px 12px 
+			position: relative
+			transition: 0.2s all ease-in-out
+			width: 40px	
+			min-width: 40px 
+			height: 100%	
+			border-left: 1px solid $bg 
+			cursor: pointer
+
+			&::after 
+				height: 0.8px
+				width: 20px
+				position: absolute
+				top: 50% 
+				margin-top: -1.5px
+				left: 50%
+				margin-left: -9.5px
+				content: "" 
+				display: block 
+				background: $heading_1
+				transform: rotate(-45deg) scaleX(1)
+				transition: 0.2s all ease-in-out
+
+			&.active 
+				transition: 0.2s all ease-in-out
+				&::after 
+					transform: rotate(-45deg) scaleX(0) 
+					transition: 0.2s all ease-in-out
+
+		&-forgot 
+			height: 100%
+			min-width: 138px 
+			text-align: center
+			border-left: 1px solid $bg 
+			color: $link 
+			white-space: nowrap
+			font-size: 14px 
+			line-height: 38px
+			cursor: pointer
+			text-decoration: underline 
+			transition: 0.25s all ease-in-out
+
+			&:hover 
+				color: $accent
+				transition: 0.25s all ease-in-out
+
+		&.error 
+			border-color: $subaccent_1
+			transition: 0.25s all ease-in-out
+			position: relative
+
+			&::before 
+				opacity: 1
+				transition: 0.25s all ease-in-out
+
+			.account-field-icon,
+			.account-field-eye,
+			.account-field-forgot,
+			.nice-select
+				border-color: $subaccent_1
+				transition: 0.25s all ease-in-out
+
+			.nice-select .current::before 
+				border-color: $subaccent_1
+				transition: 0.25s all ease-in-out
+
+			.nice-select::before 
+				border-color: $subaccent_1
+				transition: 0.25s all ease-in-out
+
+			.account-field-notify 
+				opacity: 1
+
+		&.success 
+			border-color: $subaccent_2
+			transition: 0.25s all ease-in-out
+			position: relative
+
+			&::after 
+				opacity: 1
+				transition: 0.25s all ease-in-out
+
+			.account-field-icon,
+			.account-field-eye,
+			.account-field-forgot,
+			.nice-select
+				border-color: $subaccent_2
+				transition: 0.25s all ease-in-out
+
+			.nice-select .current::before 
+				border-color: $subaccent_2
+				transition: 0.25s all ease-in-out
+
+			.nice-select::before 
+				border-color: $subaccent_2
+				transition: 0.25s all ease-in-out
+				
+
+
+	&-terms
+		margin-bottom: 15px
+		font-size: 12px 
+
+		.link 
+			color: $link 
+			position: relative
+			transition: 0.25s all ease-in-out
+
+			&:hover 
+				color: $accent
+				transition: 0.25s all ease-in-out
+
+				&::after 
+					transform: scale(0)
+					transition: 0.25s all ease-in-out
+
+			&::after 
+				height: 0.9px
+				width: 100%
+				background: $link 
+				content: "" 
+				display: block 
+				position: absolute
+				bottom: -1.5px
+				left: 0px
+				transition: 0.25s all ease-in-out
+
+	&-submit 
+		display: flex 
+		flex-direction: row 
+		justify-content: space-between
+		align-items: flex-end
+		width: 100%
+
+	&-captcha 
+		width: 303px
+		height: 76px
+		background: url('../img/captcha@2x.png') no-repeat
+		background-size: cover 
+
+	&-extra 
+		width: 100%
+		text-align: right
+		font-size: 14px 
+		margin-top: 25px
+		color: $border 
+
+		.link 
+			color: $link 
+			position: relative
+			transition: 0.25s all ease-in-out
+
+			&:hover 
+				color: $accent
+				transition: 0.25s all ease-in-out
+
+				&::after 
+					transform: scale(0)
+					transition: 0.25s all ease-in-out
+
+			&::after 
+				height: 0.9px
+				width: 100%
+				background: $link 
+				content: "" 
+				display: block 
+				position: absolute
+				bottom: -1.5px
+				left: 0px
+				transition: 0.25s all ease-in-out
+	
+
+	&-notification 
+		border-radius: 4px 
+		border: 1px solid $bg 
+		padding: 30px 20px 
+
+		&-title 
+			font-size: 32px 
+			padding-left: 37px
+			background: url('../img/icon-check-round.svg') no-repeat
+			background-position: 0 8px 
+			background-size: 24px 24px
+			padding-bottom: 8px
+			border-bottom: 3px solid $accent
+			margin-bottom: 15px
+
+		&-list 
+			width: 100%
+			padding: 0
+			margin: 0
+
+			li 
+				padding-left: 37px
+				font-size: 18px 
+				color: $border 
+				line-height: 30px
+				background: url('../img/icon-attention.svg') no-repeat
+				background-position: 0 1.5px 
+				background-size: 24px 24px 
+		
+
+	.nice-select
+		width: 100%
+		float: none 
+		display: block 
+		border: 1px solid $bg 
+		border-radius: 25px 
+		height: 40px
+		padding-left: 0
+
+		&::after 
+			right: 19px
+			border-width: 1px
+			border-color: #303030
+			margin-top: -3px
+
+		&::before 
+			content: ""
+			display: block 
+			position: absolute
+			top: 0
+			right: 40px
+			height: 100%
+			width: 40px
+			border-right: 1px solid $border-color
+
+		.current 
+			font-family: 'Helvetica Neue'
+			font-size: 14px
+			padding-left: 55px
+			background-position: 11px center
+			background-size: 20px 20px 
+
+			&::after 
+				background: transparent
+				border-radius: 50% 
+				box-shadow: 0 0 0px 10px white 
+				content: "" 
+				display: block 
+				position: absolute
+				top: 50%
+				margin-top: -8px 
+				left: 12.8px
+				width: 17px
+				height: 17px
+				transition: 0.25s all ease-in-out
+
+			&::before 
+				content: ""
+				display: block
+				position: absolute 
+				top: 0
+				left: 0
+				width: 40px
+				height: 100%
+				border-right: 1px solid $border-color
+
+		.list 
+			width: 100%
+			max-height: 200px 
+			overflow-y: auto
+			border-radius: 4px 
+
+			li 
+				background-position: 11px center
+				background-size: 18px 18px 
+				padding-left: 55px
+				position: relative
+				transition: 0.25s all ease-in-out
+
+				&:hover 
+					background-color: $bg 
+					transition: 0.25s all ease-in-out
+
+					&::after 
+						box-shadow: 0 0 0px 10px $bg 
+						transition: 0.25s all ease-in-out
+
+				&.selected
+					background-color: $bg 
+					transition: 0.25s all ease-in-out
+
+					&::after 
+						box-shadow: 0 0 0px 10px $bg 
+						transition: 0.25s all ease-in-out
+
+				&::after 
+					background: transparent
+					border-radius: 50% 
+					box-shadow: 0 0 0px 10px white 
+					content: "" 
+					display: block 
+					position: absolute
+					top: 50%
+					margin-top: -8.5px 
+					left: 11px
+					width: 18px
+					height: 18px
+					transition: 0.25s all ease-in-out
+			
+
+	
+
+
+
+
+
+
+
+#reviews-2
+	display: none
+
+// Modal 
+
+.modal 
+	width: 350px
+	margin-top: 5vh
+	margin-bottom: 5vh
+	margin-left: auto
+	margin-right: auto
+
+	&-video 
+		width: 65%
+		margin-top: 15vh
+
+		&-content 
+			width: 100%
+			position: relative
+			
+			.close-btn 
+				position: absolute
+				padding: 0
+				width: 17px
+				height: 17px
+				top: -30px
+				right: 0px
+				cursor: pointer
+				opacity: 1
+
+				&:hover 
+					&::after 
+						transform: rotate(45deg) scaleX(1.2)
+						background: $accent
+						transition: 0.3s all ease-in-out
+					&::before 
+						transform: rotate(-45deg) scaleX(1.2)
+						background: $accent
+						transition: 0.3s all ease-in-out
+				
+				&::after 
+					content: " " 
+					position: absolute 
+					width: 17px
+					height: 1.9px 
+					border-radius: 10px 
+					background: white 
+					display: block
+					top: 8px 
+					right: 0
+					transform: rotate(45deg) 
+					transform-origin: 50% 50%
+					opacity: 1
+					transition: 0.3s all ease-in-out
+
+				&::before 
+					content: "" 
+					position: absolute 
+					width: 17px
+					height: 1.9px 
+					border-radius: 10px 
+					background: white 
+					display: block
+					top: 8px 
+					left: 0
+					transform: rotate(-45deg)
+					transform-origin: 50% 50% 
+					opacity: 1
+					transition: 0.3s all ease-in-out
+
+
+	&-content 
+		width: 350px
+		background: white 
+		border-radius: 4px 
+		padding: 20px
+
+	&-header 
+		position: relative
+
+		.logo 
+			width: 111px
+			
+			img 
+				width: 100%
+
+		.close-btn 
+			position: absolute
+			padding: 0
+			width: 17px
+			height: 17px
+			top: 0
+			right: 0
+			cursor: pointer
+			opacity: 1
+
+			&:hover 
+				&::after 
+					transform: rotate(45deg) scaleX(1.2)
+					background: $accent
+					transition: 0.3s all ease-in-out
+				&::before 
+					transform: rotate(-45deg) scaleX(1.2)
+					background: $accent
+					transition: 0.3s all ease-in-out
+			
+			&::after 
+				content: " " 
+				position: absolute 
+				width: 17px
+				height: 1.9px 
+				border-radius: 10px 
+				background: $heading_1 
+				display: block
+				top: 8px 
+				right: 0
+				transform: rotate(45deg) 
+				transform-origin: 50% 50%
+				opacity: 1
+				transition: 0.3s all ease-in-out
+
+			&::before 
+				content: "" 
+				position: absolute 
+				width: 17px
+				height: 1.9px 
+				border-radius: 10px 
+				background: $heading_1 
+				display: block
+				top: 8px 
+				left: 0
+				transform: rotate(-45deg)
+				transform-origin: 50% 50% 
+				opacity: 1
+				transition: 0.3s all ease-in-out
+
+	&-title 
+		font-size: 24px 
+		text-align: center
+		padding-top: 20px
+		padding-bottom: 20px
+		font-weight: 900
+
+	&-info-table 
+		padding: 10px 20px 
+		border: 1px solid $bg 
+		border-radius: 4px 
+		width: 100%
+		margin-bottom: 10px
+
+		li 
+			display: flex 
+			flex-direction: row 
+			justify-content: space-between 
+			align-items: center 
+			margin-bottom: 10.5px
+
+			&:last-child 
+				margin-bottom: 0
+
+			.title 
+				color: $border 
+				font-size: 12px 
+
+			.value 
+				font-size: 12px 
+				font-weight: bold 
+
+				&.highlight-yellow
+					color: $accent
+
+				&.highlight-green 
+					color: $subaccent_2
+
+				&.bitcoin 
+					padding-left: 18px
+					background: url('../img/icon-cur-1@2x.png') left center no-repeat 
+					background-size: 12px 12px
+				&.acash 
+					padding-left: 18px
+					background: url('../img/icon-cur-3@2x.png') left center no-repeat 
+					background-size: 12px 12px
+				&.perfect_money 
+					padding-left: 18px
+					background: url('../img/icon-cur-2@2x.png') left center no-repeat 
+					background-size: 12px 12px
+				&.payeer 
+					padding-left: 18px
+					background: url('../img/icon-cur-4@2x.png') left center no-repeat 
+					background-size: 12px 12px
+
+	&-field 
+		margin-bottom: 20px
+		position: relative
+
+		&-title 
+			font-size: 12px 
+			color: $subaccent_1 
+			margin-bottom: 6px 
+
+		&-wrap 
+			display: flex 
+			flex-direction: row 
+			justify-content: flex-start
+			align-items: center
+
+			&.copy-success
+
+				.modal-field-address_link
+					border-color: $subaccent_2
+					transition: 0.25s all ease-in-out
+
+					&::after 
+						opacity: 1
+						transition: 0.25s all ease-in-out
+				
+				.modal-field-money_amount
+					border-color: $subaccent_2
+					transition: 0.25s all ease-in-out
+
+					&::after 
+						opacity: 1
+						transition: 0.25s all ease-in-out
+
+				.modal-field-qr_code
+					border-color: $subaccent_2
+					transition: 0.25s all ease-in-out
+
+				.modal-field-copylink
+					border-color: $subaccent_2
+					transition: 0.25s all ease-in-out
+
+
+		&-money_amount 
+			position: relative
+			padding-top: 5.8px
+			padding-bottom: 5.8px
+			padding-left: 15px
+			color: $subaccent_2
+			flex-grow: 1 
+			border: 1px solid $bg 
+			border-radius: 19px 0 0 19px 
+			font-size: 12px 
+			font-weight: 300 
+			transition: 0.25s all ease-in-out
+
+			&::after 
+				content: "" 
+				width: 16px
+				height: 13.5px
+				background: url('../img/icon-check-big.svg') center no-repeat
+				background-size: cover 
+				position: absolute
+				display: block 
+				pointer-events: none 
+				opacity: 0
+				top: 50%
+				margin-top: -7.5px 
+				right: 10px 
+				transition: 0.25s all ease-in-out
+
+		&-address_link 
+			position: relative
+			padding-top: 7px
+			padding-bottom: 7px
+			padding-left: 15px
+			color: $link
+			flex-grow: 1 
+			border: 1px solid $bg 
+			border-radius: 19px 0 0 19px 
+			font-size: 10px 
+			font-weight: 300 
+			transition: 0.25s all ease-in-out
+
+			&::after 
+				content: "" 
+				width: 16px
+				height: 13.5px
+				background: url('../img/icon-check-big.svg') center no-repeat
+				background-size: cover 
+				position: absolute
+				display: block 
+				pointer-events: none 
+				opacity: 0
+				top: 50%
+				margin-top: -7.5px 
+				right: 10px 
+				transition: 0.25s all ease-in-out
+
+		&-qr_code 
+			width: 28px
+			height: 28px
+			display: block 
+			background: url('../img/icon-qr-code.svg') center no-repeat white 
+			background-size: 12px 12px 
+			border: 1px solid $bg 
+			border-left: none 
+			transition: 0.25s all ease-in-out
+			cursor: pointer 
+
+		&-copylink 
+			width: 28px
+			height: 28px
+			cursor: pointer 
+			display: block 
+			background: url('../img/icon-copy.svg') center no-repeat $accent
+			background-size: 14px 14px 
+			border: 1px solid $bg 
+			border-left: none 
+			border-radius: 0 19px 19px 0
+			transition: 0.3s all ease-in-out
+
+			&:hover 
+				opacity: .8
+				transition: 0.3s all ease-in-out
+
+			&:active 
+				opacity: .5
+				transition: 0.3s all ease-in-out
+
+		&-notify 
+			font-size: 12px 
+			color: $subaccent_2
+			font-weight: 300
+			position: absolute
+			bottom: -14px
+			left: 0
+			overflow: hidden
+			opacity: 0
+			transition: 0.25s all ease-in-out
+
+			&.copy-success 
+				opacity: 1
+				transition: 0.25s all ease-in-out
+
+				&::after 
+					left: 100%
+					transition: 0.25s all ease-in-out
+
+			&::after 
+				content: "" 
+				display: block 
+				position: absolute 
+				left: -100%
+				width: 200%
+				height: 100%
+				top: 0
+				background: linear-gradient(90deg, transparent 0%, white 50%, white 100%)
+				transition: 0.25s all ease-in-out
+
+
+
+	&-terms 
+		margin-top: 25px
+		display: flex 
+		flex-direction: row 
+		justify-content: flex-start
+		align-items: center
+
+		&-text 
+			font-size: 10px 
+
+			.link 
+				color: $link 
+				transition: 0.25s all ease-in-out
+				&:hover 
+					color: $accent
+					transition: 0.25s all ease-in-out
+
+		&-checkbox
+			cursor: pointer
+			width: 15px
+			height: 15px
+			border-radius: 50% 
+			border: 1px solid $accent 
+			background: white
+			position: relative 
+			margin-right: 10px
+
+			&::after 
+				content: ""
+				display: block 
+				position: absolute 
+				top: 50%
+				left: 50%
+				width: 9px
+				height: 6px
+				margin-left: -4.5px
+				margin-top: -2.5px
+				background: url('../img/check-green.svg') 
+				background-size: cover 
+				opacity: 0
+				transition: 0.25s all ease-in-out
+
+			&.checked 
+				&::after 
+					opacity: 1
+					transition: 0.25s all ease-in-out
+
+	&-submit 
+		margin-bottom: 10px
+		margin-top: 15px
+		text-align: center
+	
+
+// Notify Modals 
+
+.notify,
+.modal-over  
+	display: flex 
+	flex-direction: column
+	align-self: center 
+	width: 510px
+	border-radius: 4px 
+	background: white 
+	margin-left: auto
+	margin-right: auto
+	overflow: hidden
+
+	&-content 
+		
+
+	&-header 
+		padding: 10px 20px 
+		background: $bg 
+		position: relative
+
+		.logo 
+			width: 111px
+			
+			img 
+				width: 100%
+		
+		.close-btn 
+			position: absolute
+			padding: 0
+			width: 17px
+			height: 17px
+			top: 50%
+			margin-top: -8.5px
+			right: 20px
+			cursor: pointer
+			opacity: 1
+
+			&:hover 
+				&::after 
+					transform: rotate(45deg) scaleX(1.2)
+					background: $accent
+					transition: 0.3s all ease-in-out
+				&::before 
+					transform: rotate(-45deg) scaleX(1.2)
+					background: $accent
+					transition: 0.3s all ease-in-out
+			
+			&::after 
+				content: " " 
+				position: absolute 
+				width: 17px
+				height: 1.9px 
+				border-radius: 10px 
+				background: $heading_1 
+				display: block
+				top: 8px 
+				right: 0
+				transform: rotate(45deg) 
+				transform-origin: 50% 50%
+				opacity: 1
+				transition: 0.3s all ease-in-out
+
+			&::before 
+				content: "" 
+				position: absolute 
+				width: 17px
+				height: 1.9px 
+				border-radius: 10px 
+				background: $heading_1 
+				display: block
+				top: 8px 
+				left: 0
+				transform: rotate(-45deg)
+				transform-origin: 50% 50% 
+				opacity: 1
+				transition: 0.3s all ease-in-out
+
+	&-body 
+		padding: 20px
+		background: white 
+		padding-top: 15px
+
+	&-title 
+		font-size: 32px 
+		padding-left: 40px
+		background: url('../img/icon-check-round.svg') left center no-repeat
+		background-size: 24px 24px 
+		padding-bottom: 5px
+		padding-top: 5px
+		border-bottom: 2px solid $bg 
+		margin-bottom: 12px
+		font-weight: 900
+
+	&-link 
+		color: $link 
+		transition: 0.25s all ease-in-out
+
+		&:hover 
+			color: $accent
+			transition: 0.25s all ease-in-out
+
+	&-info-list 
+		width: 100%
+
+		li 
+			position: relative
+			padding-left: 40px
+			color: $border 
+			font-size: 18px 
+			line-height: 30px
+
+			&::after 
+				content: ""
+				display: block 
+				position: absolute
+				top: 3px
+				left: 0
+				width: 24px
+				height: 24px
+				background: url('../img/icon-attention.svg') no-repeat
+				background-size: cover 
+
+	&-image 
+		margin-top: 30px
+		margin-bottom: 10px
+		display: flex 
+		flex-direction: row 
+		justify-content: center
+		align-items: center
+
+		img 
+			width: 200px
+			height: 200px
+
+.modal-over 
+	position: absolute
+	display: flex 
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: auto
+	height: 100%
+	background: rgba(0,0,0,0.3) 
+	box-shadow: 0 0 50px 50px rgba(0,0,0,0.3)
+	opacity: 0
+	z-index: -1
+	transition: opacity 0.25s ease-in-out, z-index 0.4s linear
+	pointer-events: none 
+
+	&-content 
+		width: 510px
+		border-radius: 4px 
+		background: white 
+		margin-left: auto
+		margin-right: auto
+		overflow: hidden
+		transform: scale(0)
+		transition: 0.4s all ease-in-out
+
+	&.opened 
+		pointer-events: auto 
+		z-index: 1
+		opacity: 1
+		transition: opacity 0.25s ease-in-out
+
+		.modal-over-content 
+			transform: scale(1)
+			transition: 0.4s all ease-in-out
+
+/* overlay at start */
+.mfp-fade.mfp-bg
+	opacity: 0;
+	-webkit-transition: all 0.35s ease-out
+	-moz-transition: all 0.35s ease-out
+	transition: all 0.35s ease-out
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready
+	opacity: 0.8;
+	-webkit-transition: all 0.35s ease-out
+	-moz-transition: all 0.35s ease-out
+	transition: all 0.35s ease-out
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing
+	opacity: 0
+	-webkit-transition: all 0.35s ease-out
+	-moz-transition: all 0.35s ease-out
+	transition: all 0.35s ease-out
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content
+	opacity: 0
+	transform: scale(0)
+	-webkit-transition: all 0.35s ease-out
+	-moz-transition: all 0.35s ease-out
+	transition: all 0.35s ease-out
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content
+	opacity: 1
+	transform: scale(1)
+	-webkit-transition: all 0.35s ease-out
+	-moz-transition: all 0.35s ease-out
+	transition: all 0.35s ease-out
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content
+	opacity: 0
+	-webkit-transition: all 0.35s ease-out
+	-moz-transition: all 0.35s ease-out
+	transition: all 0.35s ease-out
+
+.image-canvas 
+	width: 60%
+	margin-left: auto
+	margin-right: auto
+	background: white
+
+	img 
+		width: 100%
+
+#image-chart 
+	position: fixed 
+	top: 0
+	left: 0
+	pointer-events: none 
+	z-index: -99999 !important

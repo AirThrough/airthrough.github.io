@@ -1,0 +1,888 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title>Airbinance</title>
+ 	<link rel="stylesheet" href="css/fonts.css?ver=14">
+ 	<link rel="stylesheet" href="css/all.min.css">
+ 	<link rel="stylesheet" href="css/waves.css">
+ 	<link rel="stylesheet" href="css/main.css">
+ 	<link rel="stylesheet" href="css/media.css">
+
+ 	<style>
+
+ 	input[type="search"]::-webkit-search-decoration,
+ 	input[type="search"]::-webkit-search-cancel-button,
+ 	input[type="search"]::-webkit-search-results-button,
+ 	input[type="search"]::-webkit-search-results-decoration {
+ 		-webkit-appearance:none;
+ 	}
+ 	.tab-table::-webkit-scrollbar {
+ 		width: 6px;
+ 		border-radius: 5px;
+ 	}
+
+ 	/* Track */
+ 	.tab-table::-webkit-scrollbar-track {
+ 		background: rgba(0,0,0,.1); 
+ 		border-radius: 5px;
+ 	}
+
+ 	/* Handle */
+ 	.tab-table::-webkit-scrollbar-thumb {
+ 		background: #43475a;
+ 		border-radius: 5px;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+
+ 	/* Handle on hover */
+ 	.tab-table::-webkit-scrollbar-thumb:hover {
+ 		background: #585D77;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+
+ 	.search-input-list::-webkit-scrollbar {
+ 		width: 0px;
+ 		border-radius: 3px;
+ 		-webkit-appearance:none;
+ 	}
+
+ 	/* Track */
+ 	.search-input-list::-webkit-scrollbar-track {
+
+ 		background: none;
+ 		border-radius: 3px;
+ 	}
+
+ 	/* Handle */
+ 	.search-input-list::-webkit-scrollbar-thumb {
+ 		background: #55596a; 
+ 		border-radius: 3px;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+
+ 	/* Handle on hover */
+ 	.search-input-list::-webkit-scrollbar-thumb:hover {
+ 		background: rgba(255,255,255,.1);
+ 		transition: 0.25s all ease-in-out;
+ 	}
+
+ 	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+ 		color: white;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+ 	::-moz-placeholder { /* Firefox 19+ */
+ 		color: white;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+ 	:-ms-input-placeholder { /* IE 10+ */
+ 		color: white;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+ 	:-moz-placeholder { /* Firefox 18- */
+ 		color: white;
+ 		transition: 0.25s all ease-in-out;
+ 	}
+
+ 	input[type="text"]:focus::-webkit-input-placeholder
+ 	{
+ 		color: rgba(255,255,255, .4);
+ 		transition: 0.25s all ease-in-out;
+
+ 	}
+
+ 	input[type="text"]:focus:-ms-input-placeholder
+ 	{
+ 		color: rgba(255,255,255, .4);
+ 		transition: 0.25s all ease-in-out;
+
+ 	}
+
+ 	input[type="text"]:focus:-moz-placeholder
+ 	{
+ 		color: rgba(255,255,255, .4);
+ 		transition: 0.25s all ease-in-out;
+
+ 	}
+ 	input[type="text"]:focus::-moz-placeholder
+ 	{
+ 		color: rgba(255,255,255, .4);
+ 		transition: 0.25s all ease-in-out;
+
+ 	}
+ 	</style>
+
+ </head>
+ <body>
+
+ 	<header class="header">
+
+ 		<div class="header-left">
+
+ 			<div class="header-menu-btn-wrap">
+
+ 				<button class="header-burger">
+ 					<span class="header-burger-line"></span>
+ 					<span class="header-burger-line"></span>
+ 					<span class="header-burger-line"></span>
+ 					<span class="header-burger-bg"></span>
+ 				</button>
+
+ 			</div>
+
+ 			<div class="header-logo">
+ 				<a class="header-logo-link" href="#">
+ 					<img class="header-logo-img" src="img/logo.svg" alt="">
+ 				</a>
+ 			</div>
+
+ 			<div class="header-stats">
+
+ 				<div class="header-stats-item header-stats-item-balance">
+ 					<div class="header-stats-title">Balance</div>
+ 					<div class="header-stats-value">$ 120267.09</div>
+ 				</div>
+ 				<div class="header-stats-item header-stats-item-deposits">
+ 					<div class="header-stats-title">Deposits</div>
+ 					<div class="header-stats-value">$ 369092.02</div>
+ 				</div>
+ 				<div class="header-stats-item header-stats-item-pending">
+ 					<div class="header-stats-title">Pending</div>
+ 					<div class="header-stats-value">$ 275647.00</div>
+ 				</div>
+ 				<div class="header-stats-item header-stats-item-partners">
+ 					<div class="header-stats-title">Partners</div>
+ 					<div class="header-stats-value">25647</div>
+ 				</div>
+
+ 			</div>
+
+ 		</div>
+
+ 		<div class="header-right">
+
+
+ 			<div class="header-lng">
+
+ 				<select id="language" class="header-lng-select" name="" id="">
+ 					<option class="flag-icon flag-icon-gb" value="gb" selected="selected">gb</option>
+ 					<option value="ru">ru</option>
+ 					<option value="fr">fr</option>
+ 					<option value="es">es</option>
+ 					<option value="pt">pt</option>
+ 					<option value="de">de</option>
+ 					<option value="pl">pl</option>
+ 				</select>
+
+ 			</div>
+
+
+ 			<div class="header-logout">
+
+ 				<button class="header-logout-btn btn-yellow btn-logout">Logout</button>
+
+ 			</div>
+
+ 		</div>
+
+ 	</header>
+
+ 	<main id="affiliate">
+
+ 		<div class="content-wrapper">
+
+ 			<aside class="aside pre-mobile">
+
+ 				<div class="aside-user">
+ 					<div class="aside-user-row">
+ 						<div class="aside-user-main">
+ 							<div class="aside-user-country flag-icon-background flag-icon-gb"></div>
+ 							<div class="aside-user-name">Username</div>
+ 						</div>
+ 						<a href="#" class="aside-user-settings"></a>
+ 					</div>
+ 					<div class="aside-user-row">
+ 						<div class="aside-user-title">Partner status</div>
+ 						<div class="aside-user-rating rate">
+ 							<div class="rate-item"></div>
+ 							<div class="rate-item"></div>
+ 							<div class="rate-item bright"></div>
+ 						</div>
+ 					</div>
+ 				</div>
+
+ 				<div class="aside-title">Dashboard</div>
+
+ 				<nav class="aside-nav">
+ 					<ul class="aside-menu">
+ 						<li class="aside-menu-item icon-invest"><a href="" class="aside-menu-link ">My investment</a></li>
+ 						<li class="aside-menu-item icon-account"><a href="" class="aside-menu-link ">Account upgrade</a></li>
+ 						<li class="aside-menu-item icon-trading"><a href="/top-up.html" class="aside-menu-link ">Top up & Withdrawal</a></li>
+ 						<li class="aside-menu-item icon-trading"><a href="/trading-history.html" class="aside-menu-link icon-trading">Trading history</a></li>
+ 						<li class="aside-menu-item icon-partnership"><a href="" class="aside-menu-link ">Partnership</a></li>
+ 						<li class="aside-menu-item icon-news"><a href="" class="aside-menu-link ">News</a></li>
+ 						<li class="aside-menu-item icon-reviews"><a href="" class="aside-menu-link  ">Reviews</a></li>
+ 					</ul>
+ 				</nav>
+
+ 				<div class="aside-extra">
+ 					<div class="aside-title">Corporate website</div>
+
+ 					<ul class="aside-menu aside-menu-extra">
+ 						<li class="aside-menu-item icon-home"><a href="" class="aside-menu-link ">ArBinance Homepage</a></li>
+ 						<li class="aside-menu-item icon-terms"><a href="" class="aside-menu-link ">Affiliate terms</a></li>
+ 					</ul>
+
+ 				</div>
+
+ 				<div class="aside-bottom">
+
+ 					<div class="aside-title">Support</div>
+
+ 					<ul class="aside-support">
+ 						<li class="aside-support-item">
+ 							<a href="" class="aside-support-link">
+ 								<span class="aside-support-icon icon-tg"></span><span class="aside-support-title">Telegram</span>
+ 							</a>
+ 						</li>
+ 						<li class="aside-support-item">
+ 							<a href="" class="aside-support-link">
+ 								<span class="aside-support-icon icon-fb"></span>
+ 								<span class="aside-support-title">Facebook</span>
+ 							</a>
+ 						</li>
+ 					</ul>
+
+ 				</div>
+
+
+ 			</aside>
+
+ 			<div class="content">
+
+ 				<div class="aff-wrapper">
+
+ 					<div class="aff-top-content">
+
+ 						<h1 class="aff-h1">ArBinance binary affiliate program</h1>
+
+ 						<div class="aff-desc">Join the ArBinance affiliate program and earn commission by referring new <br> partners to our award-winning trading platform</div>
+
+ 						<div class="aff-row row-1">
+ 							<div class="aff-col-text aff-col">
+ 								<p class="aff-p">In affiliate marketing, a Binary plan allows you to have only two distributors in the first level</p>
+ 								<p class="aff-p">In this structure, new members are introduced into a Binary Tree where each “node” or new member of the organization has a left and right sub-tree</p>
+ 								<p class="aff-p">Where one subtree is known as a Power Leg or Profit Leg while the second subtree is a Profit Leg or a weak leg</p>
+ 							</div>
+ 							<div class="aff-col-img aff-col">
+ 								<div class="aff-image">
+ 									<img src="img/aff-image1.png" alt="">
+ 								</div>
+ 							</div>
+ 						</div>
+
+ 						<p class="aff-p"></p>
+
+ 						<div class="aff-row aff-row-2">
+ 							<div class="aff-col-img aff-col">
+ 								<div class="aff-image">
+ 									<img src="img/aff-image2.png" alt="">
+ 								</div>
+ 							</div>
+ 							<div class="aff-col-text aff-col">
+ 								<p class="aff-p">Other words, when you think about the arrangement of a multi-level, it is like a genealogy tree. Your parents are at the top, children are under the parents and the grandchildren down below the children…and so forth— they are all linked together.  So, only the first two people you sponsor are placed directly under you.</p>
+ 							</div>
+ 						</div>
+
+ 						<div class="aff-row aff-row-center">
+
+ 							<div class="aff-col-text aff-col">
+ 								<p class="aff-p">You have a left leg and a right leg. As you sponsor more people, they have to be put in one of those legs, somewhere down the tree. You typically only get paid on the weak-side volume.</p>
+ 							</div>
+
+ 							<div class="aff-col-img aff-col aff-col-img-multiple">
+ 								<div class="aff-image">
+ 									<img src="img/aff-l.png" alt="">
+ 									<div class="aff-image-text">Left leg</div>
+ 								</div>
+ 								<div class="aff-image">
+ 									<img src="img/aff-r.png" alt="">
+ 									<div class="aff-image-text">Right leg</div>
+ 								</div>
+ 							</div>
+ 						</div>
+
+ 						<div class="aff-row">
+ 							<div class="aff-col-img aff-col">
+ 								<div class="aff-image">
+ 									<img src="img/aff-image3.png" alt="">
+ 								</div>
+ 							</div>
+ 							<div class="aff-col-text aff-col">
+ 								<p class="aff-p">An effective binary plan gives value to all members and the best part is that the plan comes with an “equality” oriented approach. Active people in the crypto trading industry will gain profit with great easiness. Based upon affiliate leads new distributors are placed on the left and right legs, thus the tree grows on and on. Also, a well-balanced system makes the plan active.</p>
+ 							</div>
+ 						</div>
+
+ 						<p class="aff-p">The binary options trading market is also incredibly accessible. It’s available for anybody wanting to get into trading and often, brokers do not require a large initial deposit to set up an account and get started trading.</p>
+
+ 						<div class="aff-row aff-row-4">
+ 							<div class="aff-col-text aff-col">
+ 								<p class="aff-p">Binary options trading offers traders the ability to increase their investment capital with different welcome bonuses and bonuses for re-deposited funds. By choosing to partner with a reputable and trusted binary options trading site, you’ll be increasing your income and giving yourself the opportunities associated with such a vibrant, growing trading segment.</p>
+ 							</div>
+ 							<div class="aff-col-img aff-col">
+ 								<div class="aff-image">
+ 									<img src="img/aff-image4.png" alt="">
+ 								</div>
+ 							</div>
+ 						</div>
+
+ 						<div class="aff-top-bottom">
+ 							<div class="aff-top-item">Affiliates can get up to 25% of everything that a company earns from each trader that you refer to</div>
+ 							<div class="aff-top-item">
+ 								The commission and tracking 
+ 								facilities, as well as the account 
+ 								management, are some of the 
+ 							best on offer in the market today</div>
+ 						</div>
+
+ 					</div>
+
+ 					<div class="aff-steps">
+
+ 						<h2 class="aff-h1">How it works</h2>
+ 						<div class="aff-steps-wrapper">
+ 							<div class="aff-step">
+ 								<div class="aff-step-side">
+ 									<div class="aff-step-side-top"></div>
+ 									<div class="aff-step-side-main">
+ 										<div class="aff-step-side-number">
+ 											10%
+ 											<div class="aff-step-side-number-circle">
+ 												<svg width="92" height="92">
+ 													<path d="" id="c1"
+ 													fill="none" stroke-dasharray="4" stroke="#E4B940" stroke-width="1" />
+
+ 												</svg>
+ 											</div>
+ 										</div>
+ 									</div>
+ 									<div class="aff-step-side-bottom"></div>
+ 								</div>
+ 								<div class="aff-step-main">
+ 									<div class="aff-step-marker">
+
+ 										<div class="aff-step-label">Only Build Two Legs</div>
+ 										<div class="aff-step-number">1</div>
+ 									</div>
+ 									<div class="aff-step-text">
+ 										You can have only two “children” in the organisation’s genealogy. It is like a genealogy tree. Your parents are at the top, children are under the parents and the grandchildren down below the children… and so forth— they are all linked together. Referral commission pays all the way to the top of the tree, as opposed to other plan types which pay a precise number of levels.
+ 									</div>
+ 								</div>
+ 								<div class="aff-step-dec"></div>
+ 							</div>
+
+
+ 							<div class="aff-step">
+ 								<div class="aff-step-side">
+ 									<div class="aff-step-side-top"></div>
+ 									<div class="aff-step-side-main">
+ 										<div class="aff-step-side-number">
+ 											25%
+ 											<div class="aff-step-side-number-circle">
+ 												<svg width="92" height="92">
+ 													<path d="" id="c2"
+ 													fill="none" stroke-dasharray="4" stroke="#E4B940" stroke-width="1" />
+
+ 												</svg>
+ 											</div>
+ 										</div>
+ 									</div>
+ 									<div class="aff-step-side-bottom"></div>
+ 								</div>
+ 								<div class="aff-step-main">
+ 									<div class="aff-step-marker">
+
+ 										<div class="aff-step-label">Synergy</div>
+ 										<div class="aff-step-number">2</div>
+ 									</div>
+ 									<div class="aff-step-text">
+ 										Synergy is when a group of people work together toward a common goal. In most compensation plans, you have to build your own team and no one in your upline puts people on your team (because it is not in their best interest to do so). Best of all, the people they place in your team count toward your volume, which means you can get paid on it.
+ 									</div>
+ 								</div>
+ 								<div class="aff-step-dec"></div>
+ 							</div>
+
+ 							<div class="aff-step">
+ 								<div class="aff-step-side">
+ 									<div class="aff-step-side-top"></div>
+ 									<div class="aff-step-side-main">
+ 										<div class="aff-step-side-number">
+ 											50%
+ 											<div class="aff-step-side-number-circle">
+ 												<svg width="92" height="92">
+ 													<path d="" id="c3"
+ 													fill="none" stroke-dasharray="4" stroke="#E4B940" stroke-width="1" />
+
+ 												</svg>
+ 											</div>
+ 										</div>
+ 									</div>
+ 									<div class="aff-step-side-bottom"></div>
+ 								</div>
+ 								<div class="aff-step-main">
+ 									<div class="aff-step-marker">
+
+ 										<div class="aff-step-label">Infinite Depth</div>
+ 										<div class="aff-step-number">3</div>
+ 									</div>
+ 									<div class="aff-step-text">
+ 										There are no levels, you simply have two teams. Each of those teams has a volume that you are eligible to be paid on. It doesn’t matter if someone is on level 1 or level 900, their volume still counts toward your commissionable volume.  Isn’t that exciting? You must realize that each level of your team will be bigger than ALL of the levels above it.
+ 									</div>
+ 								</div>
+ 								<div class="aff-step-dec"></div>
+ 							</div>
+
+ 							<div class="aff-step">
+ 								<div class="aff-step-side">
+ 									<div class="aff-step-side-top"></div>
+ 									<div class="aff-step-side-main">
+ 										<div class="aff-step-side-number">
+ 											75%
+ 											<div class="aff-step-side-number-circle">
+ 												<svg width="92" height="92">
+ 													<path d="" id="c4"
+ 													fill="none" stroke-dasharray="4" stroke="#E4B940" stroke-width="1" />
+
+ 												</svg>
+ 											</div>
+ 										</div>
+ 									</div>
+ 									<div class="aff-step-side-bottom"></div>
+ 								</div>
+ 								<div class="aff-step-main">
+ 									<div class="aff-step-marker">
+
+ 										<div class="aff-step-label">Balancing Your Legs</div>
+ 										<div class="aff-step-number">4</div>
+ 									</div>
+ 									<div class="aff-step-text">
+ 										This is a feature we LOVE about the Binary Plan. Every influencer does it differently, but most influencers let their bank volume each day. What does this mean? It means that if there is volume in 1 of your 2 legs that you didn’t get paid on that day, the volume carries over to the next day. This is a very powerful and challenging feature.
+ 									</div>
+ 								</div>
+ 								<div class="aff-step-dec"></div>
+ 							</div>
+
+ 							<div class="aff-step">
+ 								<div class="aff-step-side">
+ 									<div class="aff-step-side-top"></div>
+ 									<div class="aff-step-side-main">
+ 										<div class="aff-step-side-number">
+ 											100%
+ 											<div class="aff-step-side-number-circle">
+ 												<svg width="92" height="92">
+ 													<path d="" id="c5"
+ 													fill="none" stroke-dasharray="4" stroke="#E4B940" stroke-width="1" />
+
+ 												</svg>
+ 											</div>
+ 										</div>
+ 									</div>
+ 									<div class="aff-step-side-bottom"></div>
+ 								</div>
+ 								<div class="aff-step-main">
+ 									<div class="aff-step-marker">
+
+ 										<div class="aff-step-label">Paid Daily</div>
+ 										<div class="aff-step-number">5</div>
+ 									</div>
+ 									<div class="aff-step-text">
+ 										We believe this motivates people to work harder. It creates a sense of urgency, because people like instant gratification and want to be paid quickly. Your key to success with the binary pay plan is to “balance” your organisation, so both legs have approximately the same amount of volume.
+ 									</div>
+ 								</div>
+ 								<div class="aff-step-dec"></div>
+ 							</div>
+ 						</div>
+ 						
+ 					</div>
+
+ 					<div class="aff-advs">
+
+ 						<h2 class="aff-h1">Advantages and features</h2>
+
+ 						<div class="aff-advs-wrapper">
+
+ 							<div class="aff-advs-item">
+ 								<div class="aff-advs-image"></div>
+ 								<div class="aff-advs-main">
+ 									<div class="aff-advs-title">High earning potential</div>
+ 									<div class="aff-advs-text">There is no bar on bringing distributors under any level, as it has no limitation on the depth of the network, so it offers good earning potential.</div>
+ 								</div>
+ 							</div>
+ 							<div class="aff-advs-item">
+ 								<div class="aff-advs-image"></div>
+ 								<div class="aff-advs-main">
+ 									<div class="aff-advs-title">Pays To Unlimited Depth</div>
+ 									<div class="aff-advs-text">For top referrers, this means their downline organization will grow beyond the limits of their payline when they are not paid through a binary ref plan.</div>
+ 								</div>
+ 							</div>
+ 							<div class="aff-advs-item">
+ 								<div class="aff-advs-image"></div>
+ 								<div class="aff-advs-main">
+ 									<div class="aff-advs-title">You get spillover</div>
+ 									<div class="aff-advs-text">For many referrals, this is a great way of appealing to new recruits. With spillover, if you are placed under an active up-line power leg.</div>
+ 								</div>
+ 							</div>
+
+ 						</div>
+
+ 					</div>
+
+
+ 					<div class="aff-ref">
+ 						
+ 						<h2 class="aff-h1">Binary Referral system</h2>
+
+ 						<div class="aff-ref-table">
+
+ 							<div class="aff-ref-head aff-ref-row">
+ 								<div class="aff-ref-cell">Exchanges</div>
+ 								<div class="aff-ref-cell">Fee</div>
+ 								<div class="aff-ref-cell">Process time</div>
+ 								<div class="aff-ref-cell">Offer time</div>
+ 							</div>
+ 							<div class=" aff-ref-row">
+ 								<div class="aff-ref-cell">0.51%-1%</div>
+ 								<div class="aff-ref-cell">0.20%</div>
+ 								<div class="aff-ref-cell">3h-4h</div>
+ 								<div class="aff-ref-cell">9 hours</div>
+ 							</div>
+ 							<div class=" aff-ref-row">
+ 								<div class="aff-ref-cell">1%-2%</div>
+ 								<div class="aff-ref-cell">0.30%</div>
+ 								<div class="aff-ref-cell">4h-5h</div>
+ 								<div class="aff-ref-cell">5 hours</div>
+ 							</div>
+ 							<div class=" aff-ref-row">
+ 								<div class="aff-ref-cell">2.01%-4%</div>
+ 								<div class="aff-ref-cell">0.6%</div>
+ 								<div class="aff-ref-cell">5h-6h</div>
+ 								<div class="aff-ref-cell">4 hours</div>
+ 							</div>
+ 							<div class=" aff-ref-row">
+ 								<div class="aff-ref-cell">4.01%-6%</div>
+ 								<div class="aff-ref-cell">1.5%</div>
+ 								<div class="aff-ref-cell">6h-8h</div>
+ 								<div class="aff-ref-cell">3 hours</div>
+ 							</div>
+ 							<div class=" aff-ref-row">
+ 								<div class="aff-ref-cell">6.01%-10%</div>
+ 								<div class="aff-ref-cell">3%</div>
+ 								<div class="aff-ref-cell">10h-12h</div>
+ 								<div class="aff-ref-cell">2 hours</div>
+ 							</div>
+ 							<div class=" aff-ref-row">
+ 								<div class="aff-ref-cell">10.01%-15%</div>
+ 								<div class="aff-ref-cell">5%</div>
+ 								<div class="aff-ref-cell">15h-20h</div>
+ 								<div class="aff-ref-cell">1 hour</div>
+ 							</div>
+ 							<div class=" aff-ref-row">
+ 								<div class="aff-ref-cell">15.01%-20%</div>
+ 								<div class="aff-ref-cell">8%</div>
+ 								<div class="aff-ref-cell">20h-30h</div>
+ 								<div class="aff-ref-cell">30 minutes</div>
+ 							</div>
+ 							<div class=" aff-ref-row">
+ 								<div class="aff-ref-cell">20.01%-30%</div>
+ 								<div class="aff-ref-cell">12%</div>
+ 								<div class="aff-ref-cell">30h-45h</div>
+ 								<div class="aff-ref-cell">20 minutes</div>
+ 							</div>
+ 							<div class=" aff-ref-row">
+ 								<div class="aff-ref-cell">30.01%-40%</div>
+ 								<div class="aff-ref-cell">15%</div>
+ 								<div class="aff-ref-cell">45h-60h</div>
+ 								<div class="aff-ref-cell">10 minutes</div>
+ 							</div>
+ 							<div class=" aff-ref-row">
+ 								<div class="aff-ref-cell">40.01% - over 50%</div>
+ 								<div class="aff-ref-cell">25%</div>
+ 								<div class="aff-ref-cell">60h-80h</div>
+ 								<div class="aff-ref-cell">5 minutes</div>
+ 							</div>
+
+ 						</div>
+
+ 					</div>
+
+
+ 					<div class="aff-calc">
+ 						
+ 						<h2 class="aff-h1">Practical example</h2>
+
+ 						<div class="aff-desc">A practical example shows the calculation of the total amount of referral <br> commission for each of the referral threads (right and left) and each trader.</div>
+
+ 						<div class="aff-calc-wrapper">
+ 							
+
+
+ 							<div class="aff-calc-left">
+ 								<div class="aff-calc-leg">
+ 									<div class="aff-calc-leg-side">
+ 										<div class="aff-calc-leg-human">
+
+ 										</div>
+ 										<div class="aff-calc-leg-image">
+
+ 										</div>
+ 										<div class="aff-calc-leg-caption">
+ 											Left leg
+ 										</div>
+ 									</div>
+ 									<div class="aff-calc-leg-main">
+ 										<div class="aff-calc-leg-item">
+ 											<div class="aff-calc-leg-item-icon"></div>
+ 											<div class="aff-calc-leg-item-number">Referral №1</div>
+ 											<div class="aff-calc-input-wrapper">
+ 											<div class="aff-calc-leg-item-input">
+ 												<input type="text" id="in-l-1" class="aff-calc-input aff-calc-input-ref" data-ref="ref-1-l"  data-leg="left"  placeholder="100.00" value="">
+ 											</div>
+ 										</div>
+ 										</div>
+ 										<div class="aff-calc-leg-item">
+ 											<div class="aff-calc-leg-item-icon"></div>
+ 											<div class="aff-calc-leg-item-number">Referral №2</div>
+ 											<div class="aff-calc-input-wrapper">
+ 											<div class="aff-calc-leg-item-input">
+ 												<input type="text"  id="in-l-2"  class="aff-calc-input aff-calc-input-ref" data-ref="ref-2-l" data-leg="left"   placeholder="200.00" value="">
+ 											</div>
+ 										</div>
+ 										</div>
+ 										<div class="aff-calc-leg-item">
+ 											<div class="aff-calc-leg-item-icon"></div>
+ 											<div class="aff-calc-leg-item-number">Referral №3</div>
+ 											<div class="aff-calc-input-wrapper">
+ 											<div class="aff-calc-leg-item-input">
+ 												<input type="text"  id="in-l-3"  class="aff-calc-input aff-calc-input-ref" data-ref="ref-3-l" data-leg="left"  placeholder="150.00" value="">
+ 											</div>
+ 										</div>
+ 										</div>
+ 										<div class="aff-calc-leg-item">
+ 											<div class="aff-calc-leg-item-icon icon-usd"></div>
+ 											<div class="aff-calc-leg-item-number">Total profit</div>
+ 											<div class="aff-calc-leg-item-input">
+ 												<input type="text" id="ref-sum-l" class="aff-calc-input" placeholder="$450.00" disabled value="$450.00">
+ 											</div>
+ 										</div>
+ 									</div>
+ 								</div>
+ 								<div class="aff-calc-leg">
+ 									<div class="aff-calc-leg-side">
+ 										<div class="aff-calc-leg-human">
+
+ 										</div>
+ 										<div class="aff-calc-leg-image">
+
+ 										</div>
+ 										<div class="aff-calc-leg-caption">
+ 											Right leg
+ 										</div>
+ 									</div>
+ 									<div class="aff-calc-leg-main">
+ 										<div class="aff-calc-leg-item">
+ 											<div class="aff-calc-leg-item-icon"></div>
+ 											<div class="aff-calc-leg-item-number">Referral №1</div>
+ 											<div class="aff-calc-input-wrapper">
+ 											<div class="aff-calc-leg-item-input">
+ 												<input type="text" id="in-r-1" class="aff-calc-input aff-calc-input-ref" data-ref="ref-1-r" placeholder="200.00" value="">
+ 											</div>
+ 										</div>
+ 										</div>
+ 										<div class="aff-calc-leg-item">
+ 											<div class="aff-calc-leg-item-icon"></div>
+ 											<div class="aff-calc-leg-item-number">Referral №2</div>
+ 											<div class="aff-calc-input-wrapper">
+ 											<div class="aff-calc-leg-item-input">
+ 												<input type="text" id="in-r-2" class="aff-calc-input aff-calc-input-ref" data-ref="ref-2-r"  placeholder="100.00" value="">
+ 											</div>
+ 										</div>
+ 										</div>
+ 										<div class="aff-calc-leg-item">
+ 											<div class="aff-calc-leg-item-icon"></div>
+ 											<div class="aff-calc-leg-item-number">Referral №3</div>
+ 											<div class="aff-calc-input-wrapper">
+ 											<div class="aff-calc-leg-item-input">
+ 												<input type="text" id="in-r-3" class="aff-calc-input aff-calc-input-ref" data-ref="ref-3-r"  placeholder="50.00" value="">
+ 												</div>
+ 											</div>
+ 										</div>
+ 										<div class="aff-calc-leg-item">
+ 											<div class="aff-calc-leg-item-icon icon-usd"></div>
+ 											<div class="aff-calc-leg-item-number">Total profit</div>
+ 											<div class="aff-calc-leg-item-input">
+ 												<input type="text" id="ref-sum-r" class="aff-calc-input" placeholder="$350.00" disabled value="$350.00">
+ 											</div>
+ 										</div>
+ 									</div>
+ 								</div>
+
+ 								<div class="aff-calc-sum">
+
+ 									<div class="aff-calc-sum-title">Carry over
+ 										<span class="aff-calc-sum-subtitle">(strong leg minus weak leg)</span>
+ 									</div>
+
+ 									<div class="aff-calc-sum-wrapper">
+ 										<div id="ref-sum-1" class="aff-calc-sum-block">$450.00</div>
+ 										<div class="aff-calc-sum-block">-</div>
+ 										<div  id="ref-sum-2" class="aff-calc-sum-block">$350.00</div>
+ 										<div class="aff-calc-sum-block">=</div>
+ 										<div  id="ref-sum-dif" class="aff-calc-sum-block">$100.00</div>
+ 									</div>
+
+ 								</div>
+
+ 							</div>
+ 							<div class="aff-calc-right">
+
+ 								<div class="aff-calc-dec"></div>
+ 								<div class="aff-calc-dec right"></div>
+
+ 								<div class="aff-calc-graph-icon-left">
+ 									<div class="aff-calc-graph-icon-leg"></div>
+ 									<div class="aff-calc-graph-icon-title">Left leg</div>
+ 								</div>
+ 								<div class="aff-calc-graph-icon-right">
+ 									<div class="aff-calc-graph-icon-leg"></div>
+ 									<div class="aff-calc-graph-icon-title">Right leg</div>
+ 								</div>
+
+ 								<div class="aff-calc-graph-row first">
+ 									<div class="aff-calc-graph-plus" id="plus-l">+$450</div>
+ 									<div class="aff-calc-graph-first">
+ 										<div class="aff-calc-graph-first-human"></div>
+ 										<div class="aff-calc-graph-first-title">Referrer</div>
+ 									</div>
+
+ 									<div class="aff-calc-graph-plus" id="plus-r">+$350</div>
+ 								</div>
+
+ 								<div class="aff-calc-graph-row second">
+ 									<div class="aff-calc-graph-item">
+ 										<div class="aff-calc-graph-item-leg">
+ 											<div class="aff-calc-graph-item-leg-icon left"></div>
+ 											<div class="aff-calc-graph-item-leg-title">Left</div>
+ 										</div>
+ 										<div class="aff-calc-graph-item-human"></div>
+ 										<div class="aff-calc-graph-item-title">Referral №1</div>
+ 										<div class="aff-calc-graph-item-plus" id="ref-1-l">+$100</div>
+ 									</div>
+ 									<div class="aff-calc-graph-item">
+ 										<div class="aff-calc-graph-item-leg">
+ 											<div class="aff-calc-graph-item-leg-icon right"></div>
+ 											<div class="aff-calc-graph-item-leg-title">Right</div>
+ 										</div>
+ 										<div class="aff-calc-graph-item-human"></div>
+ 										<div class="aff-calc-graph-item-title">Referral №1</div>
+ 										<div class="aff-calc-graph-item-plus"  id="ref-1-r">+$200</div>
+ 									</div>
+ 								</div>
+
+ 								<div class="aff-calc-graph-row">
+ 									<div class="aff-calc-graph-block">
+ 										<div class="aff-calc-graph-item">
+ 											<div class="aff-calc-graph-item-leg">
+ 												<div class="aff-calc-graph-item-leg-icon left"></div>
+ 												<div class="aff-calc-graph-item-leg-title">Left</div>
+ 											</div>
+ 											<div class="aff-calc-graph-item-human human-3"></div>
+ 											<div class="aff-calc-graph-item-title">Referral №2</div>
+ 											<div class="aff-calc-graph-item-plus"  id="ref-2-l">+$200</div>
+ 										</div>
+ 										<div class="aff-calc-graph-item">
+ 											<div class="aff-calc-graph-item-leg">
+ 												<div class="aff-calc-graph-item-leg-icon left"></div>
+ 												<div class="aff-calc-graph-item-leg-title">Left</div>
+ 											</div>
+ 											<div class="aff-calc-graph-item-human"></div>
+ 											<div class="aff-calc-graph-item-title">Referral №3</div>
+ 											<div class="aff-calc-graph-item-plus"  id="ref-3-l">+$150</div>
+ 										</div>
+ 									</div>
+ 									<div class="aff-calc-graph-block">
+ 										<div class="aff-calc-graph-item">
+ 											<div class="aff-calc-graph-item-leg">
+ 												<div class="aff-calc-graph-item-leg-icon right"></div>
+ 												<div class="aff-calc-graph-item-leg-title">Right</div>
+ 											</div>
+ 											<div class="aff-calc-graph-item-human human-3"></div>
+ 											<div class="aff-calc-graph-item-title">Referral №2</div>
+ 											<div class="aff-calc-graph-item-plus"  id="ref-2-r">+$100</div>
+ 										</div>
+ 										<div class="aff-calc-graph-item">
+ 											<div class="aff-calc-graph-item-leg">
+ 												<div class="aff-calc-graph-item-leg-icon right"></div>
+ 												<div class="aff-calc-graph-item-leg-title">Right</div>
+ 											</div>
+ 											<div class="aff-calc-graph-item-human"></div>
+ 											<div class="aff-calc-graph-item-title">Referral №3</div>
+ 											<div class="aff-calc-graph-item-plus"  id="ref-3-r">+$50</div>
+ 										</div>
+ 									</div>
+ 								</div>
+
+ 							</div>
+
+ 						</div>
+
+ 					</div>
+
+ 					<div class="aff-bottom">
+ 						
+ 						<div class="aff-advs-wrapper">
+
+ 							<div class="aff-advs-item">
+ 								<div class="aff-advs-image"></div>
+ 								<div class="aff-advs-main">
+ 									<div class="aff-advs-text">At the end of each trading day, the system calculates the amount of referral commissions for each leg</div>
+ 								</div>
+ 							</div>
+ 							<div class="aff-advs-item">
+ 								<div class="aff-advs-image"></div>
+ 								<div class="aff-advs-main">
+ 									<div class="aff-advs-text">Referrer receives payment of referral profits from the amount of referral commissions of a weak leg</div>
+ 								</div>
+ 							</div>
+ 							<div class="aff-advs-item">
+ 								<div class="aff-advs-image"></div>
+ 								<div class="aff-advs-main">
+ 									<div class="aff-advs-text">The difference between the sums of a weak and strong leg is carried over to the balance of the following calculation for a strong leg</div>
+ 								</div>
+ 							</div>
+
+ 						</div>
+
+ 					</div>
+
+ 				</div>
+
+ 			</div>
+
+
+
+ 		</div>
+
+ 	</main>
+
+
+
+
+
+ 	<script src="js/all.min.js" defer></script>
+ 	<script src="libs/moveit.js"></script>
+ 	<script src="libs/nice-select.js" defer></script>
+ 	<script src="js/app.js" defer></script>
+
+
+ </body>

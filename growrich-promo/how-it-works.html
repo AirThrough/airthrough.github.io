@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Arbinance</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/waves.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
+	<style>
+	.about-item-text::-webkit-scrollbar {
+		width: 6px;
+		border-radius: 5px;
+		position: relative;
+		margin-right: -5px;
+	}
+
+	/* Track */
+	.about-item-text::-webkit-scrollbar-track {
+		background: rgba(0,0,0,.1); 
+		border-radius: 5px;
+	}
+
+	/* Handle */
+	.about-item-text::-webkit-scrollbar-thumb {
+		background: #43475a;
+		border-radius: 5px;
+		transition: 0.25s all ease-in-out;
+	}
+
+	/* Handle on hover */
+	.about-item-text::-webkit-scrollbar-thumb:hover {
+		background: #585D77;
+		transition: 0.25s all ease-in-out;
+	}
+
+	input[type="search"]::-webkit-search-decoration,
+	input[type="search"]::-webkit-search-cancel-button,
+	input[type="search"]::-webkit-search-results-button,
+	input[type="search"]::-webkit-search-results-decoration {
+		-webkit-appearance:none;
+	}
+	.tab-table::-webkit-scrollbar {
+		width: 6px;
+		border-radius: 5px;
+	}
+
+	/* Track */
+	.tab-table::-webkit-scrollbar-track {
+		background: rgba(0,0,0,.1); 
+		border-radius: 5px;
+	}
+
+	/* Handle */
+	.tab-table::-webkit-scrollbar-thumb {
+		background: #43475a;
+		border-radius: 5px;
+		transition: 0.25s all ease-in-out;
+	}
+
+	/* Handle on hover */
+	.tab-table::-webkit-scrollbar-thumb:hover {
+		background: #585D77;
+		transition: 0.25s all ease-in-out;
+	}
+	</style>
+</head>
+<body>
+
+	<div id="how-it-works" class="page-wrapper">
+		
+
+
+		<header class="header">
+
+			<div class="header-mobile">
+
+				<div class="header-mobile-left">
+
+					<div class="header-mobile-burger">
+						<button class="header-burger">
+							<span class="header-burger-line"></span>
+							<span class="header-burger-line"></span>
+							<span class="header-burger-line"></span>
+							<span class="header-burger-bg"></span>
+						</button>
+					</div>
+
+					<div class="header-mobile-logo">
+
+					</div>
+
+				</div>
+				
+				<div class="header-mobile-lng">
+					<div class="header-lng">
+						<select id="language-mobile" class="header-lng-select" name="" id="">
+							<option class="flag-icon flag-icon-gb" value="gb" selected="selected">gb</option>
+							<option value="ru">ru</option>
+							<option value="fr">fr</option>
+							<option value="es">es</option>
+							<option value="pt">pt</option>
+							<option value="de">de</option>
+							<option value="pl">pl</option>
+						</select>
+
+					</div>
+				</div>
+
+				<div class="header-mobile-wrapper">
+					
+					<nav class="header-mobile-nav">
+						<ul class="header-mobile-menu">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Partnership</a></li>
+							<li><a href="#">How it works</a></li>
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Contacts</a></li>
+						</ul>
+					</nav>
+
+					<div class="header-nav-account">
+
+						<button class="header-nav-btn btn-transparent waves-on">
+							Sign In
+						</button>
+
+						<button class="header-nav-btn btn-yellow waves-on">
+							Sign Up
+						</button>
+
+					</div>
+
+					<div class="header-top-item">
+						<div class="header-top-title">Support:</div>
+						<div class="header-top-soc">
+							<a href="#"  class="header-top-soc-item icon-fb"></a>
+							<a href="#"  class="header-top-soc-item icon-tg"></a>
+						</div>
+					</div>
+
+				</div>
+				
+
+			</div>
+
+			<div class="header-top">
+
+				<div class="container">
+
+					<div class="header-top-inner">
+
+
+
+
+						<div class="header-top-item">
+							<div class="header-top-logo"></div>
+						</div>
+						<div class="header-top-item">
+							<div class="header-top-cur">
+								<div class="header-top-cur-icon icon-btc"></div>
+								<div class="header-top-cur-value">$8402.00</div>
+							</div>
+							<div class="header-top-cur">
+								<div class="header-top-cur-icon icon-bth"></div>
+								<div class="header-top-cur-value">$8402.00</div>
+							</div>
+							<div class="header-top-cur">
+								<div class="header-top-cur-icon icon-eth"></div>
+								<div class="header-top-cur-value">$8402.00</div>
+							</div>
+							<div class="header-top-cur">
+								<div class="header-top-cur-icon icon-ltc"></div>
+								<div class="header-top-cur-value">$8402.00</div>
+							</div>
+							<div class="header-top-cur">
+								<div class="header-top-cur-icon icon-xpr"></div>
+								<div class="header-top-cur-value">$8402.00</div>
+							</div>
+							<div class="header-top-cur">
+								<div class="header-top-cur-icon icon-dash"></div>
+								<div class="header-top-cur-value">$8402.00</div>
+							</div>
+						</div>
+						<div class="header-top-item">
+							<div class="header-top-title">Support:</div>
+							<div class="header-top-soc">
+								<a href="#"  class="header-top-soc-item icon-fb"></a>
+								<a href="#"  class="header-top-soc-item icon-tg"></a>
+							</div>
+						</div>
+						<div class="header-top-item">
+							<div class="header-top-title">Language:</div>
+							<div class="header-lng">
+
+
+								<select id="language" class="header-lng-select" name="" id="">
+									<option class="flag-icon flag-icon-gb" value="gb" selected="selected">gb</option>
+									<option value="ru">ru</option>
+									<option value="fr">fr</option>
+									<option value="es">es</option>
+									<option value="pt">pt</option>
+									<option value="de">de</option>
+									<option value="pl">pl</option>
+								</select>
+
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+			</div>
+
+			<div class="header-nav">
+
+				<div class="container">
+					
+					<div class="header-nav-inner">
+						
+						<div class="logo">
+							<img src="img/logo.svg" alt="">
+						</div>
+
+						<nav class="header-nav-container">
+							<ul class="header-nav-menu">
+								<li><a href="#">Home</a></li>
+								<li><a href="#">Partnership</a></li>
+								<li><a href="#">How it works</a></li>
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Contacts</a></li>
+							</ul>
+						</nav>
+
+						<div class="header-nav-account">
+
+							<button class="header-nav-btn btn-transparent waves-on">
+								Sign In
+							</button>
+
+							<button class="header-nav-btn btn-yellow waves-on">
+								Sign Up
+							</button>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				
+				
+
+			</div>
+
+			<div class="header-main">
+
+
+				<div class="container">
+
+					<div class="header-main-inner center">
+
+						<h1 class="header-main-title header-main-title_center header-main-title_triple">
+							<span class="header-main-title-white">How to </span><span class="header-main-title-yellow"> use and gain </span> <span class="header-main-title-white"> capital </span>
+						</h1>
+
+						<p class="header-main-text header-main-text_center">
+							Boost your cryptocurrency profits by going long or short on a secure and ultra- <br> smart crypto trading tool
+						</p>
+						<div class="header-main-btn-wrapper">
+							<a href="#" class="header-main-btn btn-down" >
+								Join now
+							</a>
+						</div>
+
+						
+					</div>
+
+				</div>
+
+				<div class="ill-how"></div>
+
+
+
+			</div>
+
+		</header>
+
+		<main class="main">
+			
+
+			<section class="hiw-steps">
+				<div class="bg"></div>
+				<div class="container">
+					<div class="hiw-steps-inner">
+						
+						<h2 class="h2">
+							How it works?
+						</h2>
+
+						<div class="desc">
+							Learn how to succeed with binary options trading and what it takes to make a living from online crypto trading. New traders often just want to know how to set up their accounts so they can hurry up and make money. For this case, we have prepared a clear step by step plan
+						</div>
+
+						<div class="hiw-steps-wrapper">
+
+							<div class="hiw-steps-row">
+								<div class="hiw-steps-item">
+									<div class="hiw-steps-item-number">01</div>
+									<div class="hiw-steps-item-main">
+										<div class="hiw-steps-item-text">Sign Up <br>
+											& <br>
+										Verify</div>
+										<div class="hiw-steps-item-icon">
+											<a href="#sec1" class="hiw-steps-item-link scroll-to"></a>
+										</div>
+									</div>
+								</div>
+								<div class="hiw-steps-item">
+									<div class="hiw-steps-item-number">02</div>
+									<div class="hiw-steps-item-main">
+										<div class="hiw-steps-item-text">Login  <br>
+											& <br>
+										Set Up </div>
+										<div class="hiw-steps-item-icon">
+											<a href="#sec2" class="hiw-steps-item-link scroll-to"></a>
+										</div>
+									</div>
+								</div>
+								<div class="hiw-steps-item">
+									<div class="hiw-steps-item-number">03</div>
+									<div class="hiw-steps-item-main">
+										<div class="hiw-steps-item-text">Top Up  <br>
+											Account <br>
+										Balance</div>
+										<div class="hiw-steps-item-icon">
+											<a href="#sec3" class="hiw-steps-item-link scroll-to"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="hiw-steps-row">
+								<div class="hiw-steps-item">
+									<div class="hiw-steps-item-number">04</div>
+									<div class="hiw-steps-item-main">
+										<div class="hiw-steps-item-text">Choose <br>
+											An <br>
+										Offer</div>
+										<div class="hiw-steps-item-icon">
+											<a href="#sec4" class="hiw-steps-item-link scroll-to"></a>
+										</div>
+									</div>
+								</div>
+								<div class="hiw-steps-item">
+									<div class="hiw-steps-item-number">05</div>
+									<div class="hiw-steps-item-main">
+										<div class="hiw-steps-item-text">Trading<br>
+											&<br>
+										Earning</div>
+										<div class="hiw-steps-item-icon">
+											<a href="#sec5" class="hiw-steps-item-link scroll-to"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="hiw-steps-row">
+								<div class="hiw-steps-item">
+									<div class="hiw-steps-item-number">06</div>
+									<div class="hiw-steps-item-main">
+										<div class="hiw-steps-item-text">Withdrawal <br>
+											Of <br>
+										Profit</div>
+										<div class="hiw-steps-item-icon">
+											<a href="#sec6" class="hiw-steps-item-link scroll-to"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="hiw-steps-way"></div>
+
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="videos">
+				
+				<div class="container">
+					
+					<div class="videos-inner">
+						
+						
+						<h2 id="sec1" class="h2">
+							Sign up and confirm your account.
+						</h2>
+
+						<div class="desc">
+							To open an account you just need to fill out the form. We respect confidentiality and do not require any personal information
+						</div>
+
+
+						<div class="videos-item videos-item-1">
+							<video  width="1104" height="694" autoplay loop muted>
+								<source src="img/videos/Signup.webm" >
+									Your browser does not support the video tag.
+								</video>
+							</div>
+
+							<h2 id="sec2" class="h2">
+								Once you are registered you can <br>
+								login and set up your account
+							</h2>
+
+							<div class="desc">
+								After confirmed registration link in the email letter, you can provide your billing information and set up your user account.
+							</div>
+
+							<div class="videos-item videos-item-2">
+								<video  width="1110" height="770" autoplay loop muted>
+									<source src="img/videos/Settings.webm" >
+										Your browser does not support the video tag.
+									</video>
+								</div>
+
+								<h2 id="sec3" class="h2">
+									Top up balance with any currency
+								</h2>
+
+								<div class="desc">
+									You have an opportunity to top up the balance for trading with any currency convenient for you, including fiat
+								</div>
+
+								<div class="videos-item videos-item-3">
+									<video  width="1110" height="819" autoplay loop muted>
+										<source src="img/videos/Deposit.webm" >
+											Your browser does not support the video tag.
+										</video>
+									</div>
+
+									<h2 id="sec4" class="h2">
+										Great choice of trading
+									</h2>
+
+									<div class="desc">
+										The platform has great opportunities for traders. Each trader can choose an arbitration deal from the best offers, or manually based search on his strategy
+									</div>
+
+									<div class="videos-item videos-item-4">
+										<video  width="1104" height="828" autoplay loop muted>
+											<source src="img/videos/BestOffers.webm" >
+												Your browser does not support the video tag.
+											</video>
+										</div>
+
+										<div class="videos-side">
+
+											<div class="videos-side-item">
+												<div class="videos-side-item-icon"></div>
+												<div class="videos-side-item-main">
+													<div class="videos-side-item-title">Best offers</div>
+													<div class="videos-side-item-text">Use our AI system which constantly searching the market, looking for the best arbitrage offers. Choose the one you like the most and make a trade</div>
+												</div>
+											</div>
+
+											<div class="videos-side-item">
+												<div class="videos-side-item-icon"></div>
+												<div class="videos-side-item-main">
+													<div class="videos-side-item-title">Manual trading</div>
+													<div class="videos-side-item-text">Trade by yourself using our search engine to find the best arbitrage deals. If you have a profitable trading strategy, you can apply it and make a consistent profit</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="videos-item videos-item-5">
+											<video  width="1110" height="770" autoplay loop muted>
+												<source src="img/videos/ManualOffers.webm" >
+													Your browser does not support the video tag.
+												</video>
+											</div>
+
+											<h2 id="sec5" class="h2">
+												Processing and getting profit
+											</h2>
+
+											<div class="desc">
+												After the processing, trading system returns your assets to your available balance, including a profit.
+											</div>
+
+											<div class="videos-subtitle">
+												Trading profit (hourly graph)
+											</div>
+											<div class="videos-item videos-item-6">
+												<video  width="1110" height="456" autoplay loop muted>
+													<source src="img/videos/TradingProfit.webm" >
+														Your browser does not support the video tag.
+													</video>
+												</div>
+
+												<div class="videos-subtitle">
+													Daily trades
+												</div>
+												<div class="videos-item videos-item-7">
+													<video  width="1110" height="280" autoplay loop muted>
+														<source src="img/videos/DailyTrades.webm" >
+															Your browser does not support the video tag.
+														</video>
+													</div>
+
+													<h2 id="sec6" class="h2">
+														Withdrawal of profit
+													</h2>
+
+													<div class="desc">
+														The user at any time can order the withdrawal from the available balance
+													</div>
+
+													<div class="videos-item videos-item-8">
+														<video  width="1110" height="762" autoplay loop muted>
+															<source src="img/videos/Withdrawal.webm" >
+																Your browser does not support the video tag.
+															</video>
+														</div>
+
+
+													</div>
+
+												</div>
+
+
+												<div class="bg-angled top"></div>
+												<div class="bg-angled-middle"></div>
+												<div class="bg-angled bottom"></div>
+
+												<div class="bg-side bg-side-right bg-side-1"></div>
+												<div class="bg-side bg-side-left bg-side-2"></div>
+												<div class="bg-side bg-side-right bg-side-3"></div>
+												<div class="bg-side bg-side-left bg-side-4"></div>
+												<div class="bg-side bg-side-right bg-side-5"></div>
+
+												<div class="bg-angled-short">
+													<div class="bg-angled-short-1"></div>
+													<div class="bg-angled-short-2"></div>
+												</div>
+
+											</section>
+
+											<section class="get-started">
+
+												<div class="container">
+
+													<div class="get-started-inner">
+
+
+														<div class="get-started-main">
+
+															<div class="get-started-title-1">READY</div>
+															<div class="get-started-title-2">TO</div>
+															<div class="get-started-title-3">GET STARTED?</div>
+															<div class="get-started-subtitle">Get free pack</div>
+															<div class="get-started-text">Open a free account and trade all cryptocurrencies, trading has never been so easy.</div>
+
+														</div>
+
+														<div class="get-started-tariff">
+
+
+															<div class="upgrade-plans-item tariff tariff_recommended selected">
+																<div class="tariff-head">
+																	<div class="tariff-stars stars stars-simple">
+																		<div class="star"></div>
+																	</div>
+																	<div class="tariff-name">Starter</div>
+																	<div class="tariff-verified"></div>
+																	<div class="tariff-desc">Taking time to explore how ArBinance crypto tool works and choose the best trading style</div>
+																</div>
+																<div class="tariff-price changed">
+																	<div class="tariff-price-value">$0.00</div>
+																	<div class="tariff-price-old">$25.00</div>
+																	<div class="tariff-price-period">Per 30 Days</div>
+																</div>
+																<ul class="tariff-list">
+																	<li class="tariff-list-item tariff-list-item_checked">
+
+																		<div class="tariff-list-item-text">E-email notifications about offers</div>
+																	</li>
+																	<li class="tariff-list-item tariff-list-item_checked">
+
+																		<div class="tariff-list-item-text">SMS notifications</div>
+																	</li>
+																	<li class="tariff-list-item tariff-list-item_checked">
+
+																		<div class="tariff-list-item-text">Support up to <span class="bold green"> 12</span> hours</div>
+																	</li>
+																	<li class="tariff-list-item tariff-list-item_checked">
+
+																		<div class="tariff-list-item-text">Max Trading volume - <span class="bold green">500</span> BTC</div>
+																	</li>
+																	<li class="tariff-list-item tariff-list-item_checked">
+
+																		<div class="tariff-list-item-text">Max <span class="bold green"> 1</span> trade at same time</div>
+																	</li>
+																	<li class="tariff-list-item tariff-list-item_checked">
+
+																		<div class="tariff-list-item-text">Max <span class="bold green"> 2</span> withdrawal request per day</div>
+																	</li>
+																	<li class="tariff-list-item tariff-list-item_checked">
+
+																		<div class="tariff-list-item-text">No more than <span class="bold green"> 100</span> first level partners </div>
+																	</li>
+																</ul>
+																<div class="tariff-submit"><button data-air-popup="upgrade-popup-1" class="tariff-btn btn-yellow open-popup">Sign Up</button></div>
+															</div>
+
+
+														</div>
+
+
+													</div>
+
+												</div>
+
+											</section>
+
+										</main>
+										
+										<footer class="footer">
+											<div class="container">
+												<div class="footer-inner">
+													<div class="footer-logo"></div>
+
+													<nav class="footer-nav">
+														<ul class="footer-menu">
+															<li><a href="#">Home</a></li>
+															<li><a href="#">Partnership</a></li>
+															<li><a href="#">How it works</a></li>
+															<li><a href="#">About us</a></li>
+															<li><a href="#">Contacts</a></li>
+														</ul>
+													</nav>
+
+													<div class="header-nav-account">
+
+														<button class="header-nav-btn btn-transparent waves-on">
+															Sign In
+														</button>
+
+														<button class="header-nav-btn btn-yellow waves-on">
+															Sign Up
+														</button>
+
+													</div>
+
+												</div>
+											</div>
+
+											<div class="footer-bottom">
+
+												<div class="container">
+
+													<div class="footer-bottom-inner">
+
+														<button class="up-btn"></button>
+
+														<div class="footer-bottom-copyright">
+															<div class="footer-bottom-txt">© 2016-2019 ArBinance All rights reserved</div>
+															<a href="#" class="footer-bottom-link">Terms of use</a>
+														</div>
+
+														<div class="footer-bottom-support">
+															<a href="#" class="footer-bottom-link footer-bottom-link_white">FAQ</a>
+															<div class="footer-bottom-title">Support:</div>
+															<div class="header-top-soc">
+																<a href="#"  class="header-top-soc-item icon-fb"></a>
+																<a href="#"  class="header-top-soc-item icon-tg"></a>
+															</div>
+														</div>
+
+													</div>
+
+												</div>
+
+											</div>
+										</footer>
+
+
+
+									</div>
+
+
+									<script src="js/all.min.js" defer></script>
+									<script src="libs/moveit.js"></script>
+									<script src="libs/nice-select.js" defer></script>
+									<script src="js/app.js" defer></script>
+
+									<div class="air-popup air-popup_video air-popup-hide" id="video"> 
+
+										<div class="air-popup-wrapper">
+											<div class="air-popup-content">
+												<iframe width="100%" height="100%" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+											</div>
+										</div>
+
+
+
+
+
+									</div>
+
+								</body>
+								</html>

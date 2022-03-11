@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Airbinance</title>
+	<link rel="stylesheet" href="css/fonts.css?ver=14">
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/waves.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
+	<style>
+
+
+	.tab-table::-webkit-scrollbar {
+		width: 6px;
+		border-radius: 5px;
+	}
+
+	/* Track */
+	.tab-table::-webkit-scrollbar-track {
+		background: rgba(0,0,0,.1); 
+		border-radius: 5px;
+	}
+
+	/* Handle */
+	.tab-table::-webkit-scrollbar-thumb {
+		background: #43475a;
+		border-radius: 5px;
+		transition: 0.25s all ease-in-out;
+	}
+
+	/* Handle on hover */
+	.tab-table::-webkit-scrollbar-thumb:hover {
+		background: #585D77;
+		transition: 0.25s all ease-in-out;
+	}
+
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: white;
+		transition: 0.25s all ease-in-out;
+		font-family: 'Helvetica Neue'
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+		color: white;
+		transition: 0.25s all ease-in-out;
+		font-family: 'Helvetica Neue'
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+		color: white;
+		transition: 0.25s all ease-in-out;
+		font-family: 'Helvetica Neue'
+	}
+	:-moz-placeholder { /* Firefox 18- */
+		color: white;
+		transition: 0.25s all ease-in-out;
+		font-family: 'Helvetica Neue'
+	}
+
+	input[type="text"]:focus::-webkit-input-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+
+	input[type="text"]:focus:-ms-input-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+
+	input[type="text"]:focus:-moz-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+	input[type="text"]:focus::-moz-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+</style>
+
+</head>
+<body>
+
+	<header class="header">
+
+		<div class="header-left">
+
+			<div class="header-menu-btn-wrap">
+
+				<button class="header-burger">
+					<span class="header-burger-line"></span>
+					<span class="header-burger-line"></span>
+					<span class="header-burger-line"></span>
+					<span class="header-burger-bg"></span>
+				</button>
+
+			</div>
+
+			<div class="header-logo">
+				<a class="header-logo-link" href="#">
+					<img class="header-logo-img" src="img/logo.svg" alt="">
+				</a>
+			</div>
+
+			<div class="header-stats">
+
+				<div class="header-stats-item header-stats-item-balance">
+					<div class="header-stats-title">Balance</div>
+					<div class="header-stats-value">$ 120267.09</div>
+				</div>
+				<div class="header-stats-item header-stats-item-deposits">
+					<div class="header-stats-title">Deposits</div>
+					<div class="header-stats-value">$ 369092.02</div>
+				</div>
+				<div class="header-stats-item header-stats-item-pending">
+					<div class="header-stats-title">Pending</div>
+					<div class="header-stats-value">$ 275647.00</div>
+				</div>
+				<div class="header-stats-item header-stats-item-partners">
+					<div class="header-stats-title">Partners</div>
+					<div class="header-stats-value">25647</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="header-right">
+
+
+			<div class="header-lng">
+
+				<select id="language" class="header-lng-select" name="" id="">
+					<option class="flag-icon flag-icon-gb" value="gb" selected="selected">gb</option>
+					<option value="ru">ru</option>
+					<option value="fr">fr</option>
+					<option value="es">es</option>
+					<option value="pt">pt</option>
+					<option value="de">de</option>
+					<option value="pl">pl</option>
+				</select>
+
+			</div>
+
+
+			<div class="header-logout">
+
+				<button class="header-logout-btn btn-yellow btn-logout">Logout</button>
+
+			</div>
+
+		</div>
+
+	</header>
+
+	<main id="topups">
+
+		<div class="content-wrapper">
+			
+			<aside class="aside pre-mobile">
+
+				<div class="aside-user">
+					<div class="aside-user-row">
+						<div class="aside-user-main">
+							<div class="aside-user-country flag-icon-background flag-icon-gb"></div>
+							<div class="aside-user-name">Username</div>
+						</div>
+						<a href="#" class="aside-user-settings"></a>
+					</div>
+					<div class="aside-user-row">
+						<div class="aside-user-title">Partner status</div>
+						<div class="aside-user-rating rate">
+							<div class="rate-item"></div>
+							<div class="rate-item"></div>
+							<div class="rate-item bright"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="aside-title">Dashboard</div>
+
+				<nav class="aside-nav">
+					<ul class="aside-menu">
+						<li class="aside-menu-item icon-invest"><a href="" class="aside-menu-link ">My investment</a></li>
+						<li class="aside-menu-item icon-account"><a href="" class="aside-menu-link ">Account upgrade</a></li>
+						<li class="aside-menu-item icon-trading"><a href="/top-up.html" class="aside-menu-link ">Top up & Withdrawal</a></li>
+						<li class="aside-menu-item icon-trading"><a href="/trading-history.html" class="aside-menu-link icon-trading">Trading history</a></li>
+						<li class="aside-menu-item icon-partnership"><a href="" class="aside-menu-link ">Partnership</a></li>
+						<li class="aside-menu-item icon-news"><a href="" class="aside-menu-link ">News</a></li>
+						<li class="aside-menu-item icon-reviews"><a href="" class="aside-menu-link  ">Reviews</a></li>
+					</ul>
+				</nav>
+
+				<div class="aside-extra">
+					<div class="aside-title">Corporate website</div>
+
+					<ul class="aside-menu aside-menu-extra">
+						<li class="aside-menu-item icon-home"><a href="" class="aside-menu-link ">ArBinance Homepage</a></li>
+						<li class="aside-menu-item icon-terms"><a href="" class="aside-menu-link ">Affiliate terms</a></li>
+					</ul>
+
+				</div>
+
+				<div class="aside-bottom">
+
+					<div class="aside-title">Support</div>
+
+					<ul class="aside-support">
+						<li class="aside-support-item">
+							<a href="" class="aside-support-link">
+								<span class="aside-support-icon icon-tg"></span><span class="aside-support-title">Telegram</span>
+							</a>
+						</li>
+						<li class="aside-support-item">
+							<a href="" class="aside-support-link">
+								<span class="aside-support-icon icon-fb"></span>
+								<span class="aside-support-title">Facebook</span>
+							</a>
+						</li>
+					</ul>
+
+				</div>
+
+
+			</aside>
+			<div class="content">
+				
+
+				<div class="stats-exchange">
+					<div class="stats-exchange-block">
+						<div class="stats-exchange-left">
+							<div class="stats-exchange-logo">
+								<img src="img/logo-exmo.svg" alt="">
+							</div>
+							<div class="stats-exchange-caption"><span class="red">LIVE</span> update</div>
+						</div>
+						<div class="stats-exchange-right">
+							<div class="stats-exchange-item">
+
+								<img src="img/icon-btc.svg" alt="" class="stats-exchange-icon">
+								<div class="stats-exchange-value">$ 5235.03</div>
+							</div>
+							<div class="stats-exchange-item">
+
+								<img src="img/icon-bth.svg" alt="" class="stats-exchange-icon">
+								<div class="stats-exchange-value">$ 171.000</div>
+							</div>
+							<div class="stats-exchange-item">
+
+								<img src="img/icon-eth.svg" alt="" class="stats-exchange-icon">
+								<div class="stats-exchange-value">$ 0.87695</div>
+							</div>
+							<div class="stats-exchange-item">
+								
+								<img src="img/icon-dash.svg" alt="" class="stats-exchange-icon">
+								<div class="stats-exchange-value">$ 235.03</div>
+							</div>
+							<div class="stats-exchange-item">
+
+								<img src="img/icon-xpr.svg" alt="" class="stats-exchange-icon">
+								<div class="stats-exchange-value">$ 114.03</div>
+							</div>
+							<div class="stats-exchange-item">
+
+								<img src="img/icon-ltc.svg" alt="" class="stats-exchange-icon">
+								<div class="stats-exchange-value">$ 88.93</div>
+							</div>
+						</div>
+					</div>
+					<div class="stats-exchange-block">
+						<div class="stats-exchange-left">
+							<div class="stats-exchange-logo">
+								<img src="img/logo-bitstamp.svg" alt="">
+							</div>
+							<div class="stats-exchange-caption"><span class="red">LIVE</span> update</div>
+						</div>
+						<div class="stats-exchange-right">
+							<div class="stats-exchange-item">
+
+								<img src="img/icon-btc.svg" alt="" class="stats-exchange-icon">
+								<div class="stats-exchange-value">$ 5235.03</div>
+							</div>
+							<div class="stats-exchange-item">
+
+								<img src="img/icon-bth.svg" alt="" class="stats-exchange-icon">
+								<div class="stats-exchange-value">$ 171.000</div>
+							</div>
+							<div class="stats-exchange-item">
+
+								<img src="img/icon-eth.svg" alt="" class="stats-exchange-icon">
+								<div class="stats-exchange-value">$ 0.87695</div>
+							</div>
+							<div class="stats-exchange-item">
+								
+								<img src="img/icon-dash.svg" alt="" class="stats-exchange-icon">
+								<div class="stats-exchange-value">$ 235.03</div>
+							</div>
+							<div class="stats-exchange-item">
+
+								<img src="img/icon-xpr.svg" alt="" class="stats-exchange-icon">
+								<div class="stats-exchange-value">$ 114.03</div>
+							</div>
+							<div class="stats-exchange-item">
+
+								<img src="img/icon-ltc.svg" alt="" class="stats-exchange-icon">
+								<div class="stats-exchange-value">$ 88.93</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="title">Total top ups / withdrawals</div>
+
+				<div class="chart chart-bar">
+
+
+					<div class="chart-bar-top">
+
+						<div class="chart-bar-top-info">
+							<div class="chart-bar-top-info-col">
+								<div class="chart-bar-top-item">
+									<div class="chart-bar-top-title">Today’s top ups</div>
+									<div class="chart-bar-top-value">$ 87.00</div>
+								</div>
+								<div class="chart-bar-top-item">
+									<div class="chart-bar-top-title">Today’s withdrawals</div>
+									<div class="chart-bar-top-value">$ 47.00</div>
+								</div>
+							</div>
+							<div class="chart-bar-top-info-col">
+								<div class="chart-bar-top-item">
+									<div class="chart-bar-top-title">Weekly top ups</div>
+									<div class="chart-bar-top-value">$ 347.00</div>
+								</div>
+								<div class="chart-bar-top-item">
+									<div class="chart-bar-top-title">Weekly  withdrawals</div>
+									<div class="chart-bar-top-value">$ 549.00</div>
+								</div>
+							</div>
+							<div class="chart-bar-top-info-col">
+								<div class="chart-bar-top-item">
+									<div class="chart-bar-top-title">Monthly top ups</div>
+									<div class="chart-bar-top-value">$ 5347.00</div>
+								</div>
+								<div class="chart-bar-top-item">
+									<div class="chart-bar-top-title">Monthly withdrawals</div>
+									<div class="chart-bar-top-value">$ 5347.00</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="chart-top-select">
+
+							<select name="" id="chart-select" class="chart-select simple-select">
+								<option selected   value="week">Week</option>
+								<option value="month">Month</option>
+							</select>
+
+						</div>
+
+					</div>
+					<div class="chart-wrapper-scroll">
+
+						<div id="chart-wrapper-1" class="chart-wrapper chart-wrapper-week">
+							<canvas id="chart-week" width="1070" height="230"></canvas>
+
+						</div>
+
+						<div id="chart-wrapper-2" class="chart-wrapper chart-wrapper-month closed absolute ">
+							<canvas id="chart-month" width="1070" height="230"></canvas>
+
+						</div>
+						<div id="chartjs-tooltip" class="chart-tooltip-custom">
+							<table></table>
+						</div>
+
+					</div>
+
+
+					<!-- chart chart-bar END -->
+
+				</div>
+
+
+				<div class="title">Top up / Withdrawal</div>
+
+				<div class="tab-block tab-block_topups">
+
+					<div id="topupAndWithdrawak" class="tab-table tab-table-topups">
+						<div class="tab-table-row tab-table-head">
+							<div class="tab-table-cell">Coin</div>
+							<div class="tab-table-cell">Name</div>
+							<div class="tab-table-cell">Total balance</div>
+							<div class="tab-table-cell">Available balance</div>
+							<div class="tab-table-cell">In order</div>
+							<div class="tab-table-cell">BTC Value</div>
+							<div class="tab-table-cell"></div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-currency">
+									<img src="img/icon-btc.svg" alt="" class="cell-currency-icon">
+									<div class="cell-currency-title">BTC</div>
+									<div class="cell-currency-extra">
+										<div class="cell-currency-extra-item">
+											<div class="cell-currency-extra-icon icon-pm"></div>
+											<div class="cell-currency-extra-checkbox"></div>
+										</div>
+										<div class="cell-currency-extra-item">
+											<div class="cell-currency-extra-icon icon-acash"></div>
+											<div class="cell-currency-extra-checkbox"></div>
+										</div>
+										<div class="cell-currency-extra-item">
+											<div class="cell-currency-extra-icon icon-payeer"></div>
+											<div class="cell-currency-extra-checkbox"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								Bitcoin
+							</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell tab-table-cell-green">0.00000000</div>
+							<div class="tab-table-cell tab-table-cell-yellow">0.00000000</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<div class="cell-action">
+									<button data-air-popup="deposit" class="cell-action-btn btn-green waves-on open-popup">Deposit</button>
+									<button data-air-popup="withdrawal" class="cell-action-btn btn-red waves-on open-popup">Withdrawal</button>
+									<button class="cell-action-btn btn-yellow waves-on">Trade</button>
+								</div>
+							</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-currency">
+									<img src="img/icon-bth.svg" alt="" class="cell-currency-icon">
+									<div class="cell-currency-title">BTH</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								Bitcoin Cash
+							</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell tab-table-cell-green">0.00000000</div>
+							<div class="tab-table-cell tab-table-cell-yellow">0.00000000</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<div class="cell-action">
+									<button class="cell-action-btn btn-disabled">Suspend</button>
+									<button data-air-popup="withdrawal" class="cell-action-btn btn-red waves-on open-popup">Withdrawal</button>
+									<button class="cell-action-btn btn-yellow waves-on">Trade</button>
+								</div>
+							</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-currency">
+									<img src="img/icon-eth.svg" alt="" class="cell-currency-icon">
+									<div class="cell-currency-title">ETH</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								Etherium
+							</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell tab-table-cell-green">0.00000000</div>
+							<div class="tab-table-cell tab-table-cell-yellow">0.00000000</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<div class="cell-action">
+									<button data-air-popup="deposit" class="cell-action-btn btn-green waves-on open-popup">Deposit</button>
+									<button data-air-popup="withdrawal" class="cell-action-btn btn-red waves-on open-popup">Withdrawal</button>
+									<button class="cell-action-btn btn-yellow waves-on">Trade</button>
+								</div>
+							</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-currency">
+									<img src="img/icon-ltc.svg" alt="" class="cell-currency-icon">
+									<div class="cell-currency-title">LTC</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								Litecoin
+							</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell tab-table-cell-green">0.00000000</div>
+							<div class="tab-table-cell tab-table-cell-yellow">0.00000000</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<div class="cell-action">
+									<button data-air-popup="deposit" class="cell-action-btn btn-green waves-on open-popup">Deposit</button>
+									<button data-air-popup="withdrawal" class="cell-action-btn btn-red waves-on open-popup">Withdrawal</button>
+									<button class="cell-action-btn btn-disabled">Trade</button>
+								</div>
+							</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-currency">
+									<img src="img/icon-dash.svg" alt="" class="cell-currency-icon">
+									<div class="cell-currency-title">Dash</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								Dash
+							</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell tab-table-cell-green">0.00000000</div>
+							<div class="tab-table-cell tab-table-cell-yellow">0.00000000</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<div class="cell-action">
+									<button data-air-popup="deposit" class="cell-action-btn btn-green waves-on open-popup">Deposit</button>
+									<button data-air-popup="withdrawal" class="cell-action-btn btn-red waves-on open-popup">Withdrawal</button>
+									<button class="cell-action-btn btn-yellow waves-on">Trade</button>
+								</div>
+							</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-currency">
+									<img src="img/icon-xpr.svg" alt="" class="cell-currency-icon">
+									<div class="cell-currency-title">XRP</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								XRP
+							</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell tab-table-cell-green">0.00000000</div>
+							<div class="tab-table-cell tab-table-cell-yellow">0.00000000</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<div class="cell-action">
+									<button data-air-popup="deposit" class="cell-action-btn btn-green waves-on open-popup">Deposit</button>
+									<button data-air-popup="withdrawal" class="cell-action-btn btn-red waves-on open-popup">Withdrawal</button>
+									<button class="cell-action-btn btn-yellow waves-on">Trade</button>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+
+					<div class="tab-attention">
+						<div class="tab-attention-message">
+							<div class="tab-attention-title">Important:</div>
+							<div class="tab-attention-text">BTC will be processed using CoinsWallet.com which also accept PerfectMoney, Payeer and Advanced Cash</div>
+						</div>
+						<div class="tab-attention-img logo-coins-wallet"></div>
+						<div class="tab-attention-item">
+							<div class="tab-attention-icon icon-pm"></div>
+							<div class="tab-attention-checkbox icon-checkbox"></div>
+						</div>
+						<div class="tab-attention-item">
+							<div class="tab-attention-icon icon-acash"></div>
+							<div class="tab-attention-checkbox icon-checkbox"></div>
+						</div>
+						<div class="tab-attention-item">
+							<div class="tab-attention-icon icon-payeer"></div>
+							<div class="tab-attention-checkbox icon-checkbox"></div>
+						</div>
+					</div>
+				</div>
+
+				
+
+
+			</div>
+
+
+
+		</div>
+		
+	</main>
+	
+
+	<div id="deposit-2" class="air-popup air-popup-hide">
+		
+		<div class="air-popup-wrapper">
+			<div class="air-popup-content">
+				
+				<form id="d-2" action="" method="post" class="popup popup_deposit">
+
+					<div class="popup-header">
+						<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+						<div class="popup-close air-popup-close"></div>
+					</div>
+
+					<div class="popup-title">Deposit</div>
+
+					<div class="popup-info">
+						<div class="popup-info-item">
+							<div class="popup-info-title">Date</div>
+							<div class="popup-info-value">30/10/2018 16:27</div>
+							<input type="hidden" value="30/10/2018 16:27">
+						</div>
+						<!-- <div for="deposit-select" class="popup-info-item popup-info-item-select">
+							<div class="popup-info-title">Coin name</div>
+							<select class="popup-info-select" name="deposit-select" id="select-currency-popup">
+								<option selected value="btc">Bitcoin (BTC)</option>
+								<option value="bth">Bitcoin CASH (BTH)</option>
+								<option value="eth">Etherium (ETH)</option>
+								<option value="ltc">Litecoin (LTC)</option>
+								<option value="dash">Dash (DASH)</option>
+								<option value="xpr">Ripple (XRP)</option>
+							</select>
+						</div> -->
+						<!-- <div for="deposit-select" class="popup-info-item popup-info-item-select">
+							<div class="popup-info-title">Coin name</div>
+							<div class="search-input-wrapper search-input-wrapper_small search-popup">
+								<div class="search-input-main search-input-main_simple search-input-main_popup">	
+									<div class="search-input-image">
+										<img src="img/icon-btc.svg" class="search-input-icon" alt="">
+									</div>
+									<input type="hidden" class="search-input-hidden" value="Bitcoin (BTC)" >
+									<div class="search-input">Bitcoin (BTC)</div>
+								</div>
+								<div class="search-input-content">
+									<ul class="search-input-list">
+										<li class="search-input-item selected">
+											<div class="search-input-image">
+												<img src="img/icon-btc.svg" alt="" class="search-input-icon">
+
+											</div>
+											<div class="search-input-item-value">Bitcoin (BTC)</div>
+										</li>
+										<li class="search-input-item">
+											<div class="search-input-image">
+												<img src="img/icon-bth.svg" alt="" class="search-input-icon">
+
+											</div>
+											<div class="search-input-item-value">Bitcoin Cash (BTH)</div>
+										</li>
+										<li class="search-input-item">
+											<div class="search-input-image">
+												<img src="img/icon-eth.svg" alt="" class="search-input-icon">
+											</div>
+											<div class="search-input-item-value">Etherium (ETH)</div>
+										</li>
+										<li class="search-input-item">
+											<div class="search-input-image">
+												<img src="img/icon-ltc.svg" alt="" class="search-input-icon">
+											</div>
+											<div class="search-input-item-value">
+											Litecoin (LTC)</div>
+										</li>
+										<li class="search-input-item">
+											<div class="search-input-image">
+												<img src="img/icon-xpr.svg" alt="" class="search-input-icon">
+											</div>
+											<div class="search-input-item-value">Ripple (XRP)</div>
+										</li>
+										<li class="search-input-item">
+											<div class="search-input-image">
+												<img src="img/icon-dash.svg" alt="" class="search-input-icon">
+											</div>
+											<div class="search-input-item-value">Dash</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div> -->
+						<div class="popup-info-item dark">
+							<div class="popup-info-title">Coin name</div>
+							<div class="popup-info-value">
+								<img src="img/icon-btc.svg" alt="" class="popup-info-value-icon">
+							Bitcoin (BTC)</div>
+							<input type="hidden" value="Bitcoin (BTC)">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Total balance</div>
+							<div class="popup-info-value">00.00000000</div>
+							<input type="hidden" value="00.00000000">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Available balance</div>
+							<div class="popup-info-value popup-info-value_green">00.00000000</div>
+							<input type="hidden" value="00.00000000">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Reserved balance</div>
+							<div class="popup-info-value popup-info-value_yellow">00.00000000</div>
+							<input type="hidden" value="00.00000000">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Deposit amount</div>
+							<div class="popup-info-value popup-info-value_green">$250.00</div>
+							<input type="hidden" value="$250.00">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Bitcoin Rate</div>
+							<div class="popup-info-value popup-info-value_green">$11460.00</div>
+							<input type="hidden" value="$11460.00">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Bitcoin Amount</div>
+							<div class="popup-info-value popup-info-value_green">BTC 0.00908076</div>
+							<input type="hidden" value="BTC 0.00908076">
+						</div>
+
+
+
+
+					</div>
+
+					<div class="popup-subtitle mrg-fix-2">
+						Send direct
+					</div>
+
+					<div class="popup-payment">
+						<div class="popup-payment-success">
+							Amount copied to clipboard
+						</div>
+						<div class="popup-payment-title">
+							<img src="img/icon-btc.svg" alt="" class="popup-payment-title-icon">
+							<span class="popup-payment-title-cur">Bitcoin (BTC) </span>
+							<span class="popup-payment-title-info">Amount / Address </span>
+						</div>
+						<div class="popup-payment-amount">
+							<div class="popup-payment-amount-value">BTC <span>0.00076431</span></div>
+							<div class="popup-payment-copy waves-on"></div>
+						</div>
+						<div class="popup-payment-address">
+							<div class="popup-payment-address-value">1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqA</div>
+							<div class="popup-payment-qr">
+								<img class="popup-payment-qr-img" src="img/qr-code.svg" alt="">
+							</div>
+							<div class="popup-payment-copy waves-on"></div>
+						</div>
+					</div>
+
+					<div class="popup-simple-input">
+						<div class="popup-simple-input-image">
+							<div class="popup-simple-input-icon icon-hash"></div>
+						</div>
+						<div class="popup-simple-input-main">
+							<div class="popup-simple-input-title">Transaction Hash</div>
+							<div class="popup-simple-input-wrapper">
+								<input required type="text" placeholder="Paste your transaction hash here" class="popup-simple-input-field">
+							</div>
+						</div>
+					</div>
+
+					<div class="popup-extra">
+						<div class="popup-extra-title">Important</div>
+						<div class="popup-extra-list">
+							<div class="popup-extra-item">Coins will be deposited immediately after 4 network confirmations</div>
+							<div class="popup-extra-item">BTC will be processed using CoinsWallet.com which also accept PerfectMoney, Payeer and Advanced Cash</div>
+						</div>
+						<div class="popup-extra-bottom mrg-fix">
+							<div class="tab-attention-img logo-coins-wallet"></div>
+							<div class="tab-attention-item">
+								<div class="tab-attention-icon icon-pm"></div>
+								<div class="tab-attention-checkbox icon-checkbox"></div>
+							</div>
+							<div class="tab-attention-item">
+								<div class="tab-attention-icon icon-acash"></div>
+								<div class="tab-attention-checkbox icon-checkbox"></div>
+							</div>
+							<div class="tab-attention-item">
+								<div class="tab-attention-icon icon-payeer"></div>
+								<div class="tab-attention-checkbox icon-checkbox"></div>
+							</div>
+						</div>
+						<div class="popup-extra-list">
+							<div class="popup-extra-item">Once you complete your payment you will be automatically 
+							redirected back to your personal account which will get credited with your first revenue after 24 hours by server time</div>
+						</div>
+					</div>
+
+				<!-- 	<div class="popup-input-block">
+						<label for="" class="popup-input-label">Deposit amount</label>
+						<div class="popup-input-wrapper">
+							
+							<div class="popup-input-before">USD</div>
+							<div class="popup-input-after">Available: $ 0.00</div>
+							<input type="number" class="popup-input" placeholder="0.00">
+
+						</div>
+					</div> -->
+
+					<!-- <div class="popup-summary">
+						<span class="popup-summary-title">You will deposit: </span>
+						<span class="popup-summary-value">0.00 </span>
+						<span class="popup-summary-currency">USD </span>
+						<span class="popup-summary-divider">/ </span>
+						<span class="popup-summary-value">0.000000 </span>
+						<span class="popup-summary-currency">BTC</span>
+					</div> -->
+
+					<div class="popup-submit">
+						<button class="btn-yellow popup-btn">Deposit</button>
+					</div>
+
+				</form>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div id="deposit" class="air-popup air-popup-hide">
+		
+		<div class="air-popup-wrapper">
+			<div class="air-popup-content">
+				
+				<form id="d-1" action="" method="post" class="popup popup_deposit">
+
+					<div class="popup-header">
+						<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+						<div class="popup-close air-popup-close"></div>
+					</div>
+
+					<div class="popup-title">Deposit</div>
+
+					<div class="popup-info">
+						<div class="popup-info-item">
+							<div class="popup-info-title">Date</div>
+							<div class="popup-info-value">30/10/2018 16:27</div>
+							<input type="hidden" value="30/10/2018 16:27">
+						</div>
+						<!-- <div for="deposit-select" class="popup-info-item popup-info-item-select">
+							<div class="popup-info-title">Coin name</div>
+							<select class="popup-info-select" name="deposit-select" id="select-currency-popup">
+								<option selected value="btc">Bitcoin (BTC)</option>
+								<option value="bth">Bitcoin CASH (BTH)</option>
+								<option value="eth">Etherium (ETH)</option>
+								<option value="ltc">Litecoin (LTC)</option>
+								<option value="dash">Dash (DASH)</option>
+								<option value="xpr">Ripple (XRP)</option>
+							</select>
+						</div> -->
+						<div for="deposit-select" class="popup-info-item popup-info-item-select">
+							<div class="popup-info-title">Coin name</div>
+							<div class="search-input-wrapper search-input-wrapper_small search-popup">
+								<div class="search-input-main search-input-main_simple search-input-main_popup">	
+									<div class="search-input-image">
+										<img src="img/icon-btc.svg" class="search-input-icon" alt="">
+									</div>
+									<input type="hidden" class="search-input-hidden" value="Bitcoin (BTC)" >
+									<div class="search-input">Bitcoin (BTC)</div>
+								</div>
+								<div class="search-input-content">
+									<ul class="search-input-list">
+										<li class="search-input-item selected">
+											<div class="search-input-image">
+												<img src="img/icon-btc.svg" alt="" class="search-input-icon">
+
+											</div>
+											<div class="search-input-item-value">Bitcoin (BTC)</div>
+										</li>
+										<li class="search-input-item">
+											<div class="search-input-image">
+												<img src="img/icon-bth.svg" alt="" class="search-input-icon">
+
+											</div>
+											<div class="search-input-item-value">Bitcoin Cash (BTH)</div>
+										</li>
+										<li class="search-input-item">
+											<div class="search-input-image">
+												<img src="img/icon-eth.svg" alt="" class="search-input-icon">
+											</div>
+											<div class="search-input-item-value">Etherium (ETH)</div>
+										</li>
+										<li class="search-input-item">
+											<div class="search-input-image">
+												<img src="img/icon-ltc.svg" alt="" class="search-input-icon">
+											</div>
+											<div class="search-input-item-value">
+											Litecoin (LTC)</div>
+										</li>
+										<li class="search-input-item">
+											<div class="search-input-image">
+												<img src="img/icon-xpr.svg" alt="" class="search-input-icon">
+											</div>
+											<div class="search-input-item-value">Ripple (XRP)</div>
+										</li>
+										<li class="search-input-item">
+											<div class="search-input-image">
+												<img src="img/icon-dash.svg" alt="" class="search-input-icon">
+											</div>
+											<div class="search-input-item-value">Dash</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Coin rate</div>
+							<div class="popup-info-value popup-info-value_green">$9,880.95</div>
+							<input type="hidden" value="$9,880.95">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Total balance</div>
+							<div class="popup-info-value">00.00000000</div>
+							<input type="hidden" value="00.00000000">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">Available balance</div>
+							<div class="popup-info-value popup-info-value_green">00.00000000</div>
+							<input type="hidden" value="00.00000000">
+						</div>
+
+						<div class="popup-info-item">
+							<div class="popup-info-title">In order</div>
+							<div class="popup-info-value popup-info-value_yellow">00.00000000</div>
+							<input type="hidden" value="00.00000000">
+						</div>
+
+
+
+
+
+
+					</div>
+
+
+
+					<div class="popup-extra">
+						<div class="popup-extra-title">Important</div>
+						<div class="popup-extra-list">
+							<div class="popup-extra-item">Coins will be deposited immediately after 4 network confirmations</div>
+							<div class="popup-extra-item">BTC will be processed using CoinsWallet.com which also accept PerfectMoney, Payeer and Advanced Cash</div>
+						</div>
+						<div class="popup-extra-bottom mrg-fix">
+							<div class="tab-attention-img logo-coins-wallet"></div>
+							<div class="tab-attention-item">
+								<div class="tab-attention-icon icon-pm"></div>
+								<div class="tab-attention-checkbox icon-checkbox"></div>
+							</div>
+							<div class="tab-attention-item">
+								<div class="tab-attention-icon icon-acash"></div>
+								<div class="tab-attention-checkbox icon-checkbox"></div>
+							</div>
+							<div class="tab-attention-item">
+								<div class="tab-attention-icon icon-payeer"></div>
+								<div class="tab-attention-checkbox icon-checkbox"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="popup-dep-input">
+						<div class="popup-dep-input-image">
+							<div class="popup-dep-input-icon icon-usd-white"></div>
+						</div>
+						<div class="popup-dep-input-main">
+							<div class="popup-dep-input-title">
+								<div class="popup-dep-input-title-text">Deposit amount</div>
+								<div class="popup-dep-input-title-side">Available: $ 0.00</div>
+							</div>
+							<div class="popup-dep-input-bottom"><input required type="number" class="popup-dep-input-usd" step="0.01" placeholder="0.00"><div class="popup-dep-input-cur">
+								<span class="green">0.000000</span> BTC
+							</div></div>
+						</div>
+					</div>
+
+				<!-- 	<div class="popup-input-block">
+						<label for="" class="popup-input-label">Deposit amount</label>
+						<div class="popup-input-wrapper">
+							
+							<div class="popup-input-before">USD</div>
+							<div class="popup-input-after">Available: $ 0.00</div>
+							<input type="number" class="popup-input" placeholder="0.00">
+
+						</div>
+					</div> -->
+
+					<!-- <div class="popup-summary">
+						<span class="popup-summary-title">You will deposit: </span>
+						<span class="popup-summary-value">0.00 </span>
+						<span class="popup-summary-currency">USD </span>
+						<span class="popup-summary-divider">/ </span>
+						<span class="popup-summary-value">0.000000 </span>
+						<span class="popup-summary-currency">BTC</span>
+					</div> -->
+
+					<div class="popup-submit">
+						<button class="btn-yellow popup-btn">Deposit</button>
+					</div>
+
+				</form>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div id="withdrawal" class="air-popup-hide air-popup">
+		
+		<div class="air-popup-wrapper">
+			<div class="air-popup-content">
+				
+				<form id="with" action="" method="post" class="popup popup_withdrawal">
+
+					<div class="popup-header">
+						<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+						<div class="popup-close air-popup-close"></div>
+					</div>
+
+					<div class="popup-title">Withdrawal</div>
+
+					<div class="popup-info">
+						<div class="popup-info-item">
+							<div class="popup-info-title">Date</div>
+							<div class="popup-info-value">30/10/2018 16:27</div>
+							<input type="hidden" value="30/10/2018 16:27">
+						</div>
+						<div for="deposit-select" class="popup-info-item popup-info-item-select">
+							<div class="popup-info-title">Coin name</div>
+							<div class="search-input-wrapper search-input-wrapper_small search-popup">
+								<div class="search-input-main search-input-main_simple search-input-main_popup">	
+									<div class="search-input-image">
+										<img src="img/icon-btc.svg" class="search-input-icon" alt="">
+									</div>
+									<input type="hidden" class="search-input-hidden" value="Bitcoin (BTC)" >
+									<div class="search-input">Bitcoin (BTC)</div>
+								</div>
+								<div class="search-input-content">
+									<ul class="search-input-list">
+										<li class="search-input-item selected">
+											<div class="search-input-image">
+												<img src="img/icon-btc.svg" alt="" class="search-input-icon">
+
+											</div>
+											<div class="search-input-item-value">Bitcoin (BTC)</div>
+										</li>
+										<li class="search-input-item">
+											<div class="search-input-image">
+												<img src="img/icon-bth.svg" alt="" class="search-input-icon">
+
+											</div>
+											<div class="search-input-item-value">Bitcoin Cash (BTH)</div>
+										</li>
+										<li class="search-input-item">
+											<div class="search-input-image">
+												<img src="img/icon-eth.svg" alt="" class="search-input-icon">
+											</div>
+											<div class="search-input-item-value">Etherium (ETH)</div>
+										</li>
+										<li class="search-input-item">
+											<div class="search-input-image">
+												<img src="img/icon-ltc.svg" alt="" class="search-input-icon">
+											</div>
+											<div class="search-input-item-value">
+											Litecoin (LTC)</div>
+										</li>
+										<li class="search-input-item">
+											<div class="search-input-image">
+												<img src="img/icon-xpr.svg" alt="" class="search-input-icon">
+											</div>
+											<div class="search-input-item-value">Ripple (XRP)</div>
+										</li>
+										<li class="search-input-item">
+											<div class="search-input-image">
+												<img src="img/icon-dash.svg" alt="" class="search-input-icon">
+											</div>
+											<div class="search-input-item-value">Dash</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="popup-info-item">
+							<div class="popup-info-title">Bitcoin (USD) Price</div>
+							<div class="popup-info-value">00.00000000</div>
+							<input type="hidden" value="00.00000000">
+						</div>
+						<div class="popup-info-item">
+							<div class="popup-info-title">Total balance</div>
+							<div class="popup-info-value">$9,880.95</div>
+							<input type="hidden" value="$9,880.95">
+						</div>
+						<div class="popup-info-item">
+							<div class="popup-info-title">Available balance</div>
+							<div class="popup-info-value popup-info-value_green">00.00000000</div>
+							<input type="hidden" value="00.00000000">
+						</div>
+						<div class="popup-info-item">
+							<div class="popup-info-title">In order</div>
+							<div class="popup-info-value popup-info-value_yellow">00.00000000</div>
+							<input type="hidden" value="00.00000000">
+						</div>
+					</div>
+
+					<div class="popup-extra">
+						<div class="popup-extra-title">Important</div>
+						<div class="popup-extra-list">
+							<div class="popup-extra-item">Coins will be deposited immediately after 4 network confirmations</div>
+							<div class="popup-extra-item">BTC will be processed using CoinsWallet.com which also accept PerfectMoney, Payeer and Advanced Cash</div>
+						</div>
+						<div class="popup-extra-bottom">
+							<div class="tab-attention-img logo-coins-wallet"></div>
+							<div class="tab-attention-item">
+								<div class="tab-attention-icon icon-pm"></div>
+								<div class="tab-attention-checkbox icon-checkbox"></div>
+							</div>
+							<div class="tab-attention-item">
+								<div class="tab-attention-icon icon-acash"></div>
+								<div class="tab-attention-checkbox icon-checkbox"></div>
+							</div>
+							<div class="tab-attention-item">
+								<div class="tab-attention-icon icon-payeer"></div>
+								<div class="tab-attention-checkbox icon-checkbox"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="popup-input-block">
+						<label for="" class="popup-input-label">Withdrawal address</label>
+						<div class="popup-input-wrapper">
+							
+							<div class="popup-input-before">BTC</div>
+							<input autocomplete="none" type="text" class="popup-input popup-input_faded" placeholder="Type your address">
+
+						</div>
+					</div>
+
+					<div class="popup-input-block popup-input-block_mb-sm">
+						<label for="" class="popup-input-label">Amount</label>
+						<div class="popup-input-label-after">24h Withdrawal Limit 0/2 BTC</div>
+						
+						<div class="popup-input-wrapper">
+							<div class="popup-input-after popup-input-after_copy">Available: 0.00726437</div>
+							<button class="popup-input-copy-btn waves-on"></button>
+							<div class="popup-input-before">BTC</div>
+							<input type="number" min="0" step="0.0000000001" class="popup-input" placeholder="0.00000000">
+
+						</div>
+					</div>
+
+					<div class="popup-input-block popup-input-block_mb-sm">
+						<label for="" class="popup-input-label">Confirm amount</label>
+						<div class="popup-input-wrapper">
+							
+							<div class="popup-input-before">BTC</div>
+							<input type="number" min="0" step="0.0000000001" class="popup-input" placeholder="0.00000000">
+
+						</div>
+					</div>
+
+					<div class="popup-summary popup-summary_2">
+						<div class="popup-summary-left">
+							<span class="popup-summary-title">Fee:</span>
+							<span class="popup-summary-value red">0.000000</span>
+							<span class="popup-summary-currency">BTC</span>
+						</div>
+						<div class="popup-summary-right">
+							<span class="popup-summary-title">You will get:</span>
+							<span class="popup-summary-value">0.000000</span>
+							<span class="popup-summary-currency">BTC</span>
+						</div>
+						
+					</div>
+
+					<div class="popup-submit">
+						<button class="btn-yellow popup-btn ">Submit</button>
+					</div>
+
+				</form>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div id="dep-s" class="air-popup air-popup-hide">
+
+		<div class="air-popup-wrapper">
+			<div class="air-popup-content">
+
+				<div class="popup popup_success">
+
+					<div class="popup-header">
+						<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+						<div class="popup-close air-popup-close"></div>
+						<div class="popup-success-check"></div>
+					</div>
+
+					<div class="popup-title popup-title_wide">Deposit successfully created</div>
+
+					<div class="popup-success-bottom  center">
+						You have just upgraded your account to Premium Plus. Now you can earn extra profit within your investment.
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div id="with-s" class="air-popup air-popup-hide">
+
+		<div class="air-popup-wrapper">
+			<div class="air-popup-content">
+
+				<div class="popup popup_success">
+
+					<div class="popup-header">
+						<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+						<div class="popup-close air-popup-close"></div>
+						<div class="popup-success-check"></div>
+					</div>
+
+					<div class="popup-title popup-title_wide">Withdrawal request created</div>
+
+					<div class="popup-success-bottom center">
+						Your withdrawal request will be processed within 24 hours. You are able to check information about all withdrawals in the My Investment -> Top Up / Withdrawal
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div id="popup-qr" class="air-popup air-popup-hide">
+
+		<div class="air-popup-wrapper">
+			<div class="air-popup-content">
+
+				<div class="popup popup_success">
+
+					<div class="popup-header">
+						<div class="popup-logo"><img src="img/logo.svg" alt="" class="popup-logo-img"></div>
+						<div class="popup-close air-popup-close"></div>
+						<div class="popup-success-check"></div>
+					</div>
+
+					<div class="popup-title popup-title_wide">Transaction QR code</div>
+
+					<div class="popup-success-bottom">
+						Activate application on your phone and use Qr code for get access to transaction.
+					</div>
+
+					<div class="popup-success-qr">
+						<img src="img/qr-code.svg" alt="" class="popup-success-qr-img">
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+	<script src="js/all.min.js" defer></script>
+	<script src="libs/nice-select.js" defer></script>
+	<script src="libs/moveit.js"></script>
+	<script src="js/app.js" defer></script>
+
+
+</body>

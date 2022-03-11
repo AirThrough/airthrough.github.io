@@ -1,0 +1,3524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Airbinance</title>
+	<link rel="stylesheet" href="css/fonts.css?ver=14">
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/waves.css">
+	<link rel="stylesheet" href="css/main.css?ver=01">
+	<link rel="stylesheet" href="css/media.css?ver=01">
+
+	<style>
+
+	input[type="search"]::-webkit-search-decoration,
+	input[type="search"]::-webkit-search-cancel-button,
+	input[type="search"]::-webkit-search-results-button,
+	input[type="search"]::-webkit-search-results-decoration {
+		-webkit-appearance:none;
+	}
+	.tab-table::-webkit-scrollbar {
+		width: 6px;
+		border-radius: 5px;
+	}
+
+	/* Track */
+	.tab-table::-webkit-scrollbar-track {
+		background: rgba(0,0,0,.1); 
+		border-radius: 5px;
+	}
+
+	/* Handle */
+	.tab-table::-webkit-scrollbar-thumb {
+		background: #43475a;
+		border-radius: 5px;
+		transition: 0.25s all ease-in-out;
+	}
+
+	/* Handle on hover */
+	.tab-table::-webkit-scrollbar-thumb:hover {
+		background: #585D77;
+		transition: 0.25s all ease-in-out;
+	}
+
+	.search-input-list::-webkit-scrollbar {
+		width: 0px;
+		border-radius: 3px;
+		-webkit-appearance:none;
+	}
+
+	/* Track */
+	.search-input-list::-webkit-scrollbar-track {
+		
+		background: none;
+		border-radius: 3px;
+	}
+
+	/* Handle */
+	.search-input-list::-webkit-scrollbar-thumb {
+		background: #55596a; 
+		border-radius: 3px;
+		transition: 0.25s all ease-in-out;
+	}
+
+	/* Handle on hover */
+	.search-input-list::-webkit-scrollbar-thumb:hover {
+		background: rgba(255,255,255,.1);
+		transition: 0.25s all ease-in-out;
+	}
+
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: white;
+		transition: 0.25s all ease-in-out;
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+		color: white;
+		transition: 0.25s all ease-in-out;
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+		color: white;
+		transition: 0.25s all ease-in-out;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+		color: white;
+		transition: 0.25s all ease-in-out;
+	}
+
+	input[type="text"]:focus::-webkit-input-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+
+	input[type="text"]:focus:-ms-input-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+
+	input[type="text"]:focus:-moz-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+	input[type="text"]:focus::-moz-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+
+	input[type="number"]:focus::-webkit-input-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+
+	input[type="number"]:focus:-ms-input-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+
+	input[type="number"]:focus:-moz-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+	input[type="number"]:focus::-moz-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+</style>
+
+</head>
+<body>
+
+	<header class="header">
+
+		<div class="header-left">
+
+			<div class="header-menu-btn-wrap">
+
+				<button class="header-burger">
+					<span class="header-burger-line"></span>
+					<span class="header-burger-line"></span>
+					<span class="header-burger-line"></span>
+					<span class="header-burger-bg"></span>
+				</button>
+
+			</div>
+
+			<div class="header-logo">
+				<a class="header-logo-link" href="#">
+					<img class="header-logo-img" src="img/logo.svg" alt="">
+				</a>
+			</div>
+
+			<div class="header-stats">
+
+				<div class="header-stats-item header-stats-item-balance">
+					<div class="header-stats-title">Balance</div>
+					<div class="header-stats-value">$ 120267.09</div>
+				</div>
+				<div class="header-stats-item header-stats-item-deposits">
+					<div class="header-stats-title">Deposits</div>
+					<div class="header-stats-value">$ 369092.02</div>
+				</div>
+				<div class="header-stats-item header-stats-item-pending">
+					<div class="header-stats-title">Pending</div>
+					<div class="header-stats-value">$ 275647.00</div>
+				</div>
+				<div class="header-stats-item header-stats-item-partners">
+					<div class="header-stats-title">Partners</div>
+					<div class="header-stats-value">25647</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="header-right">
+
+
+			<div class="header-lng">
+
+				<select id="language" class="header-lng-select" name="" id="">
+					<option class="flag-icon flag-icon-gb" value="gb" selected="selected">gb</option>
+					<option value="ru">ru</option>
+					<option value="fr">fr</option>
+					<option value="es">es</option>
+					<option value="pt">pt</option>
+					<option value="de">de</option>
+					<option value="pl">pl</option>
+				</select>
+
+			</div>
+
+
+			<div class="header-logout">
+
+				<button class="header-logout-btn btn-yellow btn-logout">Logout</button>
+
+			</div>
+
+		</div>
+
+	</header>
+
+	<main id="partnership">
+
+		<div class="content-wrapper">
+			
+			<aside class="aside pre-mobile">
+
+				<div class="aside-user">
+					<div class="aside-user-row">
+						<div class="aside-user-main">
+							<div class="aside-user-country flag-icon-background flag-icon-gb"></div>
+							<div class="aside-user-name">Username</div>
+						</div>
+						<a href="#" class="aside-user-settings"></a>
+					</div>
+					<div class="aside-user-row">
+						<div class="aside-user-title">Partner status</div>
+						<div class="aside-user-rating rate">
+							<div class="rate-item"></div>
+							<div class="rate-item"></div>
+							<div class="rate-item bright"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="aside-title">Dashboard</div>
+
+				<nav class="aside-nav">
+					<ul class="aside-menu">
+						<li class="aside-menu-item icon-invest"><a href="" class="aside-menu-link ">My investment</a></li>
+						<li class="aside-menu-item icon-account"><a href="" class="aside-menu-link ">Account upgrade</a></li>
+						<li class="aside-menu-item icon-trading"><a href="/top-up.html" class="aside-menu-link ">Top up & Withdrawal</a></li>
+						<li class="aside-menu-item icon-trading"><a href="/trading-history.html" class="aside-menu-link icon-trading">Trading history</a></li>
+						<li class="aside-menu-item icon-partnership"><a href="" class="aside-menu-link ">Partnership</a></li>
+						<li class="aside-menu-item icon-news"><a href="" class="aside-menu-link ">News</a></li>
+						<li class="aside-menu-item icon-reviews"><a href="" class="aside-menu-link  ">Reviews</a></li>
+					</ul>
+				</nav>
+
+				<div class="aside-extra">
+					<div class="aside-title">Corporate website</div>
+
+					<ul class="aside-menu aside-menu-extra">
+						<li class="aside-menu-item icon-home"><a href="" class="aside-menu-link ">ArBinance Homepage</a></li>
+						<li class="aside-menu-item icon-terms"><a href="" class="aside-menu-link ">Affiliate terms</a></li>
+					</ul>
+
+				</div>
+
+				<div class="aside-bottom">
+
+					<div class="aside-title">Support</div>
+
+					<ul class="aside-support">
+						<li class="aside-support-item">
+							<a href="" class="aside-support-link">
+								<span class="aside-support-icon icon-tg"></span><span class="aside-support-title">Telegram</span>
+							</a>
+						</li>
+						<li class="aside-support-item">
+							<a href="" class="aside-support-link">
+								<span class="aside-support-icon icon-fb"></span>
+								<span class="aside-support-title">Facebook</span>
+							</a>
+						</li>
+					</ul>
+
+				</div>
+
+
+			</aside>
+
+			<div class="content fix-content">
+
+				
+				<div class="partners-top">
+
+					<div class="row">
+						<div class="col col-pd">
+							<div class="title">Partners involvement</div>
+							<div class="partners-top-block partners-top-chart">
+
+								<div class="partners-top-graph">
+
+									<div id="chart-wrapper-top" class="chart-wrapper chart-wrapper-top">
+										<canvas id="chart-p-i" width="350" height="152"></canvas>
+									</div>
+									<div id="chart-tooltip-top" class="chart-tooltip-custom chart-tooltip-custom_p1">
+										<table></table>
+									</div>
+
+									<div class="info-legend">
+										<div class="info-legend-title">All time</div>
+										<div class="info-legend-body">
+											<div class="info-legend-item">
+												<div class="info-legend-item-title color-yellow">People visited</div>
+												<div class="info-legend-item-value">
+													<div class="info-legend-item-icon icon-people"></div>
+													<div class="info-legend-item-text">2353</div>
+												</div>
+											</div>
+											<div class="info-legend-item">
+												<div class="info-legend-item-title color-red">People registered</div>
+												<div class="info-legend-item-value">
+													<div class="info-legend-item-icon icon-people"></div>
+													<div class="info-legend-item-text">1355</div>
+												</div>
+											</div>
+											<div class="info-legend-item">
+												<div class="info-legend-item-title color-green">People traded</div>
+												<div class="info-legend-item-value">
+													<div class="info-legend-item-icon icon-people"></div>
+													<div class="info-legend-item-text">732</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+
+
+							</div>
+						</div>
+						<div class="col col-pd">
+							<div class="title">Partners amount</div>
+
+							<div class="partners-top-block">
+
+								<div class="partners-top-block-row">
+
+									<div class="home-top-diagram">
+
+										<svg width="137" height="137">
+											<path d="" id="diagram-p-1-green"
+											fill="none" stroke="#41bf50" stroke-width="19" />
+											<path d=""
+											fill="none" id="diagram-p-1-yellow" stroke="#E4B940" stroke-width="19" />
+											<path d="" id="diagram-p-1-red"
+											fill="none" stroke="#f25b5b" stroke-width="19" />
+										</svg>
+
+										<div class="home-top-diagram-center">
+											<div class="dia-center-title">All time</div>
+											<div class="dia-center-value">
+												<div class="dia-center-icon icon-people"></div>
+												<div class="dia-center-text">28765</div>
+											</div>
+										</div>
+
+									</div>
+
+									<div class="refs">
+										<div class="refs-item">
+											<div class="refs-item-level icon-level-d"></div>
+											<div class="refs-item-text">
+												<div class="refs-item-text-top">Direct</div>
+												<div class="refs-item-text-bottom">Ref.sys</div>
+											</div>
+											<div class="refs-item-icon icon-people"></div>
+											<div class="refs-item-value">1142</div>
+										</div>
+										<div class="refs-item">
+											<div class="refs-item-level icon-level-r"></div>
+											<div class="refs-item-text">
+												<div class="refs-item-text-top">Binary</div>
+												<div class="refs-item-text-bottom">Ref.sys</div>
+											</div>
+											<div class="refs-item-icon icon-people"></div>
+											<div class="refs-item-value">3142</div>
+										</div>
+										<div class="refs-item">
+											<div class="refs-item-level icon-level-l"></div>
+											<div class="refs-item-text">
+												<div class="refs-item-text-top">Binary</div>
+												<div class="refs-item-text-bottom">Ref.sys</div>
+											</div>
+											<div class="refs-item-icon icon-people"></div>
+											<div class="refs-item-value">2142</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="info-legend">
+									<div class="info-legend-title">Today</div>
+									<div class="info-legend-body">
+										<div class="info-legend-item">
+											<div class="info-legend-item-title icon-after-level icon-after-level-d">Direct ref.sys</div>
+											<div class="info-legend-item-value">
+												<div class="info-legend-item-icon icon-people"></div>
+												<div class="info-legend-item-text">353</div>
+											</div>
+										</div>
+										<div class="info-legend-item">
+											<div class="info-legend-item-title icon-after-level icon-after-level-r">Binary ref.sys</div>
+											<div class="info-legend-item-value">
+												<div class="info-legend-item-icon icon-people"></div>
+												<div class="info-legend-item-text">241</div>
+											</div>
+										</div>
+										<div class="info-legend-item">
+											<div class="info-legend-item-title icon-after-level icon-after-level-l">Binary ref.sys</div>
+											<div class="info-legend-item-value">
+												<div class="info-legend-item-icon icon-people"></div>
+												<div class="info-legend-item-text">183</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+
+							</div>
+
+							
+						</div>
+						<div class="col col-pd">
+							<div class="title">Sales & commission</div>
+
+							<div class="partners-top-block partners-top-block_chart">
+
+								<div class="partners-top-block-row">
+
+									<div id="chart-wrapper-p-w" class="chart-wrapper">
+										<canvas id="chart-p-w"  width="350" height="145"></canvas>
+									</div>
+
+									<div id="chartjs-tooltip-p-w" class="chart-tooltip-custom chart-tooltip-custom_p2">
+										<table></table>
+									</div>
+								</div>
+
+								<div class="info-legend-wrapper">
+									
+									<div class="info-legend">
+										<div class="info-legend-title">All time</div>
+										<div class="info-legend-body">
+											<div class="info-legend-item">
+												<div class="info-legend-item-title color-green">Sales</div>
+												<div class="info-legend-item-value">
+													<div class="info-legend-item-text">$ 2353</div>
+												</div>
+											</div>
+											<div class="info-legend-item">
+												<div class="info-legend-item-title color-red">Commission</div>
+												<div class="info-legend-item-value">
+													<div class="info-legend-item-text">$ 1355</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="info-legend">
+										<div class="info-legend-title">Today</div>
+										<div class="info-legend-body">
+											<div class="info-legend-item">
+												<div class="info-legend-item-title color-green">Sales</div>
+												<div class="info-legend-item-value">
+													<div class="info-legend-item-text">$ 353</div>
+												</div>
+											</div>
+											<div class="info-legend-item">
+												<div class="info-legend-item-title color-red">Commission</div>
+												<div class="info-legend-item-value">
+													<div class="info-legend-item-text">$ 255</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								
+							</div>
+
+
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row">
+					<div class="col col-pd">
+						<div class="title">Promotion</div>
+						<div class="simple-block simple-block_mid">	
+							
+							<div class="prom">	
+
+								<div class="prom-title">	
+									My representative links
+								</div>
+
+								<div class="prom-link-block">	
+									<a href="#" class="prom-link">https://ArBinance.com/id2380940924-21u-9274093274
+										<span class="prom-link-short">
+
+										</span>
+									</a>
+									<div class="prom-link-copy icon-copy waves-on">	</div>
+								</div>
+
+								<div class="prom-title">	
+									Banners
+								</div>
+
+								<div class="prom-row">
+									<div class="prom-item">
+										<div class="prom-item-title">125X125</div>
+										<div class="prom-item-bottom">
+											<a href="#" target="_blank" class="prom-item-view waves-on"></a>
+											<div class="prom-item-copy waves-on"></div>
+											<div class="link-to-copy">link1</div>
+										</div>
+									</div>
+									<div class="prom-item">
+										<div class="prom-item-title">250X300</div>
+										<div class="prom-item-bottom">
+											<a href="#" target="_blank" class="prom-item-view waves-on"></a>
+											<div class="prom-item-copy waves-on"></div>
+											<div class="link-to-copy">link2</div>
+										</div>
+									</div>
+									<div class="prom-item">
+										<div class="prom-item-title">468X60</div>
+										<div class="prom-item-bottom">
+											<a href="#" target="_blank" class="prom-item-view waves-on"></a>
+											<div class="prom-item-copy waves-on"></div>
+											<div class="link-to-copy">link3</div>
+										</div>
+									</div>
+									<div class="prom-item">
+										<div class="prom-item-title">728X90</div>
+										<div class="prom-item-bottom">
+											<a href="#" target="_blank" class="prom-item-view waves-on"></a>
+											<div class="prom-item-copy waves-on"></div>
+											<div class="link-to-copy">link4</div>
+										</div>
+									</div>
+									<div class="prom-item">
+										<div class="prom-item-title">160X600</div>
+										<div class="prom-item-bottom">
+											<a href="#" target="_blank" class="prom-item-view waves-on"></a>
+											<div class="prom-item-copy waves-on"></div>
+											<div class="link-to-copy">link5</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+					<div class="col col-pd">
+						<div class="title">Cashback</div>
+						<div class="simple-block cashback  simple-block_mid">
+							<div class="range-block">	
+
+								<div class="range-scale">
+									<ul class="range-scale-list">
+										<li class="range-scale-item">
+											<div class="range-scale-tick">0%</div>
+											<div class="range-scale-point"></div>
+										</li>
+										<li class="range-scale-item">
+											<div class="range-scale-tick">10%</div>
+											<div class="range-scale-point"></div>
+										</li>
+										<li class="range-scale-item">
+											<div class="range-scale-tick">20%</div>
+											<div class="range-scale-point"></div>
+										</li>
+										<li class="range-scale-item">
+											<div class="range-scale-tick">30%</div>
+											<div class="range-scale-point"></div>
+										</li>
+										<li class="range-scale-item">
+											<div class="range-scale-tick">40%</div>
+											<div class="range-scale-point"></div>
+										</li>
+										<li class="range-scale-item">
+											<div class="range-scale-tick">50%</div>
+											<div class="range-scale-point"></div>
+										</li>
+										<li class="range-scale-item">
+											<div class="range-scale-tick">60%</div>
+											<div class="range-scale-point"></div>
+										</li>
+										<li class="range-scale-item">
+											<div class="range-scale-tick">70%</div>
+											<div class="range-scale-point"></div>
+										</li>
+										<li class="range-scale-item">
+											<div class="range-scale-tick">80%</div>
+											<div class="range-scale-point"></div>
+										</li>
+										<li class="range-scale-item">
+											<div class="range-scale-tick">90%</div>
+											<div class="range-scale-point"></div>
+										</li>
+										<li class="range-scale-item">
+											<div class="range-scale-tick">100%</div>
+											<div class="range-scale-point"></div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="input-range-wrapper">
+									<div class="input-range"></div>
+								</div>
+							</div>
+
+							<div class="warning">
+								
+								<div class="warning-head">
+									<div class="warning-head-icon icon-attention"></div>
+									<div class="warning-head-title">Important</div>
+								</div>
+								<ul class="warning-list">
+									<li class="warning-item">Only referrers with the direct referral plan can provide a cashback of their commission to their referrals.</li>
+								</ul>
+
+							</div>
+
+							<button class="btn-yellow waves-on">Save</button>
+
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col col-pd">
+						<div class="title">Referrer rank</div>
+						<div class="simple-block simple-block_bottom">
+							
+							<div class="ref-rank">
+
+								<div class="ref-rank-left">
+									
+									<div class="ref-rank-head">
+										<div class="ref-rank-head-title">My rank</div>
+										<div class="ref-rank-head-rate rate">
+											<div class="rate-item"></div>
+											<div class="rate-item"></div>
+											<div class="rate-item empty"></div>
+										</div>
+										<div class="ref-rank-head-value">$ 27293.56</div>
+									</div>
+
+									<div class="ref-rank-levels">
+
+										<div class="ref-rank-level">
+											<div class="ref-rank-level-rate rate">
+												<div class="rate-item"></div>
+												<div class="rate-item empty"></div>
+												<div class="rate-item empty"></div>
+											</div>
+											<div class="ref-rank-level-human icon-human-green"></div>
+											<div class="ref-rank-level-info">
+												<div class="ref-rank-level-info-top">
+													<div class="ref-rank-level-info-plus">+10%</div>
+													<div class="ref-rank-level-info-extra"><span class="special">EXTRA</span> <br>
+													PROFIT</div>
+												</div>
+												<div class="ref-rank-level-info-bottom">
+													<div class="ref-rank-level-info-subtitle">Turnover:</div>
+													<div class="ref-rank-level-info-value">$ 10000</div>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="ref-rank-level">
+											<div class="ref-rank-level-rate rate">
+												<div class="rate-item"></div>
+												<div class="rate-item"></div>
+												<div class="rate-item empty"></div>
+											</div>
+											<div class="ref-rank-level-human icon-human-red"></div>
+											<div class="ref-rank-level-info">
+												<div class="ref-rank-level-info-top">
+													<div class="ref-rank-level-info-plus">+20%</div>
+													<div class="ref-rank-level-info-extra"><span class="special">EXTRA</span><br>
+													PROFIT</div>
+												</div>
+												<div class="ref-rank-level-info-bottom">
+													<div class="ref-rank-level-info-subtitle">Turnover:</div>
+													<div class="ref-rank-level-info-value">$ 20000</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="ref-rank-level">
+											<div class="ref-rank-level-rate rate">
+												<div class="rate-item"></div>
+												<div class="rate-item"></div>
+												<div class="rate-item"></div>
+											</div>
+											<div class="ref-rank-level-human icon-human-yellow"></div>
+											<div class="ref-rank-level-info">
+												<div class="ref-rank-level-info-top">
+													<div class="ref-rank-level-info-plus">+30%</div>
+													<div class="ref-rank-level-info-extra"><span class="special">EXTRA</span> <br>
+													PROFIT</div>
+												</div>
+												<div class="ref-rank-level-info-bottom">
+													<div class="ref-rank-level-info-subtitle">Turnover:</div>
+													<div class="ref-rank-level-info-value">$ 30000</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+									<div class="ref-rank-extra">
+										Extra daily bonus to weak leg
+									</div>
+
+								</div>
+
+								<div class="ref-rank-right">
+
+									<div id="ref-rank-caption-1" class="ref-rank-caption">
+										<div class="ref-rank-caption-title">Ambassador</div>
+										<div class="ref-rank-caption-human "></div>
+									</div>
+
+									<div id="ref-rank-caption-2" class="ref-rank-caption">
+										<div class="ref-rank-caption-title">Director</div>
+										<div class="ref-rank-caption-human "></div>
+									</div>
+
+									<div id="ref-rank-caption-3" class="ref-rank-caption">
+										<div class="ref-rank-caption-title">Associate</div>
+										<div class="ref-rank-caption-human "></div>
+									</div>
+
+									<div class="ref-rank-circle ref-rank-circle-1" id="ref-rank-circle-1"><span class="inner">78%</span></div>
+									<div class="ref-rank-circle ref-rank-circle-2" id="ref-rank-circle-2"><span class="inner">100%</span></div>
+									<div class="ref-rank-circle ref-rank-circle-3" id="ref-rank-circle-3"><span class="inner">100%</span></div>
+									
+									
+									<svg width="242" height="242">
+										<path d="" id="ref-rank-1-grey"
+										fill="none" stroke="#43475a" stroke-linecap="round" stroke-width="22" />
+										<path d=""
+										fill="none" id="ref-rank-2-grey" stroke-linecap="round" stroke="#43475a" stroke-width="22" />
+										<path d="" id="ref-rank-3-grey"
+										fill="none" stroke="#43475a" stroke-linecap="round" stroke-width="22" />
+										<path d="" id="ref-rank-1"
+										fill="none" stroke="#ffa511" stroke-linecap="round" stroke-width="22" />
+										<path d=""
+										fill="none" id="ref-rank-2" stroke-linecap="round" stroke="#fe5461" stroke-width="22" />
+										<path d="" id="ref-rank-3"
+										fill="none" stroke="#41bf50" stroke-linecap="round" stroke-width="22" />
+
+									</svg>
+
+
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+					<div class="col col-pd">
+						<div class="title">Binary sales & commissions</div>
+						<div class="simple-block simple-block_bottom">
+
+							<div class="simple-block-row">
+
+								<div id="chart-wrapper-p-w-2" class="chart-wrapper">
+									<canvas id="chart-p-w-2"  width="550" height="175"></canvas>
+								</div>
+
+								<div id="chartjs-tooltip-p-w-2" class="chart-tooltip-custom chart-tooltip-custom_p3">
+									<table></table>
+								</div>
+							</div>
+
+							<div class="info-legend-wrapper info-legend-wrapper_wide">
+
+								<div class="info-legend">
+									<div class="info-legend-title">All time</div>
+									<div class="info-legend-body">
+										<div class="info-legend-item">
+											<div class="info-legend-item-title color-green">Sales <span class="info-legend-item-extra">(Binary)</span></div>
+											<div class="info-legend-item-value">
+												<div class="info-legend-item-text">$ 2353</div>
+											</div>
+										</div>
+										<div class="info-legend-item">
+											<div class="info-legend-item-title color-red">Commission <span class="info-legend-item-extra">(Binary)</span></div>
+											<div class="info-legend-item-value">
+												<div class="info-legend-item-text">$ 1355</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="info-legend">
+									<div class="info-legend-title">Today</div>
+									<div class="info-legend-body">
+										<div class="info-legend-item">
+											<div class="info-legend-item-title color-green">Sales <span class="info-legend-item-extra">(Binary)</span></div>
+											<div class="info-legend-item-value">
+												<div class="info-legend-item-text">$ 353</div>
+											</div>
+										</div>
+										<div class="info-legend-item">
+											<div class="info-legend-item-title color-red">Commission <span class="info-legend-item-extra">(Binary)</span></div>
+											<div class="info-legend-item-value">
+												<div class="info-legend-item-text">$ 255</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+
+
+				<div class="title title-w-icon"> <span class="title-icon icon-level-d"></span> 
+					<span class="title-text">Direct referral structure</span>
+				</div>
+
+
+				<div class="tab-block">
+					
+					<form action="" class="tab-filter">
+						<div class="tab-filter-row">
+							<div class="tab-filter-block tab-filter-block_margin-sm tab-filter-block-small">
+								<label for="filter-from-2" class="tab-filter-label">Date from</label>
+								<div class="tab-filter-date">
+									<input id="filter-from-2" name="filter-to-1" type="text" class="text-cover-date-input simple-select simple-select-date" placeholder="" value="01/05/19">
+								</div>
+							</div>
+							<div class="tab-filter-block tab-filter-block-small">
+								<label for="filter-to-2" class="tab-filter-label">To</label>
+								<div class="tab-filter-date">
+									<input id="filter-to-2" name="filter-to-2" type="text" class="text-cover-date-input simple-select simple-select-date" placeholder="" value="09/05/19">
+								</div>
+							</div>
+							<div class="tab-filter-block tab-filter-block-small">
+								<label for="username" class="tab-filter-label">Username</label>
+								<input name="filter-price-2" id="filter-price-2" type="text" class="tab-filter-input input-text" value="" placeholder="Cecik">
+							</div>
+							<div class="tab-filter-block tab-filter-block-submit">
+								<button type="submit" class="btn-yellow btn-shadow">Filter Out</button>
+							</div>
+						</div>
+					</form>
+
+					<div id="partnership-table" class="tab-table tab-table_p1">
+						<div class="tab-table-row tab-table-head">
+							<div class="tab-table-cell">Date</div>
+							<div class="tab-table-cell">Username</div>
+							<div class="tab-table-cell">Name</div>
+							<div class="tab-table-cell">Verification</div>
+							<div class="tab-table-cell">Contacts</div>
+							<div class="tab-table-cell">Upline</div>
+							<div class="tab-table-cell">Referrals</div>
+							<div class="tab-table-cell">Trades</div>
+							<div class="tab-table-cell">Trades volume</div>
+							<div class="tab-table-cell">Total profit</div>
+						</div>
+
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								11/09/19
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-username cell-username-s">
+									<div class="username-country flag-icon-kn flag-icon-background"></div>
+									<div class="username-title">Porter11…</div>
+									<div class="username-eye popover-start">
+										<div class="username-full popover-body">Porter1148</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Michael Po…</div>
+									<div class="cell-fullname-eye popover-start">
+										<div class="cell-fullname-popover popover-body">Michael Porter</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<span class="green">Verified</span>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell-contacts"><a href="#" class="cell-contacts-link icon-mail-w"></a><a href="#" class="cell-contacts-link icon-tg-w"></a></div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Josh1287…</div>
+									<div class="cell-fullname-eye popover-start">
+										<div class="cell-fullname-popover popover-body">Josh128786</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-people"></div>
+									<div class="cell-ic-txt-text green">1647</div>
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-raise"></div>
+									<div class="cell-ic-txt-text">1209</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-cycle"></div>
+									<div class="cell-ic-txt-text red">$ 3876523.12</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<span class="green">$ 29873.12</span>
+							</div>
+
+
+
+						</div>
+
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								11/09/19
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-username cell-username-s">
+									<div class="username-country flag-icon-fr flag-icon-background"></div>
+									<div class="username-title">Porter11…</div>
+									<div class="username-eye popover-start">
+										<div class="username-full popover-body">Porter1148</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Michael Po…</div>
+									<div class="cell-fullname-eye popover-start">
+										<div class="cell-fullname-popover popover-body">Michael Porter</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<span class="green">Verified</span>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell-contacts"><a href="#" class="cell-contacts-link icon-mail-w"></a><a href="#" class="cell-contacts-link icon-tg-w"></a></div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Josh1287…</div>
+									<div class="cell-fullname-eye popover-start">
+										<div class="cell-fullname-popover popover-body">Josh128786</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-people"></div>
+									<div class="cell-ic-txt-text green">1647</div>
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-raise"></div>
+									<div class="cell-ic-txt-text">1209</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-cycle"></div>
+									<div class="cell-ic-txt-text red">$ 3876523.12</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<span class="green">$ 29873.12</span>
+							</div>
+
+
+
+						</div>
+
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								11/09/19
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-username cell-username-s">
+									<div class="username-country flag-icon-jp flag-icon-background"></div>
+									<div class="username-title">DenisWol…</div>
+									<div class="username-eye popover-start">
+										<div class="username-full popover-body">DenisWolf</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Denis Wolf</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<span class="red">Unverified</span>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell-contacts"><a href="#" class="cell-contacts-link icon-mail-w"></a><a href="#" class="cell-contacts-link icon-tg-w"></a></div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Mark</div>
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-people"></div>
+									<div class="cell-ic-txt-text green">2247</div>
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-raise"></div>
+									<div class="cell-ic-txt-text">124</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-cycle"></div>
+									<div class="cell-ic-txt-text red">$ 43213.12</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<span class="green">$ 1213.55</span>
+							</div>
+
+
+
+						</div>
+
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								11/09/19
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-username cell-username-s">
+									<div class="username-country flag-icon-lu flag-icon-background"></div>
+									<div class="username-title">MAsak43</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Josh Pickm…</div>
+									<div class="cell-fullname-eye popover-start">
+										<div class="cell-fullname-popover popover-body">Josh Pickman</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<span class="green">Verified</span>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell-contacts"><a href="#" class="cell-contacts-link icon-mail-w"></a><a href="#" class="cell-contacts-link icon-tg-w"></a></div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Samsonti…</div>
+									<div class="cell-fullname-eye popover-start">
+										<div class="cell-fullname-popover popover-body">Samsontique</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-people"></div>
+									<div class="cell-ic-txt-text green">47</div>
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-raise"></div>
+									<div class="cell-ic-txt-text">19</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-cycle"></div>
+									<div class="cell-ic-txt-text red">$ 321.98</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<span class="green">$ 55.43</span>
+							</div>
+
+
+
+						</div>
+
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								05/01/19
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-username cell-username-s">
+									<div class="username-country flag-icon-ru flag-icon-background"></div>
+									<div class="username-title">Rinos</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Ryan Mitty</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<span class="red">Unverified</span>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell-contacts"><a href="#" class="cell-contacts-link icon-mail-w"></a><a href="#" class="cell-contacts-link icon-tg-w"></a></div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Peter34</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-people"></div>
+									<div class="cell-ic-txt-text green">437</div>
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-raise"></div>
+									<div class="cell-ic-txt-text">1999</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-cycle"></div>
+									<div class="cell-ic-txt-text red">$ 3219.76</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<span class="green">$ 232.21</span>
+							</div>
+
+
+
+						</div>
+
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								12/09/19
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-username cell-username-s">
+									<div class="username-country flag-icon-gb flag-icon-background"></div>
+									<div class="username-title">Colt</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Viktor Sob…</div>
+									<div class="cell-fullname-eye popover-start">
+										<div class="cell-fullname-popover popover-body">Viktor Sobotin</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<span class="green">Verified</span>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell-contacts"><a href="#" class="cell-contacts-link icon-mail-w"></a><a href="#" class="cell-contacts-link icon-tg-w"></a></div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Little</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-people"></div>
+									<div class="cell-ic-txt-text green">1647</div>
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-raise"></div>
+									<div class="cell-ic-txt-text">1209</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-cycle"></div>
+									<div class="cell-ic-txt-text red">$ 3876523.12</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<span class="green">$ 29873.12</span>
+							</div>
+
+
+
+						</div>
+
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								11/09/19
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-username cell-username-s">
+									<div class="username-country flag-icon-kn flag-icon-background"></div>
+									<div class="username-title">Porter11…</div>
+									<div class="username-eye popover-start">
+										<div class="username-full popover-body">Porter1148</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Michael Po…</div>
+									<div class="cell-fullname-eye popover-start">
+										<div class="cell-fullname-popover popover-body">Michael Porter</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<span class="green">Verified</span>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell-contacts"><a href="#" class="cell-contacts-link icon-mail-w"></a><a href="#" class="cell-contacts-link icon-tg-w"></a></div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Josh1287…</div>
+									<div class="cell-fullname-eye popover-start">
+										<div class="cell-fullname-popover popover-body">Josh128786</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-people"></div>
+									<div class="cell-ic-txt-text green">1647</div>
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-raise"></div>
+									<div class="cell-ic-txt-text">1209</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-cycle"></div>
+									<div class="cell-ic-txt-text red">$ 3876523.12</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<span class="green">$ 29873.12</span>
+							</div>
+
+
+
+						</div>
+
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								11/09/19
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-username cell-username-s">
+									<div class="username-country flag-icon-fr flag-icon-background"></div>
+									<div class="username-title">Porter11…</div>
+									<div class="username-eye popover-start">
+										<div class="username-full popover-body">Porter1148</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Michael Po…</div>
+									<div class="cell-fullname-eye popover-start">
+										<div class="cell-fullname-popover popover-body">Michael Porter</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<span class="green">Verified</span>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell-contacts"><a href="#" class="cell-contacts-link icon-mail-w"></a><a href="#" class="cell-contacts-link icon-tg-w"></a></div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Josh1287…</div>
+									<div class="cell-fullname-eye popover-start">
+										<div class="cell-fullname-popover popover-body">Josh128786</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-people"></div>
+									<div class="cell-ic-txt-text green">1647</div>
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-raise"></div>
+									<div class="cell-ic-txt-text">1209</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-cycle"></div>
+									<div class="cell-ic-txt-text red">$ 3876523.12</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<span class="green">$ 29873.12</span>
+							</div>
+
+
+
+						</div>
+
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								11/09/19
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-username cell-username-s">
+									<div class="username-country flag-icon-jp flag-icon-background"></div>
+									<div class="username-title">DenisWol…</div>
+									<div class="username-eye popover-start">
+										<div class="username-full popover-body">DenisWolf</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Denis Wolf</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<span class="red">Unverified</span>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell-contacts"><a href="#" class="cell-contacts-link icon-mail-w"></a><a href="#" class="cell-contacts-link icon-tg-w"></a></div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Mark</div>
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-people"></div>
+									<div class="cell-ic-txt-text green">2247</div>
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-raise"></div>
+									<div class="cell-ic-txt-text">124</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-cycle"></div>
+									<div class="cell-ic-txt-text red">$ 43213.12</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<span class="green">$ 1213.55</span>
+							</div>
+
+
+
+						</div>
+
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								11/09/19
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-username cell-username-s">
+									<div class="username-country flag-icon-lu flag-icon-background"></div>
+									<div class="username-title">MAsak43</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Josh Pickm…</div>
+									<div class="cell-fullname-eye popover-start">
+										<div class="cell-fullname-popover popover-body">Josh Pickman</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<span class="green">Verified</span>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell-contacts"><a href="#" class="cell-contacts-link icon-mail-w"></a><a href="#" class="cell-contacts-link icon-tg-w"></a></div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Samsonti…</div>
+									<div class="cell-fullname-eye popover-start">
+										<div class="cell-fullname-popover popover-body">Samsontique</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-people"></div>
+									<div class="cell-ic-txt-text green">47</div>
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-raise"></div>
+									<div class="cell-ic-txt-text">19</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-cycle"></div>
+									<div class="cell-ic-txt-text red">$ 321.98</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<span class="green">$ 55.43</span>
+							</div>
+
+
+
+						</div>
+
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								05/01/19
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-username cell-username-s">
+									<div class="username-country flag-icon-ru flag-icon-background"></div>
+									<div class="username-title">Rinos</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Ryan Mitty</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<span class="red">Unverified</span>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell-contacts"><a href="#" class="cell-contacts-link icon-mail-w"></a><a href="#" class="cell-contacts-link icon-tg-w"></a></div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Peter34</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-people"></div>
+									<div class="cell-ic-txt-text green">437</div>
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-raise"></div>
+									<div class="cell-ic-txt-text">1999</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-cycle"></div>
+									<div class="cell-ic-txt-text red">$ 3219.76</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<span class="green">$ 232.21</span>
+							</div>
+
+
+
+						</div>
+
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								12/09/19
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-username cell-username-s">
+									<div class="username-country flag-icon-gb flag-icon-background"></div>
+									<div class="username-title">Colt</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Viktor Sob…</div>
+									<div class="cell-fullname-eye popover-start">
+										<div class="cell-fullname-popover popover-body">Viktor Sobotin</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<span class="green">Verified</span>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell-contacts"><a href="#" class="cell-contacts-link icon-mail-w"></a><a href="#" class="cell-contacts-link icon-tg-w"></a></div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-fullname">
+									<div class="cell-fullname-text">Little</div>
+									
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-people"></div>
+									<div class="cell-ic-txt-text green">1647</div>
+								</div>
+							</div>
+
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-raise"></div>
+									<div class="cell-ic-txt-text">1209</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell cell-ic-txt">
+									<div class="cell-ic-txt-icon icon-cycle"></div>
+									<div class="cell-ic-txt-text red">$ 3876523.12</div>
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								<span class="green">$ 29873.12</span>
+							</div>
+
+
+
+						</div>
+
+
+
+
+
+
+					</div>
+
+				</div>
+
+				<div class="row fix-row">
+					<div class="col col-pd">
+						
+						<div class="title title-w-icon"> <span class="title-icon icon-level-l"></span> 
+							<span class="title-text">Left leg</span>
+						</div>
+
+						<div class="tab-block table-wrapper-fix">
+
+							<form action="" class="tab-filter  tab-filter-lg-row"">
+								<div class="tab-filter-row">
+									<div class="tab-filter-block tab-filter-block_margin-sm tab-filter-block-small">
+										<label for="filter-from-2" class="tab-filter-label">Date from</label>
+										<div class="tab-filter-date">
+											<input id="filter-from-2" name="filter-to-1" type="text" class="text-cover-date-input simple-select simple-select-date" placeholder="" value="01/05/19">
+										</div>
+									</div>
+									<div class="tab-filter-block tab-filter-block-small">
+										<label for="filter-to-2" class="tab-filter-label">To</label>
+										<div class="tab-filter-date">
+											<input id="filter-to-2" name="filter-to-2" type="text" class="text-cover-date-input simple-select simple-select-date" placeholder="" value="09/05/19">
+										</div>
+									</div>
+
+									<div class="tab-filter-block tab-filter-block-small">
+										<label class="tab-filter-label">Level</label>
+
+
+										<select name="" id="" class="nice-select tab-filter-select simple-select simple-select-empty select-digit">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>	
+										</select>
+									</div>
+
+									<div class="tab-filter-block tab-filter-block-small double-block">
+										<label class="tab-filter-label">To be paid / To be carried over</label>
+										<div class="double-input">
+
+											<div class="double-input-wrapper">
+												<input type="number" class="double-input-text" value="35273.12" step="0.01">
+											</div>
+											<div class="double-input-wrapper">
+												<input type="number" class="double-input-text" value="35273.12" step="0.01">
+											</div>
+											
+											
+
+										</div>
+									</div>
+
+								</div>
+
+								<div class="tab-filter-row">
+									<div class="tab-filter-block tab-filter-block-small">
+										<label for="username" class="tab-filter-label">Username</label>
+										<input name="filter-price-2" id="filter-price-2" type="text" class="tab-filter-input input-text" value="" placeholder="Cecik">
+									</div>
+									<div class="tab-filter-block tab-filter-block-submit">
+										<button type="submit" class="btn-yellow btn-shadow">Filter Out</button>
+									</div>
+								</div>
+
+							</form>
+
+							
+							<div class="tab-table tab-table_p2">
+								<div class="tab-table-row tab-table-head">
+									<div class="tab-table-cell">Username</div>
+									<div class="tab-table-cell">Lvl</div>
+									<div class="tab-table-cell">Referrals</div>
+									<div class="tab-table-cell">Total PV</div>
+									<div class="tab-table-cell">Trades</div>
+									<div class="tab-table-cell">Trades volume</div>
+									<div class="tab-table-cell">Total profit</div>
+								</div>
+
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Porter11…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">Porter1148</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											1
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">1647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 27863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">1209</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 3876523.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 29873.12</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-jp flag-icon-background"></div>
+											<div class="username-title">DenisWol…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">DenisWolf</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 23276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">9909</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 76523.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 232.98</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-lu flag-icon-background"></div>
+											<div class="username-title">MAsak43</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											3
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">989</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 111.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">265</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 332.00</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 2342.91</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Rinos</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">17</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 2321.98
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">8762</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 7789.87</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 982.01</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-gb flag-icon-background"></div>
+											<div class="username-title">Colt</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											1
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">1697</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 35863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">5409</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 3876743.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 213.12</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Boyanovi…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">Boyanovich</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">8647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 27863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">123</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 32.22</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 2932.12</span>
+									</div>
+
+
+								</div>
+
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Porter11…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">Porter1148</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											1
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">1647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 27863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">1209</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 3876523.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 29873.12</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-jp flag-icon-background"></div>
+											<div class="username-title">DenisWol…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">DenisWolf</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 23276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">9909</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 76523.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 232.98</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-lu flag-icon-background"></div>
+											<div class="username-title">MAsak43</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											3
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">989</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 111.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">265</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 332.00</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 2342.91</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Rinos</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">17</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 2321.98
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">8762</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 7789.87</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 982.01</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-gb flag-icon-background"></div>
+											<div class="username-title">Colt</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											1
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">1697</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 35863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">5409</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 3876743.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 213.12</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Boyanovi…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">Boyanovich</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">8647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 27863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">123</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 32.22</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 2932.12</span>
+									</div>
+
+
+								</div>
+
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Porter11…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">Porter1148</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											1
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">1647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 27863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">1209</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 3876523.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 29873.12</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-jp flag-icon-background"></div>
+											<div class="username-title">DenisWol…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">DenisWolf</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 23276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">9909</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 76523.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 232.98</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-lu flag-icon-background"></div>
+											<div class="username-title">MAsak43</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											3
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">989</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 111.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">265</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 332.00</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 2342.91</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Rinos</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">17</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 2321.98
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">8762</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 7789.87</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 982.01</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-gb flag-icon-background"></div>
+											<div class="username-title">Colt</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											1
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">1697</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 35863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">5409</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 3876743.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 213.12</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Boyanovi…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">Boyanovich</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">8647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 27863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">123</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 32.22</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 2932.12</span>
+									</div>
+
+
+								</div>
+
+
+
+							</div>
+
+
+						</div>
+
+					</div>
+					<div class="col col-pd">
+
+						<div class="title title-w-icon"> <span class="title-icon icon-level-r"></span> 
+							<span class="title-text">Right leg</span>
+						</div>
+
+						<div class="tab-block table-wrapper-fix">
+
+							<form action="" class="tab-filter tab-filter-lg-row">
+								<div class="tab-filter-row">
+									<div class="tab-filter-block tab-filter-block_margin-sm tab-filter-block-small">
+										<label for="filter-from-2" class="tab-filter-label">Date from</label>
+										<div class="tab-filter-date">
+											<input id="filter-from-2" name="filter-to-1" type="text" class="text-cover-date-input simple-select simple-select-date" placeholder="" value="01/05/19">
+										</div>
+									</div>
+									<div class="tab-filter-block tab-filter-block-small">
+										<label for="filter-to-2" class="tab-filter-label">To</label>
+										<div class="tab-filter-date">
+											<input id="filter-to-2" name="filter-to-2" type="text" class="text-cover-date-input simple-select simple-select-date" placeholder="" value="09/05/19">
+										</div>
+									</div>
+
+									<div class="tab-filter-block tab-filter-block-small">
+										<label class="tab-filter-label">Level</label>
+
+
+										<select name="" id="" class="nice-select tab-filter-select simple-select simple-select-empty select-digit">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>	
+										</select>
+									</div>
+
+									<div class="tab-filter-block tab-filter-block-small double-block">
+										<label class="tab-filter-label">To be paid / To be carried over</label>
+										<div class="double-input">
+
+											<div class="double-input-wrapper">
+												<input type="number" class="double-input-text" value="35273.12" step="0.01">
+											</div>
+											<div class="double-input-wrapper">
+												<input type="number" class="double-input-text" value="35273.12" step="0.01">
+											</div>
+											
+											
+
+										</div>
+									</div>
+
+								</div>
+
+								<div class="tab-filter-row">
+									<div class="tab-filter-block tab-filter-block-small">
+										<label for="username" class="tab-filter-label">Username</label>
+										<input name="filter-price-2" id="filter-price-2" type="text" class="tab-filter-input input-text" value="" placeholder="Cecik">
+									</div>
+									<div class="tab-filter-block tab-filter-block-submit">
+										<button type="submit" class="btn-yellow btn-shadow">Filter Out</button>
+									</div>
+								</div>
+							</form>
+
+							
+							<div class="tab-table tab-table_p2">
+								<div class="tab-table-row tab-table-head">
+									<div class="tab-table-cell">Username</div>
+									<div class="tab-table-cell">Lvl</div>
+									<div class="tab-table-cell">Referrals</div>
+									<div class="tab-table-cell">Total PV</div>
+									<div class="tab-table-cell">Trades</div>
+									<div class="tab-table-cell">Trades volume</div>
+									<div class="tab-table-cell">Total profit</div>
+								</div>
+
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Porter11…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">Porter1148</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											1
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">1647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 27863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">1209</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 3876523.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 29873.12</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-jp flag-icon-background"></div>
+											<div class="username-title">DenisWol…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">DenisWolf</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 23276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">9909</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 76523.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 232.98</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-lu flag-icon-background"></div>
+											<div class="username-title">MAsak43</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											3
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">989</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 111.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">265</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 332.00</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 2342.91</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Rinos</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">17</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 2321.98
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">8762</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 7789.87</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 982.01</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-gb flag-icon-background"></div>
+											<div class="username-title">Colt</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											1
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">1697</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 35863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">5409</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 3876743.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 213.12</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Boyanovi…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">Boyanovich</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">8647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 27863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">123</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 32.22</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 2932.12</span>
+									</div>
+
+
+								</div>
+
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Porter11…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">Porter1148</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											1
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">1647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 27863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">1209</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 3876523.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 29873.12</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-jp flag-icon-background"></div>
+											<div class="username-title">DenisWol…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">DenisWolf</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 23276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">9909</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 76523.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 232.98</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-lu flag-icon-background"></div>
+											<div class="username-title">MAsak43</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											3
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">989</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 111.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">265</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 332.00</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 2342.91</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Rinos</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">17</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 2321.98
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">8762</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 7789.87</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 982.01</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-gb flag-icon-background"></div>
+											<div class="username-title">Colt</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											1
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">1697</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 35863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">5409</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 3876743.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 213.12</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Boyanovi…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">Boyanovich</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">8647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 27863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">123</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 32.22</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 2932.12</span>
+									</div>
+
+
+								</div>
+
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Porter11…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">Porter1148</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											1
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">1647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 27863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">1209</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 3876523.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 29873.12</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-jp flag-icon-background"></div>
+											<div class="username-title">DenisWol…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">DenisWolf</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 23276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">9909</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 76523.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 232.98</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-lu flag-icon-background"></div>
+											<div class="username-title">MAsak43</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											3
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">989</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 111.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">265</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 332.00</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 2342.91</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Rinos</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">17</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 2321.98
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">8762</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 7789.87</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 982.01</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-gb flag-icon-background"></div>
+											<div class="username-title">Colt</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											1
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">1697</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 35863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">5409</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 3876743.12</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 213.12</span>
+									</div>
+
+
+								</div>
+								<div class="tab-table-row">
+
+									<div class="tab-table-cell">
+										<div class="cell cell-username cell-username-s">
+											<div class="username-country flag-icon-kn flag-icon-background"></div>
+											<div class="username-title">Boyanovi…</div>
+											<div class="username-eye popover-start">
+												<div class="username-full popover-body">Boyanovich</div>
+											</div>
+
+										</div>
+									</div>
+									
+									<div class="tab-table-cell">
+										<div class="cell-lvl">
+											2
+										</div>
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-people"></div>
+											<div class="cell-ic-txt-text green">8647</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										$ 27863276.87
+									</div>
+
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-raise"></div>
+											<div class="cell-ic-txt-text">123</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell cell-ic-txt">
+											<div class="cell-ic-txt-icon icon-cycle"></div>
+											<div class="cell-ic-txt-text red">$ 32.22</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">
+										<span class="green">$ 2932.12</span>
+									</div>
+
+
+								</div>
+
+
+							</div>
+
+
+						</div>
+
+
+					</div>
+				</div>
+
+
+
+
+			</div>
+
+
+
+		</div>
+
+	</main>
+
+
+
+
+	<script src="js/all.min.js" defer></script>
+	<script src="libs/moveit.js"></script>
+	<script src="libs/nice-select.js" defer></script>
+	<script src="libs/jquery.transform2d.js" defer></script>
+
+	<script src="js/app.js?ver=01" defer></script>
+
+
+</body>

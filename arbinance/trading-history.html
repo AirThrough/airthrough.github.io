@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Airbinance</title>
+	<link rel="stylesheet" href="css/fonts.css?ver=14">
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/waves.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
+	<style>
+	.tab-table::-webkit-scrollbar {
+		width: 6px;
+		border-radius: 5px;
+	}
+
+	/* Track */
+	.tab-table::-webkit-scrollbar-track {
+		background: rgba(0,0,0,.1); 
+		border-radius: 5px;
+	}
+
+	/* Handle */
+	.tab-table::-webkit-scrollbar-thumb {
+		background: #43475a;
+		border-radius: 5px;
+		transition: 0.25s all ease-in-out;
+	}
+
+	/* Handle on hover */
+	.tab-table::-webkit-scrollbar-thumb:hover {
+		background: #585D77;
+		transition: 0.25s all ease-in-out;
+	}
+
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: white;
+		transition: 0.25s all ease-in-out;
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+		color: white;
+		transition: 0.25s all ease-in-out;
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+		color: white;
+		transition: 0.25s all ease-in-out;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+		color: white;
+		transition: 0.25s all ease-in-out;
+	}
+
+	input[type="text"]:focus::-webkit-input-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+
+	input[type="text"]:focus:-ms-input-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+
+	input[type="text"]:focus:-moz-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+	input[type="text"]:focus::-moz-placeholder
+	{
+		color: rgba(255,255,255, .4);
+		transition: 0.25s all ease-in-out;
+
+	}
+</style>
+
+</head>
+<body>
+
+	<header class="header">
+
+		<div class="header-left">
+
+			<div class="header-menu-btn-wrap">
+
+				<button class="header-burger">
+					<span class="header-burger-line"></span>
+					<span class="header-burger-line"></span>
+					<span class="header-burger-line"></span>
+					<span class="header-burger-bg"></span>
+				</button>
+
+			</div>
+
+			<div class="header-logo">
+				<a class="header-logo-link" href="/">
+					<img class="header-logo-img" src="img/logo.svg" alt="">
+				</a>
+			</div>
+
+			<div class="header-stats">
+
+				<div class="header-stats-item header-stats-item-balance">
+					<div class="header-stats-title">Balance</div>
+					<div class="header-stats-value">$ 120267.09</div>
+				</div>
+				<div class="header-stats-item header-stats-item-deposits">
+					<div class="header-stats-title">Deposits</div>
+					<div class="header-stats-value">$ 369092.02</div>
+				</div>
+				<div class="header-stats-item header-stats-item-pending">
+					<div class="header-stats-title">Pending</div>
+					<div class="header-stats-value">$ 275647.00</div>
+				</div>
+				<div class="header-stats-item header-stats-item-partners">
+					<div class="header-stats-title">Partners</div>
+					<div class="header-stats-value">25647</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="header-right">
+
+
+			<div class="header-lng">
+
+				<select id="language" class="header-lng-select" name="" id="">
+					<option class="flag-icon flag-icon-gb" value="gb" selected="selected">gb</option>
+					<option value="ru">ru</option>
+					<option value="fr">fr</option>
+					<option value="es">es</option>
+					<option value="pt">pt</option>
+					<option value="de">de</option>
+					<option value="pl">pl</option>
+				</select>
+
+			</div>
+
+
+			<div class="header-logout">
+
+				<button class="header-logout-btn btn-yellow btn-logout">Logout</button>
+
+			</div>
+
+		</div>
+
+	</header>
+
+	<main id="trading-history">
+
+		<div class="content-wrapper">
+			
+			<aside class="aside pre-mobile">
+
+ 				<div class="aside-user">
+ 					<div class="aside-user-row">
+ 						<div class="aside-user-main">
+ 							<div class="aside-user-country flag-icon-background flag-icon-gb"></div>
+ 							<div class="aside-user-name">Username</div>
+ 						</div>
+ 						<a href="#" class="aside-user-settings"></a>
+ 					</div>
+ 					<div class="aside-user-row">
+ 						<div class="aside-user-title">Partner status</div>
+ 						<div class="aside-user-rating rate">
+ 							<div class="rate-item"></div>
+ 							<div class="rate-item"></div>
+ 							<div class="rate-item bright"></div>
+ 						</div>
+ 					</div>
+ 				</div>
+
+ 				<div class="aside-title">Dashboard</div>
+
+ 				<nav class="aside-nav">
+ 					<ul class="aside-menu">
+ 						<li class="aside-menu-item icon-invest"><a href="" class="aside-menu-link ">My investment</a></li>
+ 						<li class="aside-menu-item icon-account"><a href="" class="aside-menu-link ">Account upgrade</a></li>
+ 						<li class="aside-menu-item icon-trading"><a href="/top-up.html" class="aside-menu-link ">Top up & Withdrawal</a></li>
+ 						<li class="aside-menu-item icon-trading"><a href="/trading-history.html" class="aside-menu-link icon-trading">Trading history</a></li>
+ 						<li class="aside-menu-item icon-partnership"><a href="" class="aside-menu-link ">Partnership</a></li>
+ 						<li class="aside-menu-item icon-news"><a href="" class="aside-menu-link ">News</a></li>
+ 						<li class="aside-menu-item icon-reviews"><a href="" class="aside-menu-link  ">Reviews</a></li>
+ 					</ul>
+ 				</nav>
+
+ 				<div class="aside-extra">
+ 					<div class="aside-title">Corporate website</div>
+
+ 					<ul class="aside-menu aside-menu-extra">
+ 						<li class="aside-menu-item icon-home"><a href="" class="aside-menu-link ">ArBinance Homepage</a></li>
+ 						<li class="aside-menu-item icon-terms"><a href="" class="aside-menu-link ">Affiliate terms</a></li>
+ 					</ul>
+
+ 				</div>
+
+ 				<div class="aside-bottom">
+
+ 					<div class="aside-title">Support</div>
+
+ 					<ul class="aside-support">
+ 						<li class="aside-support-item">
+ 							<a href="" class="aside-support-link">
+ 								<span class="aside-support-icon icon-tg"></span><span class="aside-support-title">Telegram</span>
+ 							</a>
+ 						</li>
+ 						<li class="aside-support-item">
+ 							<a href="" class="aside-support-link">
+ 								<span class="aside-support-icon icon-fb"></span>
+ 								<span class="aside-support-title">Facebook</span>
+ 							</a>
+ 						</li>
+ 					</ul>
+
+ 				</div>
+
+
+ 			</aside>
+
+			<div class="content">
+				
+				<div class="top-stats animate-fade-in">
+					<div class="row">
+						<div class="col col-pd_sm">
+							<div class="top-stats-item">
+								<div class="top-stats-currency">
+									
+									<img src="img/icon-bth.svg" alt="" class="top-stats-icon">
+									<div class="top-stats-value">2.03412350</div>
+								</div>
+								<div class="top-stats-currency">
+									<img src="img/icon-usd.svg" alt="" class="top-stats-icon">
+									<div class="top-stats-value">$ 120267.09</div>
+								</div>
+							</div>
+						</div>
+						<div class="col col-pd_sm">
+							<div class="top-stats-item">
+								<div class="top-stats-currency">
+									
+									<img src="img/icon-btc.svg" alt="" class="top-stats-icon">
+									<div class="top-stats-value">2.03412350</div>
+								</div>
+								<div class="top-stats-currency">
+									<img src="img/icon-usd.svg" alt="" class="top-stats-icon">
+									<div class="top-stats-value">$ 120267.09</div>
+								</div>
+							</div>
+						</div>
+						<div class="col col-pd_sm">
+							<div class="top-stats-item">
+								<div class="top-stats-currency">
+									
+									<img src="img/icon-eth.svg" alt="" class="top-stats-icon">
+									<div class="top-stats-value">1.03412350</div>
+								</div>
+								<div class="top-stats-currency">
+									<img src="img/icon-usd.svg" alt="" class="top-stats-icon">
+									<div class="top-stats-value">$ 120267.09</div>
+								</div>
+							</div>
+						</div>
+						<div class="col col-pd_sm">
+							<div class="top-stats-item error">
+								<div class="top-stats-currency">
+									
+									<img src="img/icon-ltc.svg" alt="" class="top-stats-icon">
+									<div class="top-stats-value">0.00000000</div>
+								</div>
+								<div class="top-stats-currency">
+									<img src="img/icon-usd.svg" alt="" class="top-stats-icon">
+									<div class="top-stats-value">$ 0.00</div>
+								</div>
+							</div>
+						</div>
+						<div class="col col-pd_sm">
+							<div class="top-stats-item">
+								<div class="top-stats-currency">
+									
+									<img src="img/icon-xpr.svg" alt="" class="top-stats-icon">
+									<div class="top-stats-value">0.03412350</div>
+								</div>
+								<div class="top-stats-currency">
+									<img src="img/icon-usd.svg" alt="" class="top-stats-icon">
+									<div class="top-stats-value">$ 167.09</div>
+								</div>
+							</div>
+						</div>
+						<div class="col col-pd_sm">
+							<div class="top-stats-item error">
+								<div class="top-stats-currency">
+									<img src="img/icon-dash.svg" alt="" class="top-stats-icon">
+									<div class="top-stats-value">0.00000000</div>
+								</div>
+								<div class="top-stats-currency">
+									<img src="img/icon-usd.svg" alt="" class="top-stats-icon">
+
+									<div class="top-stats-value">$ 0.00</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row row-main">
+
+					<div class="col col-pd">
+						
+						<div class="title">Statistic of trades</div>
+
+						<div class="row">
+							<div class="col col-pd">
+								<div class="number-block">
+									<div class="number-block-value">74</div>
+									<div class="number-block-caption">trades made</div>
+								</div>
+							</div>
+							<div class="col-2 col-pd">
+								<div class="stats-block">
+
+									<div class="stats-diagram">
+										<svg width="136" height="136">
+											<linearGradient id="linearColors1" x1="0" y1="0" x2="1" y2="1">
+												<stop offset="0%" stop-color="#fd45ad"></stop>
+												<stop offset="100%" stop-color="#e6af49"></stop>
+											</linearGradient>
+											<linearGradient id="linearColors2" x1="0.5" y1="0" x2="0.5" y2="1">
+												<stop offset="0%" stop-color="#5870ff"></stop>
+												<stop offset="100%" stop-color="#33ccfd"></stop>
+											</linearGradient>
+											<path d=""
+											fill="none" id="stats-diagram-profit" stroke="url(#linearColors1)" stroke-width="19" />
+											<path d="" id="stats-diagram-total"
+											fill="none" stroke="url(#linearColors2)" stroke-width="19" />
+										</svg>
+										<div class="stats-diagram-text">24%</div>
+									</div> 
+
+									<div class="stats-info">
+										<div class="stats-info-item">
+											<div class="stats-info-title stats-info-title-blue">Total trading volume:</div>
+											<div class="stats-info-currency">
+												<div class="stats-info-currency-icon icon-usd"></div>
+												<div class="stats-info-currency-value">235347.00</div>
+											</div>
+											<div class="stats-info-currency">
+												<div class="stats-info-currency-icon icon-btc"></div>
+												<div class="stats-info-currency-value">1.03412350</div>
+											</div>
+										</div>
+										<div class="stats-info-item">
+											<div class="stats-info-title stats-info-title-red">Total return (profit):</div>
+											<div class="stats-info-currency">
+												<div class="stats-info-currency-icon icon-usd"></div>
+												<div class="stats-info-currency-value">235347.00</div>
+											</div>
+											<div class="stats-info-currency">
+												<div class="stats-info-currency-icon icon-btc"></div>
+												<div class="stats-info-currency-value">1.03412350</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="title">Total trading Profit</div>
+
+						<div class="chart">
+
+							<div class="chart-top">
+								<div class="chart-top-item">
+									<div class="chart-title">Total profit</div>
+									<div class="chart-value">$ 5347.00</div>
+								</div>
+
+								<div class="chart-top-select">
+									
+									<select name="" id="chart-select" class="chart-select simple-select">
+										<option selected value="week">Week</option>
+										<option value="month">Month</option>
+									</select>
+
+								</div>
+								
+							</div>
+							<div id="chart-wrapper-1" class="chart-wrapper chart-wrapper-week">
+								<canvas id="myChart" width="400" height="200"></canvas>
+								<div class="blue-line-1 blue-line"></div>
+								<div class="blue-line-2 blue-line"></div>
+								<div class="blue-line-3 blue-line"></div>
+							</div>
+							<div id="chart-wrapper-2" class="chart-wrapper chart-wrapper-month closed absolute">
+								<canvas id="myChart1" width="400" height="200"></canvas>
+								<div class="blue-line-1 blue-line"></div>
+								<div class="blue-line-2 blue-line"></div>
+								<div class="blue-line-3 blue-line"></div>
+							</div>
+							<!-- <div class="chart-wrapper closed absolute">
+								<canvas id="myChart2" width="400" height="200"></canvas>
+								<div class="blue-line-1 blue-line"></div>
+								<div class="blue-line-2 blue-line"></div>
+								<div class="blue-line-3 blue-line"></div>
+							</div> -->
+							<div id="chartjs-tooltip" class="chart-tooltip-custom">
+								<table></table>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="col col-pd">
+
+						<div class="title">Statistic of trades</div>
+						
+						<div class="tab-block tab-block_stats">
+							<form method="post" action="" class="tab-filter tab-filter-small">
+								
+								<div class="tab-filter-row">
+									<div class="tab-filter-block tab-filter-block_margin-sm tab-filter-block-small">
+										<label for="filter-from-1" class="tab-filter-label">Date from</label>
+										<div class="tab-filter-date">
+											<input id="filter-to-1" name="filter-to-1" type="text" class="text-cover-date-input simple-select simple-select-date" placeholder="" value="01/05/19">
+										</div>
+									</div>
+									<div class="tab-filter-block tab-filter-block-small">
+										<label for="filter-from-2" class="tab-filter-label">To</label>
+										<div class="tab-filter-date">
+											<input id="filter-to-2" name="filter-to-2" type="text" class="text-cover-date-input simple-select simple-select-date" placeholder="" value="09/05/19">
+										</div>
+									</div>
+									<div class="tab-filter-block">
+										<label for="filter-pair-1" class="tab-filter-label">Trading pair</label>
+										<!-- <select name="filter-pair-1" id="filter-pair-1" class="tab-filter-select simple-select simple-select-currency">
+											<option value="btc">Bitcoin (BTC)</option>
+											<option value="bth">Bitcoin Cash (BCH)</option>
+											<option value="eth">Etherium (ETH)</option>
+											<option value="ltc">Litecoin (LTC)</option>
+											<option value="xpr">Ripple (XRP)</option>
+											<option value="dash">Dash</option>
+										</select> -->
+										<div class="search-input-wrapper search-input-wrapper_small simple-search">
+											<div class="search-input-main search-input-main_simple">	
+												<div class="search-input-image">
+													<img src="img/icon-btc.svg" class="search-input-icon" alt="">
+												</div>
+												<input type="text" class="search-input" value="Bitcoin (BTC)" >
+											</div>
+											<div class="search-input-content">
+												<ul class="search-input-list">
+													<li class="search-input-item selected">
+														<div class="search-input-image">
+															<img src="img/icon-btc.svg" alt="" class="search-input-icon">
+														</div>
+														<div class="search-input-item-value">Bitcoin (BTC)</div>
+													</li>
+													<li class="search-input-item">
+														<div class="search-input-image">
+															<img src="img/icon-bth.svg" alt="" class="search-input-icon">
+
+														</div>
+														<div class="search-input-item-value">Bitcoin Cash (BTH)</div>
+													</li>
+													<li class="search-input-item">
+														<div class="search-input-image">
+															<img src="img/icon-eth.svg" alt="" class="search-input-icon">
+														</div>
+														<div class="search-input-item-value">Etherium (ETH)</div>
+													</li>
+													<li class="search-input-item">
+														<div class="search-input-image">
+															<img src="img/icon-ltc.svg" alt="" class="search-input-icon">
+														</div>
+														<div class="search-input-item-value">
+														Litecoin (LTC)</div>
+													</li>
+													<li class="search-input-item">
+														<div class="search-input-image">
+															<img src="img/icon-xpr.svg" alt="" class="search-input-icon">
+														</div>
+														<div class="search-input-item-value">Ripple (XRP)</div>
+													</li>
+													<li class="search-input-item">
+														<div class="search-input-image">
+															<img src="img/icon-dash.svg" alt="" class="search-input-icon">
+														</div>
+														<div class="search-input-item-value">Dash</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="tab-filter-block tab-filter-block-wide">
+										<label for="filter-fee-1" class="tab-filter-label">Fee</label>
+										<input name="filter-fee-1" id="filter-fee-1" type="text" class="tab-filter-input input-text input-text" value="" placeholder="0.00">
+									</div>
+								</div>
+								<div class="tab-filter-row tab-filter-row_flex-start">
+									
+									<div class="tab-filter-block tab-filter-block_margin-sm tab-filter-block-small">
+										<label for="filter-fee-1" class="tab-filter-label">Buy price from</label>
+										<input name="filter-fee-1" id="filter-fee-1" type="text" class="tab-filter-input input-text input-text-price" value="" placeholder="0.00">
+									</div>
+									<div class="tab-filter-block tab-filter-block-small">
+										<label for="filter-fee-1" class="tab-filter-label">to</label>
+										<input name="filter-fee-1" id="filter-fee-1" type="text" class="tab-filter-input input-text-price input-text" value="" placeholder="0.00">
+									</div>
+									<div class="tab-filter-block tab-filter-block_margin-sm tab-filter-block-small">
+										<label for="filter-fee-1" class="tab-filter-label">Sell price from</label>
+										<input name="filter-fee-1" id="filter-fee-1" type="text" class="tab-filter-input input-text-price input-text" value="" placeholder="0.00">
+									</div>
+									<div class="tab-filter-block tab-filter-block-small">
+										<label for="filter-fee-1" class="tab-filter-label">to</label>
+										<input name="filter-fee-1" id="filter-fee-1" type="text" class="tab-filter-input input-text-price input-text" value="" placeholder="0.00">
+									</div>
+
+								</div>
+
+								<div class="tab-filter-submit">
+									<button class="btn-yellow btn-shadow">Filter out</button>
+								</div>
+
+							</form>
+							
+							<div id="stats" class="tab-table" data-simplebar>
+								
+								<div class="tab-table-row tab-table-head">
+									<div class="tab-table-cell">Date</div>
+									<div class="tab-table-cell">Trading pair</div>
+									<div class="tab-table-cell">Buy price</div>
+									<div class="tab-table-cell">Sell price</div>
+									<div class="tab-table-cell">Pure profit</div>
+									<div class="tab-table-cell">Fee</div>
+								</div>
+								<div class="tab-table-row">
+									<div class="tab-table-cell">
+										<div class="cell-value">21/12/17</div>
+										<div class="cell-value">17:40:51</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell-pair">
+											<div class="cell-pair-item">
+												<img src="img/icon-eth.svg" alt="" class="cell-icon">
+												
+												<div class="cell-company">Poloniex</div>
+											</div>
+											<div class="cell-pair-item">
+												<img src="img/icon-eth.svg" alt="" class="cell-icon">
+												<div class="cell-company">Coinbase</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+									<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+								</div>
+								<div class="tab-table-row">
+									<div class="tab-table-cell">
+										<div class="cell-value">21/12/17</div>
+										<div class="cell-value">17:40:51</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell-pair">
+											<div class="cell-pair-item">
+												<img src="img/icon-btc.svg" alt="" class="cell-icon">
+												<div class="cell-company">Poloniex</div>
+											</div>
+											<div class="cell-pair-item">
+												<img src="img/icon-btc.svg" alt="" class="cell-icon">
+												<div class="cell-company">Coinbase</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+									<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+								</div>
+								<div class="tab-table-row">
+									<div class="tab-table-cell">
+										<div class="cell-value">21/12/17</div>
+										<div class="cell-value">17:40:51</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell-pair">
+											<div class="cell-pair-item">
+												<img src="img/icon-eth.svg" alt="" class="cell-icon">
+												<div class="cell-company">Poloniex</div>
+											</div>
+											<div class="cell-pair-item">
+												<img src="img/icon-eth.svg" alt="" class="cell-icon">
+												<div class="cell-company">Coinbase</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+									<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+								</div>
+								<div class="tab-table-row">
+									<div class="tab-table-cell">
+										<div class="cell-value">21/12/17</div>
+										<div class="cell-value">17:40:51</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell-pair">
+											<div class="cell-pair-item">
+												<img src="img/icon-btc.svg" alt="" class="cell-icon">
+												<div class="cell-company">Poloniex</div>
+											</div>
+											<div class="cell-pair-item">
+												<img src="img/icon-btc.svg" alt="" class="cell-icon">
+												<div class="cell-company">Coinbase</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+									<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+								</div>
+								<div class="tab-table-row">
+									<div class="tab-table-cell">
+										<div class="cell-value">21/12/17</div>
+										<div class="cell-value">17:40:51</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell-pair">
+											<div class="cell-pair-item">
+												<img src="img/icon-bth.svg" alt="" class="cell-icon">
+												<div class="cell-company">Poloniex</div>
+											</div>
+											<div class="cell-pair-item">
+												<img src="img/icon-bth.svg" alt="" class="cell-icon">
+												<div class="cell-company">Coinbase</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+									<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+								</div>
+								<div class="tab-table-row">
+									<div class="tab-table-cell">
+										<div class="cell-value">21/12/17</div>
+										<div class="cell-value">17:40:51</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell-pair">
+											<div class="cell-pair-item">
+												<img src="img/icon-ltc.svg" alt="" class="cell-icon">
+												<div class="cell-company">Poloniex</div>
+											</div>
+											<div class="cell-pair-item">
+												<img src="img/icon-ltc.svg" alt="" class="cell-icon">
+												<div class="cell-company">Coinbase</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+									<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+								</div>
+								<div class="tab-table-row">
+									<div class="tab-table-cell">
+										<div class="cell-value">21/12/17</div>
+										<div class="cell-value">17:40:51</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell-pair">
+											<div class="cell-pair-item">
+												<img src="img/icon-xpr.svg" alt="" class="cell-icon">
+												<div class="cell-company">Poloniex</div>
+											</div>
+											<div class="cell-pair-item">
+												<img src="img/icon-xpr.svg" alt="" class="cell-icon">
+												<div class="cell-company">Coinbase</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+									<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+								</div>
+								<div class="tab-table-row">
+									<div class="tab-table-cell">
+										<div class="cell-value">21/12/17</div>
+										<div class="cell-value">17:40:51</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell-pair">
+											<div class="cell-pair-item">
+												<img src="img/icon-dash.svg" alt="" class="cell-icon">
+												<div class="cell-company">Poloniex</div>
+											</div>
+											<div class="cell-pair-item">
+												<img src="img/icon-dash.svg" alt="" class="cell-icon">
+												<div class="cell-company">Coinbase</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+									<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+								</div>
+								<div class="tab-table-row">
+									<div class="tab-table-cell">
+										<div class="cell-value">21/12/17</div>
+										<div class="cell-value">17:40:51</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell-pair">
+											<div class="cell-pair-item">
+												<img src="img/icon-ltc.svg" alt="" class="cell-icon">
+												<div class="cell-company">Poloniex</div>
+											</div>
+											<div class="cell-pair-item">
+												<img src="img/icon-ltc.svg" alt="" class="cell-icon">
+												<div class="cell-company">Coinbase</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+									<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+								</div>
+								<div class="tab-table-row">
+									<div class="tab-table-cell">
+										<div class="cell-value">21/12/17</div>
+										<div class="cell-value">17:40:51</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell-pair">
+											<div class="cell-pair-item">
+												<img src="img/icon-xpr.svg" alt="" class="cell-icon">
+												<div class="cell-company">Poloniex</div>
+											</div>
+											<div class="cell-pair-item">
+												<img src="img/icon-xpr.svg" alt="" class="cell-icon">
+												<div class="cell-company">Coinbase</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+									<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+								</div>
+								<div class="tab-table-row">
+									<div class="tab-table-cell">
+										<div class="cell-value">21/12/17</div>
+										<div class="cell-value">17:40:51</div>
+									</div>
+									<div class="tab-table-cell">
+										<div class="cell-pair">
+											<div class="cell-pair-item">
+												<img src="img/icon-dash.svg" alt="" class="cell-icon">
+												<div class="cell-company">Poloniex</div>
+											</div>
+											<div class="cell-pair-item">
+												<img src="img/icon-dash.svg" alt="" class="cell-icon">
+												<div class="cell-company">Coinbase</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell">8.09080774 (ETH)</div>
+									<div class="tab-table-cell tab-table-cell-green">0.04854754 (2,7%)</div>
+									<div class="tab-table-cell tab-table-cell-red">0.00006754</div>
+								</div>
+
+
+							</div>
+
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="title">Transactions</div>
+
+				<div class="tab-block">
+					
+					<form action="" class="tab-filter tab-filter-trans">
+						
+						<div class="tab-filter-row">
+							<div class="tab-filter-block tab-filter-block_margin-sm tab-filter-block-small">
+								<label for="filter-from-2" class="tab-filter-label">Date from</label>
+								<div class="tab-filter-date">
+									<input id="filter-from-2" name="filter-to-1" type="text" class="text-cover-date-input simple-select simple-select-date" placeholder="" value="01/05/19">
+								</div>
+							</div>
+							<div class="tab-filter-block tab-filter-block-small">
+								<label for="filter-to-2" class="tab-filter-label">To</label>
+								<div class="tab-filter-date">
+									<input id="filter-to-2" name="filter-to-2" type="text" class="text-cover-date-input simple-select simple-select-date" placeholder="" value="09/05/19">
+								</div>
+							</div>
+							<div class="tab-filter-block tab-filter-block-small tab-filter-block-small-mrg">
+								<label for="filter-select-2" class="tab-filter-label">State</label>
+								<select name="filter-select-2" id="filter-select-2" class="tab-filter-select simple-select simple-select-colored">
+									<option value="all">All</option>
+									<option value="active" selected>Active</option>
+									<option value="pending">Pending</option>
+									<option value="rejected">Rejected</option>
+								</select>
+							</div>
+							<div class="tab-filter-block tab-filter-block-small">
+								<label for="filter-select-3" class="tab-filter-label">Transaction</label>
+								<select name="filter-select-3" id="filter-select-3" class="tab-filter-select simple-select simple-select-trans">
+									<option value="">Withdrawal</option>
+									<option value="">Some Value</option>
+									<option value="">Some Value</option>
+									<option value="">Some Value</option>
+									<option value="">Some Value</option>
+								</select>
+							</div>
+							<div class="tab-filter-block tab-filter-block-wide">
+								<label for="filter-select-4" class="tab-filter-label">Trading pair</label>
+								<!-- <select name="filter-select-4" id="filter-select-4" class="tab-filter-select simple-select simple-select-currency">
+									<option value="btc">Bitcoin (BTC)</option>
+									<option value="bth">Bitcoin Cash (BCH)</option>
+									<option value="eth">Etherium (ETH)</option>
+									<option value="ltc">Litecoin (LTC)</option>
+									<option value="xpr">Ripple (XRP)</option>
+									<option value="dash">Dash</option>
+								</select> -->
+								<div class="search-input-wrapper search-input-wrapper_small simple-search">
+											<div class="search-input-main search-input-main_simple">	
+												<div class="search-input-image">
+													<img src="img/icon-btc.svg" class="search-input-icon" alt="">
+												</div>
+												<input type="text" class="search-input" value="Bitcoin (BTC)" >
+											</div>
+											<div class="search-input-content">
+												<ul class="search-input-list">
+													<li class="search-input-item selected">
+														<div class="search-input-image">
+															<img src="img/icon-btc.svg" alt="" class="search-input-icon">
+														</div>
+														<div class="search-input-item-value">Bitcoin (BTC)</div>
+													</li>
+													<li class="search-input-item">
+														<div class="search-input-image">
+															<img src="img/icon-bth.svg" alt="" class="search-input-icon">
+
+														</div>
+														<div class="search-input-item-value">Bitcoin Cash (BTH)</div>
+													</li>
+													<li class="search-input-item">
+														<div class="search-input-image">
+															<img src="img/icon-eth.svg" alt="" class="search-input-icon">
+														</div>
+														<div class="search-input-item-value">Etherium (ETH)</div>
+													</li>
+													<li class="search-input-item">
+														<div class="search-input-image">
+															<img src="img/icon-ltc.svg" alt="" class="search-input-icon">
+														</div>
+														<div class="search-input-item-value">
+														Litecoin (LTC)</div>
+													</li>
+													<li class="search-input-item">
+														<div class="search-input-image">
+															<img src="img/icon-xpr.svg" alt="" class="search-input-icon">
+														</div>
+														<div class="search-input-item-value">Ripple (XRP)</div>
+													</li>
+													<li class="search-input-item">
+														<div class="search-input-image">
+															<img src="img/icon-dash.svg" alt="" class="search-input-icon">
+														</div>
+														<div class="search-input-item-value">Dash</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+							</div>
+							<div class="tab-filter-block tab-filter-block_margin-sm tab-filter-block-small">
+								<label for="filter-price-2" class="tab-filter-label">Sell price from</label>
+								<input name="filter-price-2" id="filter-price-2" type="text" class="tab-filter-input input-text-price input-text" value="" placeholder="0.00">
+							</div>
+							<div class="tab-filter-block tab-filter-block-small">
+								<label for="filter-price-3" class="tab-filter-label">to</label>
+								<input name="filter-price-3" id="filter-price-3" type="text" class="tab-filter-input input-text-price input-text" value="" placeholder="0.00">
+							</div>
+							<div class="tab-filter-block tab-filter-block-submit">
+								<button type="submit" class="btn-yellow btn-shadow">Filter Out</button>
+							</div>
+						</div>
+						<div class="tab-filter-row tab-filter-row_flex-start">
+							
+							<div class="tab-filter-block tab-filter-block_margin-sm tab-filter-block-small">
+								<label for="filter-crypto-from" class="tab-filter-label">Crypto from</label>
+								<input name="filter-crypto-from" id="filter-crypto-from" type="text" class="tab-filter-input input-text-price input-text" value="" placeholder="0.00000000">
+							</div>
+							<div class="tab-filter-block tab-filter-block-small">
+								<label for="filter-crypto-to" class="tab-filter-label">to</label>
+								<input name="filter-crypto-to" id="filter-crypto-to" type="text" class="tab-filter-input input-text-price input-text" value="" placeholder="0.00000000">
+							</div>
+
+							<div class="tab-filter-block tab-filter-block-wide-mobile">
+								<label for="filter-trans-id" class="tab-filter-label">Transaction ID</label>
+								<input name="filter-trans-id" id="filter-trans-id" type="text" class="tab-filter-input input-text-id input-text" value="" placeholder="93857b33487419e7…">
+							</div>
+
+							<div class="tab-filter-block tab-filter-block-wide">
+								<label for="filter-details" class="tab-filter-label">Details</label>
+								<input name="filter-details" id="filter-details" type="text" class="tab-filter-input input-text-wide input-text" value="" placeholder="Profit from">
+							</div>
+
+							<div class="tab-filter-block tab-filter-block-wide">
+								<div class="tab-filter-info">
+									<div class="tab-filter-info-main">
+										<div class="tab-filter-info-title">Estimated value:</div>
+										<div class="tab-filter-info-value">0.00000000 BTC / $0.00</div>
+									</div>
+									<div class="tab-filter-info-text">24h Withdrawal Limit: 2BTC In Use: 0BTC</div>
+								</div>
+							</div>
+							
+						</div>
+
+					</form>
+
+					<div id="transactions" class="tab-table tab-table-wide">
+						<div class="tab-table-row tab-table-head">
+							<div class="tab-table-cell">Date</div>
+							<div class="tab-table-cell">State</div>
+							<div class="tab-table-cell">Transaction</div>
+							<div class="tab-table-cell">Coin name</div>
+							<div class="tab-table-cell">Amount (USD)</div>
+							<div class="tab-table-cell">Amount (Crypto)</div>
+							<div class="tab-table-cell">Transaction ID</div>
+							<div class="tab-table-cell">Details</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color green">
+
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								Profit
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-coin">
+									<img src="img/icon-eth.svg" alt="" class="cell-coin-icon">
+
+									<div class="cell-coin-title">(ETH) Etherium</div>
+								</div>
+							</div>
+							<div class="tab-table-cell tab-table-cell-green">$ 0.00</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<a href="#" class="cell-link" title="93857b33487419e93857b33487419e7">93857b33487419e93857b33487419e7</a>
+							</div>
+							<div class="tab-table-cell">
+								Profit from trade #25582
+							</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color green">
+
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								Profit
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-coin">
+									<img src="img/icon-eth.svg" alt="" class="cell-coin-icon">
+									<div class="cell-coin-title">(ETH) Etherium</div>
+								</div>
+							</div>
+							<div class="tab-table-cell tab-table-cell-green">$ 0.00</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<a href="#" class="cell-link" title="93857b33487419e93857b33487419e7">93857b33487419e93857b33487419e7</a>
+							</div>
+							<div class="tab-table-cell">
+								Profit from trade #25582
+							</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color green">
+
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								Profit
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-coin">
+									<img src="img/icon-eth.svg" alt="" class="cell-coin-icon">
+									<div class="cell-coin-title">(ETH) Etherium</div>
+								</div>
+							</div>
+							<div class="tab-table-cell tab-table-cell-green">$ 0.00</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<a href="#" class="cell-link" title="93857b33487419e93857b33487419e7">93857b33487419e93857b33487419e7</a>
+							</div>
+							<div class="tab-table-cell">
+								Profit from trade #25582
+							</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color green">
+
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								Profit
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-coin">
+									<img src="img/icon-btc.svg" alt="" class="cell-coin-icon">
+									<div class="cell-coin-title">(BTC) Bitcoin</div>
+								</div>
+							</div>
+							<div class="tab-table-cell tab-table-cell-green">$ 0.00</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<a href="#" class="cell-link" title="93857b33487419e93857b33487419e7">93857b33487419e93857b33487419e7</a>
+							</div>
+							<div class="tab-table-cell">
+								Profit from trade #25582
+							</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color green">
+
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								Profit
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-coin">
+									<img src="img/icon-bth.svg" alt="" class="cell-coin-icon">
+									<div class="cell-coin-title">(BTH) Bitcoin Cash</div>
+								</div>
+							</div>
+							<div class="tab-table-cell tab-table-cell-green">$ 0.00</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<a href="#" class="cell-link" title="93857b33487419e93857b33487419e7">93857b33487419e93857b33487419e7</a>
+							</div>
+							<div class="tab-table-cell">
+								Profit from trade #25582
+							</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color green">
+
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								Profit
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-coin">
+									<img src="img/icon-ltc.svg" alt="" class="cell-coin-icon">
+									<div class="cell-coin-title">(LTC) Litecoin</div>
+								</div>
+							</div>
+							<div class="tab-table-cell tab-table-cell-green">$ 0.00</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<a href="#" class="cell-link" title="93857b33487419e93857b33487419e7">93857b33487419e93857b33487419e7</a>
+							</div>
+							<div class="tab-table-cell">
+								Profit from trade #25582
+							</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color yellow">
+
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								Profit
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-coin">
+									<div class="cell-coin-icon icon-xpr"></div>
+									<div class="cell-coin-title">(XRP) Ripple</div>
+								</div>
+							</div>
+							<div class="tab-table-cell tab-table-cell-green">$ 0.00</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<a href="#" class="cell-link" title="93857b33487419e93857b33487419e7">93857b33487419e93857b33487419e7</a>
+							</div>
+							<div class="tab-table-cell">
+								Profit from trade #25582
+							</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color red">
+
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								Withdrawal
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-coin">
+									<img src="img/icon-dash.svg" alt="" class="cell-coin-icon">
+									<div class="cell-coin-title">Dash</div>
+								</div>
+							</div>
+							<div class="tab-table-cell tab-table-cell-green">$ 0.00</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<a href="#" class="cell-link" title="93857b33487419e93857b33487419e7">93857b33487419e93857b33487419e7</a>
+							</div>
+							<div class="tab-table-cell">
+								Profit from trade #25582
+							</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color red">
+
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								Withdrawal
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-coin">
+									<img src="img/icon-dash.svg" alt="" class="cell-coin-icon">
+									<div class="cell-coin-title">Dash</div>
+								</div>
+							</div>
+							<div class="tab-table-cell tab-table-cell-green">$ 0.00</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<a href="#" class="cell-link" title="93857b33487419e93857b33487419e7">93857b33487419e93857b33487419e7</a>
+							</div>
+							<div class="tab-table-cell">
+								Profit from trade #25582
+							</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color green">
+
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								Profit
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-coin">
+									<img src="img/icon-eth.svg" alt="" class="cell-coin-icon">
+									<div class="cell-coin-title">(ETH) Etherium</div>
+								</div>
+							</div>
+							<div class="tab-table-cell tab-table-cell-green">$ 0.00</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<a href="#" class="cell-link" title="93857b33487419e93857b33487419e7">93857b33487419e93857b33487419e7</a>
+							</div>
+							<div class="tab-table-cell">
+								Profit from trade #25582
+							</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color green">
+
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								Profit
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-coin">
+									<img src="img/icon-eth.svg" alt="" class="cell-coin-icon">
+									<div class="cell-coin-title">(ETH) Etherium</div>
+								</div>
+							</div>
+							<div class="tab-table-cell tab-table-cell-green">$ 0.00</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<a href="#" class="cell-link" title="93857b33487419e93857b33487419e7">93857b33487419e93857b33487419e7</a>
+							</div>
+							<div class="tab-table-cell">
+								Profit from trade #25582
+							</div>
+						</div>
+						<div class="tab-table-row">
+							<div class="tab-table-cell">
+								<div class="cell-value">21/12/17</div>
+								<div class="cell-value">17:40:51</div>
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-color green">
+
+								</div>
+							</div>
+							<div class="tab-table-cell">
+								Profit
+							</div>
+							<div class="tab-table-cell">
+								<div class="cell-coin">
+									<img src="img/icon-eth.svg" alt="" class="cell-coin-icon">
+									<div class="cell-coin-title">(ETH) Etherium</div>
+								</div>
+							</div>
+							<div class="tab-table-cell tab-table-cell-green">$ 0.00</div>
+							<div class="tab-table-cell">0.00000000</div>
+							<div class="tab-table-cell">
+								<a href="#" class="cell-link" title="93857b33487419e93857b33487419e7">93857b33487419e93857b33487419e7</a>
+							</div>
+							<div class="tab-table-cell">
+								Profit from trade #25582
+							</div>
+						</div>
+
+
+
+					</div>
+
+				</div>
+
+
+
+			</div>
+
+
+
+		</div>
+		
+	</main>
+	
+
+	
+
+
+	<script src="js/all.min.js" defer></script>
+	<script src="libs/nice-select.js" defer></script>
+	<script src="libs/moveit.js"></script>
+	<script src="js/app.js" defer></script>
+
+
+</body>
